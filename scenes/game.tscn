@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cafnh4rpv7oee"]
+[gd_scene load_steps=8 format=3 uid="uid://cafnh4rpv7oee"]
 
 [ext_resource type="PackedScene" uid="uid://b3l8edt0bi7np" path="res://scenes/player.tscn" id="1_dofbq"]
 [ext_resource type="Texture2D" uid="uid://ce8aomk05iuvx" path="res://art/background.png" id="3_0jlkx"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dtjj7eo541s6l" path="res://art/honk.png" id="4_71f3e"]
 [ext_resource type="Texture2D" uid="uid://dceu0ui6tvg3" path="res://art/cake.png" id="5_f7c1e"]
 [ext_resource type="Texture2D" uid="uid://dunkl37kuc773" path="res://art/inflatable.png" id="6_w2n4u"]
+[ext_resource type="PackedScene" uid="uid://rq4ussnki31b" path="res://scenes/sad_man.tscn" id="7_or3d6"]
 
 [node name="Game" type="Node2D"]
 
@@ -45,7 +46,25 @@ size_flags_horizontal = 3
 icon = ExtResource("5_f7c1e")
 icon_alignment = 1
 
+[node name="WHOOPIE" type="Button" parent="CanvasLayer/PanelContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+icon = ExtResource("6_w2n4u")
+icon_alignment = 1
+
+[node name="JOKE" type="Button" parent="CanvasLayer/PanelContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+icon = ExtResource("6_w2n4u")
+icon_alignment = 1
+
 [node name="INFLATABLE" type="Button" parent="CanvasLayer/PanelContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+icon = ExtResource("6_w2n4u")
+icon_alignment = 1
+
+[node name="BALOON" type="Button" parent="CanvasLayer/PanelContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 icon = ExtResource("6_w2n4u")
@@ -56,5 +75,8 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="Sad man" parent="." instance=ExtResource("7_or3d6")]
+position = Vector2(875, 1213)
 
 [connection signal="button_down" from="CanvasLayer/PanelContainer/HBoxContainer/HONK" to="Player" method="skill_honk"]
