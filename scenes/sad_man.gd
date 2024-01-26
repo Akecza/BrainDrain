@@ -38,7 +38,9 @@ func _on_hitbox_area_area_entered(area : Area2D):
 	if (area.name == "Honk"):
 		make_happy(10)
 	if (area.name == "Whoopie"):
+		print("SAD FART")
 		make_happy(-50)
 	if (area.name == "WhoopieSound"):
+		print("YAY FART")
 		make_happy(30)
 		

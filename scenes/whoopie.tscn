@@ -5,6 +5,7 @@
 [ext_resource type="AudioStream" uid="uid://ctwge7rxc2m4y" path="res://sounds/fart.wav" id="3_42fey"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_oawvf"]
+radius = 10.2873
 
 [node name="Whoopie" type="Node2D"]
 script = ExtResource("1_mpyoc")
@@ -21,12 +22,21 @@ shape = SubResource("CircleShape2D_oawvf")
 [node name="WhoopieSound" type="Area2D" parent="."]
 
 [node name="WhoopieSoundCollision" type="CollisionShape2D" parent="WhoopieSound"]
-scale = Vector2(8, 8)
+scale = Vector2(12, 12)
 shape = SubResource("CircleShape2D_oawvf")
 
 [node name="DeathTimer" type="Timer" parent="."]
+wait_time = 10.0
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_42fey")
 
+[node name="FartCooldown" type="Timer" parent="."]
+wait_time = 0.1
+
+[node name="FartDuration" type="Timer" parent="."]
+wait_time = 0.1
+
+[connection signal="area_entered" from="Whoopie" to="." method="_on_whoopie_area_entered"]
 [connection signal="timeout" from="DeathTimer" to="." method="_on_death_timer_timeout"]
+[connection signal="timeout" from="FartDuration" to="." method="_on_fart_duration_timeout"]

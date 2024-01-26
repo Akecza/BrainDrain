@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cafnh4rpv7oee"]
+[gd_scene load_steps=12 format=3 uid="uid://cafnh4rpv7oee"]
 
 [ext_resource type="PackedScene" uid="uid://b3l8edt0bi7np" path="res://scenes/player.tscn" id="1_dofbq"]
 [ext_resource type="Texture2D" uid="uid://ce8aomk05iuvx" path="res://art/background.png" id="3_0jlkx"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cps8i6qug7k0t" path="res://art/joke.png" id="7_o1ny2"]
 [ext_resource type="PackedScene" uid="uid://dowrjcdnnxods" path="res://scenes/sad_man.tscn" id="7_or3d6"]
 [ext_resource type="Texture2D" uid="uid://bwu3lq2c0v524" path="res://art/baloon.png" id="9_higc0"]
+[ext_resource type="PackedScene" uid="uid://biwhd6ooi88yn" path="res://scenes/whoopie.tscn" id="11_0vyw4"]
 
 [node name="Game" type="Node2D"]
 
@@ -81,5 +82,20 @@ offset_bottom = 40.0
 
 [node name="Sad man" parent="." instance=ExtResource("7_or3d6")]
 position = Vector2(875, 1213)
+
+[node name="Sad man2" parent="." instance=ExtResource("7_or3d6")]
+position = Vector2(758, 1282)
+
+[node name="Sad man3" parent="." instance=ExtResource("7_or3d6")]
+position = Vector2(1011, 1291)
+
+[node name="Sad man4" parent="." instance=ExtResource("7_or3d6")]
+position = Vector2(861, 1375)
+
+[node name="Sad man5" parent="." instance=ExtResource("7_or3d6")]
+position = Vector2(666, 1426)
+
+[node name="Whoopie" parent="." instance=ExtResource("11_0vyw4")]
+position = Vector2(819, 1297)
 
 [connection signal="button_down" from="CanvasLayer/PanelContainer/HBoxContainer/HONK" to="Player" method="skill_honk"]
