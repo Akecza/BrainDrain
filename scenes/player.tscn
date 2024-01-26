@@ -36,6 +36,7 @@ radius = 85.5862
 
 [node name="Player" type="RigidBody2D"]
 gravity_scale = 0.0
+lock_rotation = true
 script = ExtResource("1_bpioq")
 metadata/_edit_group_ = true
 

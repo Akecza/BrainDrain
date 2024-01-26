@@ -1,4 +1,4 @@
-extends Node2D
+extends RigidBody2D
 @export var speed = 400 # How fast the player will move (pixels/sec).
 var screen_size # Size of the game window.
 var skill_on_cooldown = false
@@ -28,17 +28,18 @@ func _process(delta):
 		$AnimatedSprite2D.play()
 	else:
 		$AnimatedSprite2D.stop()
-	position += velocity * delta
-
+	linear_velocity=velocity
 
 func skill_honk():
 	if(not skill_on_cooldown):
 		skill_on_cooldown=true
-		
+		$SkillCooldown.start()
+		$SkillRange.disabled=false
+		$SkillDuration.start()
 
 func _on_skill_cooldown_timeout():
 	skill_on_cooldown=false
 
 
 func _on_skill_duration_timeout():
-	pass # Replace with function body.
+	$SkillRange.disabled=false
