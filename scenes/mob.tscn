@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://b70siedgt6thp"]
+
+[ext_resource type="Texture2D" uid="uid://0wwxt6rpnmrw" path="res://Placeholder/bunny2_stand.png" id="1_kq1g0"]
+
+[node name="Mob" type="RigidBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_kq1g0")
