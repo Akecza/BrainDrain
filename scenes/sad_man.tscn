@@ -24,7 +24,7 @@ bg_color = Color(0.341176, 0.341176, 0.341176, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rtoln"]
 bg_color = Color(1, 1, 0, 1)
 
-[node name="Sad man" type="CharacterBody2D"]
+[node name="Sad man" type="CharacterBody2D" groups=["Cakeables"]]
 script = ExtResource("1_wtxo7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
