@@ -56,3 +56,5 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[connection signal="button_down" from="CanvasLayer/PanelContainer/HBoxContainer/HONK" to="Player" method="skill_honk"]
