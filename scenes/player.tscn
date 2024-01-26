@@ -28,17 +28,18 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qphrt"]
-radius = 62.0
-height = 162.0
+radius = 12.0
+height = 32.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5c1sj"]
-radius = 242.019
+radius = 85.5862
 
 [node name="Player" type="Node2D"]
 script = ExtResource("1_bpioq")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_byd17")
 animation = &"walk"
 
