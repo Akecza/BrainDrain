@@ -1,6 +1,6 @@
 extends Area2D
 
-var speed = 750
+var speed = 300
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -13,4 +13,4 @@ func _process(delta):
 
 
 func _on_body_entered(body):
-	pass
+	queue_free()

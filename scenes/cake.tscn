@@ -1,18 +1,19 @@
 [gd_scene load_steps=4 format=3 uid="uid://nbhh5gxf8d8r"]
 
-[ext_resource type="Texture2D" uid="uid://cer62p5bq6oph" path="res://icon.svg" id="1_x0ngg"]
 [ext_resource type="Script" path="res://scenes/cake.gd" id="1_yh8wj"]
+[ext_resource type="Texture2D" uid="uid://dceu0ui6tvg3" path="res://art/cake.png" id="2_i5eyf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_68s8s"]
-radius = 6.0
+radius = 4.0
 
 [node name="Cake" type="Area2D"]
-collision_mask = 0
+collision_layer = 4
 script = ExtResource("1_yh8wj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("1_x0ngg")
+position = Vector2(0, -1)
+scale = Vector2(0.1, 0.12)
+texture = ExtResource("2_i5eyf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_68s8s")

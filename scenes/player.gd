@@ -3,7 +3,7 @@ extends RigidBody2D
 @export var speed = 400 # How fast the player will move (pixels/sec).
 @onready var honk = $Honk/HonkCollision
 var screen_size # Size of the game window.
-var skill_on_cooldown = false
+var honk_on_cooldown = false
 
 
 
@@ -13,7 +13,6 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	honk.disabled=true
 	var velocity = Vector2.ZERO # The player's movement vector.
 	if Input.is_action_pressed("walk_right"):
 		velocity.x += 1
@@ -37,19 +36,21 @@ func _process(delta):
 	$Hand.look_at(get_global_mouse_position())
 
 func skill_honk():
-	if(not skill_on_cooldown):
-		skill_on_cooldown=true
-		$SkillCooldown.start()
+	if(not honk_on_cooldown):
+		honk_on_cooldown=true
+		$HonkCooldown.start()
 		honk.disabled=false
-		$SkillDuration.start()
+		$HonkDuration.start()
 
 func shoot():
-	var b=cake.instantiate()
-	owner.add_child(b)
-	b.transform=$Hand.global_transform
+	if $ShootCooldown.is_stopped():
+		$ShootCooldown.start()
+		var b=cake.instantiate()
+		owner.add_child(b)
+		b.transform=$Hand.global_transform
 
 func _on_skill_cooldown_timeout():
-	skill_on_cooldown=false
+	honk_on_cooldown=false
 
 func _on_skill_duration_timeout():
-	honk.disabled=false
+	honk.disabled=true
