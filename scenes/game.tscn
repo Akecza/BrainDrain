@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://cafnh4rpv7oee"]
+[gd_scene load_steps=7 format=3 uid="uid://cafnh4rpv7oee"]
 
 [ext_resource type="PackedScene" uid="uid://b3l8edt0bi7np" path="res://scenes/player.tscn" id="1_dofbq"]
 [ext_resource type="Texture2D" uid="uid://ce8aomk05iuvx" path="res://art/background.png" id="3_0jlkx"]
-[ext_resource type="PackedScene" path="res://scenes/budynek.tscn" id="4_8rbaf"]
+[ext_resource type="PackedScene" uid="uid://dgdmp3j05ja2b" path="res://scenes/budynek.tscn" id="4_8rbaf"]
+[ext_resource type="Texture2D" uid="uid://dtjj7eo541s6l" path="res://art/honk.png" id="4_71f3e"]
+[ext_resource type="Texture2D" uid="uid://dceu0ui6tvg3" path="res://art/cake.png" id="5_f7c1e"]
+[ext_resource type="Texture2D" uid="uid://dunkl37kuc773" path="res://art/inflatable.png" id="6_w2n4u"]
 
 [node name="Game" type="Node2D"]
 
@@ -11,10 +14,45 @@ position = Vector2(968, 965)
 texture = ExtResource("3_0jlkx")
 
 [node name="Player" parent="." instance=ExtResource("1_dofbq")]
-position = Vector2(104, 110)
+position = Vector2(571, 1229)
 
 [node name="Budynek" parent="." instance=ExtResource("4_8rbaf")]
 position = Vector2(224, 972)
 
 [node name="Budynek2" parent="." instance=ExtResource("4_8rbaf")]
 position = Vector2(859, 979)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer"]
+offset_left = 64.0
+offset_top = 551.0
+offset_right = 1088.0
+offset_bottom = 637.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/PanelContainer"]
+layout_mode = 2
+
+[node name="HONK" type="Button" parent="CanvasLayer/PanelContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+icon = ExtResource("4_71f3e")
+icon_alignment = 1
+
+[node name="CAKE" type="Button" parent="CanvasLayer/PanelContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+icon = ExtResource("5_f7c1e")
+icon_alignment = 1
+
+[node name="INFLATABLE" type="Button" parent="CanvasLayer/PanelContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+icon = ExtResource("6_w2n4u")
+icon_alignment = 1
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
