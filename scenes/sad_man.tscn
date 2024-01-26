@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dowrjcdnnxods"]
+[gd_scene load_steps=7 format=3 uid="uid://rq4ussnki31b"]
 
 [ext_resource type="Texture2D" uid="uid://nkb633kis74n" path="res://art/sadman.png" id="1_el25n"]
 [ext_resource type="Script" path="res://scenes/sad_man.gd" id="1_wtxo7"]

@@ -1,11 +1,6 @@
-extends Button
+extends Node2D
 
-@export var input : String
-
-func _input(event):
-	if (event.is_action_pressed(input)):
-		emit_signal("pressed")
-
+@onready var honk = $HonkPlayer2D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -14,3 +9,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+
+
+func _on_honk_pressed():
+	honk.play()
