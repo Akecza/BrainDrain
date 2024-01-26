@@ -22,6 +22,8 @@ func _process(delta):
 		velocity.y -= 1
 	if Input.is_action_pressed("skill1"):
 		skill_honk()
+	if Input.is_action_pressed("shoot"):
+		shoot()
 
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
@@ -29,6 +31,7 @@ func _process(delta):
 	else:
 		$AnimatedSprite2D.stop()
 	linear_velocity=velocity
+	$Hand.look_at(get_global_mouse_position())
 
 func skill_honk():
 	if(not skill_on_cooldown):
@@ -36,6 +39,9 @@ func skill_honk():
 		$SkillCooldown.start()
 		$SkillRange.disabled=false
 		$SkillDuration.start()
+
+func shoot():
+	pass
 
 func _on_skill_cooldown_timeout():
 	skill_on_cooldown=false
