@@ -51,7 +51,10 @@ func _on_hitbox_area_area_entered(area : Area2D):
 	if (area.name == "WhoopieSound"):
 		print("YAY FART")
 		make_happy(30)
-	
+	if (area.name == "Cake"):
+		make_happy(-100)
+	if (area.name == "CakeHappy"):
+		make_happy(50)
 
 
 func _on_happy_deplete_timer_timeout():
