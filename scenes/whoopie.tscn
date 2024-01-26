@@ -22,8 +22,9 @@ shape = SubResource("CircleShape2D_oawvf")
 [node name="WhoopieSound" type="Area2D" parent="."]
 
 [node name="WhoopieSoundCollision" type="CollisionShape2D" parent="WhoopieSound"]
-scale = Vector2(12, 12)
+scale = Vector2(30, 30)
 shape = SubResource("CircleShape2D_oawvf")
+disabled = true
 
 [node name="DeathTimer" type="Timer" parent="."]
 wait_time = 10.0
@@ -33,9 +34,11 @@ stream = ExtResource("3_42fey")
 
 [node name="FartCooldown" type="Timer" parent="."]
 wait_time = 0.1
+one_shot = true
 
 [node name="FartDuration" type="Timer" parent="."]
 wait_time = 0.1
+one_shot = true
 
 [connection signal="area_entered" from="Whoopie" to="." method="_on_whoopie_area_entered"]
 [connection signal="timeout" from="DeathTimer" to="." method="_on_death_timer_timeout"]
