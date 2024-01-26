@@ -18,12 +18,12 @@ position = Vector2(0, -1)
 scale = Vector2(0.1, 0.12)
 texture = ExtResource("2_i5eyf")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="Cake" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_68s8s")
 
-[node name="HappyArea" type="Area2D" parent="."]
+[node name="CakeHappy" type="Area2D" parent="."]
 
-[node name="Happy" type="CollisionShape2D" parent="HappyArea"]
+[node name="Happy" type="CollisionShape2D" parent="CakeHappy"]
 shape = SubResource("CircleShape2D_a7btd")
 
 [node name="HappyTimer" type="Timer" parent="."]

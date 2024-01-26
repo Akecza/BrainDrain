@@ -5,7 +5,7 @@ extends CharacterBody2D
 var direction : Vector2
 const SPEED = 50.0
 const JUMP_VELOCITY = -400.0
-@export var BaseHappyDepleteSpeed
+var BaseHappyDepleteSpeed = 5
 var HappyDepleteAmount
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -35,8 +35,9 @@ func _on_timer_timeout():
 	
 func make_happy(amount):
 	happiness_bar.value = happiness_bar.value + amount
-	$HappyDepleteTimer.start()
-	HappyDepleteAmount=0
+	if amount > 0:
+		$HappyDepleteTimer.start()
+		HappyDepleteAmount=0
 	
 
 
@@ -47,10 +48,10 @@ func _on_hitbox_area_area_entered(area : Area2D):
 	if (area.name == "Whoopie"):
 		print("SAD FART")
 		make_happy(-50)
-	elif (area.name == "WhoopieSound"):
+	if (area.name == "WhoopieSound"):
 		print("YAY FART")
 		make_happy(30)
-		
+	
 
 
 func _on_happy_deplete_timer_timeout():
