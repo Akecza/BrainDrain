@@ -34,7 +34,7 @@ height = 32.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_5c1sj"]
 radius = 85.5862
 
-[node name="Player" type="Node2D"]
+[node name="Player" type="Area2D"]
 script = ExtResource("1_bpioq")
 metadata/_edit_group_ = true
 
@@ -50,3 +50,15 @@ shape = SubResource("CapsuleShape2D_qphrt")
 light_mask = 0
 shape = SubResource("CircleShape2D_5c1sj")
 disabled = true
+
+[node name="SkillDuration" type="Timer" parent="."]
+one_shot = true
+
+[node name="SkillCooldown" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[connection signal="timeout" from="SkillDuration" to="." method="_on_skill_duration_timeout"]
+[connection signal="timeout" from="SkillCooldown" to="." method="_on_skill_cooldown_timeout"]
