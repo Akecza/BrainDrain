@@ -33,10 +33,11 @@ func _process(delta):
 
 func skill_honk():
 	if(not skill_on_cooldown):
-		pass
+		skill_on_cooldown=true
+		
 
 func _on_skill_cooldown_timeout():
-	pass # Replace with function body.
+	skill_on_cooldown=false
 
 
 func _on_skill_duration_timeout():
