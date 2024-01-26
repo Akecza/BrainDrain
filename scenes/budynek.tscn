@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgdmp3j05ja2b"]
+
+[ext_resource type="Texture2D" uid="uid://cwfro85tkkvta" path="res://art/pixel-art-building.jpg" id="1_x761f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h3s5l"]
+size = Vector2(179, 206)
+
+[node name="Budynek" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_x761f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 8)
+shape = SubResource("RectangleShape2D_h3s5l")
