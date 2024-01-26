@@ -1,4 +1,5 @@
 extends RigidBody2D
+@export var cake: PackedScene
 @export var speed = 400 # How fast the player will move (pixels/sec).
 var screen_size # Size of the game window.
 var skill_on_cooldown = false
@@ -41,7 +42,9 @@ func skill_honk():
 		$SkillDuration.start()
 
 func shoot():
-	pass
+	var b=cake.instantiate()
+	owner.add_child(b)
+	b.transform=$Hand.global_transform
 
 func _on_skill_cooldown_timeout():
 	skill_on_cooldown=false
