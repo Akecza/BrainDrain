@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://cafnh4rpv7oee"]
 
 [ext_resource type="PackedScene" uid="uid://b3l8edt0bi7np" path="res://scenes/player.tscn" id="1_dofbq"]
-[ext_resource type="Texture2D" uid="uid://ce8aomk05iuvx" path="res://art/background.png" id="3_0jlkx"]
+[ext_resource type="Texture2D" path="res://art/background.png" id="3_0jlkx"]
 [ext_resource type="PackedScene" uid="uid://dgdmp3j05ja2b" path="res://scenes/budynek.tscn" id="4_8rbaf"]
 [ext_resource type="Texture2D" uid="uid://dtjj7eo541s6l" path="res://art/honk.png" id="4_71f3e"]
 [ext_resource type="Script" path="res://scenes/button.gd" id="5_42r6h"]
