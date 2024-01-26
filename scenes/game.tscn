@@ -1,22 +1,37 @@
-[gd_scene load_steps=4 format=3 uid="uid://cafnh4rpv7oee"]
+[gd_scene load_steps=5 format=3 uid="uid://cafnh4rpv7oee"]
 
 [ext_resource type="PackedScene" uid="uid://b3l8edt0bi7np" path="res://scenes/player.tscn" id="1_dofbq"]
 [ext_resource type="Texture2D" uid="uid://cer62p5bq6oph" path="res://icon.svg" id="2_1dwjh"]
+[ext_resource type="Texture2D" uid="uid://ce8aomk05iuvx" path="res://art/background.png" id="3_0jlkx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cwio2"]
-size = Vector2(685, 72)
+size = Vector2(181.5, 222)
 
 [node name="Game" type="Node2D"]
+
+[node name="Background2" type="Sprite2D" parent="."]
+position = Vector2(968, 965)
+texture = ExtResource("3_0jlkx")
 
 [node name="Player" parent="." instance=ExtResource("1_dofbq")]
 position = Vector2(104, 110)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(365, 318)
+position = Vector2(474, 685)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource("RectangleShape2D_cwio2")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
-scale = Vector2(5.32813, 0.570313)
+scale = Vector2(1.4375, 1.76172)
+texture = ExtResource("2_1dwjh")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(891, 1129)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+shape = SubResource("RectangleShape2D_cwio2")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2"]
+scale = Vector2(1.4375, 1.76172)
 texture = ExtResource("2_1dwjh")
