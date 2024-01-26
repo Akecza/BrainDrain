@@ -4,7 +4,7 @@ var speed = 300
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	$HappyArea/Happy.disabled=true
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -14,9 +14,9 @@ func _process(delta):
 
 func _on_body_entered(body):
 	if body.is_in_group("Cakeables"):
-		$HappyArea.disabled=false
+		$HappyArea/Happy.disabled=false
 	$HappyTimer.start()
-	
+	speed=0
 
 
 
