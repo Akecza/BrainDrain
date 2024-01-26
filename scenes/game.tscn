@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://b3l8edt0bi7np" path="res://scenes/player.tscn" id="1_dofbq"]
 [ext_resource type="Texture2D" uid="uid://ce8aomk05iuvx" path="res://art/background.png" id="3_0jlkx"]
-[ext_resource type="PackedScene" path="res://scenes/budynek.tscn" id="4_8rbaf"]
+[ext_resource type="PackedScene" uid="uid://dgdmp3j05ja2b" path="res://scenes/budynek.tscn" id="4_8rbaf"]
 [ext_resource type="Texture2D" uid="uid://dtjj7eo541s6l" path="res://art/honk.png" id="4_71f3e"]
 [ext_resource type="Texture2D" uid="uid://dceu0ui6tvg3" path="res://art/cake.png" id="5_f7c1e"]
 [ext_resource type="Texture2D" uid="uid://dunkl37kuc773" path="res://art/inflatable.png" id="6_w2n4u"]

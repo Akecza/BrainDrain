@@ -47,4 +47,10 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_rtoln")
 value = 60.0
 show_percentage = false
 
+[node name="HitboxArea" type="Area2D" parent="."]
+
+[node name="HitboxAreaCollision" type="CollisionShape2D" parent="HitboxArea"]
+shape = SubResource("CapsuleShape2D_q607b")
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="area_entered" from="HitboxArea" to="." method="_on_hitbox_area_area_entered"]

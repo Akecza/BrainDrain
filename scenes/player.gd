@@ -1,6 +1,7 @@
 extends RigidBody2D
 @export var cake: PackedScene
 @export var speed = 400 # How fast the player will move (pixels/sec).
+@onready var honk = $Honk/HonkCollision
 var screen_size # Size of the game window.
 var skill_on_cooldown = false
 
@@ -12,6 +13,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	honk.disabled=true
 	var velocity = Vector2.ZERO # The player's movement vector.
 	if Input.is_action_pressed("walk_right"):
 		velocity.x += 1
@@ -38,7 +40,7 @@ func skill_honk():
 	if(not skill_on_cooldown):
 		skill_on_cooldown=true
 		$SkillCooldown.start()
-		$SkillRange.disabled=false
+		honk.disabled=false
 		$SkillDuration.start()
 
 func shoot():
@@ -49,6 +51,5 @@ func shoot():
 func _on_skill_cooldown_timeout():
 	skill_on_cooldown=false
 
-
 func _on_skill_duration_timeout():
-	$SkillRange.disabled=false
+	honk.disabled=false

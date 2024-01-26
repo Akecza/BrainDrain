@@ -30,5 +30,10 @@ func _on_timer_timeout():
 	
 func make_happy(amount):
 	happiness_bar.value = happiness_bar.value + amount
+
+
+func _on_hitbox_area_area_entered(area : Area2D):
+	print("ENTER")
 	
-	
+	if (area.name == "Honk"):
+		make_happy(10)
