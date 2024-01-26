@@ -15,7 +15,7 @@ func new_random_direction():
 
 func _physics_process(delta):
 	# Add the gravity.
-	happiness_bar.value = happiness_bar.value - 10*delta
+	happiness_bar.value = happiness_bar.value - 5*delta
 	
 	velocity = direction * SPEED
 	#velocity.x = move_toward(velocity.x, 0, SPEED)

@@ -1,0 +1,82 @@
+[gd_scene load_steps=10 format=3 uid="uid://b3l8edt0bi7np"]
+
+[ext_resource type="Script" path="res://scenes/player.gd" id="1_bpioq"]
+[ext_resource type="PackedScene" path="res://scenes/cake.tscn" id="2_10fye"]
+[ext_resource type="Texture2D" uid="uid://bwxalerr3oecs" path="res://Placeholder/bunny1_stand.png" id="2_11l5n"]
+[ext_resource type="Texture2D" uid="uid://cer62p5bq6oph" path="res://icon.svg" id="2_60x14"]
+[ext_resource type="Texture2D" uid="uid://dgok2lgd86qi7" path="res://Placeholder/bunny1_walk1.png" id="3_yorwq"]
+[ext_resource type="Texture2D" uid="uid://cuftb2iyu3028" path="res://Placeholder/bunny1_walk2.png" id="4_7mb2m"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_byd17"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_11l5n")
+}],
+"loop": true,
+"name": &"stand",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_yorwq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_7mb2m")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qphrt"]
+radius = 12.0
+height = 32.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5c1sj"]
+radius = 85.5862
+
+[node name="Player" type="RigidBody2D"]
+gravity_scale = 0.0
+lock_rotation = true
+script = ExtResource("1_bpioq")
+cake = ExtResource("2_10fye")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_byd17")
+animation = &"walk"
+
+[node name="PlayerCollision" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_qphrt")
+
+[node name="Honk" type="Area2D" parent="."]
+
+[node name="HonkCollision" type="CollisionShape2D" parent="Honk"]
+light_mask = 0
+shape = SubResource("CircleShape2D_5c1sj")
+disabled = true
+
+[node name="SkillDuration" type="Timer" parent="."]
+one_shot = true
+
+[node name="SkillCooldown" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Hand" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Hand"]
+visible = false
+position = Vector2(18, 3)
+scale = Vector2(0.234375, 0.0625)
+texture = ExtResource("2_60x14")
+
+[node name="Marker2D" type="Marker2D" parent="Hand"]
+position = Vector2(20, 0)
+
+[connection signal="timeout" from="SkillDuration" to="." method="_on_skill_duration_timeout"]
+[connection signal="timeout" from="SkillCooldown" to="." method="_on_skill_cooldown_timeout"]
