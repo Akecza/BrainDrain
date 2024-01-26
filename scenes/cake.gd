@@ -19,6 +19,5 @@ func _on_body_entered(body):
 	speed=0
 
 
-
 func _on_happy_timer_timeout():
 	queue_free()

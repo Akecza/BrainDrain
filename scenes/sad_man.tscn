@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://rq4ussnki31b"]
+[gd_scene load_steps=7 format=3 uid="uid://dowrjcdnnxods"]
 
 [ext_resource type="Texture2D" uid="uid://nkb633kis74n" path="res://art/sadman.png" id="1_el25n"]
 [ext_resource type="Script" path="res://scenes/sad_man.gd" id="1_wtxo7"]
@@ -52,5 +52,10 @@ show_percentage = false
 [node name="HitboxAreaCollision" type="CollisionShape2D" parent="HitboxArea"]
 shape = SubResource("CapsuleShape2D_q607b")
 
+[node name="HappyDepleteTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="area_entered" from="HitboxArea" to="." method="_on_hitbox_area_area_entered"]
+[connection signal="timeout" from="HappyDepleteTimer" to="." method="_on_happy_deplete_timer_timeout"]
