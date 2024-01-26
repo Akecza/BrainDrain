@@ -104,4 +104,16 @@ position = Vector2(690, 1320)
 [node name="Whoopie3" parent="." instance=ExtResource("11_0vyw4")]
 position = Vector2(933, 1298)
 
+[node name="Whoopie4" parent="." instance=ExtResource("11_0vyw4")]
+position = Vector2(751, 1203)
+
+[node name="Whoopie5" parent="." instance=ExtResource("11_0vyw4")]
+position = Vector2(858, 1460)
+
+[node name="Whoopie6" parent="." instance=ExtResource("11_0vyw4")]
+position = Vector2(989, 1209)
+
+[node name="Whoopie7" parent="." instance=ExtResource("11_0vyw4")]
+position = Vector2(878, 1142)
+
 [connection signal="button_down" from="CanvasLayer/PanelContainer/HBoxContainer/HONK" to="Player" method="skill_honk"]

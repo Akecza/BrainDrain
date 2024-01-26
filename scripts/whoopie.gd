@@ -10,7 +10,6 @@ extends Node2D
 func _ready():
 	pass # Replace with function body.
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
@@ -23,10 +22,10 @@ func _on_whoopie_area_entered(area : Area2D):
 		fart()
 
 func fart():
-	whoopieSound.disabled=false
+	whoopieSound.set_deferred("disabled", false)
 	audioStreamPlayer2D.play()
 	fartCooldown.start()
 	fartDuration.start()
 
 func _on_fart_duration_timeout():
-	whoopieSound.disabled=true
+	whoopieSound.set_deferred("disabled", true)

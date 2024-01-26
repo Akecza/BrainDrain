@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://biwhd6ooi88yn"]
+[gd_scene load_steps=6 format=3 uid="uid://biwhd6ooi88yn"]
 
 [ext_resource type="Script" path="res://scripts/whoopie.gd" id="1_mpyoc"]
 [ext_resource type="Texture2D" uid="uid://c6ep6l1a1bqjt" path="res://art/whoopie.png" id="1_mwjmx"]
@@ -6,6 +6,9 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_oawvf"]
 radius = 10.2873
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8rglb"]
+radius = 279.002
 
 [node name="Whoopie" type="Node2D"]
 script = ExtResource("1_mpyoc")
@@ -22,12 +25,13 @@ shape = SubResource("CircleShape2D_oawvf")
 [node name="WhoopieSound" type="Area2D" parent="."]
 
 [node name="WhoopieSoundCollision" type="CollisionShape2D" parent="WhoopieSound"]
-scale = Vector2(30, 30)
-shape = SubResource("CircleShape2D_oawvf")
+shape = SubResource("CircleShape2D_8rglb")
 disabled = true
 
 [node name="DeathTimer" type="Timer" parent="."]
 wait_time = 10.0
+one_shot = true
+autostart = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_42fey")
