@@ -22,7 +22,7 @@ shape = SubResource("CircleShape2D_68s8s")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HappyArea"]
 
-[node name="HappyTimer" type="Timer" parent="." groups=["SadMen"]]
+[node name="HappyTimer" type="Timer" parent="."]
 wait_time = 2.0
 one_shot = true
 
