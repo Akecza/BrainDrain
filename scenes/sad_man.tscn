@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://rq4ussnki31b"]
+[gd_scene load_steps=10 format=3 uid="uid://dowrjcdnnxods"]
 
 [ext_resource type="Texture2D" uid="uid://nkb633kis74n" path="res://art/sadman.png" id="1_el25n"]
 [ext_resource type="Script" path="res://scripts/sad_man.gd" id="1_wtxo7"]
@@ -31,6 +31,8 @@ bg_color = Color(1, 1, 0, 1)
 script = ExtResource("1_wtxo7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(2.5, -1.5)
+scale = Vector2(0.95, 0.97)
 sprite_frames = SubResource("SpriteFrames_wtm5c")
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("starting_state")]

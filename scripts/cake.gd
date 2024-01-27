@@ -40,7 +40,7 @@ func _on_happy_timer_timeout():
 
 func _on_fly_time_timeout():
 	speed=0
-	rotation=0
+	#rotation=0
 	rotateSpeed=0
 	$CakeSprite.visible=false
 	$CakeFloorMush.visible=true
