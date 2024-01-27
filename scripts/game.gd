@@ -3,6 +3,11 @@ extends Node2D
 var SadManList = []
 var GlobalHappinessLevel=0
 @onready var honk = $HonkPlayer2D
+@onready var track1 : AudioStreamPlayer = $Music/TrackLevel1
+@onready var track2 : AudioStreamPlayer = $Music/TrackLevel2
+@onready var track3 : AudioStreamPlayer = $Music/TrackLevel3
+@onready var trackFart : AudioStreamPlayer = $Music/TrackFart
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -25,10 +30,13 @@ func countGlobalHappiness():
 	GlobalHappinessLevel=HappinessTotal
 	var skillsAvailable=2
 	if GlobalHappinessLevel>20:
+		track2.volume_db=0
 		skillsAvailable+=1
 	if GlobalHappinessLevel>40:
+		trackFart.volume_db=0
 		skillsAvailable+=1
 	if GlobalHappinessLevel>60:
+		track3.volume_db=0
 		skillsAvailable+=1
 	if GlobalHappinessLevel>80:
 		skillsAvailable+=1

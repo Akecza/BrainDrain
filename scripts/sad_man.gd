@@ -14,6 +14,7 @@ const SPEED = 50.0
 const JUMP_VELOCITY = -400.0
 var BaseHappyDepleteSpeed = 5
 var HappyDepleteAmount
+var InInflatableRange
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -31,6 +32,8 @@ func _physics_process(delta):
 	happiness_bar.value = happiness_bar.value - HappyDepleteAmount*delta
 	state_machine.process_physics(delta)
 	check_happiness_state()
+	if (InInflatableRange):
+		make_happy(55*delta)
 	if velocity.x>0:
 		$AnimatedSprite2D.flip_h=true
 	else:
@@ -66,10 +69,13 @@ func _on_hitbox_area_area_entered(area : Area2D):
 		make_happy(100)
 	if (area.name == "InflatableSound"):
 		state_machine.change_state($StateMachine/Following, area.get_parent())
+		InInflatableRange=true
 
 func _on_hitbox_area_area_exited(area):
 	if (area.name == "Joke"):
 		state_machine.change_state($StateMachine/Idle, null)
+	if (area.name == "InflatableSound"):
+		InInflatableRange=false
 
 func _on_happy_deplete_timer_timeout():
 	HappyDepleteAmount = BaseHappyDepleteSpeed
