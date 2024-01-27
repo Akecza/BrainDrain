@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dsn3hhui0gbhr"]
+
+[ext_resource type="Texture2D" uid="uid://cyethh07dwi2d" path="res://art/UI/button_round/transparent_cropped/button_rnd_grayscale.png" id="1_5ut4m"]
+
+[node name="Indicator" type="Sprite2D"]
+position = Vector2(750, 179)
+rotation = -1.5708
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_5ut4m")
