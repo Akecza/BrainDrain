@@ -325,7 +325,7 @@ script = ExtResource("1_wtxo7")
 position = Vector2(2.5, -1.5)
 scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_wtm5c")
-frame_progress = 0.797271
+frame_progress = 0.485565
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("starting_state")]
 script = ExtResource("3_q2x24")

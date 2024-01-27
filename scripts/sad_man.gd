@@ -20,6 +20,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _ready():
 	HappyDepleteAmount=BaseHappyDepleteSpeed
+	$AnimatedSprite2D.play("default")
 	state_machine.init(self)
 	owner.SadManList.push_back(self)
 #func new_random_direction():
@@ -30,7 +31,10 @@ func _physics_process(delta):
 	happiness_bar.value = happiness_bar.value - HappyDepleteAmount*delta
 	state_machine.process_physics(delta)
 	check_happiness_state()
-	
+	if velocity.x>0:
+		$AnimatedSprite2D.flip_h=true
+	else:
+		$AnimatedSprite2D.flip_h=false
 	
 func getHappinessValue():
 	return $HappinessBar.value
