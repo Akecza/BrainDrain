@@ -40,6 +40,10 @@ func _process(delta):
 		skill_honk()
 	if Input.is_action_pressed("shoot"):
 		useActiveSkill()
+	if Input.is_action_pressed("skill_up"):
+		changeSkill(1)
+	if Input.is_action_pressed("skill_down"):
+		changeSkill(-1)
 
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
@@ -106,7 +110,10 @@ func _on_skill_cooldown_timeout():
 func _on_skill_duration_timeout():
 	honk.disabled=true
 
-
+func changeSkill(a):
+	activeSkill+=a
+	if activeSkill==0:
+		pass
 
 
 
