@@ -1,0 +1,61 @@
+[gd_scene load_steps=7 format=3 uid="uid://dowrjcdnnxods"]
+
+[ext_resource type="Texture2D" uid="uid://nkb633kis74n" path="res://art/sadman.png" id="1_el25n"]
+[ext_resource type="Script" path="res://scenes/sad_man.gd" id="1_wtxo7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wtm5c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_el25n")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q607b"]
+radius = 13.0
+height = 68.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_niccl"]
+bg_color = Color(0.341176, 0.341176, 0.341176, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rtoln"]
+bg_color = Color(1, 1, 0, 1)
+
+[node name="Sad man" type="CharacterBody2D" groups=["Cakeables", "Sadman"]]
+script = ExtResource("1_wtxo7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_wtm5c")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_q607b")
+
+[node name="HappinessBar" type="ProgressBar" parent="."]
+offset_left = -28.0
+offset_top = -40.0
+offset_right = 27.0
+offset_bottom = -36.0
+theme_override_styles/background = SubResource("StyleBoxFlat_niccl")
+theme_override_styles/fill = SubResource("StyleBoxFlat_rtoln")
+value = 60.0
+show_percentage = false
+
+[node name="HitboxArea" type="Area2D" parent="."]
+
+[node name="HitboxAreaCollision" type="CollisionShape2D" parent="HitboxArea"]
+shape = SubResource("CapsuleShape2D_q607b")
+
+[node name="HappyDepleteTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="area_entered" from="HitboxArea" to="." method="_on_hitbox_area_area_entered"]
+[connection signal="timeout" from="HappyDepleteTimer" to="." method="_on_happy_deplete_timer_timeout"]
