@@ -38,7 +38,7 @@ func _process(delta):
 	if Input.is_action_pressed("skill1"):
 		skill_honk()
 	if Input.is_action_pressed("shoot"):
-		useActiveSkill
+		useActiveSkill()
 
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
