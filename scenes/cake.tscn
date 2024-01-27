@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://nbhh5gxf8d8r"]
+[gd_scene load_steps=6 format=3 uid="uid://nbhh5gxf8d8r"]
 
 [ext_resource type="Script" path="res://scripts/cake.gd" id="1_yh8wj"]
-[ext_resource type="Texture2D" uid="uid://dceu0ui6tvg3" path="res://art/cake.png" id="2_i5eyf"]
+[ext_resource type="Texture2D" uid="uid://b6xxyfhaj5rye" path="res://art/jajcarz-ciasto-krem.png" id="2_us8ln"]
+[ext_resource type="Texture2D" uid="uid://7blhlgfhv5xn" path="res://art/jajcarz-ciasto-spod02.png" id="3_3vgrp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_68s8s"]
 radius = 4.0
@@ -13,10 +14,18 @@ radius = 311.026
 collision_layer = 4
 script = ExtResource("1_yh8wj")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -1)
-scale = Vector2(0.1, 0.12)
-texture = ExtResource("2_i5eyf")
+[node name="CakeSprite" type="Sprite2D" parent="."]
+position = Vector2(3, 1.19209e-07)
+rotation = 0.0820305
+scale = Vector2(0.1, 0.0963715)
+texture = ExtResource("2_us8ln")
+
+[node name="CakeCrust" type="Sprite2D" parent="CakeSprite"]
+position = Vector2(29.7825, 122.616)
+rotation = -1.86813
+scale = Vector2(0.751628, 1.01443)
+skew = -0.0494591
+texture = ExtResource("3_3vgrp")
 
 [node name="Cake" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_68s8s")
@@ -24,6 +33,7 @@ shape = SubResource("CircleShape2D_68s8s")
 [node name="CakeHappy" type="Area2D" parent="."]
 
 [node name="Happy" type="CollisionShape2D" parent="CakeHappy"]
+visible = false
 shape = SubResource("CircleShape2D_a7btd")
 
 [node name="HappyTimer" type="Timer" parent="."]
