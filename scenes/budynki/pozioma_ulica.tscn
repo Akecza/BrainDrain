@@ -1,0 +1,61 @@
+[gd_scene load_steps=5 format=3 uid="uid://b1rw41fkubyrg"]
+
+[ext_resource type="Texture2D" uid="uid://bbcf7f6herrm8" path="res://art/Terrain/chodnik-poziom.png" id="1_dbave"]
+[ext_resource type="Texture2D" uid="uid://bwfwl8igo03rj" path="res://art/Terrain/asfalt.png" id="3_wf736"]
+[ext_resource type="Texture2D" uid="uid://bto08d5iufbf4" path="res://art/Terrain/kraweznik-poziom-01.png" id="5_gyv2x"]
+[ext_resource type="Texture2D" uid="uid://dvx2ddx1civm8" path="res://art/Terrain/kraweznik-poziom-02.png" id="6_11vpk"]
+
+[node name="PrawyRóg" type="Node2D"]
+position = Vector2(1954, 30)
+
+[node name="Chodnik-poziom2" type="Sprite2D" parent="."]
+position = Vector2(-1112, 143)
+texture = ExtResource("1_dbave")
+
+[node name="Kraweznik-poziom-04" type="Sprite2D" parent="."]
+position = Vector2(-543.5, 339)
+texture = ExtResource("6_11vpk")
+
+[node name="Kraweznik-poziom-07" type="Sprite2D" parent="."]
+position = Vector2(-1080.5, 344)
+texture = ExtResource("5_gyv2x")
+
+[node name="Kraweznik-poziom-08" type="Sprite2D" parent="."]
+position = Vector2(-1608.5, 343)
+texture = ExtResource("6_11vpk")
+
+[node name="Asfalt4" type="Sprite2D" parent="."]
+position = Vector2(-840.5, 969.5)
+texture = ExtResource("3_wf736")
+
+[node name="Asfalt4" type="Sprite2D" parent="Asfalt4"]
+position = Vector2(7.5, 376)
+texture = ExtResource("3_wf736")
+
+[node name="Asfalt3" type="Sprite2D" parent="."]
+position = Vector2(-840.5, 583.5)
+texture = ExtResource("3_wf736")
+
+[node name="Kraweznik-poziom-02" type="Sprite2D" parent="."]
+position = Vector2(-1082, 1615)
+texture = ExtResource("6_11vpk")
+
+[node name="Kraweznik-poziom-01" type="Sprite2D" parent="."]
+position = Vector2(-1614, 1616)
+texture = ExtResource("5_gyv2x")
+
+[node name="Kraweznik-poziom-05" type="Sprite2D" parent="."]
+position = Vector2(-17, 1611)
+texture = ExtResource("6_11vpk")
+
+[node name="Kraweznik-poziom-06" type="Sprite2D" parent="."]
+position = Vector2(-549, 1612)
+texture = ExtResource("5_gyv2x")
+
+[node name="Chodnik-poziom" type="Sprite2D" parent="."]
+position = Vector2(-1165, 1789)
+texture = ExtResource("1_dbave")
+
+[node name="Chodnik-poziom3" type="Sprite2D" parent="."]
+position = Vector2(-257, 1786)
+texture = ExtResource("1_dbave")

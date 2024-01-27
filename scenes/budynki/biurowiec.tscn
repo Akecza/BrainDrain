@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdb4dovef24af"]
+
+[ext_resource type="Texture2D" uid="uid://c2767ydtsnsha" path="res://art/Terrain/budynek-czubek.png" id="1_yoi74"]
+[ext_resource type="Texture2D" uid="uid://n7dq2b3s2bmk" path="res://art/Terrain/budynek-01.png" id="2_3ps6v"]
+
+[node name="Biurowiec" type="Node2D"]
+position = Vector2(-11, 5)
+
+[node name="Budynek-czubek" type="Sprite2D" parent="."]
+position = Vector2(60, -2125.5)
+texture = ExtResource("1_yoi74")
+
+[node name="Budynek-03" type="Sprite2D" parent="."]
+position = Vector2(472, -632.5)
+scale = Vector2(0.723917, 0.754839)
+texture = ExtResource("2_3ps6v")
+
+[node name="Budynek-02" type="Sprite2D" parent="."]
+position = Vector2(-391, -654.5)
+scale = Vector2(0.683698, 0.77724)
+texture = ExtResource("2_3ps6v")
+
+[node name="Budynek-01" type="Sprite2D" parent="."]
+position = Vector2(20, -835.5)
+texture = ExtResource("2_3ps6v")

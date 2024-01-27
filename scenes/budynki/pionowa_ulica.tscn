@@ -1,0 +1,90 @@
+[gd_scene load_steps=4 format=3 uid="uid://c3gksvotehbio"]
+
+[ext_resource type="Texture2D" uid="uid://cqtxqofdrw08c" path="res://art/Terrain/chodnik-pion.png" id="3_t2w40"]
+[ext_resource type="Texture2D" uid="uid://bwfwl8igo03rj" path="res://art/Terrain/asfalt.png" id="4_t3b1e"]
+[ext_resource type="Texture2D" uid="uid://dmvsb1cs1kubs" path="res://art/Terrain/kraweznik-pion.png" id="6_wrwb0"]
+
+[node name="Skrzyżowanie" type="Node2D"]
+position = Vector2(310, -7)
+
+[node name="Asfalt8" type="Sprite2D" parent="."]
+position = Vector2(829, 1921)
+texture = ExtResource("4_t3b1e")
+
+[node name="Asfalt" type="Sprite2D" parent="."]
+position = Vector2(826, 260)
+texture = ExtResource("4_t3b1e")
+
+[node name="Asfalt" type="Sprite2D" parent="Asfalt"]
+position = Vector2(-24, 375)
+texture = ExtResource("4_t3b1e")
+
+[node name="Asfalt3" type="Sprite2D" parent="."]
+position = Vector2(805.5, 964.5)
+scale = Vector2(1, 1.01373)
+texture = ExtResource("4_t3b1e")
+
+[node name="Asfalt4" type="Sprite2D" parent="."]
+position = Vector2(806.5, 1367.5)
+scale = Vector2(1, 1.00915)
+texture = ExtResource("4_t3b1e")
+
+[node name="Asfalt6" type="Sprite2D" parent="."]
+position = Vector2(811.5, 1766.5)
+texture = ExtResource("4_t3b1e")
+
+[node name="Kraweznik-pion" type="Sprite2D" parent="."]
+position = Vector2(1591, 273)
+texture = ExtResource("6_wrwb0")
+
+[node name="Kraweznik-pion2" type="Sprite2D" parent="."]
+position = Vector2(1593, 718)
+texture = ExtResource("6_wrwb0")
+
+[node name="Kraweznik-pion3" type="Sprite2D" parent="."]
+position = Vector2(1595, 1163)
+texture = ExtResource("6_wrwb0")
+
+[node name="Kraweznik-pion4" type="Sprite2D" parent="."]
+position = Vector2(1594, 1522)
+texture = ExtResource("6_wrwb0")
+
+[node name="Kraweznik-pion5" type="Sprite2D" parent="."]
+position = Vector2(1599, 1908)
+texture = ExtResource("6_wrwb0")
+
+[node name="Kraweznik-pion6" type="Sprite2D" parent="."]
+position = Vector2(56, 265.5)
+texture = ExtResource("6_wrwb0")
+
+[node name="Kraweznik-pion7" type="Sprite2D" parent="."]
+position = Vector2(58, 710.5)
+texture = ExtResource("6_wrwb0")
+
+[node name="Kraweznik-pion8" type="Sprite2D" parent="."]
+position = Vector2(60, 1155.5)
+texture = ExtResource("6_wrwb0")
+
+[node name="Kraweznik-pion9" type="Sprite2D" parent="."]
+position = Vector2(59, 1514.5)
+texture = ExtResource("6_wrwb0")
+
+[node name="Kraweznik-pion10" type="Sprite2D" parent="."]
+position = Vector2(64, 1900.5)
+texture = ExtResource("6_wrwb0")
+
+[node name="Chodnik-pion" type="Sprite2D" parent="."]
+position = Vector2(1801, 1354)
+texture = ExtResource("3_t2w40")
+
+[node name="Chodnik-pion" type="Sprite2D" parent="Chodnik-pion"]
+position = Vector2(2, -542)
+texture = ExtResource("3_t2w40")
+
+[node name="Chodnik-pion2" type="Sprite2D" parent="."]
+position = Vector2(-134, 1361)
+texture = ExtResource("3_t2w40")
+
+[node name="Chodnik-pion" type="Sprite2D" parent="Chodnik-pion2"]
+position = Vector2(-4, -556)
+texture = ExtResource("3_t2w40")

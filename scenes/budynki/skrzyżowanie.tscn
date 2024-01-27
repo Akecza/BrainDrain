@@ -1,0 +1,88 @@
+[gd_scene load_steps=7 format=3 uid="uid://dhfv05m8tul0s"]
+
+[ext_resource type="Texture2D" uid="uid://bwfwl8igo03rj" path="res://art/Terrain/asfalt.png" id="1_vaj6m"]
+[ext_resource type="Texture2D" uid="uid://eh0t5hgxijq7" path="res://art/Terrain/kraweznik-rog02.png" id="2_ig7uq"]
+[ext_resource type="Texture2D" uid="uid://bwxkc1oy5d7mp" path="res://art/Terrain/kraweznik-rog04.png" id="3_hbmwd"]
+[ext_resource type="Texture2D" uid="uid://b6fkpalkin2m" path="res://art/Terrain/kraweznik-rog03.png" id="4_ytudf"]
+[ext_resource type="Texture2D" uid="uid://but1ww3nbcwk8" path="res://art/Terrain/kraweznik-rog01.png" id="5_qxw33"]
+[ext_resource type="Texture2D" uid="uid://bbcf7f6herrm8" path="res://art/Terrain/chodnik-poziom.png" id="6_qaq85"]
+
+[node name="Skrzyżowanie" type="Node2D"]
+position = Vector2(-4, 1)
+
+[node name="Asfalt8" type="Sprite2D" parent="."]
+position = Vector2(1264, 1879.75)
+scale = Vector2(1, 1.02403)
+texture = ExtResource("1_vaj6m")
+
+[node name="Asfalt" type="Sprite2D" parent="."]
+position = Vector2(1261, 256.25)
+scale = Vector2(1, 1.1476)
+texture = ExtResource("1_vaj6m")
+
+[node name="Asfalt" type="Sprite2D" parent="Asfalt"]
+position = Vector2(-24, 409)
+texture = ExtResource("1_vaj6m")
+
+[node name="Asfalt" type="Sprite2D" parent="Asfalt/Asfalt"]
+position = Vector2(6, 387)
+texture = ExtResource("1_vaj6m")
+
+[node name="Kraweznik-rog02" type="Sprite2D" parent="."]
+position = Vector2(270, 227)
+texture = ExtResource("2_ig7uq")
+
+[node name="Kraweznik-rog04" type="Sprite2D" parent="."]
+position = Vector2(2237, 222)
+texture = ExtResource("3_hbmwd")
+
+[node name="Asfalt2" type="Sprite2D" parent="."]
+position = Vector2(1701, 683.25)
+scale = Vector2(1, 1.01259)
+texture = ExtResource("1_vaj6m")
+
+[node name="Asfalt3" type="Sprite2D" parent="."]
+position = Vector2(809, 689)
+texture = ExtResource("1_vaj6m")
+
+[node name="Asfalt4" type="Sprite2D" parent="."]
+position = Vector2(810, 1091)
+texture = ExtResource("1_vaj6m")
+
+[node name="Asfalt5" type="Sprite2D" parent="."]
+position = Vector2(1703, 1091.75)
+scale = Vector2(1, 1.03776)
+texture = ExtResource("1_vaj6m")
+
+[node name="Asfalt6" type="Sprite2D" parent="."]
+position = Vector2(815, 1488)
+texture = ExtResource("1_vaj6m")
+
+[node name="Asfalt7" type="Sprite2D" parent="."]
+position = Vector2(1713, 1470.25)
+scale = Vector2(1, 1.04005)
+texture = ExtResource("1_vaj6m")
+
+[node name="Kraweznik-rog03" type="Sprite2D" parent="."]
+position = Vector2(282, 1897)
+texture = ExtResource("4_ytudf")
+
+[node name="Kraweznik-rog01" type="Sprite2D" parent="."]
+position = Vector2(2256, 1901)
+texture = ExtResource("5_qxw33")
+
+[node name="Chodnik-poziom" type="Sprite2D" parent="."]
+position = Vector2(2889, 1873)
+texture = ExtResource("6_qaq85")
+
+[node name="Chodnik-poziom2" type="Sprite2D" parent="."]
+position = Vector2(-352, 1875)
+texture = ExtResource("6_qaq85")
+
+[node name="Chodnik-poziom3" type="Sprite2D" parent="."]
+position = Vector2(2871, 193)
+texture = ExtResource("6_qaq85")
+
+[node name="Chodnik-poziom4" type="Sprite2D" parent="."]
+position = Vector2(-365, 197)
+texture = ExtResource("6_qaq85")

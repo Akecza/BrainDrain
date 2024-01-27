@@ -1,0 +1,83 @@
+[gd_scene load_steps=2 format=3 uid="uid://cc4o75emmeaay"]
+
+[ext_resource type="Texture2D" uid="uid://bbcf7f6herrm8" path="res://art/Terrain/chodnik-poziom.png" id="1_j0itc"]
+
+[node name="Bruk" type="Node2D"]
+
+[node name="Chodnik-poziom" type="Sprite2D" parent="."]
+position = Vector2(806, 156)
+texture = ExtResource("1_j0itc")
+
+[node name="Chodnik-poziom13" type="Sprite2D" parent="."]
+position = Vector2(809, 457)
+rotation = 3.14159
+texture = ExtResource("1_j0itc")
+
+[node name="Chodnik-poziom16" type="Sprite2D" parent="."]
+position = Vector2(3024, 166)
+rotation = 3.14159
+texture = ExtResource("1_j0itc")
+
+[node name="Chodnik-poziom17" type="Sprite2D" parent="."]
+position = Vector2(3037, 748)
+rotation = 3.14159
+texture = ExtResource("1_j0itc")
+
+[node name="Chodnik-poziom18" type="Sprite2D" parent="."]
+position = Vector2(3039, 1324)
+rotation = 3.14159
+texture = ExtResource("1_j0itc")
+
+[node name="Chodnik-poziom14" type="Sprite2D" parent="."]
+position = Vector2(801, 1033)
+rotation = 3.14159
+texture = ExtResource("1_j0itc")
+
+[node name="Chodnik-poziom15" type="Sprite2D" parent="."]
+position = Vector2(806, 1623)
+rotation = 3.14159
+texture = ExtResource("1_j0itc")
+
+[node name="Chodnik-poziom2" type="Sprite2D" parent="."]
+position = Vector2(1454, 447)
+texture = ExtResource("1_j0itc")
+
+[node name="Chodnik-poziom3" type="Sprite2D" parent="."]
+position = Vector2(802, 728)
+texture = ExtResource("1_j0itc")
+
+[node name="Chodnik-poziom4" type="Sprite2D" parent="."]
+position = Vector2(1450, 1017)
+texture = ExtResource("1_j0itc")
+
+[node name="Chodnik-poziom5" type="Sprite2D" parent="."]
+position = Vector2(2398, 153)
+texture = ExtResource("1_j0itc")
+
+[node name="Chodnik-poziom6" type="Sprite2D" parent="."]
+position = Vector2(3028, 447)
+texture = ExtResource("1_j0itc")
+
+[node name="Chodnik-poziom7" type="Sprite2D" parent="."]
+position = Vector2(2376, 719)
+texture = ExtResource("1_j0itc")
+
+[node name="Chodnik-poziom8" type="Sprite2D" parent="."]
+position = Vector2(3043, 1012)
+texture = ExtResource("1_j0itc")
+
+[node name="Chodnik-poziom9" type="Sprite2D" parent="."]
+position = Vector2(791, 1315)
+texture = ExtResource("1_j0itc")
+
+[node name="Chodnik-poziom10" type="Sprite2D" parent="."]
+position = Vector2(2375, 1311)
+texture = ExtResource("1_j0itc")
+
+[node name="Chodnik-poziom11" type="Sprite2D" parent="."]
+position = Vector2(1467, 1615)
+texture = ExtResource("1_j0itc")
+
+[node name="Chodnik-poziom12" type="Sprite2D" parent="."]
+position = Vector2(3035, 1611)
+texture = ExtResource("1_j0itc")

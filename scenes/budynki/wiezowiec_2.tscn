@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://bs4d2gfiogkav"]
+
+[ext_resource type="Texture2D" uid="uid://bepbipvtblt58" path="res://art/Terrain/budynek-modul-02.png" id="1_3fg81"]
+
+[node name="Wiezowiec2" type="Node2D"]
+
+[node name="Budynek-modul-02" type="Sprite2D" parent="."]
+position = Vector2(1, -496.75)
+scale = Vector2(1, 1.13006)
+texture = ExtResource("1_3fg81")
+
+[node name="Budynek-modul-05" type="Sprite2D" parent="."]
+position = Vector2(43.5005, -1640.5)
+scale = Vector2(1.30777, 1.62659)
+texture = ExtResource("1_3fg81")

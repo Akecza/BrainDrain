@@ -1,0 +1,66 @@
+[gd_scene load_steps=9 format=3 uid="uid://b3a5mwiqvlxb"]
+
+[ext_resource type="Texture2D" uid="uid://bbcf7f6herrm8" path="res://art/Terrain/chodnik-poziom.png" id="1_ggusi"]
+[ext_resource type="Texture2D" uid="uid://cqtxqofdrw08c" path="res://art/Terrain/chodnik-pion.png" id="2_5j4pp"]
+[ext_resource type="Texture2D" uid="uid://bwfwl8igo03rj" path="res://art/Terrain/asfalt.png" id="3_8du1a"]
+[ext_resource type="Texture2D" uid="uid://b6fkpalkin2m" path="res://art/Terrain/kraweznik-rog03.png" id="4_7wc2s"]
+[ext_resource type="Texture2D" uid="uid://bto08d5iufbf4" path="res://art/Terrain/kraweznik-poziom-01.png" id="5_rqqbh"]
+[ext_resource type="Texture2D" uid="uid://dvx2ddx1civm8" path="res://art/Terrain/kraweznik-poziom-02.png" id="6_k16tb"]
+[ext_resource type="Texture2D" uid="uid://dmvsb1cs1kubs" path="res://art/Terrain/kraweznik-pion.png" id="7_0vq0h"]
+[ext_resource type="Texture2D" uid="uid://eh0t5hgxijq7" path="res://art/Terrain/kraweznik-rog02.png" id="8_nil5l"]
+
+[node name="PrawyRóg" type="Node2D"]
+
+[node name="Chodnik-poziom2" type="Sprite2D" parent="."]
+position = Vector2(-798.5, 143)
+texture = ExtResource("1_ggusi")
+
+[node name="Chodnik-pion2" type="Sprite2D" parent="."]
+position = Vector2(-157.5, 827.939)
+rotation = -3.14159
+scale = Vector2(1, 1.03853)
+texture = ExtResource("2_5j4pp")
+
+[node name="Asfalt4" type="Sprite2D" parent="."]
+position = Vector2(-1183.5, 986)
+texture = ExtResource("3_8du1a")
+
+[node name="Asfalt4" type="Sprite2D" parent="Asfalt4"]
+position = Vector2(7.5, 376)
+texture = ExtResource("3_8du1a")
+
+[node name="Asfalt3" type="Sprite2D" parent="."]
+position = Vector2(-1183.5, 600)
+texture = ExtResource("3_8du1a")
+
+[node name="Kraweznik-rog03" type="Sprite2D" parent="."]
+position = Vector2(-556.5, 542)
+texture = ExtResource("4_7wc2s")
+
+[node name="Kraweznik-poziom-03" type="Sprite2D" parent="."]
+position = Vector2(-1080.5, 344)
+texture = ExtResource("5_rqqbh")
+
+[node name="Kraweznik-poziom-04" type="Sprite2D" parent="."]
+position = Vector2(-1608.5, 343)
+texture = ExtResource("6_k16tb")
+
+[node name="Kraweznik-pion3" type="Sprite2D" parent="."]
+position = Vector2(-338.5, 985)
+texture = ExtResource("7_0vq0h")
+
+[node name="Kraweznik-rog02" type="Sprite2D" parent="."]
+position = Vector2(-554, 1417)
+texture = ExtResource("8_nil5l")
+
+[node name="Kraweznik-poziom-02" type="Sprite2D" parent="."]
+position = Vector2(-1082, 1615)
+texture = ExtResource("6_k16tb")
+
+[node name="Kraweznik-poziom-01" type="Sprite2D" parent="."]
+position = Vector2(-1614, 1616)
+texture = ExtResource("5_rqqbh")
+
+[node name="Chodnik-poziom" type="Sprite2D" parent="."]
+position = Vector2(-799, 1800)
+texture = ExtResource("1_ggusi")

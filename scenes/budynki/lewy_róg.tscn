@@ -1,0 +1,66 @@
+[gd_scene load_steps=10 format=3 uid="uid://bbrcme6303jvk"]
+
+[ext_resource type="Texture2D" uid="uid://bbcf7f6herrm8" path="res://art/Terrain/chodnik-poziom.png" id="1_tihg6"]
+[ext_resource type="Texture2D" uid="uid://bwfwl8igo03rj" path="res://art/Terrain/asfalt.png" id="2_3nf6o"]
+[ext_resource type="Texture2D" uid="uid://cqtxqofdrw08c" path="res://art/Terrain/chodnik-pion.png" id="3_3pf3t"]
+[ext_resource type="Texture2D" uid="uid://but1ww3nbcwk8" path="res://art/Terrain/kraweznik-rog01.png" id="4_uu21m"]
+[ext_resource type="Texture2D" uid="uid://bto08d5iufbf4" path="res://art/Terrain/kraweznik-poziom-01.png" id="5_wd5pf"]
+[ext_resource type="Texture2D" uid="uid://dvx2ddx1civm8" path="res://art/Terrain/kraweznik-poziom-02.png" id="6_iqtud"]
+[ext_resource type="Texture2D" uid="uid://dmvsb1cs1kubs" path="res://art/Terrain/kraweznik-pion.png" id="7_fiw8d"]
+[ext_resource type="Texture2D" uid="uid://bwxkc1oy5d7mp" path="res://art/Terrain/kraweznik-rog04.png" id="8_2qp1e"]
+[ext_resource type="Texture2D" uid="uid://c8ux06316r8m5" path="res://art/Terrain/kraweznik-poziom-03.png" id="9_bhbem"]
+
+[node name="LewyRóg" type="Node2D"]
+
+[node name="Chodnik-poziom" type="Sprite2D" parent="."]
+position = Vector2(793, 145)
+texture = ExtResource("1_tihg6")
+
+[node name="Asfalt" type="Sprite2D" parent="."]
+position = Vector2(1167, 582)
+texture = ExtResource("2_3nf6o")
+
+[node name="Chodnik-pion" type="Sprite2D" parent="."]
+position = Vector2(150, 1111)
+scale = Vector2(1, 1.05978)
+texture = ExtResource("3_3pf3t")
+
+[node name="Kraweznik-rog01" type="Sprite2D" parent="."]
+position = Vector2(551, 529)
+texture = ExtResource("4_uu21m")
+
+[node name="Kraweznik-poziom-01" type="Sprite2D" parent="."]
+position = Vector2(1084, 329)
+texture = ExtResource("5_wd5pf")
+
+[node name="Kraweznik-poziom-02" type="Sprite2D" parent="."]
+position = Vector2(1607, 327)
+texture = ExtResource("6_iqtud")
+
+[node name="Kraweznik-pion" type="Sprite2D" parent="."]
+position = Vector2(334, 975)
+texture = ExtResource("7_fiw8d")
+
+[node name="Asfalt2" type="Sprite2D" parent="."]
+position = Vector2(1174, 957)
+texture = ExtResource("2_3nf6o")
+
+[node name="Asfalt2" type="Sprite2D" parent="Asfalt2"]
+position = Vector2(-3, 383)
+texture = ExtResource("2_3nf6o")
+
+[node name="Kraweznik-rog04" type="Sprite2D" parent="."]
+position = Vector2(547, 1425)
+texture = ExtResource("8_2qp1e")
+
+[node name="Kraweznik-poziom-03" type="Sprite2D" parent="."]
+position = Vector2(1078, 1621)
+texture = ExtResource("6_iqtud")
+
+[node name="Kraweznik-poziom-04" type="Sprite2D" parent="."]
+position = Vector2(1608, 1617)
+texture = ExtResource("9_bhbem")
+
+[node name="Chodnik-poziom2" type="Sprite2D" parent="."]
+position = Vector2(1077, 1804)
+texture = ExtResource("1_tihg6")

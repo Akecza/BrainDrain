@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://iitbdf6snpgv"]
+
+[ext_resource type="Texture2D" uid="uid://cxjd5y4fkgu64" path="res://art/Terrain/budynek-modul-03.png" id="1_5abpw"]
+
+[node name="Wiezowiec3" type="StaticBody2D"]
+
+[node name="Budynek-modul-03" type="Sprite2D" parent="."]
+position = Vector2(-54.0762, -513.279)
+rotation = 1.5504
+scale = Vector2(0.951594, 1.03622)
+skew = 0.0575958
+texture = ExtResource("1_5abpw")
+
+[node name="Budynek-modul-04" type="Sprite2D" parent="."]
+position = Vector2(-46.4634, -1378.33)
+rotation = 1.5504
+scale = Vector2(0.951594, 1.08774)
+skew = 0.0575958
+texture = ExtResource("1_5abpw")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(397, -20, 397, -20, -559, -1, -588, -1770, 473, -1803)
