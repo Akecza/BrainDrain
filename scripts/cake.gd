@@ -1,5 +1,6 @@
 extends Node2D
 
+@onready var audio = $AudioStreamPlayer2D
 @onready var cake_happy_collision = $CakeHappy/CakeHappyCollision
 var speedVector = Vector2(0,0)
 var fallVector = Vector2(0,2)
@@ -24,6 +25,7 @@ func _on_body_entered(body):
 		print ("Ouch a cake")
 		body.got_caked_timer.start()
 		body.make_happy(-100)
+		audio.play()
 	$CakeSprite.visible=false
 	$CakeFloorMush.visible=true
 	$CakeFloorMush.rotation=$CakeSprite.rotation
