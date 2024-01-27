@@ -3,7 +3,6 @@
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_3qlki"]
 [ext_resource type="PackedScene" uid="uid://b3l8edt0bi7np" path="res://scenes/player.tscn" id="1_dofbq"]
 [ext_resource type="Texture2D" uid="uid://ce8aomk05iuvx" path="res://art/background.png" id="3_0jlkx"]
-[ext_resource type="PackedScene" uid="uid://dgdmp3j05ja2b" path="res://scenes/budynek.tscn" id="4_8rbaf"]
 [ext_resource type="Texture2D" uid="uid://dtjj7eo541s6l" path="res://art/honk.png" id="4_71f3e"]
 [ext_resource type="Script" path="res://scripts/button.gd" id="5_42r6h"]
 [ext_resource type="Texture2D" uid="uid://dceu0ui6tvg3" path="res://art/cake.png" id="5_f7c1e"]
@@ -13,17 +12,18 @@
 [ext_resource type="PackedScene" uid="uid://dowrjcdnnxods" path="res://scenes/sad_man.tscn" id="7_or3d6"]
 [ext_resource type="Texture2D" uid="uid://bwu3lq2c0v524" path="res://art/baloon.png" id="9_higc0"]
 [ext_resource type="PackedScene" uid="uid://biwhd6ooi88yn" path="res://scenes/whoopie.tscn" id="11_0vyw4"]
-[ext_resource type="Texture2D" uid="uid://5mvw15dojlum" path="res://art/UI/panel_brown.png" id="12_vlhmp"]
-[ext_resource type="Texture2D" uid="uid://c3v0di7dtkgva" path="res://art/UI/yellowBar.png" id="13_2etor"]
+[ext_resource type="Texture2D" uid="uid://dbpxvi1lkb5as" path="res://art/UI/panel_brown.png" id="12_vlhmp"]
+[ext_resource type="Texture2D" uid="uid://3128u8et1qoq" path="res://art/UI/yellowBar.png" id="13_2etor"]
 [ext_resource type="AudioStream" uid="uid://bgy2su6e4hleh" path="res://sounds/A_Clown_Honker_02.wav" id="13_t681a"]
-[ext_resource type="AudioStream" uid="uid://c6vlevppvli77" path="res://audio/Ambience/A_Park_Ambience_Loop.wav" id="17_oilmp"]
-[ext_resource type="AudioStream" uid="uid://btvox6oaimgoj" path="res://audio/Music/A_Music_Layer_Basic.wav" id="18_fq0xi"]
-[ext_resource type="AudioStream" uid="uid://bjdsuyxlnk3hq" path="res://audio/Music/A_Music_Layer_BasicHappy.wav" id="18_kkle2"]
-[ext_resource type="AudioStream" uid="uid://drjx60xlafitj" path="res://audio/Music/A_Music_Layer_BasicPlus.wav" id="19_so2l7"]
-[ext_resource type="AudioStream" uid="uid://b5l7oi4ljffu1" path="res://audio/Music/A_Music_Layer_Cake.wav" id="20_n0l12"]
-[ext_resource type="AudioStream" uid="uid://cbh1ksrlccdwe" path="res://audio/Music/A_Music_Layer_Fart.wav" id="21_hmvje"]
-[ext_resource type="AudioStream" uid="uid://ddp3u1pyj1slp" path="res://audio/Music/A_Music_Layer_Honk.wav" id="22_ki84i"]
-[ext_resource type="AudioStream" uid="uid://138iflh26rbe" path="res://audio/Music/A_Music_Layer_Laugh.wav" id="23_ak3fa"]
+[ext_resource type="AudioStream" uid="uid://cvnn1n6xqetgc" path="res://audio/Ambience/A_Park_Ambience_Loop.wav" id="17_oilmp"]
+[ext_resource type="AudioStream" uid="uid://npe2edwn8kcx" path="res://audio/Music/A_Music_Layer_Basic.wav" id="18_fq0xi"]
+[ext_resource type="AudioStream" uid="uid://1key58iu5lec" path="res://audio/Music/A_Music_Layer_BasicHappy.wav" id="18_kkle2"]
+[ext_resource type="AudioStream" uid="uid://c74i65ivcuv5u" path="res://audio/Music/A_Music_Layer_BasicPlus.wav" id="19_so2l7"]
+[ext_resource type="AudioStream" uid="uid://cg6tfgkmlbsfw" path="res://audio/Music/A_Music_Layer_Cake.wav" id="20_n0l12"]
+[ext_resource type="AudioStream" uid="uid://b1erj13n14ne1" path="res://audio/Music/A_Music_Layer_Fart.wav" id="21_hmvje"]
+[ext_resource type="AudioStream" uid="uid://b6ymviyrdekep" path="res://audio/Music/A_Music_Layer_Honk.wav" id="22_ki84i"]
+[ext_resource type="AudioStream" uid="uid://cp4nik5ummt7l" path="res://audio/Music/A_Music_Layer_Laugh.wav" id="23_ak3fa"]
+[ext_resource type="PackedScene" uid="uid://cbgw8hvxcwppe" path="res://scenes/world.tscn" id="25_jtldu"]
 
 [sub_resource type="GDScript" id="GDScript_j45pr"]
 script/source = "extends TextureProgressBar
@@ -49,14 +49,12 @@ script = ExtResource("1_3qlki")
 position = Vector2(968, 965)
 texture = ExtResource("3_0jlkx")
 
+[node name="World" parent="." instance=ExtResource("25_jtldu")]
+position = Vector2(-427, -119)
+scale = Vector2(0.25, 0.25)
+
 [node name="Player" parent="." instance=ExtResource("1_dofbq")]
 position = Vector2(571, 1229)
-
-[node name="Budynek" parent="." instance=ExtResource("4_8rbaf")]
-position = Vector2(224, 972)
-
-[node name="Budynek2" parent="." instance=ExtResource("4_8rbaf")]
-position = Vector2(859, 979)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
