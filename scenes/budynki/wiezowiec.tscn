@@ -3,20 +3,23 @@
 [ext_resource type="Texture2D" uid="uid://kjxx0wrugulo" path="res://art/Terrain/budynek-modul-01.png" id="1_4ww7j"]
 [ext_resource type="Texture2D" uid="uid://bepbipvtblt58" path="res://art/Terrain/budynek-modul-02.png" id="2_01rer"]
 
-[node name="Wiezowiec" type="Node2D"]
+[node name="Wiezowiec" type="StaticBody2D"]
 position = Vector2(-6, -5)
 
 [node name="Budynek-modul-01" type="Sprite2D" parent="."]
-position = Vector2(-46.5, -480.25)
+position = Vector2(-22.5, -451.25)
 scale = Vector2(1, 1.07242)
 texture = ExtResource("1_4ww7j")
 
 [node name="Budynek-modul-04" type="Sprite2D" parent="."]
-position = Vector2(-17.3936, -1298.25)
+position = Vector2(6.6064, -1269.25)
 scale = Vector2(0.854577, 0.854577)
 texture = ExtResource("1_4ww7j")
 
 [node name="Budynek-modul-02" type="Sprite2D" parent="."]
-position = Vector2(36.0845, -2075.25)
+position = Vector2(60.0845, -2046.25)
 scale = Vector2(0.97052, 0.97052)
 texture = ExtResource("2_01rer")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-502, 8, 462, 5, 385, -1633, 481, -2168, -379, -2165, -324, -1628)

@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://diq7uclkf3cag"]
+
+[ext_resource type="Texture2D" uid="uid://dav6qee5r3p6s" path="res://art/Terrain/budynek-wejscie.png" id="1_i86ck"]
+[ext_resource type="Texture2D" uid="uid://ch6u54tftakfv" path="res://art/Terrain/budynek-03.png" id="2_ycej6"]
+[ext_resource type="Texture2D" uid="uid://qj0lcawadvyy" path="res://art/Terrain/budynek03-dach.png" id="3_iiywr"]
+
+[node name="Kamienica2" type="StaticBody2D"]
+position = Vector2(-96, -1858)
+
+[node name="Budynek-04" type="Sprite2D" parent="."]
+position = Vector2(939, 926)
+rotation = -3.14159
+texture = ExtResource("2_ycej6")
+
+[node name="Budynek-wejscie" type="Sprite2D" parent="."]
+position = Vector2(97, 1584)
+texture = ExtResource("1_i86ck")
+
+[node name="Budynek-03" type="Sprite2D" parent="."]
+position = Vector2(108, 421)
+texture = ExtResource("2_ycej6")
+
+[node name="Budynek03-dach" type="Sprite2D" parent="."]
+position = Vector2(50, -722)
+texture = ExtResource("3_iiywr")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-382, 1838, 1438, 1842, 1422, 358, 529, 358, 516, -302, -391, -298)

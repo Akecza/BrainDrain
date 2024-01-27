@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c2767ydtsnsha" path="res://art/Terrain/budynek-czubek.png" id="1_yoi74"]
 [ext_resource type="Texture2D" uid="uid://n7dq2b3s2bmk" path="res://art/Terrain/budynek-01.png" id="2_3ps6v"]
 
-[node name="Biurowiec" type="Node2D"]
+[node name="Biurowiec" type="StaticBody2D"]
 position = Vector2(-11, 5)
 
 [node name="Budynek-czubek" type="Sprite2D" parent="."]
@@ -23,3 +23,6 @@ texture = ExtResource("2_3ps6v")
 [node name="Budynek-01" type="Sprite2D" parent="."]
 position = Vector2(20, -835.5)
 texture = ExtResource("2_3ps6v")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-599, -25, -562, -535, -641, -1140, -272, -1123, -351, -1480, -218, -1504, -89, -1497, 144, -1509, 293, -1514, 403, -1509, 363, -1138, 743, -1128, 683, -513, 692, -16)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://cafnh4rpv7oee"]
+[gd_scene load_steps=33 format=3 uid="uid://cafnh4rpv7oee"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_3qlki"]
 [ext_resource type="PackedScene" uid="uid://b3l8edt0bi7np" path="res://scenes/player.tscn" id="1_dofbq"]
@@ -23,7 +23,14 @@
 [ext_resource type="AudioStream" uid="uid://b1erj13n14ne1" path="res://audio/Music/A_Music_Layer_Fart.wav" id="21_hmvje"]
 [ext_resource type="AudioStream" uid="uid://b6ymviyrdekep" path="res://audio/Music/A_Music_Layer_Honk.wav" id="22_ki84i"]
 [ext_resource type="AudioStream" uid="uid://cp4nik5ummt7l" path="res://audio/Music/A_Music_Layer_Laugh.wav" id="23_ak3fa"]
+[ext_resource type="PackedScene" uid="uid://cj2k68g58rsu6" path="res://scenes/budynki/wiezowiec.tscn" id="25_8fpw8"]
 [ext_resource type="PackedScene" uid="uid://cbgw8hvxcwppe" path="res://scenes/world.tscn" id="25_jtldu"]
+[ext_resource type="PackedScene" uid="uid://cdb4dovef24af" path="res://scenes/budynki/biurowiec.tscn" id="26_gb857"]
+[ext_resource type="PackedScene" uid="uid://bs4d2gfiogkav" path="res://scenes/budynki/wiezowiec_2.tscn" id="27_rwnbm"]
+[ext_resource type="PackedScene" uid="uid://iitbdf6snpgv" path="res://scenes/budynki/wiezowiec_3.tscn" id="28_6wr15"]
+[ext_resource type="PackedScene" uid="uid://diycyfouraes3" path="res://scenes/budynki/kamienica3.tscn" id="29_0o51i"]
+[ext_resource type="PackedScene" uid="uid://cw45db8jb3vse" path="res://scenes/budynki/kamienica2.tscn" id="30_hbg7v"]
+[ext_resource type="PackedScene" uid="uid://diq7uclkf3cag" path="res://scenes/budynki/kamienica.tscn" id="31_vq0jr"]
 
 [sub_resource type="GDScript" id="GDScript_j45pr"]
 script/source = "extends TextureProgressBar
@@ -221,6 +228,60 @@ autoplay = true
 [node name="TrackLaugh" type="AudioStreamPlayer" parent="Music"]
 stream = ExtResource("23_ak3fa")
 autoplay = true
+
+[node name="Budynki" type="Node2D" parent="."]
+
+[node name="Wiezowiec7" parent="Budynki" instance=ExtResource("25_8fpw8")]
+position = Vector2(418.5, 742.25)
+scale = Vector2(0.25, 0.25)
+
+[node name="Biurowiec3" parent="Budynki" instance=ExtResource("26_gb857")]
+position = Vector2(1767.25, 781.25)
+scale = Vector2(0.25, 0.25)
+
+[node name="Wiezowiec8" parent="Budynki" instance=ExtResource("27_rwnbm")]
+position = Vector2(1335.5, 715.25)
+scale = Vector2(0.25, 0.25)
+
+[node name="Wiezowiec9" parent="Budynki" instance=ExtResource("28_6wr15")]
+position = Vector2(1541, 1741.5)
+scale = Vector2(0.25, 0.25)
+
+[node name="Kamienica6" parent="Budynki" instance=ExtResource("29_0o51i")]
+position = Vector2(876.25, 3033.5)
+scale = Vector2(0.25, 0.25)
+
+[node name="Kamienica7" parent="Budynki" instance=ExtResource("30_hbg7v")]
+position = Vector2(1437, 2921)
+scale = Vector2(0.25, 0.25)
+
+[node name="Kamienica8" parent="Budynki" instance=ExtResource("29_0o51i")]
+position = Vector2(1942.75, 3581.5)
+scale = Vector2(0.25, 0.25)
+
+[node name="Kamienica9" parent="Budynki" instance=ExtResource("31_vq0jr")]
+position = Vector2(1925.25, 2928)
+scale = Vector2(0.25, 0.25)
+
+[node name="Kamienica10" parent="Budynki" instance=ExtResource("30_hbg7v")]
+position = Vector2(2402.25, 2927.25)
+scale = Vector2(0.25, 0.25)
+
+[node name="Wiezowiec10" parent="Budynki" instance=ExtResource("25_8fpw8")]
+position = Vector2(1272, 1755.5)
+scale = Vector2(0.25, 0.25)
+
+[node name="Wiezowiec11" parent="Budynki" instance=ExtResource("27_rwnbm")]
+position = Vector2(2167.75, 2286.5)
+scale = Vector2(0.25, 0.25)
+
+[node name="Wiezowiec12" parent="Budynki" instance=ExtResource("25_8fpw8")]
+position = Vector2(411.75, 1764)
+scale = Vector2(0.25, 0.25)
+
+[node name="Biurowiec4" parent="Budynki" instance=ExtResource("26_gb857")]
+position = Vector2(1312, 2305)
+scale = Vector2(0.25, 0.25)
 
 [connection signal="skill_changed" from="Player" to="." method="_on_player_skill_changed"]
 [connection signal="pressed" from="CanvasLayer/PanelContainer/HBoxContainer/HONK" to="." method="_on_honk_pressed"]

@@ -1,18 +1,14 @@
-[gd_scene load_steps=14 format=3 uid="uid://cbgw8hvxcwppe"]
+[gd_scene load_steps=10 format=3 uid="uid://cbgw8hvxcwppe"]
 
 [ext_resource type="PackedScene" uid="uid://cc4o75emmeaay" path="res://scenes/budynki/bruk.tscn" id="2_klmb1"]
 [ext_resource type="PackedScene" uid="uid://bbrcme6303jvk" path="res://scenes/budynki/lewy_róg.tscn" id="6_nkrty"]
 [ext_resource type="PackedScene" uid="uid://b3a5mwiqvlxb" path="res://scenes/budynki/prawy_róg.tscn" id="7_eml4v"]
 [ext_resource type="PackedScene" uid="uid://dhfv05m8tul0s" path="res://scenes/budynki/skrzyżowanie.tscn" id="8_xdg67"]
 [ext_resource type="PackedScene" uid="uid://c3gksvotehbio" path="res://scenes/budynki/pionowa_ulica.tscn" id="9_oeqk6"]
-[ext_resource type="PackedScene" uid="uid://cj2k68g58rsu6" path="res://scenes/budynki/wiezowiec.tscn" id="10_ce1m1"]
 [ext_resource type="PackedScene" uid="uid://b1rw41fkubyrg" path="res://scenes/budynki/pozioma_ulica.tscn" id="10_pmvnd"]
-[ext_resource type="PackedScene" uid="uid://cdb4dovef24af" path="res://scenes/budynki/biurowiec.tscn" id="11_i6hqt"]
 [ext_resource type="Texture2D" uid="uid://dnckm3py6rgcy" path="res://art/Terrain/trawa-04.png" id="12_4f8op"]
 [ext_resource type="Texture2D" uid="uid://c7i28p1erondq" path="res://art/Terrain/trawa-03.png" id="12_rh4d6"]
-[ext_resource type="PackedScene" uid="uid://bs4d2gfiogkav" path="res://scenes/budynki/wiezowiec_2.tscn" id="12_wum6q"]
 [ext_resource type="Texture2D" uid="uid://cunmh8ba4c6dk" path="res://art/Terrain/trawa-05.png" id="13_k4au4"]
-[ext_resource type="PackedScene" uid="uid://iitbdf6snpgv" path="res://scenes/budynki/wiezowiec_3.tscn" id="13_rpgwo"]
 
 [node name="World" type="Node2D"]
 
@@ -204,18 +200,6 @@ position = Vector2(6331, 6289)
 
 [node name="Bruk4" parent="KawalBruku" instance=ExtResource("2_klmb1")]
 position = Vector2(6302, 5552)
-
-[node name="Wiezowiec" parent="." instance=ExtResource("10_ce1m1")]
-position = Vector2(3382, 3445)
-
-[node name="Biurowiec" parent="." instance=ExtResource("11_i6hqt")]
-position = Vector2(8574, 3686)
-
-[node name="Wiezowiec2" parent="." instance=ExtResource("12_wum6q")]
-position = Vector2(7050, 3337)
-
-[node name="Wiezowiec3" parent="." instance=ExtResource("13_rpgwo")]
-position = Vector2(6974, 9629)
 
 [node name="Trawa-04" type="Sprite2D" parent="."]
 position = Vector2(20628, 7742)
