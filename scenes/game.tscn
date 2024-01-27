@@ -76,9 +76,9 @@ baloon_button = NodePath("../CanvasLayer/PanelContainer/HBoxContainer/BALOON")
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -421.5
-offset_right = 421.5
-offset_bottom = 79.0
+offset_left = -480.0
+offset_right = 480.0
+offset_bottom = 69.0
 grow_horizontal = 2
 
 [node name="GlobalHappinessBar" type="TextureProgressBar" parent="CanvasLayer/HappinessContainer"]
@@ -92,6 +92,11 @@ stretch_margin_bottom = 1
 texture_under = ExtResource("12_vlhmp")
 texture_progress = ExtResource("13_2etor")
 script = SubResource("GDScript_j45pr")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/HappinessContainer"]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 50
+text = "GLOBAL HAPPINESS"
 
 [node name="SkillText" type="TextEdit" parent="CanvasLayer"]
 offset_left = 62.0
