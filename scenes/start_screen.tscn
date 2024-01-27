@@ -1,0 +1,159 @@
+[gd_scene load_steps=19 format=3 uid="uid://cs2vplbx5y43g"]
+
+[ext_resource type="Texture2D" uid="uid://bwfwl8igo03rj" path="res://art/Terrain/asfalt.png" id="1_o32mo"]
+[ext_resource type="Texture2D" uid="uid://n7dq2b3s2bmk" path="res://art/Terrain/budynek-01.png" id="2_v2ct1"]
+[ext_resource type="Texture2D" uid="uid://bbcf7f6herrm8" path="res://art/Terrain/chodnik-poziom.png" id="3_qbuld"]
+[ext_resource type="Texture2D" uid="uid://bto08d5iufbf4" path="res://art/Terrain/kraweznik-poziom-01.png" id="4_wwybk"]
+[ext_resource type="Texture2D" uid="uid://cwpvhoqv6nog6" path="res://art/Terrain/trawa-08.png" id="5_4kt0m"]
+[ext_resource type="Texture2D" uid="uid://b6pwcetslqcse" path="res://art/Terrain/trawa-06.png" id="5_mpjo3"]
+[ext_resource type="Texture2D" uid="uid://cqkdmga3mtppl" path="res://art/CharacterParts/honk-sound.png" id="7_0gj06"]
+[ext_resource type="Texture2D" uid="uid://clk3lf4mx6t" path="res://art/CharacterParts/Arm-L.png" id="7_2nlku"]
+[ext_resource type="Texture2D" uid="uid://dobiitb2g74vc" path="res://art/CharacterAnimation/SadCoffee/Kawiarz_walk_frame_00000.png" id="7_p1ksc"]
+[ext_resource type="Texture2D" uid="uid://ckwkxus81hfnu" path="res://art/CharacterParts/honk.png" id="8_wbvq6"]
+[ext_resource type="Texture2D" uid="uid://ubdiu45dvxrl" path="res://art/CharacterParts/Glove-R-honk.png" id="9_pfblx"]
+[ext_resource type="Texture2D" uid="uid://b4aifpgensnxj" path="res://art/CharacterAnimation/JajcarzNoHand/Jajcarz_nohand_00001.png" id="10_cm8eo"]
+[ext_resource type="Texture2D" uid="uid://gm47lu1i8q57" path="res://art/CharacterParts/menu_napis.png" id="12_20q5e"]
+[ext_resource type="Texture2D" uid="uid://sfpwyuyo4785" path="res://art/CharacterParts/cien.png" id="12_sfycc"]
+[ext_resource type="Texture2D" uid="uid://fuqh8ds7i57a" path="res://art/UI/menu_przycisk.png" id="13_uba4j"]
+[ext_resource type="Texture2D" uid="uid://d161xtnygl0ew" path="res://art/UI/stat.png" id="16_a17s1"]
+[ext_resource type="Texture2D" uid="uid://ciuvcwqugpyf4" path="res://art/UI/quit.png" id="17_efcn1"]
+
+[sub_resource type="Theme" id="Theme_iaf0c"]
+
+[node name="StartScreen" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+visible = false
+position = Vector2(432, 644)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Asfalt" type="TextureRect" parent="CanvasLayer"]
+offset_left = 824.0
+offset_top = 659.0
+offset_right = 824.0
+offset_bottom = 659.0
+scale = Vector2(1.03092, 1.12929)
+texture = ExtResource("1_o32mo")
+
+[node name="Budynek" type="TextureRect" parent="CanvasLayer"]
+offset_left = -1163.0
+offset_top = -3422.0
+offset_right = 846.0
+offset_bottom = 12.9998
+scale = Vector2(2.9708, 1.35079)
+texture = ExtResource("2_v2ct1")
+
+[node name="Trawa-08" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(3158, 916)
+scale = Vector2(1.45501, 1.64815)
+texture = ExtResource("5_4kt0m")
+flip_h = true
+
+[node name="Kraweznik" type="TextureRect" parent="CanvasLayer"]
+offset_left = -269.0
+offset_top = 989.0
+offset_right = 917.0
+offset_bottom = 1317.0
+scale = Vector2(3.62942, 1)
+texture = ExtResource("4_wwybk")
+
+[node name="Chodnik" type="TextureRect" parent="CanvasLayer"]
+offset_left = -335.0
+offset_top = 1170.0
+offset_right = 3349.0
+offset_bottom = 2010.0
+scale = Vector2(1.2199, 1)
+texture = ExtResource("3_qbuld")
+
+[node name="Trawa-06" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(218, 1529)
+scale = Vector2(2.75, 2.62626)
+texture = ExtResource("5_mpjo3")
+
+[node name="Honk-sound" type="Sprite2D" parent="CanvasLayer"]
+visible = false
+position = Vector2(1086, 379)
+rotation = -0.491477
+scale = Vector2(0.949962, 0.763277)
+texture = ExtResource("7_0gj06")
+
+[node name="Arm-l" type="Sprite2D" parent="CanvasLayer"]
+visible = false
+position = Vector2(1587, 773)
+rotation = 2.01235
+texture = ExtResource("7_2nlku")
+flip_h = true
+
+[node name="Honk" type="Sprite2D" parent="CanvasLayer/Arm-l"]
+position = Vector2(149.421, 383.973)
+rotation = 6.8441
+texture = ExtResource("8_wbvq6")
+flip_v = true
+
+[node name="Glove-r-honk" type="Sprite2D" parent="CanvasLayer/Arm-l"]
+position = Vector2(73.4032, 174.839)
+rotation = 2.46923
+scale = Vector2(0.903587, 0.891692)
+texture = ExtResource("9_pfblx")
+
+[node name="JajcarzNohand00001" type="Sprite2D" parent="CanvasLayer/Arm-l"]
+position = Vector2(-153.882, -222.588)
+rotation = -2.01235
+scale = Vector2(0.85, 0.85)
+texture = ExtResource("10_cm8eo")
+flip_h = true
+
+[node name="MenuNapis" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(2147, 1017)
+rotation = 0.162026
+scale = Vector2(1.82099, 1.82099)
+texture = ExtResource("12_20q5e")
+
+[node name="MenuPrzycisk" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(977, 255)
+scale = Vector2(1.41862, 1.41862)
+texture = ExtResource("13_uba4j")
+
+[node name="MenuPrzycisk" type="Sprite2D" parent="CanvasLayer/MenuPrzycisk"]
+position = Vector2(300.292, 410.257)
+scale = Vector2(0.67346, 0.67346)
+texture = ExtResource("13_uba4j")
+
+[node name="Cien" type="Sprite2D" parent="CanvasLayer"]
+visible = false
+position = Vector2(788.25, 1740)
+scale = Vector2(1.54307, 1)
+texture = ExtResource("12_sfycc")
+
+[node name="KawiarzWalkFrame00000" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(763, 1045)
+scale = Vector2(0.85, 0.85)
+texture = ExtResource("7_p1ksc")
+
+[node name="Stat" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(1944, 757)
+scale = Vector2(1.451, 1.52614)
+texture = ExtResource("16_a17s1")
+
+[node name="Quit" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(2060, 1182)
+scale = Vector2(1.82883, 1.55785)
+texture = ExtResource("17_efcn1")
+
+[node name="PlayButton" type="Button" parent="CanvasLayer"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 1522.0
+offset_top = 599.0
+offset_right = 2391.0
+offset_bottom = 969.0
+theme = SubResource("Theme_iaf0c")
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0)
+
+[node name="QuitButton" type="Button" parent="CanvasLayer"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 1774.0
+offset_top = 1075.0
+offset_right = 2352.0
+offset_bottom = 1316.0

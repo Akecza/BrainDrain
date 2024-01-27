@@ -4,7 +4,6 @@
 [ext_resource type="Script" path="res://scripts/state_machine/Idle.gd" id="3_kjit3"]
 [ext_resource type="Script" path="res://scripts/state_machine/StateMachine.gd" id="3_q2x24"]
 [ext_resource type="Texture2D" uid="uid://dobiitb2g74vc" path="res://art/CharacterAnimation/SadCoffee/Kawiarz_walk_frame_00000.png" id="3_to2qc"]
-[ext_resource type="Texture2D" uid="uid://csxdmnbqetjio" path="res://art/laughing.png" id="3_wtfk3"]
 [ext_resource type="Texture2D" uid="uid://bxk4lvx4k537f" path="res://art/CharacterAnimation/SadCoffee/Kawiarz_walk_frame_00001.png" id="4_vo87y"]
 [ext_resource type="Texture2D" uid="uid://cilqquv58h6wr" path="res://art/CharacterAnimation/SadCoffee/Kawiarz_walk_frame_00002.png" id="5_fyjim"]
 [ext_resource type="Script" path="res://scripts/state_machine/Following.gd" id="5_o78q0"]
@@ -12,13 +11,15 @@
 [ext_resource type="Script" path="res://scripts/state_machine/Laughing.gd" id="7_btwq4"]
 [ext_resource type="Texture2D" uid="uid://blk6tgc4sj8to" path="res://art/CharacterAnimation/SadCoffee/Kawiarz_walk_frame_00004.png" id="7_tutmj"]
 [ext_resource type="Texture2D" uid="uid://byp3hk15ge37l" path="res://art/CharacterAnimation/SadCoffee/Kawiarz_walk_frame_00005.png" id="8_4fri4"]
-[ext_resource type="AudioStream" uid="uid://cgnjpbcbc5w6u" path="res://audio/Objects/Laugh/A_Crowd_Laugh_01.wav" id="8_m2jpo"]
+[ext_resource type="AudioStream" uid="uid://c3q0mleruo2wg" path="res://audio/Objects/Laugh/A_Crowd_Laugh_01.wav" id="8_m2jpo"]
 [ext_resource type="Texture2D" uid="uid://quwekyglr070" path="res://art/CharacterAnimation/SadCoffee/Kawiarz_walk_frame_00006.png" id="9_rwnak"]
-[ext_resource type="AudioStream" uid="uid://5gey3evtlaq" path="res://audio/Objects/Laugh/A_Crowd_Laugh_02.wav" id="9_v0tvv"]
+[ext_resource type="AudioStream" uid="uid://ltk3o5i7i347" path="res://audio/Objects/Laugh/A_Crowd_Laugh_02.wav" id="9_v0tvv"]
+[ext_resource type="AudioStream" uid="uid://bhcutxbf3gb04" path="res://audio/Objects/Laugh/A_Crowd_Laugh_03.wav" id="10_5olv7"]
 [ext_resource type="Texture2D" uid="uid://ddqw7s5p4h0i7" path="res://art/CharacterAnimation/SadCoffee/Kawiarz_walk_frame_00007.png" id="10_w3roh"]
-[ext_resource type="AudioStream" uid="uid://cxpsjw2myupk4" path="res://audio/Objects/Laugh/A_Crowd_Laugh_04.wav" id="11_q5hps"]
+[ext_resource type="AudioStream" uid="uid://52akspnbh31w" path="res://audio/Objects/Laugh/A_Crowd_Laugh_04.wav" id="11_q5hps"]
 [ext_resource type="Texture2D" uid="uid://bomnyo72r4l05" path="res://art/CharacterAnimation/SadCoffee/Kawiarz_walk_frame_00008.png" id="11_w1tps"]
 [ext_resource type="Texture2D" uid="uid://b5snlyictrx7c" path="res://art/CharacterAnimation/SadCoffee/Kawiarz_walk_frame_00009.png" id="12_7tdjg"]
+[ext_resource type="AudioStream" uid="uid://4howgexykh8x" path="res://audio/Objects/Laugh/A_Crowd_Laugh_05.wav" id="12_ne6cm"]
 [ext_resource type="Texture2D" uid="uid://gsbatqx5ye16" path="res://art/CharacterAnimation/SadCoffee/Kawiarz_walk_frame_00010.png" id="13_6tbhb"]
 [ext_resource type="Texture2D" uid="uid://vx47y2t0670o" path="res://art/CharacterAnimation/SadCoffee/Kawiarz_walk_frame_00011.png" id="14_8ixtp"]
 [ext_resource type="Texture2D" uid="uid://bbt677pxovjhp" path="res://art/CharacterAnimation/SadCoffee/Kawiarz_walk_frame_00012.png" id="15_phm2i"]
@@ -73,14 +74,7 @@
 [ext_resource type="Texture2D" uid="uid://b1im2lkjqexey" path="res://art/CharacterAnimation/SadCoffee/Kawiarz_walk_frame_00061.png" id="64_j6ae7"]
 [ext_resource type="Texture2D" uid="uid://blnbpovjrq13x" path="res://art/CharacterAnimation/SadCoffee/Kawiarz_walk_frame_00062.png" id="65_2kjwu"]
 [ext_resource type="Texture2D" uid="uid://d1kesl405ykso" path="res://art/CharacterAnimation/SadCoffee/Kawiarz_walk_frame_00063.png" id="66_2135m"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_mqhde"]
-atlas = ExtResource("3_wtfk3")
-region = Rect2(0, 0, 100, 100)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_dp2ub"]
-atlas = ExtResource("3_wtfk3")
-region = Rect2(100, 0, 100, 100)
+[ext_resource type="Texture2D" uid="uid://deopmvfy7av6c" path="res://art/CharacterParts/kawiarz-wesoly.png" id="66_tq43l"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wtm5c"]
 animations = [{
@@ -279,18 +273,15 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 24.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_mqhde")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_dp2ub")
+"texture": ExtResource("66_tq43l")
 }],
 "loop": true,
 "name": &"laughing",
-"speed": 5.0
+"speed": 6.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q607b"]
@@ -304,13 +295,17 @@ bg_color = Color(0.341176, 0.341176, 0.341176, 1)
 bg_color = Color(1, 1, 0, 1)
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_4pejl"]
-streams_count = 3
+streams_count = 5
 stream_0/stream = ExtResource("8_m2jpo")
 stream_0/weight = 1.0
 stream_1/stream = ExtResource("9_v0tvv")
 stream_1/weight = 1.0
-stream_2/stream = ExtResource("11_q5hps")
+stream_2/stream = ExtResource("10_5olv7")
 stream_2/weight = 1.0
+stream_3/stream = ExtResource("11_q5hps")
+stream_3/weight = 1.0
+stream_4/stream = ExtResource("12_ne6cm")
+stream_4/weight = 1.0
 
 [node name="Sad man" type="CharacterBody2D" groups=["Cakeables", "Sadman"]]
 script = ExtResource("1_wtxo7")
@@ -319,7 +314,7 @@ script = ExtResource("1_wtxo7")
 position = Vector2(2.5, -1.5)
 scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_wtm5c")
-frame_progress = 0.797271
+animation = &"laughing"
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("starting_state")]
 script = ExtResource("3_q2x24")
@@ -333,9 +328,8 @@ animation_name = "default"
 one_shot = true
 autostart = true
 
-[node name="Following" type="Node" parent="StateMachine" node_paths=PackedStringArray("next_state")]
+[node name="Following" type="Node" parent="StateMachine"]
 script = ExtResource("5_o78q0")
-next_state = NodePath("../Idle")
 animation_name = "default"
 
 [node name="Laughing" type="Node" parent="StateMachine" node_paths=PackedStringArray("next_state")]

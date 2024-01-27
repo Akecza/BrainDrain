@@ -15,8 +15,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	countGlobalHappiness()
-	
+	#countGlobalHappiness()
+	pass
 
 func _on_honk_pressed():
 	honk.play()

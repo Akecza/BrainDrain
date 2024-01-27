@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://nbhh5gxf8d8r"]
 
 [ext_resource type="Script" path="res://scripts/cake.gd" id="1_yh8wj"]
-[ext_resource type="Texture2D" uid="uid://dqugnpyjc7c2p" path="res://art/jajcarz-ciasto-krem.png" id="2_us8ln"]
-[ext_resource type="Texture2D" uid="uid://c4pj5hlohvipi" path="res://art/jajcarz-ciasto-spod02.png" id="3_3vgrp"]
-[ext_resource type="Texture2D" uid="uid://dkws5q6yvrssn" path="res://art/jajcarz-ciasto-krem02.png" id="4_5ynac"]
-[ext_resource type="AudioStream" uid="uid://c4sf8gpqgkpdt" path="res://audio/Objects/Cake/A_Cake_Smash_03.wav" id="5_8mies"]
+[ext_resource type="Texture2D" uid="uid://b6xxyfhaj5rye" path="res://art/jajcarz-ciasto-krem.png" id="2_us8ln"]
+[ext_resource type="Texture2D" uid="uid://7blhlgfhv5xn" path="res://art/jajcarz-ciasto-spod02.png" id="3_3vgrp"]
+[ext_resource type="Texture2D" uid="uid://gid87eyaajbe" path="res://art/jajcarz-ciasto-krem02.png" id="4_5ynac"]
+[ext_resource type="AudioStream" uid="uid://3rth7wwxfft" path="res://audio/Objects/Cake/A_Cake_Smash_03.wav" id="5_8mies"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_md1jc"]
 radius = 21.0
@@ -63,7 +63,6 @@ autostart = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_8mies")
-volume_db = 20.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="HappyTimer" to="." method="_on_happy_timer_timeout"]
