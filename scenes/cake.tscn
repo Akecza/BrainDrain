@@ -1,9 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://nbhh5gxf8d8r"]
+[gd_scene load_steps=7 format=3 uid="uid://d2trrbx3ixdgy"]
 
 [ext_resource type="Script" path="res://scripts/cake.gd" id="1_yh8wj"]
-[ext_resource type="Texture2D" uid="uid://b6xxyfhaj5rye" path="res://art/jajcarz-ciasto-krem.png" id="2_us8ln"]
-[ext_resource type="Texture2D" uid="uid://7blhlgfhv5xn" path="res://art/jajcarz-ciasto-spod02.png" id="3_3vgrp"]
-[ext_resource type="Texture2D" uid="uid://gid87eyaajbe" path="res://art/jajcarz-ciasto-krem02.png" id="4_5ynac"]
+[ext_resource type="Texture2D" uid="uid://dqugnpyjc7c2p" path="res://art/jajcarz-ciasto-krem.png" id="2_us8ln"]
+[ext_resource type="Texture2D" uid="uid://c4pj5hlohvipi" path="res://art/jajcarz-ciasto-spod02.png" id="3_3vgrp"]
+[ext_resource type="Texture2D" uid="uid://dkws5q6yvrssn" path="res://art/jajcarz-ciasto-krem02.png" id="4_5ynac"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_md1jc"]
 radius = 21.0

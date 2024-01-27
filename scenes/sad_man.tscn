@@ -97,7 +97,7 @@ show_percentage = false
 shape = SubResource("CapsuleShape2D_q607b")
 
 [node name="HappyDepleteTimer" type="Timer" parent="."]
-wait_time = 3.0
+wait_time = 8.0
 one_shot = true
 
 [connection signal="timeout" from="StateMachine/Idle/IdleTimer" to="StateMachine/Idle" method="_on_idle_timer_timeout"]

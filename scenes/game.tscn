@@ -145,6 +145,7 @@ input = "1"
 
 [connection signal="pressed" from="CanvasLayer/PanelContainer/HBoxContainer/HONK" to="Player" method="skill_honk"]
 [connection signal="pressed" from="CanvasLayer/PanelContainer/HBoxContainer/CAKE" to="Player" method="shoot"]
+[connection signal="pressed" from="CanvasLayer/PanelContainer/HBoxContainer/WHOOPIE" to="Player" method="skill_whoopie"]
 [connection signal="pressed" from="CanvasLayer/PanelContainer/HBoxContainer/JOKE" to="Player" method="skill_joke"]
 [connection signal="pressed" from="HONK" to="." method="_on_honk_pressed"]
 [connection signal="pressed" from="HONK" to="Player" method="skill_honk"]

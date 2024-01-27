@@ -34,7 +34,7 @@ func _physics_process(delta):
 	
 func make_happy(amount):
 	happiness_bar.value = happiness_bar.value + amount
-	if amount > 0:
+	if happiness_bar.value == 100:
 		$HappyDepleteTimer.start()
 		HappyDepleteAmount=0
 

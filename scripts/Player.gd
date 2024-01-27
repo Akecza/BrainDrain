@@ -1,11 +1,13 @@
 extends RigidBody2D
+
+@export var whoopie: PackedScene
 @export var cake: PackedScene
 @export var speed = 400 # How fast the player will move (pixels/sec).
 @onready var honk = $Honk/HonkCollision
 @onready var joke = $Joke/JokeCollision
 @onready var joke_duration_timer = $JokeDuration
 @onready var joke_cooldown_timer = $JokeCooldown
-
+@onready var whoopie_cooldown_timer = $WhoopieCooldownTimer
 
 var screen_size # Size of the game window.
 var honk_on_cooldown = false
@@ -63,6 +65,12 @@ func skill_joke():
 		joke.disabled=false
 		joke_duration_timer.start()
 
+func skill_whoopie():
+	if(whoopie_cooldown_timer.time_left == 0):
+		whoopie_cooldown_timer.start()
+		var instance=whoopie.instantiate()
+		owner.add_child(instance)
+		instance.position=position
 
 func _on_skill_cooldown_timeout():
 	honk_on_cooldown=false
@@ -72,4 +80,6 @@ func _on_skill_duration_timeout():
 
 func _on_joke_duration_timeout():
 	joke.disabled=true
+
+
 
