@@ -142,6 +142,26 @@ func changeSkill(a):
 		activeSkill=1
 	print("skillchanged")
 	skill_changed.emit()
+	disableAllHands()
+	if activeSkill==1:
+		$Hand/HandHonk.visible =true
+	if activeSkill==2:
+		$Hand/HandCake.visible =true
+	if activeSkill==3:
+		$Hand/HandFart.visible =true
+	if activeSkill==4:
+		$Hand/HandJoke.visible =true
+	if activeSkill==5:
+		$Hand/HandInflatable.visible =true
+	if activeSkill==6:
+		$Hand/HandJoke.visible =true
+
+func disableAllHands():
+	$Hand/HandInflatable.visible =false
+	$Hand/HandCake.visible =false
+	$Hand/HandFart.visible =false
+	$Hand/HandHonk.visible =false
+	$Hand/HandJoke.visible =false
 
 func activateButtons():
 	cake_button.disabled=true
