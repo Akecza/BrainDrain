@@ -1,7 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://rq4ussnki31b"]
+[gd_scene load_steps=9 format=3 uid="uid://rq4ussnki31b"]
 
 [ext_resource type="Texture2D" uid="uid://nkb633kis74n" path="res://art/sadman.png" id="1_el25n"]
 [ext_resource type="Script" path="res://scripts/sad_man.gd" id="1_wtxo7"]
+[ext_resource type="Script" path="res://scripts/state_machine/Idle.gd" id="3_kjit3"]
+[ext_resource type="Script" path="res://scripts/state_machine/StateMachine.gd" id="3_q2x24"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wtm5c"]
 animations = [{
@@ -30,7 +32,15 @@ script = ExtResource("1_wtxo7")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_wtm5c")
 
-[node name="Timer" type="Timer" parent="."]
+[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("starting_state")]
+script = ExtResource("3_q2x24")
+starting_state = NodePath("Idle")
+
+[node name="Idle" type="Node" parent="StateMachine"]
+script = ExtResource("3_kjit3")
+animation_name = "default"
+
+[node name="IdleTimer" type="Timer" parent="StateMachine/Idle"]
 one_shot = true
 autostart = true
 
@@ -56,6 +66,6 @@ shape = SubResource("CapsuleShape2D_q607b")
 wait_time = 3.0
 one_shot = true
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="StateMachine/Idle/IdleTimer" to="StateMachine/Idle" method="_on_idle_timer_timeout"]
 [connection signal="area_entered" from="HitboxArea" to="." method="_on_hitbox_area_area_entered"]
 [connection signal="timeout" from="HappyDepleteTimer" to="." method="_on_happy_deplete_timer_timeout"]

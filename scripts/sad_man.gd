@@ -1,8 +1,11 @@
 extends CharacterBody2D
+class_name SadMan
 
+@onready var animations = $AnimatedSprite2D
+@onready var state_machine = $StateMachine
 @onready var timer : Timer = $Timer
 @onready var happiness_bar : ProgressBar = $HappinessBar 
-var direction : Vector2
+
 const SPEED = 50.0
 const JUMP_VELOCITY = -400.0
 var BaseHappyDepleteSpeed = 5
@@ -13,25 +16,20 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _ready():
 	HappyDepleteAmount=BaseHappyDepleteSpeed
+	state_machine.init(self)
 
-func new_random_direction():
-	direction = Vector2(randf_range(-1, 1), randf_range(-1, 1))
-	direction = direction.normalized()
+#func new_random_direction():
+	#direction = Vector2(randf_range(-1, 1), randf_range(-1, 1))
+	#direction = direction.normalized()
 
 func _physics_process(delta):
-	# Add the gravity.
 	happiness_bar.value = happiness_bar.value - HappyDepleteAmount*delta
+	state_machine.process_physics(delta)
 	
-	velocity = direction * SPEED
-	#velocity.x = move_toward(velocity.x, 0, SPEED)
-
-	move_and_slide()
-
-
-func _on_timer_timeout():
-	new_random_direction()
-	timer.wait_time = randf_range(1,3)
-	timer.start()
+#func _on_timer_timeout():
+	#new_random_direction()
+	#timer.wait_time = randf_range(1,3)
+	#timer.start()
 	
 func make_happy(amount):
 	happiness_bar.value = happiness_bar.value + amount
