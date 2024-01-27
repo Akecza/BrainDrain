@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dnrndlk1de3cm"
+path="res://.godot/imported/A_Whoopie_Cusion_04.wav-e0b3bf176370e6492b4e2f38182b489e.sample"
+
+[deps]
+
+source_file="res://audio/Objects/Whoopie Cushion/A_Whoopie_Cusion_04.wav"
+dest_files=["res://.godot/imported/A_Whoopie_Cusion_04.wav-e0b3bf176370e6492b4e2f38182b489e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

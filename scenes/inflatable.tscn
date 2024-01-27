@@ -10,16 +10,15 @@ radius = 10.2873
 [sub_resource type="CircleShape2D" id="CircleShape2D_8rglb"]
 radius = 279.002
 
-[node name="Iflatable" type="Node2D"]
+[node name="Iflatable" type="RigidBody2D"]
+gravity_scale = 0.0
 script = ExtResource("1_8ky1c")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.35, 0.35)
 texture = ExtResource("2_rev3k")
 
-[node name="Inflatable" type="Area2D" parent="."]
-
-[node name="InflatableCollision" type="CollisionShape2D" parent="Inflatable"]
+[node name="InflatableCollision" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_oawvf")
 
 [node name="InflatableSound" type="Area2D" parent="."]
@@ -35,5 +34,4 @@ autostart = true
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_7r7fj")
 
-[connection signal="area_entered" from="Inflatable" to="." method="_on_whoopie_area_entered"]
 [connection signal="timeout" from="DeathTimer" to="." method="_on_death_timer_timeout"]
