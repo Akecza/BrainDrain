@@ -1,28 +1,56 @@
-extends CharacterBody2D
+extends RigidBody2D
+@export var cake: PackedScene
+@export var speed = 400 # How fast the player will move (pixels/sec).
+@onready var honk = $Honk/HonkCollision
+var screen_size # Size of the game window.
+var honk_on_cooldown = false
 
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
 
-# Get the gravity from the project settings to be synced with RigidBody nodes.
-var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+func _ready():
+	screen_size = get_viewport_rect().size
 
 
-func _physics_process(delta):
-	# Add the gravity.
-	if not is_on_floor():
-		velocity.y += gravity * delta
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	var velocity = Vector2.ZERO # The player's movement vector.
+	if Input.is_action_pressed("walk_right"):
+		velocity.x += 1
+	if Input.is_action_pressed("walk_left"):
+		velocity.x -= 1
+	if Input.is_action_pressed("walk_down"):
+		velocity.y += 1
+	if Input.is_action_pressed("walk_up"):
+		velocity.y -= 1
+	if Input.is_action_pressed("skill1"):
+		skill_honk()
+	if Input.is_action_pressed("shoot"):
+		shoot()
 
-	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction = Input.get_axis("ui_left", "ui_right")
-	if direction:
-		velocity.x = direction * SPEED
+	if velocity.length() > 0:
+		velocity = velocity.normalized() * speed
+		$AnimatedSprite2D.play()
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+		$AnimatedSprite2D.stop()
+	linear_velocity=velocity
+	$Hand.look_at(get_global_mouse_position())
 
-	move_and_slide()
+func skill_honk():
+	if(not honk_on_cooldown):
+		honk_on_cooldown=true
+		$HonkCooldown.start()
+		honk.disabled=false
+		$HonkDuration.start()
+
+func shoot():
+	if $ShootCooldown.is_stopped():
+		$ShootCooldown.start()
+		var b=cake.instantiate()
+		owner.add_child(b)
+		b.transform=$Hand.global_transform
+
+func _on_skill_cooldown_timeout():
+	honk_on_cooldown=false
+
+func _on_skill_duration_timeout():
+	honk.disabled=true

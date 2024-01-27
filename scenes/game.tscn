@@ -1,11 +1,11 @@
 [gd_scene load_steps=15 format=3 uid="uid://cafnh4rpv7oee"]
 
-[ext_resource type="Script" path="res://scenes/game.gd" id="1_3qlki"]
+[ext_resource type="Script" path="res://scripts/game.gd" id="1_3qlki"]
 [ext_resource type="PackedScene" uid="uid://b3l8edt0bi7np" path="res://scenes/player.tscn" id="1_dofbq"]
-[ext_resource type="Texture2D" path="res://art/background.png" id="3_0jlkx"]
+[ext_resource type="Texture2D" uid="uid://ce8aomk05iuvx" path="res://art/background.png" id="3_0jlkx"]
 [ext_resource type="PackedScene" uid="uid://dgdmp3j05ja2b" path="res://scenes/budynek.tscn" id="4_8rbaf"]
 [ext_resource type="Texture2D" uid="uid://dtjj7eo541s6l" path="res://art/honk.png" id="4_71f3e"]
-[ext_resource type="Script" path="res://scenes/button.gd" id="5_42r6h"]
+[ext_resource type="Script" path="res://scripts/button.gd" id="5_42r6h"]
 [ext_resource type="Texture2D" uid="uid://dceu0ui6tvg3" path="res://art/cake.png" id="5_f7c1e"]
 [ext_resource type="Texture2D" uid="uid://c6ep6l1a1bqjt" path="res://art/whoopie.png" id="6_324vo"]
 [ext_resource type="Texture2D" uid="uid://dunkl37kuc773" path="res://art/inflatable.png" id="6_w2n4u"]
@@ -41,14 +41,6 @@ offset_bottom = 637.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/PanelContainer"]
 layout_mode = 2
-
-[node name="HONK" type="Button" parent="CanvasLayer/PanelContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-icon = ExtResource("4_71f3e")
-icon_alignment = 1
-script = ExtResource("5_42r6h")
-input = "1"
 
 [node name="CAKE" type="Button" parent="CanvasLayer/PanelContainer/HBoxContainer"]
 layout_mode = 2
@@ -135,6 +127,13 @@ position = Vector2(878, 1142)
 [node name="HonkPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("13_l7vp3")
 
-[connection signal="pressed" from="CanvasLayer/PanelContainer/HBoxContainer/HONK" to="." method="_on_honk_pressed"]
-[connection signal="pressed" from="CanvasLayer/PanelContainer/HBoxContainer/HONK" to="Player" method="skill_honk"]
+[node name="HONK" type="Button" parent="."]
+size_flags_horizontal = 3
+icon = ExtResource("4_71f3e")
+icon_alignment = 1
+script = ExtResource("5_42r6h")
+input = "1"
+
 [connection signal="pressed" from="CanvasLayer/PanelContainer/HBoxContainer/CAKE" to="Player" method="shoot"]
+[connection signal="pressed" from="HONK" to="." method="_on_honk_pressed"]
+[connection signal="pressed" from="HONK" to="Player" method="skill_honk"]
