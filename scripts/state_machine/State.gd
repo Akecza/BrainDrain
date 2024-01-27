@@ -1,6 +1,8 @@
 extends Node
 class_name State
 
+signal change_state
+
 @export var animation_name: String
 var parent : SadMan
 

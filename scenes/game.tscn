@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://c6ep6l1a1bqjt" path="res://art/whoopie.png" id="6_324vo"]
 [ext_resource type="Texture2D" uid="uid://dunkl37kuc773" path="res://art/inflatable.png" id="6_w2n4u"]
 [ext_resource type="Texture2D" uid="uid://cps8i6qug7k0t" path="res://art/joke.png" id="7_o1ny2"]
-[ext_resource type="PackedScene" uid="uid://dowrjcdnnxods" path="res://scenes/sad_man.tscn" id="7_or3d6"]
+[ext_resource type="PackedScene" uid="uid://rq4ussnki31b" path="res://scenes/sad_man.tscn" id="7_or3d6"]
 [ext_resource type="Texture2D" uid="uid://bwu3lq2c0v524" path="res://art/baloon.png" id="9_higc0"]
 [ext_resource type="PackedScene" uid="uid://biwhd6ooi88yn" path="res://scenes/whoopie.tscn" id="11_0vyw4"]
 [ext_resource type="AudioStream" uid="uid://bgy2su6e4hleh" path="res://sounds/A_Clown_Honker_02.wav" id="13_t681a"]

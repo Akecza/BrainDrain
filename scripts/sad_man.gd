@@ -25,6 +25,7 @@ func _ready():
 func _physics_process(delta):
 	happiness_bar.value = happiness_bar.value - HappyDepleteAmount*delta
 	state_machine.process_physics(delta)
+	check_happiness_state()
 	
 #func _on_timer_timeout():
 	#new_random_direction()
@@ -36,8 +37,6 @@ func make_happy(amount):
 	if amount > 0:
 		$HappyDepleteTimer.start()
 		HappyDepleteAmount=0
-	
-
 
 func _on_hitbox_area_area_entered(area : Area2D):
 	print(area.name)
@@ -60,3 +59,7 @@ func _on_hitbox_area_area_exited(area):
 
 func _on_happy_deplete_timer_timeout():
 	HappyDepleteAmount = BaseHappyDepleteSpeed
+
+func check_happiness_state():
+	if (happiness_bar.value == 100):
+		state_machine.change_state($StateMachine/Laughing, null)

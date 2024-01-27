@@ -1,10 +1,20 @@
-[gd_scene load_steps=10 format=3 uid="uid://dowrjcdnnxods"]
+[gd_scene load_steps=14 format=3 uid="uid://rq4ussnki31b"]
 
 [ext_resource type="Texture2D" uid="uid://nkb633kis74n" path="res://art/sadman.png" id="1_el25n"]
 [ext_resource type="Script" path="res://scripts/sad_man.gd" id="1_wtxo7"]
 [ext_resource type="Script" path="res://scripts/state_machine/Idle.gd" id="3_kjit3"]
 [ext_resource type="Script" path="res://scripts/state_machine/StateMachine.gd" id="3_q2x24"]
+[ext_resource type="Texture2D" uid="uid://csxdmnbqetjio" path="res://art/laughing.png" id="3_wtfk3"]
 [ext_resource type="Script" path="res://scripts/state_machine/Following.gd" id="5_o78q0"]
+[ext_resource type="Script" path="res://scripts/state_machine/Laughing.gd" id="7_btwq4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mqhde"]
+atlas = ExtResource("3_wtfk3")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dp2ub"]
+atlas = ExtResource("3_wtfk3")
+region = Rect2(100, 0, 100, 100)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wtm5c"]
 animations = [{
@@ -14,6 +24,17 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mqhde")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dp2ub")
+}],
+"loop": true,
+"name": &"laughing",
 "speed": 5.0
 }]
 
@@ -34,6 +55,7 @@ script = ExtResource("1_wtxo7")
 position = Vector2(2.5, -1.5)
 scale = Vector2(0.95, 0.97)
 sprite_frames = SubResource("SpriteFrames_wtm5c")
+animation = &"laughing"
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("starting_state")]
 script = ExtResource("3_q2x24")
@@ -49,6 +71,12 @@ autostart = true
 
 [node name="Following" type="Node" parent="StateMachine"]
 script = ExtResource("5_o78q0")
+animation_name = "default"
+
+[node name="Laughing" type="Node" parent="StateMachine" node_paths=PackedStringArray("next_state")]
+script = ExtResource("7_btwq4")
+next_state = NodePath("../Idle")
+animation_name = "laughing"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_q607b")
