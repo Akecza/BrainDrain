@@ -1,5 +1,6 @@
 extends Area2D
 
+var speedVector = Vector2(0,0)
 var speed = 300
 var rotateSpeed=0.1
 var ySpeed=5
@@ -12,10 +13,10 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	position += transform.x * speed * delta
+	position += speedVector * speed * delta
 	$CakeSprite.rotation-=rotateSpeed
-	position += transform.y * ySpeed * delta
-	ySpeed-=delta
+	#position += transform.y * ySpeed * delta
+	#ySpeed-=delta
 	
 
 func _on_body_entered(body):

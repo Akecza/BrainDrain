@@ -45,9 +45,12 @@ func skill_honk():
 func shoot():
 	if $ShootCooldown.is_stopped():
 		$ShootCooldown.start()
+		var shootAngle = $Hand/Nuzzle.global_position - $Hand/Center.global_position
+		shootAngle=shootAngle.normalized()
 		var b=cake.instantiate()
 		owner.add_child(b)
-		b.transform=$Hand.global_transform
+		b.position=$Hand/Nuzzle.global_position
+		b.speedVector=shootAngle
 
 func _on_skill_cooldown_timeout():
 	honk_on_cooldown=false
