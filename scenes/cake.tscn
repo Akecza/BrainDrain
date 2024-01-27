@@ -5,15 +5,14 @@
 [ext_resource type="Texture2D" uid="uid://c4pj5hlohvipi" path="res://art/jajcarz-ciasto-spod02.png" id="3_3vgrp"]
 [ext_resource type="Texture2D" uid="uid://dkws5q6yvrssn" path="res://art/jajcarz-ciasto-krem02.png" id="4_5ynac"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_jwp0v"]
+radius = 409.0
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_md1jc"]
 radius = 21.0
 height = 56.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_a7btd"]
-radius = 311.026
-
-[node name="Cake" type="Area2D"]
-collision_layer = 4
+[node name="Cake" type="Node2D"]
 script = ExtResource("1_yh8wj")
 
 [node name="CakeSprite" type="Sprite2D" parent="."]
@@ -28,24 +27,13 @@ scale = Vector2(0.912, 1.25799)
 texture = ExtResource("3_3vgrp")
 flip_v = true
 
-[node name="Cake" type="CollisionShape2D" parent="."]
-rotation = 1.5708
-shape = SubResource("CapsuleShape2D_md1jc")
-
-[node name="CakeHappy" type="Area2D" parent="."]
-
-[node name="Happy" type="CollisionShape2D" parent="CakeHappy"]
-visible = false
-shape = SubResource("CircleShape2D_a7btd")
-
 [node name="HappyTimer" type="Timer" parent="."]
 wait_time = 2.0
 one_shot = true
 
 [node name="CakeFloorMush" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(-1, 3)
-rotation = 4.71239
+rotation = -1.5708
 scale = Vector2(0.0528976, 0.0703737)
 texture = ExtResource("4_5ynac")
 
@@ -60,6 +48,18 @@ flip_h = true
 one_shot = true
 autostart = true
 
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[node name="CakeHappy" type="Area2D" parent="."]
+
+[node name="CakeHappyCollision" type="CollisionShape2D" parent="CakeHappy"]
+shape = SubResource("CircleShape2D_jwp0v")
+disabled = true
+
+[node name="Cake" type="Area2D" parent="."]
+
+[node name="CakeCollision" type="CollisionShape2D" parent="Cake"]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_md1jc")
+
 [connection signal="timeout" from="HappyTimer" to="." method="_on_happy_timer_timeout"]
 [connection signal="timeout" from="FlyTime" to="." method="_on_fly_time_timeout"]
+[connection signal="body_entered" from="Cake" to="." method="_on_body_entered"]

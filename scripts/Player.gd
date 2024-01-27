@@ -68,11 +68,15 @@ func skill_joke():
 		joke_player.play()
 		joke_cooldown_timer.start()
 		joke.disabled=false
-		joke_duration_timer.start()
+		#joke_duration_timer.start()
 		
 func skill_joke_finished():
 	joke_finished.disabled=false
+	joke.disabled=true
 	joke_finish_duration_timer.start()
+	
+func _on_joke_finish_duration_timeout():
+	joke_finished.disabled=true
 
 func skill_whoopie():
 	if(whoopie_cooldown_timer.time_left == 0):
@@ -87,8 +91,9 @@ func _on_skill_cooldown_timeout():
 func _on_skill_duration_timeout():
 	honk.disabled=true
 
-func _on_joke_duration_timeout():
-	joke.disabled=true
+
+
+
 
 
 

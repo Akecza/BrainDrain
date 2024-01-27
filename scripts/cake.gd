@@ -1,5 +1,6 @@
-extends Area2D
+extends Node2D
 
+@onready var cake_happy_collision = $CakeHappy/CakeHappyCollision
 var speedVector = Vector2(0,0)
 var fallVector = Vector2(0,2)
 var speed = 400
@@ -7,9 +8,8 @@ var rotateSpeed=0.1
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$CakeHappy/Happy.disabled=true
+	cake_happy_collision.disabled=true
 	
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -20,8 +20,9 @@ func _process(delta):
 
 func _on_body_entered(body):
 	if body.is_in_group("Cakeables"):
-		$CakeHappy/Happy.disabled=false
+		cake_happy_collision.disabled=false
 		print ("Ouch a cake")
+	body.make_happy(-100)
 	$CakeSprite.visible=false
 	$CakeFloorMush.visible=true
 	$CakeFloorMush.rotation=$CakeSprite.rotation

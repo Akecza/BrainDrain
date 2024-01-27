@@ -90,15 +90,12 @@ one_shot = true
 wait_time = 0.2
 one_shot = true
 
-[node name="JokeDuration" type="Timer" parent="."]
-wait_time = 4.0
-one_shot = true
-
 [node name="JokeCooldown" type="Timer" parent="."]
 wait_time = 10.0
 one_shot = true
 
 [node name="JokeFinishDuration" type="Timer" parent="."]
+wait_time = 0.1
 
 [node name="ShootCooldown" type="Timer" parent="."]
 wait_time = 0.2
@@ -123,5 +120,5 @@ stream = ExtResource("7_776qy")
 
 [connection signal="timeout" from="HonkDuration" to="." method="_on_skill_duration_timeout"]
 [connection signal="timeout" from="HonkCooldown" to="." method="_on_skill_cooldown_timeout"]
-[connection signal="timeout" from="JokeDuration" to="." method="_on_joke_duration_timeout"]
+[connection signal="timeout" from="JokeFinishDuration" to="." method="_on_joke_finish_duration_timeout"]
 [connection signal="finished" from="JokePlayer" to="." method="skill_joke_finished"]
