@@ -15,8 +15,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	#countGlobalHappiness()
-	pass
+	countGlobalHappiness()
+	
 
 func _on_honk_pressed():
 	honk.play()
@@ -29,13 +29,13 @@ func countGlobalHappiness():
 	$CanvasLayer/HappinessContainer/GlobalHappinessBar.value=HappinessTotal
 	GlobalHappinessLevel=HappinessTotal
 	var skillsAvailable=2
-	if GlobalHappinessLevel>20:
+	if GlobalHappinessLevel>10:
 		track2.volume_db=0
 		skillsAvailable+=1
-	if GlobalHappinessLevel>40:
+	if GlobalHappinessLevel>20:
 		trackFart.volume_db=0
 		skillsAvailable+=1
-	if GlobalHappinessLevel>60:
+	if GlobalHappinessLevel>50:
 		track3.volume_db=0
 		skillsAvailable+=1
 	if GlobalHappinessLevel>80:

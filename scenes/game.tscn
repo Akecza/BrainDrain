@@ -1,10 +1,11 @@
-[gd_scene load_steps=33 format=3 uid="uid://cafnh4rpv7oee"]
+[gd_scene load_steps=34 format=3 uid="uid://cafnh4rpv7oee"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_3qlki"]
 [ext_resource type="PackedScene" uid="uid://b3l8edt0bi7np" path="res://scenes/player.tscn" id="1_dofbq"]
 [ext_resource type="Texture2D" uid="uid://ce8aomk05iuvx" path="res://art/background.png" id="3_0jlkx"]
 [ext_resource type="Script" path="res://scripts/button.gd" id="5_42r6h"]
 [ext_resource type="Theme" uid="uid://b0svc8rhmt1x" path="res://buttontheme.tres" id="7_8sk05"]
+[ext_resource type="Texture2D" uid="uid://dxqb2dxqkxwbk" path="res://art/UI/arrowBeige_right.png" id="7_brmyy"]
 [ext_resource type="PackedScene" uid="uid://dowrjcdnnxods" path="res://scenes/sad_man.tscn" id="7_or3d6"]
 [ext_resource type="Texture2D" uid="uid://bjcvy08py5q6q" path="res://art/CharacterParts/ciasto.png" id="7_vevqi"]
 [ext_resource type="Texture2D" uid="uid://ckwkxus81hfnu" path="res://art/CharacterParts/honk.png" id="9_6rsn5"]
@@ -21,7 +22,7 @@
 [ext_resource type="AudioStream" uid="uid://drjx60xlafitj" path="res://audio/Music/A_Music_Layer_BasicPlus.wav" id="19_so2l7"]
 [ext_resource type="AudioStream" uid="uid://cbh1ksrlccdwe" path="res://audio/Music/A_Music_Layer_Fart.wav" id="21_hmvje"]
 [ext_resource type="PackedScene" uid="uid://cj2k68g58rsu6" path="res://scenes/budynki/wiezowiec.tscn" id="25_8fpw8"]
-[ext_resource type="PackedScene" path="res://scenes/world.tscn" id="25_jtldu"]
+[ext_resource type="PackedScene" uid="uid://cg0ad0p2mjrkd" path="res://scenes/world.tscn" id="25_jtldu"]
 [ext_resource type="PackedScene" uid="uid://cdb4dovef24af" path="res://scenes/budynki/biurowiec.tscn" id="26_gb857"]
 [ext_resource type="PackedScene" uid="uid://bs4d2gfiogkav" path="res://scenes/budynki/wiezowiec_2.tscn" id="27_rwnbm"]
 [ext_resource type="PackedScene" uid="uid://iitbdf6snpgv" path="res://scenes/budynki/wiezowiec_3.tscn" id="28_6wr15"]
@@ -76,9 +77,10 @@ baloon_button = NodePath("../CanvasLayer/PanelContainer/HBoxContainer/BALOON")
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -480.0
-offset_right = 480.0
-offset_bottom = 69.0
+offset_left = -168.0
+offset_top = 20.0
+offset_right = 792.0
+offset_bottom = 89.0
 grow_horizontal = 2
 
 [node name="GlobalHappinessBar" type="TextureProgressBar" parent="CanvasLayer/HappinessContainer"]
@@ -97,6 +99,30 @@ script = SubResource("GDScript_j45pr")
 layout_mode = 2
 theme_override_font_sizes/normal_font_size = 50
 text = "GLOBAL HAPPINESS"
+
+[node name="10" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(750, 112)
+rotation = -1.5708
+scale = Vector2(2.09524, 1.73809)
+texture = ExtResource("7_brmyy")
+
+[node name="20" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(845, 112)
+rotation = -1.5708
+scale = Vector2(2.09524, 1.73809)
+texture = ExtResource("7_brmyy")
+
+[node name="50" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(1132, 112)
+rotation = -1.5708
+scale = Vector2(2.09524, 1.73809)
+texture = ExtResource("7_brmyy")
+
+[node name="80" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(750, 112)
+rotation = -1.5708
+scale = Vector2(2.09524, 1.73809)
+texture = ExtResource("7_brmyy")
 
 [node name="SkillText" type="TextEdit" parent="CanvasLayer"]
 offset_left = 62.0
