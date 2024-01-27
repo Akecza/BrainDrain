@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://b3l8edt0bi7np"]
+[gd_scene load_steps=40 format=3 uid="uid://b3l8edt0bi7np"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_bpioq"]
 [ext_resource type="PackedScene" uid="uid://nbhh5gxf8d8r" path="res://scenes/cake.tscn" id="2_10fye"]
@@ -8,8 +8,12 @@
 [ext_resource type="Texture2D" uid="uid://bapipwx1v3rbn" path="res://art/CharacterParts/Arm-throw-L.png" id="5_ofjq8"]
 [ext_resource type="Texture2D" uid="uid://d0mv8dvvcl6qi" path="res://art/CharacterParts/Glove-throw-L.png" id="6_m2u5l"]
 [ext_resource type="Texture2D" uid="uid://bjcvy08py5q6q" path="res://art/CharacterParts/ciasto.png" id="7_0qkqp"]
+[ext_resource type="Texture2D" uid="uid://bx1vaoyby07pv" path="res://art/CharacterParts/wiggleman.png" id="7_hqcgr"]
 [ext_resource type="Texture2D" uid="uid://b4aifpgensnxj" path="res://art/CharacterAnimation/JajcarzNoHand/Jajcarz_nohand_00001.png" id="9_fx33r"]
+[ext_resource type="Texture2D" uid="uid://c3g27pccu1m6" path="res://art/CharacterParts/Arm-Honk.png" id="9_ggdq2"]
+[ext_resource type="Texture2D" uid="uid://2c3s08aegmb1" path="res://art/CharacterParts/Arm-Joke.png" id="10_5lwg1"]
 [ext_resource type="Texture2D" uid="uid://cb3so5jgql0wy" path="res://art/CharacterAnimation/JajcarzNoHand/Jajcarz_nohand_00002.png" id="10_hip7h"]
+[ext_resource type="Texture2D" uid="uid://dp43v5vo461t5" path="res://art/CharacterParts/fart.png" id="11_qv4dg"]
 [ext_resource type="Texture2D" uid="uid://bqwcw7ie3kv35" path="res://art/CharacterAnimation/JajcarzNoHand/Jajcarz_nohand_00003.png" id="11_yjj5v"]
 [ext_resource type="Texture2D" uid="uid://cf4ag2bh0n2sm" path="res://art/CharacterAnimation/JajcarzNoHand/Jajcarz_nohand_00004.png" id="12_im6n8"]
 [ext_resource type="Texture2D" uid="uid://b0ix4caqhwyf8" path="res://art/CharacterAnimation/JajcarzNoHand/Jajcarz_nohand_00005.png" id="13_sv311"]
@@ -134,6 +138,25 @@ whoopie = ExtResource("2_h6r6q")
 cake = ExtResource("2_10fye")
 metadata/_edit_group_ = true
 
+[node name="HandInflatable" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(28, 10)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("5_ofjq8")
+
+[node name="Glove" type="Sprite2D" parent="HandInflatable"]
+position = Vector2(175, -50)
+rotation = 0.459572
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("6_m2u5l")
+flip_h = true
+
+[node name="Inflatable" type="Sprite2D" parent="HandInflatable/Glove"]
+position = Vector2(-93.1753, -455.982)
+rotation = -0.225719
+scale = Vector2(1.33307, 1.46435)
+texture = ExtResource("7_hqcgr")
+
 [node name="Hand" type="Node2D" parent="."]
 
 [node name="Nuzzle" type="Marker2D" parent="Hand"]
@@ -141,21 +164,52 @@ position = Vector2(49, -1)
 
 [node name="Center" type="Marker2D" parent="Hand"]
 
-[node name="HandSprite" type="Sprite2D" parent="Hand"]
+[node name="HandCake" type="Sprite2D" parent="Hand"]
+visible = false
 position = Vector2(28, 10)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("5_ofjq8")
 
-[node name="Glove" type="Sprite2D" parent="Hand/HandSprite"]
+[node name="Glove" type="Sprite2D" parent="Hand/HandCake"]
 position = Vector2(175, -50)
 rotation = 0.459572
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("6_m2u5l")
 flip_h = true
 
-[node name="Cake" type="Sprite2D" parent="Hand/HandSprite/Glove"]
+[node name="Cake" type="Sprite2D" parent="Hand/HandCake/Glove"]
 position = Vector2(0.569603, -139.753)
 texture = ExtResource("7_0qkqp")
+
+[node name="HandHonk" type="Sprite2D" parent="Hand"]
+position = Vector2(41, -1)
+scale = Vector2(0.09, 0.09)
+texture = ExtResource("9_ggdq2")
+
+[node name="HandJoke" type="Sprite2D" parent="Hand"]
+visible = false
+position = Vector2(34, 9)
+scale = Vector2(0.09, 0.09)
+texture = ExtResource("10_5lwg1")
+
+[node name="HandFart" type="Sprite2D" parent="Hand"]
+visible = false
+position = Vector2(28, 10)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("5_ofjq8")
+
+[node name="Glove" type="Sprite2D" parent="Hand/HandFart"]
+position = Vector2(175, -50)
+rotation = 0.459572
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("6_m2u5l")
+flip_h = true
+
+[node name="Fart" type="Sprite2D" parent="Hand/HandFart/Glove"]
+position = Vector2(-10.1208, -259.986)
+scale = Vector2(1.454, 1.50184)
+skew = -0.268781
+texture = ExtResource("11_qv4dg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 light_mask = 2
