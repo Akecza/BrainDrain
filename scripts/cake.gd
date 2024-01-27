@@ -1,9 +1,9 @@
 extends Area2D
 
 var speedVector = Vector2(0,0)
-var speed = 300
+var fallVector = Vector2(0,2)
+var speed = 400
 var rotateSpeed=0.1
-var ySpeed=5
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -14,18 +14,24 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	position += speedVector * speed * delta
-	$CakeSprite.rotation-=rotateSpeed
-	#position += transform.y * ySpeed * delta
-	#ySpeed-=delta
+	speedVector += fallVector * delta
+	$CakeSprite.rotation = speedVector.angle()+90
 	
 
 func _on_body_entered(body):
 	if body.is_in_group("Cakeables"):
 		$CakeHappy/Happy.disabled=false
 		print ("Ouch a cake")
+	$CakeSprite.visible=false
+	$CakeFloorMush.visible=true
+	$CakeFloorMush.rotation=$CakeSprite.rotation
+		#var smush=$CakeFloorMush.instantiate()
+		#body.add_child(smush)
+		#$CakeFloorMush.transform.look_at(body)
 	$HappyTimer.start()
 	rotateSpeed=0
 	speed=0
+	fallVector = Vector2(0,0)
 
 
 func _on_happy_timer_timeout():

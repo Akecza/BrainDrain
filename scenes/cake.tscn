@@ -7,7 +7,7 @@
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_md1jc"]
 radius = 21.0
-height = 58.0
+height = 56.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_a7btd"]
 radius = 311.026
@@ -17,9 +17,8 @@ collision_layer = 4
 script = ExtResource("1_yh8wj")
 
 [node name="CakeSprite" type="Sprite2D" parent="."]
-position = Vector2(5, -2)
-rotation = 1.5708
-scale = Vector2(0.1, 0.0963715)
+position = Vector2(-2, -3)
+scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_us8ln")
 
 [node name="CakeCrust" type="Sprite2D" parent="CakeSprite"]
@@ -30,6 +29,7 @@ texture = ExtResource("3_3vgrp")
 flip_v = true
 
 [node name="Cake" type="CollisionShape2D" parent="."]
+rotation = 1.5708
 shape = SubResource("CapsuleShape2D_md1jc")
 
 [node name="CakeHappy" type="Area2D" parent="."]
