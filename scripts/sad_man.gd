@@ -8,6 +8,8 @@ signal happinessChanged
 @onready var timer : Timer = $Timer
 @onready var happiness_bar : ProgressBar = $HappinessBar 
 
+@onready var laughing_player : AudioStreamPlayer2D = $LaughingPlayer
+
 const SPEED = 50.0
 const JUMP_VELOCITY = -400.0
 var BaseHappyDepleteSpeed = 5
@@ -71,3 +73,4 @@ func _on_happy_deplete_timer_timeout():
 func check_happiness_state():
 	if (happiness_bar.value == 100):
 		state_machine.change_state($StateMachine/Laughing, null)
+
