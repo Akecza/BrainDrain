@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://b3l8edt0bi7np"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_bpioq"]
-[ext_resource type="PackedScene" uid="uid://nbhh5gxf8d8r" path="res://scenes/cake.tscn" id="2_10fye"]
+[ext_resource type="PackedScene" uid="uid://d2trrbx3ixdgy" path="res://scenes/cake.tscn" id="2_10fye"]
 [ext_resource type="Texture2D" uid="uid://bwxalerr3oecs" path="res://Placeholder/bunny1_stand.png" id="2_11l5n"]
 [ext_resource type="PackedScene" uid="uid://biwhd6ooi88yn" path="res://scenes/whoopie.tscn" id="2_h6r6q"]
 [ext_resource type="Texture2D" uid="uid://dgok2lgd86qi7" path="res://Placeholder/bunny1_walk1.png" id="3_yorwq"]

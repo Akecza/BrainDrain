@@ -8,7 +8,7 @@ var rotateSpeed=0.1
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	cake_happy_collision.disabled=true
+	cake_happy_collision.set_deferred("disabled", true)
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -20,9 +20,9 @@ func _process(delta):
 
 func _on_body_entered(body):
 	if body.is_in_group("Cakeables"):
-		cake_happy_collision.disabled=false
+		cake_happy_collision.set_deferred("disabled", false)
 		print ("Ouch a cake")
-	body.make_happy(-100)
+	body.make_happy(-200)
 	$CakeSprite.visible=false
 	$CakeFloorMush.visible=true
 	$CakeFloorMush.rotation=$CakeSprite.rotation
