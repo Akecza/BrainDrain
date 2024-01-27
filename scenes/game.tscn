@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cafnh4rpv7oee"]
+[gd_scene load_steps=26 format=3 uid="uid://cafnh4rpv7oee"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_3qlki"]
 [ext_resource type="PackedScene" uid="uid://b3l8edt0bi7np" path="res://scenes/player.tscn" id="1_dofbq"]
@@ -13,10 +13,17 @@
 [ext_resource type="PackedScene" uid="uid://dowrjcdnnxods" path="res://scenes/sad_man.tscn" id="7_or3d6"]
 [ext_resource type="Texture2D" uid="uid://bwu3lq2c0v524" path="res://art/baloon.png" id="9_higc0"]
 [ext_resource type="PackedScene" uid="uid://biwhd6ooi88yn" path="res://scenes/whoopie.tscn" id="11_0vyw4"]
-[ext_resource type="Texture2D" uid="uid://5mvw15dojlum" path="res://art/UI/panel_brown.png" id="12_vlhmp"]
-[ext_resource type="Texture2D" uid="uid://c3v0di7dtkgva" path="res://art/UI/yellowBar.png" id="13_2etor"]
+[ext_resource type="Texture2D" uid="uid://dbpxvi1lkb5as" path="res://art/UI/panel_brown.png" id="12_vlhmp"]
+[ext_resource type="Texture2D" uid="uid://3128u8et1qoq" path="res://art/UI/yellowBar.png" id="13_2etor"]
 [ext_resource type="AudioStream" uid="uid://bgy2su6e4hleh" path="res://sounds/A_Clown_Honker_02.wav" id="13_t681a"]
-[ext_resource type="AudioStream" uid="uid://c6vlevppvli77" path="res://audio/Ambience/A_Park_Ambience_Loop.wav" id="17_oilmp"]
+[ext_resource type="AudioStream" uid="uid://cvnn1n6xqetgc" path="res://audio/Ambience/A_Park_Ambience_Loop.wav" id="17_oilmp"]
+[ext_resource type="AudioStream" uid="uid://npe2edwn8kcx" path="res://audio/Music/A_Music_Layer_Basic.wav" id="18_fq0xi"]
+[ext_resource type="AudioStream" uid="uid://1key58iu5lec" path="res://audio/Music/A_Music_Layer_BasicHappy.wav" id="18_kkle2"]
+[ext_resource type="AudioStream" uid="uid://c74i65ivcuv5u" path="res://audio/Music/A_Music_Layer_BasicPlus.wav" id="19_so2l7"]
+[ext_resource type="AudioStream" uid="uid://cg6tfgkmlbsfw" path="res://audio/Music/A_Music_Layer_Cake.wav" id="20_n0l12"]
+[ext_resource type="AudioStream" uid="uid://b1erj13n14ne1" path="res://audio/Music/A_Music_Layer_Fart.wav" id="21_hmvje"]
+[ext_resource type="AudioStream" uid="uid://b6ymviyrdekep" path="res://audio/Music/A_Music_Layer_Honk.wav" id="22_ki84i"]
+[ext_resource type="AudioStream" uid="uid://cp4nik5ummt7l" path="res://audio/Music/A_Music_Layer_Laugh.wav" id="23_ak3fa"]
 
 [sub_resource type="GDScript" id="GDScript_j45pr"]
 script/source = "extends TextureProgressBar
@@ -173,8 +180,43 @@ volume_db = 24.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("17_oilmp")
+volume_db = -14.509
 autoplay = true
 
+[node name="Music" type="Node" parent="."]
+
+[node name="TrackLevel1" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource("18_fq0xi")
+autoplay = true
+
+[node name="TrackLevel2" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource("19_so2l7")
+volume_db = -80.0
+autoplay = true
+
+[node name="TrackLevel3" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource("18_kkle2")
+volume_db = -80.0
+autoplay = true
+
+[node name="TrackCake" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource("20_n0l12")
+volume_db = -80.0
+autoplay = true
+
+[node name="TrackFart" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource("21_hmvje")
+autoplay = true
+
+[node name="TrackHonk" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource("22_ki84i")
+autoplay = true
+
+[node name="TrackLaugh" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource("23_ak3fa")
+autoplay = true
+
+[connection signal="pressed" from="CanvasLayer/PanelContainer/HBoxContainer/HONK" to="." method="_on_honk_pressed"]
 [connection signal="pressed" from="CanvasLayer/PanelContainer/HBoxContainer/HONK" to="Player" method="skill_honk"]
 [connection signal="pressed" from="CanvasLayer/PanelContainer/HBoxContainer/CAKE" to="Player" method="shoot"]
 [connection signal="pressed" from="CanvasLayer/PanelContainer/HBoxContainer/WHOOPIE" to="Player" method="skill_whoopie"]

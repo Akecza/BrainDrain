@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/inflatable.gd" id="1_8ky1c"]
 [ext_resource type="Texture2D" uid="uid://dunkl37kuc773" path="res://art/inflatable.png" id="2_rev3k"]
-[ext_resource type="AudioStream" uid="uid://ctwge7rxc2m4y" path="res://sounds/fart.wav" id="3_7r7fj"]
+[ext_resource type="AudioStream" uid="uid://bqbk6k81rb33i" path="res://audio/Objects/Inflatable/A_Inflatable_04.wav" id="3_0ayhi"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_oawvf"]
 radius = 10.2873
@@ -32,6 +32,7 @@ one_shot = true
 autostart = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_7r7fj")
+stream = ExtResource("3_0ayhi")
+autoplay = true
 
 [connection signal="timeout" from="DeathTimer" to="." method="_on_death_timer_timeout"]
