@@ -1,18 +1,27 @@
-[gd_scene load_steps=13 format=3 uid="uid://b3l8edt0bi7np"]
+[gd_scene load_steps=22 format=3 uid="uid://b3l8edt0bi7np"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_bpioq"]
 [ext_resource type="PackedScene" uid="uid://nbhh5gxf8d8r" path="res://scenes/cake.tscn" id="2_10fye"]
-[ext_resource type="Texture2D" uid="uid://bwxalerr3oecs" path="res://Placeholder/bunny1_stand.png" id="2_11l5n"]
 [ext_resource type="PackedScene" uid="uid://biwhd6ooi88yn" path="res://scenes/whoopie.tscn" id="2_h6r6q"]
-[ext_resource type="Texture2D" uid="uid://dgok2lgd86qi7" path="res://Placeholder/bunny1_walk1.png" id="3_yorwq"]
-[ext_resource type="Texture2D" uid="uid://cuftb2iyu3028" path="res://Placeholder/bunny1_walk2.png" id="4_7mb2m"]
+[ext_resource type="Texture2D" uid="uid://dj8v5u48ma13i" path="res://art/CharacterAnimation/Jajcarz/Jajcarz_00000.png" id="5_1uyty"]
+[ext_resource type="Texture2D" uid="uid://b0ulf5e2jgfbm" path="res://art/CharacterAnimation/Jajcarz/Jajcarz_00001.png" id="6_1f44k"]
 [ext_resource type="AudioStream" uid="uid://ctwge7rxc2m4y" path="res://sounds/fart.wav" id="7_776qy"]
+[ext_resource type="Texture2D" uid="uid://dwd2akvjmrh88" path="res://art/CharacterAnimation/Jajcarz/Jajcarz_00002.png" id="7_rnnhr"]
+[ext_resource type="Texture2D" uid="uid://c81e162pt4n62" path="res://art/CharacterAnimation/Jajcarz/Jajcarz_00003.png" id="8_kgkpm"]
+[ext_resource type="Texture2D" uid="uid://1m4sug00yeg7" path="res://art/CharacterAnimation/Jajcarz/Jajcarz_00004.png" id="9_8ahdw"]
+[ext_resource type="Texture2D" uid="uid://b1gqxqiqw2squ" path="res://art/CharacterAnimation/Jajcarz/Jajcarz_00005.png" id="10_j4f86"]
+[ext_resource type="Texture2D" uid="uid://ctl0w7pdfohiv" path="res://art/CharacterAnimation/Jajcarz/Jajcarz_00006.png" id="11_1rv1w"]
+[ext_resource type="Texture2D" uid="uid://coxle3rpg1qwc" path="res://art/CharacterAnimation/Jajcarz/Jajcarz_00007.png" id="12_m45vq"]
+[ext_resource type="Texture2D" uid="uid://yyr5plrsj15h" path="res://art/CharacterAnimation/Jajcarz/Jajcarz_00008.png" id="13_78smh"]
+[ext_resource type="Texture2D" uid="uid://cov107ao1s6a" path="res://art/CharacterAnimation/Jajcarz/Jajcarz_00009.png" id="14_7eubi"]
+[ext_resource type="Texture2D" uid="uid://dd0o08w3xtfnr" path="res://art/CharacterAnimation/Jajcarz/Jajcarz_00010.png" id="15_7d1ui"]
+[ext_resource type="Texture2D" uid="uid://difqt7l2utyvv" path="res://art/CharacterAnimation/Jajcarz/Jajcarz_00011.png" id="16_4vxfl"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_byd17"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_11l5n")
+"texture": ExtResource("5_1uyty")
 }],
 "loop": true,
 "name": &"stand",
@@ -20,19 +29,49 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_yorwq")
+"texture": ExtResource("5_1uyty")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_7mb2m")
+"texture": ExtResource("6_1f44k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_rnnhr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_kgkpm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_8ahdw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_j4f86")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_1rv1w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_m45vq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_78smh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_7eubi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_7d1ui")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_4vxfl")
 }],
 "loop": true,
 "name": &"walk",
-"speed": 5.0
+"speed": 24.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qphrt"]
-radius = 12.0
-height = 32.0
+radius = 15.0
+height = 56.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5c1sj"]
 radius = 85.5862
@@ -56,9 +95,11 @@ metadata/_edit_group_ = true
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 light_mask = 2
 visibility_layer = 3
-scale = Vector2(0.2, 0.2)
+scale = Vector2(0.04, 0.04)
 sprite_frames = SubResource("SpriteFrames_byd17")
 animation = &"walk"
+frame = 8
+frame_progress = 0.614454
 
 [node name="PlayerCollision" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_qphrt")
