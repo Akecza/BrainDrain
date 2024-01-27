@@ -22,8 +22,8 @@ func _on_body_entered(body):
 	if body.is_in_group("Cakeables"):
 		cake_happy_collision.set_deferred("disabled", false)
 		print ("Ouch a cake")
-	body.got_caked_timer.start()
-	body.make_happy(-100)
+		body.got_caked_timer.start()
+		body.make_happy(-100)
 	$CakeSprite.visible=false
 	$CakeFloorMush.visible=true
 	$CakeFloorMush.rotation=$CakeSprite.rotation

@@ -47,7 +47,11 @@ func _process(delta):
 		$AnimatedSprite2D.stop()
 	linear_velocity=velocity
 	$Hand.look_at(get_global_mouse_position())
-
+	if $Hand.rotation>180:
+		transform.inverse()
+	
+	
+	
 func skill_honk():
 	if(not honk_on_cooldown):
 		honk_on_cooldown=true
