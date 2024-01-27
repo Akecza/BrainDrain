@@ -7,11 +7,11 @@
 [ext_resource type="Texture2D" uid="uid://csxdmnbqetjio" path="res://art/laughing.png" id="3_wtfk3"]
 [ext_resource type="Script" path="res://scripts/state_machine/Following.gd" id="5_o78q0"]
 [ext_resource type="Script" path="res://scripts/state_machine/Laughing.gd" id="7_btwq4"]
-[ext_resource type="AudioStream" uid="uid://cgnjpbcbc5w6u" path="res://audio/Objects/Laugh/A_Crowd_Laugh_01.wav" id="8_m2jpo"]
-[ext_resource type="AudioStream" uid="uid://5gey3evtlaq" path="res://audio/Objects/Laugh/A_Crowd_Laugh_02.wav" id="9_v0tvv"]
-[ext_resource type="AudioStream" uid="uid://ddsddbkvwe617" path="res://audio/Objects/Laugh/A_Crowd_Laugh_03.wav" id="10_5olv7"]
-[ext_resource type="AudioStream" uid="uid://cxpsjw2myupk4" path="res://audio/Objects/Laugh/A_Crowd_Laugh_04.wav" id="11_q5hps"]
-[ext_resource type="AudioStream" uid="uid://mgimv6hk3riw" path="res://audio/Objects/Laugh/A_Crowd_Laugh_05.wav" id="12_ne6cm"]
+[ext_resource type="AudioStream" uid="uid://c3q0mleruo2wg" path="res://audio/Objects/Laugh/A_Crowd_Laugh_01.wav" id="8_m2jpo"]
+[ext_resource type="AudioStream" uid="uid://ltk3o5i7i347" path="res://audio/Objects/Laugh/A_Crowd_Laugh_02.wav" id="9_v0tvv"]
+[ext_resource type="AudioStream" uid="uid://bhcutxbf3gb04" path="res://audio/Objects/Laugh/A_Crowd_Laugh_03.wav" id="10_5olv7"]
+[ext_resource type="AudioStream" uid="uid://52akspnbh31w" path="res://audio/Objects/Laugh/A_Crowd_Laugh_04.wav" id="11_q5hps"]
+[ext_resource type="AudioStream" uid="uid://4howgexykh8x" path="res://audio/Objects/Laugh/A_Crowd_Laugh_05.wav" id="12_ne6cm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mqhde"]
 atlas = ExtResource("3_wtfk3")

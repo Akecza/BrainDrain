@@ -1,7 +1,7 @@
 extends Node2D
 
 var SadManList = []
-var GlobalHappinessLevel
+var GlobalHappinessLevel=0
 @onready var honk = $HonkPlayer2D
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -32,7 +32,14 @@ func countGlobalHappiness():
 		skillsAvailable+=1
 	if GlobalHappinessLevel>80:
 		skillsAvailable+=1
+	$Player.skillsAvailable=skillsAvailable
+		
 		
 func ultimateJoke():
 	pass
 
+
+
+func _on_player_skill_changed():
+	$CanvasLayer/SkillText.text=$Player.skillNames[$Player.activeSkill-1]
+	#$CanvasLayer/SkillText.text=""

@@ -15,11 +15,13 @@ extends RigidBody2D
 
 @onready var joke_player : AudioStreamPlayer2D = $JokePlayer
 
+signal skill_changed
+
 var screen_size # Size of the game window.
 var honk_on_cooldown = false
 var skillsAvailable = 2
 var activeSkill = 1
-
+var skillNames = ["Honk","Cake","Fart","Joke","Wobbly Man", "The Ultimate Joke"]
 
 func _ready():
 	screen_size = get_viewport_rect().size
@@ -40,11 +42,6 @@ func _process(delta):
 		skill_honk()
 	if Input.is_action_pressed("shoot"):
 		useActiveSkill()
-	if Input.is_action_pressed("skill_up"):
-		changeSkill(1)
-	if Input.is_action_pressed("skill_down"):
-		changeSkill(-1)
-
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
 		$AnimatedSprite2D.play()
@@ -54,9 +51,26 @@ func _process(delta):
 	$Hand.look_at(get_global_mouse_position())
 	if $Hand.rotation>180:
 		transform.inverse()
-	
+		
+func _input(event):
+	if event.is_action_pressed("skill_up"):
+		changeSkill(1)
+	if event.is_action_pressed("skill_down"):
+		changeSkill(-1)
+
 func useActiveSkill():
-	shoot()
+	if activeSkill==1:
+		skill_honk()
+	if activeSkill==2:
+		shoot()
+	if activeSkill==3:
+		skill_whoopie()
+	if activeSkill==4:
+		skill_joke()
+	if activeSkill==5:
+		skill_inflatable()
+	if activeSkill==6:
+		pass
 	
 func skill_honk():
 	if(not honk_on_cooldown):
@@ -113,7 +127,11 @@ func _on_skill_duration_timeout():
 func changeSkill(a):
 	activeSkill+=a
 	if activeSkill==0:
-		pass
+		activeSkill=skillsAvailable
+	if activeSkill>skillsAvailable:
+		activeSkill=1
+	print("skillchanged")
+	skill_changed.emit()
 
 
 
