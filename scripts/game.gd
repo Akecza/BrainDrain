@@ -18,4 +18,5 @@ func _on_honk_pressed():
 func countGlobalHappiness():
 	var HappinessTotal=0
 	for i in SadManList:
-		pass
+		#HappinessTotal += i.$HappinessBar.value
+	pass
