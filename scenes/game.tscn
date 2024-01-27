@@ -1,37 +1,36 @@
-[gd_scene load_steps=34 format=3 uid="uid://cafnh4rpv7oee"]
+[gd_scene load_steps=33 format=3 uid="uid://cafnh4rpv7oee"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_3qlki"]
 [ext_resource type="PackedScene" uid="uid://b3l8edt0bi7np" path="res://scenes/player.tscn" id="1_dofbq"]
 [ext_resource type="Texture2D" uid="uid://ce8aomk05iuvx" path="res://art/background.png" id="3_0jlkx"]
-[ext_resource type="Texture2D" uid="uid://dtjj7eo541s6l" path="res://art/honk.png" id="4_71f3e"]
 [ext_resource type="Script" path="res://scripts/button.gd" id="5_42r6h"]
-[ext_resource type="Texture2D" uid="uid://c6ep6l1a1bqjt" path="res://art/whoopie.png" id="6_324vo"]
-[ext_resource type="Texture2D" uid="uid://dunkl37kuc773" path="res://art/inflatable.png" id="6_w2n4u"]
 [ext_resource type="Theme" uid="uid://b835pp085gvxa" path="res://buttontheme.tres" id="7_8sk05"]
-[ext_resource type="Texture2D" uid="uid://cps8i6qug7k0t" path="res://art/joke.png" id="7_o1ny2"]
 [ext_resource type="PackedScene" uid="uid://dowrjcdnnxods" path="res://scenes/sad_man.tscn" id="7_or3d6"]
 [ext_resource type="Texture2D" uid="uid://bjcvy08py5q6q" path="res://art/CharacterParts/ciasto.png" id="7_vevqi"]
-[ext_resource type="Texture2D" uid="uid://bwu3lq2c0v524" path="res://art/baloon.png" id="9_higc0"]
-[ext_resource type="PackedScene" uid="uid://biwhd6ooi88yn" path="res://scenes/whoopie.tscn" id="11_0vyw4"]
-[ext_resource type="Texture2D" uid="uid://5mvw15dojlum" path="res://art/UI/panel_brown.png" id="12_vlhmp"]
-[ext_resource type="Texture2D" uid="uid://c3v0di7dtkgva" path="res://art/UI/yellowBar.png" id="13_2etor"]
+[ext_resource type="Texture2D" uid="uid://ckwkxus81hfnu" path="res://art/CharacterParts/honk.png" id="9_6rsn5"]
+[ext_resource type="Texture2D" uid="uid://dp43v5vo461t5" path="res://art/CharacterParts/fart.png" id="11_5snge"]
+[ext_resource type="Texture2D" uid="uid://2c3s08aegmb1" path="res://art/CharacterParts/Arm-Joke.png" id="12_2ynn6"]
+[ext_resource type="Texture2D" uid="uid://dbpxvi1lkb5as" path="res://art/UI/panel_brown.png" id="12_vlhmp"]
+[ext_resource type="Texture2D" uid="uid://3128u8et1qoq" path="res://art/UI/yellowBar.png" id="13_2etor"]
 [ext_resource type="AudioStream" uid="uid://bgy2su6e4hleh" path="res://sounds/A_Clown_Honker_02.wav" id="13_t681a"]
-[ext_resource type="AudioStream" uid="uid://c6vlevppvli77" path="res://audio/Ambience/A_Park_Ambience_Loop.wav" id="17_oilmp"]
-[ext_resource type="AudioStream" uid="uid://btvox6oaimgoj" path="res://audio/Music/A_Music_Layer_Basic.wav" id="18_fq0xi"]
-[ext_resource type="AudioStream" uid="uid://bjdsuyxlnk3hq" path="res://audio/Music/A_Music_Layer_BasicHappy.wav" id="18_kkle2"]
-[ext_resource type="AudioStream" uid="uid://drjx60xlafitj" path="res://audio/Music/A_Music_Layer_BasicPlus.wav" id="19_so2l7"]
-[ext_resource type="AudioStream" uid="uid://b5l7oi4ljffu1" path="res://audio/Music/A_Music_Layer_Cake.wav" id="20_n0l12"]
-[ext_resource type="AudioStream" uid="uid://cbh1ksrlccdwe" path="res://audio/Music/A_Music_Layer_Fart.wav" id="21_hmvje"]
-[ext_resource type="AudioStream" uid="uid://ddp3u1pyj1slp" path="res://audio/Music/A_Music_Layer_Honk.wav" id="22_ki84i"]
-[ext_resource type="AudioStream" uid="uid://138iflh26rbe" path="res://audio/Music/A_Music_Layer_Laugh.wav" id="23_ak3fa"]
+[ext_resource type="Texture2D" uid="uid://b664mtq5hexct" path="res://art/CharacterParts/balon-zoltko.png" id="14_22ane"]
+[ext_resource type="Texture2D" uid="uid://bx1vaoyby07pv" path="res://art/CharacterParts/wiggleman.png" id="14_o7bdr"]
+[ext_resource type="AudioStream" uid="uid://cvnn1n6xqetgc" path="res://audio/Ambience/A_Park_Ambience_Loop.wav" id="17_oilmp"]
+[ext_resource type="AudioStream" uid="uid://npe2edwn8kcx" path="res://audio/Music/A_Music_Layer_Basic.wav" id="18_fq0xi"]
+[ext_resource type="AudioStream" uid="uid://1key58iu5lec" path="res://audio/Music/A_Music_Layer_BasicHappy.wav" id="18_kkle2"]
+[ext_resource type="AudioStream" uid="uid://c74i65ivcuv5u" path="res://audio/Music/A_Music_Layer_BasicPlus.wav" id="19_so2l7"]
+[ext_resource type="AudioStream" uid="uid://cg6tfgkmlbsfw" path="res://audio/Music/A_Music_Layer_Cake.wav" id="20_n0l12"]
+[ext_resource type="AudioStream" uid="uid://b1erj13n14ne1" path="res://audio/Music/A_Music_Layer_Fart.wav" id="21_hmvje"]
+[ext_resource type="AudioStream" uid="uid://b6ymviyrdekep" path="res://audio/Music/A_Music_Layer_Honk.wav" id="22_ki84i"]
+[ext_resource type="AudioStream" uid="uid://cp4nik5ummt7l" path="res://audio/Music/A_Music_Layer_Laugh.wav" id="23_ak3fa"]
 [ext_resource type="PackedScene" uid="uid://cj2k68g58rsu6" path="res://scenes/budynki/wiezowiec.tscn" id="25_8fpw8"]
-[ext_resource type="PackedScene" path="res://scenes/world.tscn" id="25_jtldu"]
+[ext_resource type="PackedScene" uid="uid://cbgw8hvxcwppe" path="res://scenes/world.tscn" id="25_jtldu"]
 [ext_resource type="PackedScene" uid="uid://cdb4dovef24af" path="res://scenes/budynki/biurowiec.tscn" id="26_gb857"]
 [ext_resource type="PackedScene" uid="uid://bs4d2gfiogkav" path="res://scenes/budynki/wiezowiec_2.tscn" id="27_rwnbm"]
 [ext_resource type="PackedScene" uid="uid://iitbdf6snpgv" path="res://scenes/budynki/wiezowiec_3.tscn" id="28_6wr15"]
-[ext_resource type="PackedScene" path="res://scenes/budynki/kamienica3.tscn" id="29_0o51i"]
-[ext_resource type="PackedScene" path="res://scenes/budynki/kamienica2.tscn" id="30_hbg7v"]
-[ext_resource type="PackedScene" path="res://scenes/budynki/kamienica.tscn" id="31_vq0jr"]
+[ext_resource type="PackedScene" uid="uid://diycyfouraes3" path="res://scenes/budynki/kamienica3.tscn" id="29_0o51i"]
+[ext_resource type="PackedScene" uid="uid://cw45db8jb3vse" path="res://scenes/budynki/kamienica2.tscn" id="30_hbg7v"]
+[ext_resource type="PackedScene" uid="uid://diq7uclkf3cag" path="res://scenes/budynki/kamienica.tscn" id="31_vq0jr"]
 
 [sub_resource type="GDScript" id="GDScript_j45pr"]
 script/source = "extends TextureProgressBar
@@ -61,8 +60,9 @@ texture = ExtResource("3_0jlkx")
 position = Vector2(-427, -119)
 scale = Vector2(0.25, 0.25)
 
-[node name="Player" parent="." node_paths=PackedStringArray("honk_button", "cake_button", "whoopie_button", "joke_button", "inflattable_button", "baloon_button") instance=ExtResource("1_dofbq")]
+[node name="Player" parent="." node_paths=PackedStringArray("honk_player", "honk_button", "cake_button", "whoopie_button", "joke_button", "inflattable_button", "baloon_button") instance=ExtResource("1_dofbq")]
 position = Vector2(571, 1229)
+honk_player = NodePath("../HonkPlayer2D")
 honk_button = NodePath("../CanvasLayer/PanelContainer/HBoxContainer/HONK")
 cake_button = NodePath("../CanvasLayer/PanelContainer/HBoxContainer/CAKE")
 whoopie_button = NodePath("../CanvasLayer/PanelContainer/HBoxContainer/WHOOPIE")
@@ -120,15 +120,18 @@ theme = ExtResource("7_8sk05")
 [node name="HONK" type="Button" parent="CanvasLayer/PanelContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-icon = ExtResource("4_71f3e")
 icon_alignment = 1
 script = ExtResource("5_42r6h")
 input = "1"
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/PanelContainer/HBoxContainer/HONK"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 21.0
+offset_top = 19.0
+offset_right = 149.0
+offset_bottom = 139.0
+texture = ExtResource("9_6rsn5")
+expand_mode = 1
 
 [node name="CAKE" type="Button" parent="CanvasLayer/PanelContainer/HBoxContainer"]
 layout_mode = 2
@@ -149,35 +152,70 @@ expand_mode = 1
 [node name="WHOOPIE" type="Button" parent="CanvasLayer/PanelContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-icon = ExtResource("6_324vo")
 icon_alignment = 1
 script = ExtResource("5_42r6h")
 input = "3"
 
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/PanelContainer/HBoxContainer/WHOOPIE"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 23.0
+offset_top = 20.0
+offset_right = 149.0
+offset_bottom = 149.0
+texture = ExtResource("11_5snge")
+expand_mode = 1
+
 [node name="JOKE" type="Button" parent="CanvasLayer/PanelContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-icon = ExtResource("7_o1ny2")
 icon_alignment = 1
 script = ExtResource("5_42r6h")
 input = "4"
 
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/PanelContainer/HBoxContainer/JOKE"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 23.0
+offset_top = 20.0
+offset_right = 149.0
+offset_bottom = 149.0
+texture = ExtResource("12_2ynn6")
+expand_mode = 1
+
 [node name="INFLATABLE" type="Button" parent="CanvasLayer/PanelContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-disabled = true
-icon = ExtResource("6_w2n4u")
 icon_alignment = 1
 script = ExtResource("5_42r6h")
 input = "5"
 
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/PanelContainer/HBoxContainer/INFLATABLE"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 23.0
+offset_top = 20.0
+offset_right = 149.0
+offset_bottom = 149.0
+texture = ExtResource("14_o7bdr")
+expand_mode = 1
+
 [node name="BALOON" type="Button" parent="CanvasLayer/PanelContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-icon = ExtResource("9_higc0")
 icon_alignment = 1
 script = ExtResource("5_42r6h")
 input = "6"
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/PanelContainer/HBoxContainer/BALOON"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 38.0
+offset_top = 27.0
+offset_right = 129.0
+offset_bottom = 140.0
+texture = ExtResource("14_22ane")
+expand_mode = 1
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -199,15 +237,6 @@ position = Vector2(861, 1375)
 
 [node name="Sad man5" parent="." instance=ExtResource("7_or3d6")]
 position = Vector2(666, 1426)
-
-[node name="Whoopie" parent="." instance=ExtResource("11_0vyw4")]
-position = Vector2(819, 1297)
-
-[node name="Whoopie3" parent="." instance=ExtResource("11_0vyw4")]
-position = Vector2(933, 1298)
-
-[node name="Whoopie6" parent="." instance=ExtResource("11_0vyw4")]
-position = Vector2(989, 1209)
 
 [node name="HonkPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("13_t681a")

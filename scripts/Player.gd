@@ -14,6 +14,7 @@ extends RigidBody2D
 @onready var inflatable_cooldown_timer = $InflatableCooldownTimer
 
 @onready var joke_player : AudioStreamPlayer2D = $JokePlayer
+@export var honk_player: AudioStreamPlayer2D
 
 @export var honk_button : Button
 @export var cake_button : Button
@@ -86,6 +87,7 @@ func skill_honk():
 		$HonkCooldown.start()
 		honk.disabled=false
 		$HonkDuration.start()
+		honk_player.play()
 
 func shoot():
 	if $ShootCooldown.is_stopped():
