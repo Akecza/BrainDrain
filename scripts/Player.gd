@@ -2,6 +2,11 @@ extends RigidBody2D
 @export var cake: PackedScene
 @export var speed = 400 # How fast the player will move (pixels/sec).
 @onready var honk = $Honk/HonkCollision
+@onready var joke = $Joke/JokeCollision
+@onready var joke_duration_timer = $JokeDuration
+@onready var joke_cooldown_timer = $JokeCooldown
+
+
 var screen_size # Size of the game window.
 var honk_on_cooldown = false
 
@@ -51,9 +56,20 @@ func shoot():
 		owner.add_child(b)
 		b.position=$Hand/Nuzzle.global_position
 		b.speedVector=shootAngle
+		
+func skill_joke():
+	if(joke_cooldown_timer.time_left == 0):
+		joke_cooldown_timer.start()
+		joke.disabled=false
+		joke_duration_timer.start()
+
 
 func _on_skill_cooldown_timeout():
 	honk_on_cooldown=false
 
 func _on_skill_duration_timeout():
 	honk.disabled=true
+
+func _on_joke_duration_timeout():
+	joke.disabled=true
+

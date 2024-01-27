@@ -4,7 +4,7 @@ class_name State
 @export var animation_name: String
 var parent : SadMan
 
-func enter():
+func enter(player_ref):
 	parent.animations.play(animation_name)
 	
 func exit():

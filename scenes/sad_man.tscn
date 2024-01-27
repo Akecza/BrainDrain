@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://dowrjcdnnxods"]
+[gd_scene load_steps=10 format=3 uid="uid://rq4ussnki31b"]
 
 [ext_resource type="Texture2D" uid="uid://nkb633kis74n" path="res://art/sadman.png" id="1_el25n"]
 [ext_resource type="Script" path="res://scripts/sad_man.gd" id="1_wtxo7"]
 [ext_resource type="Script" path="res://scripts/state_machine/Idle.gd" id="3_kjit3"]
 [ext_resource type="Script" path="res://scripts/state_machine/StateMachine.gd" id="3_q2x24"]
+[ext_resource type="Script" path="res://scripts/state_machine/Following.gd" id="5_o78q0"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wtm5c"]
 animations = [{
@@ -44,6 +45,9 @@ animation_name = "default"
 one_shot = true
 autostart = true
 
+[node name="Following" type="Node" parent="StateMachine"]
+script = ExtResource("5_o78q0")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_q607b")
 
@@ -68,4 +72,5 @@ one_shot = true
 
 [connection signal="timeout" from="StateMachine/Idle/IdleTimer" to="StateMachine/Idle" method="_on_idle_timer_timeout"]
 [connection signal="area_entered" from="HitboxArea" to="." method="_on_hitbox_area_area_entered"]
+[connection signal="area_exited" from="HitboxArea" to="." method="_on_hitbox_area_area_exited"]
 [connection signal="timeout" from="HappyDepleteTimer" to="." method="_on_happy_deplete_timer_timeout"]

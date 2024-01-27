@@ -44,16 +44,19 @@ func _on_hitbox_area_area_entered(area : Area2D):
 	if (area.name == "Honk"):
 		make_happy(10)
 	if (area.name == "Whoopie"):
-		print("SAD FART")
 		make_happy(-50)
 	if (area.name == "WhoopieSound"):
-		print("YAY FART")
 		make_happy(30)
 	if (area.name == "Cake"):
 		make_happy(-100)
 	if (area.name == "CakeHappy"):
 		make_happy(50)
+	if (area.name == "Joke"):
+		state_machine.change_state($StateMachine/Following, area.get_parent())
 
+func _on_hitbox_area_area_exited(area):
+	if (area.name == "Joke"):
+		state_machine.change_state($StateMachine/Idle, null)
 
 func _on_happy_deplete_timer_timeout():
 	HappyDepleteAmount = BaseHappyDepleteSpeed

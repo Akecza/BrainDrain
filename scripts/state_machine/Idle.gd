@@ -4,8 +4,8 @@ class_name Idle
 @onready var idle_timer : Timer = $IdleTimer
 var direction : Vector2
 
-func enter():
-	super()
+func enter(player_ref):
+	super(player_ref)
 	new_random_direction()
 	
 func exit():

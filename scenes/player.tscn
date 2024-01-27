@@ -1,7 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://b3l8edt0bi7np"]
+[gd_scene load_steps=10 format=3 uid="uid://b3l8edt0bi7np"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_bpioq"]
-[ext_resource type="PackedScene" uid="uid://nbhh5gxf8d8r" path="res://scenes/cake.tscn" id="2_10fye"]
+[ext_resource type="PackedScene" path="res://scenes/cake.tscn" id="2_10fye"]
 [ext_resource type="Texture2D" uid="uid://bwxalerr3oecs" path="res://Placeholder/bunny1_stand.png" id="2_11l5n"]
 [ext_resource type="Texture2D" uid="uid://dgok2lgd86qi7" path="res://Placeholder/bunny1_walk1.png" id="3_yorwq"]
 [ext_resource type="Texture2D" uid="uid://cuftb2iyu3028" path="res://Placeholder/bunny1_walk2.png" id="4_7mb2m"]
@@ -35,6 +35,9 @@ height = 32.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_5c1sj"]
 radius = 85.5862
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_vvg36"]
+radius = 178.908
+
 [node name="Player" type="RigidBody2D"]
 collision_layer = 2
 collision_mask = 7
@@ -61,12 +64,26 @@ light_mask = 0
 shape = SubResource("CircleShape2D_5c1sj")
 disabled = true
 
+[node name="Joke" type="Area2D" parent="."]
+
+[node name="JokeCollision" type="CollisionShape2D" parent="Joke"]
+shape = SubResource("CircleShape2D_vvg36")
+disabled = true
+
 [node name="HonkDuration" type="Timer" parent="."]
 wait_time = 0.1
 one_shot = true
 
 [node name="HonkCooldown" type="Timer" parent="."]
 wait_time = 0.5
+one_shot = true
+
+[node name="JokeDuration" type="Timer" parent="."]
+wait_time = 4.0
+one_shot = true
+
+[node name="JokeCooldown" type="Timer" parent="."]
+wait_time = 10.0
 one_shot = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -85,3 +102,4 @@ one_shot = true
 
 [connection signal="timeout" from="HonkDuration" to="." method="_on_skill_duration_timeout"]
 [connection signal="timeout" from="HonkCooldown" to="." method="_on_skill_cooldown_timeout"]
+[connection signal="timeout" from="JokeDuration" to="." method="_on_joke_duration_timeout"]
