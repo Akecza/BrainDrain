@@ -1,15 +1,16 @@
-[gd_scene load_steps=33 format=3 uid="uid://cafnh4rpv7oee"]
+[gd_scene load_steps=34 format=3 uid="uid://cafnh4rpv7oee"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_3qlki"]
 [ext_resource type="PackedScene" uid="uid://b3l8edt0bi7np" path="res://scenes/player.tscn" id="1_dofbq"]
 [ext_resource type="Texture2D" uid="uid://ce8aomk05iuvx" path="res://art/background.png" id="3_0jlkx"]
 [ext_resource type="Texture2D" uid="uid://dtjj7eo541s6l" path="res://art/honk.png" id="4_71f3e"]
 [ext_resource type="Script" path="res://scripts/button.gd" id="5_42r6h"]
-[ext_resource type="Texture2D" uid="uid://dceu0ui6tvg3" path="res://art/cake.png" id="5_f7c1e"]
 [ext_resource type="Texture2D" uid="uid://c6ep6l1a1bqjt" path="res://art/whoopie.png" id="6_324vo"]
 [ext_resource type="Texture2D" uid="uid://dunkl37kuc773" path="res://art/inflatable.png" id="6_w2n4u"]
+[ext_resource type="Theme" uid="uid://b835pp085gvxa" path="res://buttontheme.tres" id="7_8sk05"]
 [ext_resource type="Texture2D" uid="uid://cps8i6qug7k0t" path="res://art/joke.png" id="7_o1ny2"]
 [ext_resource type="PackedScene" uid="uid://dowrjcdnnxods" path="res://scenes/sad_man.tscn" id="7_or3d6"]
+[ext_resource type="Texture2D" uid="uid://bjcvy08py5q6q" path="res://art/CharacterParts/ciasto.png" id="7_vevqi"]
 [ext_resource type="Texture2D" uid="uid://bwu3lq2c0v524" path="res://art/baloon.png" id="9_higc0"]
 [ext_resource type="PackedScene" uid="uid://biwhd6ooi88yn" path="res://scenes/whoopie.tscn" id="11_0vyw4"]
 [ext_resource type="Texture2D" uid="uid://dbpxvi1lkb5as" path="res://art/UI/panel_brown.png" id="12_vlhmp"]
@@ -62,17 +63,48 @@ scale = Vector2(0.25, 0.25)
 
 [node name="Player" parent="." instance=ExtResource("1_dofbq")]
 position = Vector2(571, 1229)
+speed = 400
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="GlobalHappinessBar" type="TextureProgressBar" parent="CanvasLayer"]
+offset_left = 997.0
+offset_top = 49.0
+offset_right = 1626.0
+offset_bottom = 117.0
+value = 50.0
+nine_patch_stretch = true
+stretch_margin_left = 7
+stretch_margin_top = 1
+stretch_margin_right = 6
+stretch_margin_bottom = 1
+texture_under = ExtResource("12_vlhmp")
+texture_progress = ExtResource("13_2etor")
+script = SubResource("GDScript_j45pr")
+
+[node name="SkillText" type="TextEdit" parent="CanvasLayer"]
+offset_left = 62.0
+offset_top = 27.0
+offset_right = 319.0
+offset_bottom = 133.0
+theme_override_font_sizes/font_size = 64
+text = "few"
+
 [node name="PanelContainer" type="PanelContainer" parent="CanvasLayer"]
-offset_left = 565.0
+offset_left = 653.0
 offset_top = 751.0
-offset_right = 1589.0
-offset_bottom = 859.0
+offset_right = 1731.0
+offset_bottom = 917.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/PanelContainer"]
 layout_mode = 2
+theme = ExtResource("7_8sk05")
 
 [node name="HONK" type="Button" parent="CanvasLayer/PanelContainer/HBoxContainer"]
 layout_mode = 2
@@ -85,10 +117,18 @@ input = "1"
 [node name="CAKE" type="Button" parent="CanvasLayer/PanelContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-icon = ExtResource("5_f7c1e")
 icon_alignment = 1
 script = ExtResource("5_42r6h")
 input = "2"
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/PanelContainer/HBoxContainer/CAKE"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 15.0
+offset_right = 153.0
+offset_bottom = 141.0
+texture = ExtResource("7_vevqi")
+expand_mode = 1
 
 [node name="WHOOPIE" type="Button" parent="CanvasLayer/PanelContainer/HBoxContainer"]
 layout_mode = 2
@@ -121,29 +161,6 @@ icon = ExtResource("9_higc0")
 icon_alignment = 1
 script = ExtResource("5_42r6h")
 input = "6"
-
-[node name="GlobalHappinessBar" type="TextureProgressBar" parent="CanvasLayer"]
-offset_left = 997.0
-offset_top = 49.0
-offset_right = 1626.0
-offset_bottom = 117.0
-value = 50.0
-nine_patch_stretch = true
-stretch_margin_left = 7
-stretch_margin_top = 1
-stretch_margin_right = 6
-stretch_margin_bottom = 1
-texture_under = ExtResource("12_vlhmp")
-texture_progress = ExtResource("13_2etor")
-script = SubResource("GDScript_j45pr")
-
-[node name="SkillText" type="TextEdit" parent="CanvasLayer"]
-offset_left = 62.0
-offset_top = 27.0
-offset_right = 319.0
-offset_bottom = 133.0
-theme_override_font_sizes/font_size = 64
-text = "few"
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
