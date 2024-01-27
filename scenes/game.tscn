@@ -61,9 +61,14 @@ texture = ExtResource("3_0jlkx")
 position = Vector2(-427, -119)
 scale = Vector2(0.25, 0.25)
 
-[node name="Player" parent="." instance=ExtResource("1_dofbq")]
+[node name="Player" parent="." node_paths=PackedStringArray("honk_button", "cake_button", "whoopie_button", "joke_button", "inflattable_button", "baloon_button") instance=ExtResource("1_dofbq")]
 position = Vector2(571, 1229)
-speed = 400
+honk_button = NodePath("../CanvasLayer/PanelContainer/HBoxContainer/HONK")
+cake_button = NodePath("../CanvasLayer/PanelContainer/HBoxContainer/CAKE")
+whoopie_button = NodePath("../CanvasLayer/PanelContainer/HBoxContainer/WHOOPIE")
+joke_button = NodePath("../CanvasLayer/PanelContainer/HBoxContainer/JOKE")
+inflattable_button = NodePath("../CanvasLayer/PanelContainer/HBoxContainer/INFLATABLE")
+baloon_button = NodePath("../CanvasLayer/PanelContainer/HBoxContainer/BALOON")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -95,10 +100,16 @@ theme_override_font_sizes/font_size = 64
 text = "few"
 
 [node name="PanelContainer" type="PanelContainer" parent="CanvasLayer"]
-offset_left = 653.0
-offset_top = 751.0
-offset_right = 1731.0
-offset_bottom = 917.0
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -539.0
+offset_top = -166.0
+offset_right = 539.0
+grow_horizontal = 2
+grow_vertical = 0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
@@ -113,6 +124,11 @@ icon = ExtResource("4_71f3e")
 icon_alignment = 1
 script = ExtResource("5_42r6h")
 input = "1"
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/PanelContainer/HBoxContainer/HONK"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="CAKE" type="Button" parent="CanvasLayer/PanelContainer/HBoxContainer"]
 layout_mode = 2
@@ -149,6 +165,7 @@ input = "4"
 [node name="INFLATABLE" type="Button" parent="CanvasLayer/PanelContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+disabled = true
 icon = ExtResource("6_w2n4u")
 icon_alignment = 1
 script = ExtResource("5_42r6h")
@@ -186,23 +203,11 @@ position = Vector2(666, 1426)
 [node name="Whoopie" parent="." instance=ExtResource("11_0vyw4")]
 position = Vector2(819, 1297)
 
-[node name="Whoopie2" parent="." instance=ExtResource("11_0vyw4")]
-position = Vector2(690, 1320)
-
 [node name="Whoopie3" parent="." instance=ExtResource("11_0vyw4")]
 position = Vector2(933, 1298)
 
-[node name="Whoopie4" parent="." instance=ExtResource("11_0vyw4")]
-position = Vector2(751, 1203)
-
-[node name="Whoopie5" parent="." instance=ExtResource("11_0vyw4")]
-position = Vector2(858, 1460)
-
 [node name="Whoopie6" parent="." instance=ExtResource("11_0vyw4")]
 position = Vector2(989, 1209)
-
-[node name="Whoopie7" parent="." instance=ExtResource("11_0vyw4")]
-position = Vector2(878, 1142)
 
 [node name="HonkPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("13_t681a")
@@ -299,6 +304,27 @@ scale = Vector2(0.25, 0.25)
 [node name="Biurowiec4" parent="Budynki" instance=ExtResource("26_gb857")]
 position = Vector2(1312, 2305)
 scale = Vector2(0.25, 0.25)
+
+[node name="Sad man6" parent="." instance=ExtResource("7_or3d6")]
+position = Vector2(1371, 1020)
+
+[node name="Sad man7" parent="." instance=ExtResource("7_or3d6")]
+position = Vector2(1558, 1142)
+
+[node name="Sad man8" parent="." instance=ExtResource("7_or3d6")]
+position = Vector2(1646, 917)
+
+[node name="Sad man9" parent="." instance=ExtResource("7_or3d6")]
+position = Vector2(631, 950)
+
+[node name="Sad man10" parent="." instance=ExtResource("7_or3d6")]
+position = Vector2(983, 987)
+
+[node name="Sad man11" parent="." instance=ExtResource("7_or3d6")]
+position = Vector2(346, 1002)
+
+[node name="Sad man12" parent="." instance=ExtResource("7_or3d6")]
+position = Vector2(1774, 1054)
 
 [connection signal="skill_changed" from="Player" to="." method="_on_player_skill_changed"]
 [connection signal="pressed" from="CanvasLayer/PanelContainer/HBoxContainer/HONK" to="." method="_on_honk_pressed"]

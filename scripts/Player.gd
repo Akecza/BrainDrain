@@ -15,6 +15,13 @@ extends RigidBody2D
 
 @onready var joke_player : AudioStreamPlayer2D = $JokePlayer
 
+@export var honk_button : Button
+@export var cake_button : Button
+@export var whoopie_button : Button
+@export var joke_button : Button
+@export var inflattable_button : Button
+@export var baloon_button : Button
+
 signal skill_changed
 
 var screen_size # Size of the game window.
@@ -29,6 +36,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	activateButtons()
 	var velocity = Vector2.ZERO # The player's movement vector.
 	if Input.is_action_pressed("walk_right"):
 		velocity.x += 1
@@ -54,9 +62,9 @@ func _process(delta):
 		
 func _input(event):
 	if event.is_action_pressed("skill_up"):
-		changeSkill(1)
+		changeSkill(activeSkill+1)
 	if event.is_action_pressed("skill_down"):
-		changeSkill(-1)
+		changeSkill(activeSkill-1)
 
 func useActiveSkill():
 	if activeSkill==1:
@@ -125,7 +133,7 @@ func _on_skill_duration_timeout():
 	honk.disabled=true
 
 func changeSkill(a):
-	activeSkill+=a
+	activeSkill=a
 	if activeSkill==0:
 		activeSkill=skillsAvailable
 	if activeSkill>skillsAvailable:
@@ -133,7 +141,37 @@ func changeSkill(a):
 	print("skillchanged")
 	skill_changed.emit()
 
-
-
+func activateButtons():
+	cake_button.disabled=true
+	whoopie_button.disabled=true
+	joke_button.disabled=true
+	inflattable_button.disabled=true
+	baloon_button.disabled=true
+	
+	if activeSkill > skillsAvailable: 
+		activeSkill=1
+	if skillsAvailable > 1:
+		cake_button.disabled=false
+	if skillsAvailable > 2:
+		whoopie_button.disabled=false
+	if skillsAvailable > 3:
+		joke_button.disabled=false
+	if skillsAvailable > 4:
+		inflattable_button.disabled=false
+	if skillsAvailable > 5:
+		baloon_button.disabled=false
+		
+	if activeSkill == 1:
+		honk_button.grab_focus()
+	if activeSkill == 2:
+		cake_button.grab_focus()
+	if activeSkill == 3:
+		whoopie_button.grab_focus()
+	if activeSkill == 4:
+		joke_button.grab_focus()
+	if activeSkill == 5:
+		inflattable_button.grab_focus()
+	if activeSkill == 6:
+		baloon_button.grab_focus()
 
 
