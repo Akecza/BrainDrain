@@ -5,33 +5,33 @@
 [ext_resource type="Texture2D" uid="uid://ce8aomk05iuvx" path="res://art/background.png" id="3_0jlkx"]
 [ext_resource type="Script" path="res://scripts/button.gd" id="5_42r6h"]
 [ext_resource type="Theme" uid="uid://b0svc8rhmt1x" path="res://buttontheme.tres" id="7_8sk05"]
-[ext_resource type="Texture2D" uid="uid://dxqb2dxqkxwbk" path="res://art/UI/arrowBeige_right.png" id="7_brmyy"]
+[ext_resource type="Texture2D" uid="uid://osc7ghwu84r6" path="res://art/UI/arrowBeige_right.png" id="7_brmyy"]
 [ext_resource type="PackedScene" uid="uid://dowrjcdnnxods" path="res://scenes/sad_man.tscn" id="7_or3d6"]
 [ext_resource type="Texture2D" uid="uid://bjcvy08py5q6q" path="res://art/CharacterParts/ciasto.png" id="7_vevqi"]
 [ext_resource type="Texture2D" uid="uid://ckwkxus81hfnu" path="res://art/CharacterParts/honk.png" id="9_6rsn5"]
 [ext_resource type="Texture2D" uid="uid://dp43v5vo461t5" path="res://art/CharacterParts/fart.png" id="11_5snge"]
 [ext_resource type="Texture2D" uid="uid://2c3s08aegmb1" path="res://art/CharacterParts/Arm-Joke.png" id="12_2ynn6"]
-[ext_resource type="Texture2D" uid="uid://5mvw15dojlum" path="res://art/UI/panel_brown.png" id="12_vlhmp"]
-[ext_resource type="Texture2D" uid="uid://c3v0di7dtkgva" path="res://art/UI/yellowBar.png" id="13_2etor"]
+[ext_resource type="Texture2D" uid="uid://dbpxvi1lkb5as" path="res://art/UI/panel_brown.png" id="12_vlhmp"]
+[ext_resource type="Texture2D" uid="uid://3128u8et1qoq" path="res://art/UI/yellowBar.png" id="13_2etor"]
 [ext_resource type="AudioStream" uid="uid://bgy2su6e4hleh" path="res://sounds/A_Clown_Honker_02.wav" id="13_t681a"]
 [ext_resource type="Texture2D" uid="uid://b664mtq5hexct" path="res://art/CharacterParts/balon-zoltko.png" id="14_22ane"]
 [ext_resource type="Texture2D" uid="uid://bx1vaoyby07pv" path="res://art/CharacterParts/wiggleman.png" id="14_o7bdr"]
-[ext_resource type="AudioStream" uid="uid://c6vlevppvli77" path="res://audio/Ambience/A_Park_Ambience_Loop.wav" id="17_oilmp"]
-[ext_resource type="AudioStream" uid="uid://btvox6oaimgoj" path="res://audio/Music/A_Music_Layer_Basic.wav" id="18_fq0xi"]
-[ext_resource type="AudioStream" uid="uid://bjdsuyxlnk3hq" path="res://audio/Music/A_Music_Layer_BasicHappy.wav" id="18_kkle2"]
-[ext_resource type="AudioStream" uid="uid://drjx60xlafitj" path="res://audio/Music/A_Music_Layer_BasicPlus.wav" id="19_so2l7"]
-[ext_resource type="AudioStream" uid="uid://cbh1ksrlccdwe" path="res://audio/Music/A_Music_Layer_Fart.wav" id="21_hmvje"]
+[ext_resource type="AudioStream" uid="uid://cvnn1n6xqetgc" path="res://audio/Ambience/A_Park_Ambience_Loop.wav" id="17_oilmp"]
+[ext_resource type="AudioStream" uid="uid://npe2edwn8kcx" path="res://audio/Music/A_Music_Layer_Basic.wav" id="18_fq0xi"]
+[ext_resource type="AudioStream" uid="uid://1key58iu5lec" path="res://audio/Music/A_Music_Layer_BasicHappy.wav" id="18_kkle2"]
+[ext_resource type="AudioStream" uid="uid://c74i65ivcuv5u" path="res://audio/Music/A_Music_Layer_BasicPlus.wav" id="19_so2l7"]
+[ext_resource type="AudioStream" uid="uid://b1erj13n14ne1" path="res://audio/Music/A_Music_Layer_Fart.wav" id="21_hmvje"]
 [ext_resource type="PackedScene" uid="uid://cj2k68g58rsu6" path="res://scenes/budynki/wiezowiec.tscn" id="25_8fpw8"]
-[ext_resource type="PackedScene" uid="uid://cg0ad0p2mjrkd" path="res://scenes/world.tscn" id="25_jtldu"]
+[ext_resource type="PackedScene" uid="uid://cbgw8hvxcwppe" path="res://scenes/world.tscn" id="25_jtldu"]
 [ext_resource type="PackedScene" uid="uid://cdb4dovef24af" path="res://scenes/budynki/biurowiec.tscn" id="26_gb857"]
 [ext_resource type="PackedScene" uid="uid://bs4d2gfiogkav" path="res://scenes/budynki/wiezowiec_2.tscn" id="27_rwnbm"]
 [ext_resource type="PackedScene" uid="uid://iitbdf6snpgv" path="res://scenes/budynki/wiezowiec_3.tscn" id="28_6wr15"]
-[ext_resource type="PackedScene" path="res://scenes/budynki/kamienica3.tscn" id="29_0o51i"]
+[ext_resource type="PackedScene" uid="uid://diycyfouraes3" path="res://scenes/budynki/kamienica3.tscn" id="29_0o51i"]
 [ext_resource type="PackedScene" uid="uid://cr0t6c44qy4er" path="res://scenes/drzewa/drzewo2.tscn" id="29_ou8qf"]
 [ext_resource type="PackedScene" uid="uid://bbm0jsitf31h0" path="res://scenes/drzewa/drzewo3.tscn" id="30_evsiw"]
-[ext_resource type="PackedScene" path="res://scenes/budynki/kamienica2.tscn" id="30_hbg7v"]
+[ext_resource type="PackedScene" uid="uid://cw45db8jb3vse" path="res://scenes/budynki/kamienica2.tscn" id="30_hbg7v"]
 [ext_resource type="PackedScene" uid="uid://yv8iuhtcensv" path="res://scenes/drzewa/drzewo.tscn" id="31_dpvcf"]
-[ext_resource type="PackedScene" path="res://scenes/budynki/kamienica.tscn" id="31_vq0jr"]
+[ext_resource type="PackedScene" uid="uid://diq7uclkf3cag" path="res://scenes/budynki/kamienica.tscn" id="31_vq0jr"]
 
 [sub_resource type="GDScript" id="GDScript_j45pr"]
 script/source = "extends TextureProgressBar
@@ -62,7 +62,7 @@ position = Vector2(-427, -119)
 scale = Vector2(0.25, 0.25)
 
 [node name="Player" parent="." node_paths=PackedStringArray("honk_player", "honk_button", "cake_button", "whoopie_button", "joke_button", "inflattable_button", "baloon_button") instance=ExtResource("1_dofbq")]
-position = Vector2(571, 1229)
+position = Vector2(4190, 2526)
 honk_player = NodePath("../HonkPlayer")
 honk_button = NodePath("../CanvasLayer/PanelContainer/HBoxContainer/HONK")
 cake_button = NodePath("../CanvasLayer/PanelContainer/HBoxContainer/CAKE")
@@ -328,7 +328,7 @@ position = Vector2(1774, 1054)
 position = Vector2(2399, 1221)
 
 [node name="Sad man14" parent="SadPeople" instance=ExtResource("7_or3d6")]
-position = Vector2(2282, 1290)
+position = Vector2(2100, 382)
 
 [node name="Sad man15" parent="SadPeople" instance=ExtResource("7_or3d6")]
 position = Vector2(2914, 1048)
@@ -343,7 +343,7 @@ position = Vector2(2190, 1434)
 position = Vector2(3274, 777)
 
 [node name="Sad man19" parent="SadPeople" instance=ExtResource("7_or3d6")]
-position = Vector2(3461, 899)
+position = Vector2(3454, 1303)
 
 [node name="Sad man20" parent="SadPeople" instance=ExtResource("7_or3d6")]
 position = Vector2(3549, 674)
@@ -390,6 +390,24 @@ position = Vector2(3640, 1999)
 [node name="Sad man34" parent="SadPeople" instance=ExtResource("7_or3d6")]
 position = Vector2(3992, 2036)
 
+[node name="Sad man81" parent="SadPeople" instance=ExtResource("7_or3d6")]
+position = Vector2(719, 2433)
+
+[node name="Sad man82" parent="SadPeople" instance=ExtResource("7_or3d6")]
+position = Vector2(972, 2442)
+
+[node name="Sad man83" parent="SadPeople" instance=ExtResource("7_or3d6")]
+position = Vector2(1673, 2849)
+
+[node name="Sad man87" parent="SadPeople" instance=ExtResource("7_or3d6")]
+position = Vector2(-20, 2767)
+
+[node name="Sad man108" parent="SadPeople" instance=ExtResource("7_or3d6")]
+position = Vector2(592, 2101)
+
+[node name="Sad man109" parent="SadPeople" instance=ExtResource("7_or3d6")]
+position = Vector2(944, 2138)
+
 [node name="Sad man35" parent="SadPeople" instance=ExtResource("7_or3d6")]
 position = Vector2(3045, 2334)
 
@@ -400,7 +418,7 @@ position = Vector2(3151, 1754)
 position = Vector2(3767, 3124)
 
 [node name="Sad man38" parent="SadPeople" instance=ExtResource("7_or3d6")]
-position = Vector2(2706, 3777)
+position = Vector2(3157, 3353)
 
 [node name="Sad man39" parent="SadPeople" instance=ExtResource("7_or3d6")]
 position = Vector2(3903, 3202)
@@ -424,7 +442,7 @@ position = Vector2(4538, 2828)
 position = Vector2(3192, 2888)
 
 [node name="Sad man46" parent="SadPeople" instance=ExtResource("7_or3d6")]
-position = Vector2(3008, 3079)
+position = Vector2(2288, 2548)
 
 [node name="Sad man47" parent="SadPeople" instance=ExtResource("7_or3d6")]
 position = Vector2(2907, 2940)
@@ -436,49 +454,40 @@ position = Vector2(4666, 2965)
 position = Vector2(4930, 970)
 
 [node name="Sad man69" parent="SadPeople" instance=ExtResource("7_or3d6")]
-position = Vector2(5805, 711)
+position = Vector2(-75, 1815)
 
 [node name="Sad man70" parent="SadPeople" instance=ExtResource("7_or3d6")]
-position = Vector2(6058, 720)
+position = Vector2(4172, 985)
 
 [node name="Sad man71" parent="SadPeople" instance=ExtResource("7_or3d6")]
-position = Vector2(5908, 804)
+position = Vector2(2102, 978)
 
 [node name="Sad man72" parent="SadPeople" instance=ExtResource("7_or3d6")]
-position = Vector2(5713, 855)
+position = Vector2(505, 2695)
 
 [node name="Sad man73" parent="SadPeople" instance=ExtResource("7_or3d6")]
-position = Vector2(5678, 379)
+position = Vector2(-146, 1187)
 
 [node name="Sad man74" parent="SadPeople" instance=ExtResource("7_or3d6")]
-position = Vector2(6030, 416)
+position = Vector2(3889, 462)
 
 [node name="Sad man75" parent="SadPeople" instance=ExtResource("7_or3d6")]
 position = Vector2(5083, 714)
 
 [node name="Sad man76" parent="SadPeople" instance=ExtResource("7_or3d6")]
-position = Vector2(5805, 1504)
+position = Vector2(1831, 1600)
 
 [node name="Sad man77" parent="SadPeople" instance=ExtResource("7_or3d6")]
 position = Vector2(5383, 1700)
 
 [node name="Sad man78" parent="SadPeople" instance=ExtResource("7_or3d6")]
-position = Vector2(5941, 1582)
+position = Vector2(4513, 1982)
 
 [node name="Sad man79" parent="SadPeople" instance=ExtResource("7_or3d6")]
 position = Vector2(5486, 1793)
 
 [node name="Sad man80" parent="SadPeople" instance=ExtResource("7_or3d6")]
 position = Vector2(5291, 1844)
-
-[node name="Sad man81" parent="SadPeople" instance=ExtResource("7_or3d6")]
-position = Vector2(6301, 1311)
-
-[node name="Sad man82" parent="SadPeople" instance=ExtResource("7_or3d6")]
-position = Vector2(6488, 1433)
-
-[node name="Sad man83" parent="SadPeople" instance=ExtResource("7_or3d6")]
-position = Vector2(6576, 1208)
 
 [node name="Sad man84" parent="SadPeople" instance=ExtResource("7_or3d6")]
 position = Vector2(5230, 1268)
@@ -489,20 +498,17 @@ position = Vector2(5046, 1459)
 [node name="Sad man86" parent="SadPeople" instance=ExtResource("7_or3d6")]
 position = Vector2(4945, 1320)
 
-[node name="Sad man87" parent="SadPeople" instance=ExtResource("7_or3d6")]
-position = Vector2(6704, 1345)
-
 [node name="Sad man88" parent="SadPeople" instance=ExtResource("7_or3d6")]
 position = Vector2(4503, 3533)
 
 [node name="Sad man89" parent="SadPeople" instance=ExtResource("7_or3d6")]
-position = Vector2(5378, 3274)
+position = Vector2(3470, 2980)
 
 [node name="Sad man90" parent="SadPeople" instance=ExtResource("7_or3d6")]
-position = Vector2(5631, 3283)
+position = Vector2(2559, 3618)
 
 [node name="Sad man91" parent="SadPeople" instance=ExtResource("7_or3d6")]
-position = Vector2(5481, 3367)
+position = Vector2(1709, 3505)
 
 [node name="Sad man92" parent="SadPeople" instance=ExtResource("7_or3d6")]
 position = Vector2(5286, 3418)
@@ -514,7 +520,7 @@ position = Vector2(5251, 2942)
 position = Vector2(5603, 2979)
 
 [node name="Sad man95" parent="SadPeople" instance=ExtResource("7_or3d6")]
-position = Vector2(4656, 3277)
+position = Vector2(301, 3412)
 
 [node name="Sad man96" parent="SadPeople" instance=ExtResource("7_or3d6")]
 position = Vector2(92, 715)
@@ -541,13 +547,13 @@ position = Vector2(775, 644)
 position = Vector2(863, 419)
 
 [node name="Sad man104" parent="SadPeople" instance=ExtResource("7_or3d6")]
-position = Vector2(3740, 3522)
+position = Vector2(2756, 3392)
 
 [node name="Sad man105" parent="SadPeople" instance=ExtResource("7_or3d6")]
 position = Vector2(3556, 3713)
 
 [node name="Sad man106" parent="SadPeople" instance=ExtResource("7_or3d6")]
-position = Vector2(3455, 3574)
+position = Vector2(842, 1777)
 
 [node name="Sad man107" parent="SadPeople" instance=ExtResource("7_or3d6")]
 position = Vector2(991, 556)
@@ -598,7 +604,7 @@ position = Vector2(1202, 3893)
 position = Vector2(1290, 3668)
 
 [node name="Sad man64" parent="SadPeople" instance=ExtResource("7_or3d6")]
-position = Vector2(849, 4041)
+position = Vector2(932, 3935)
 
 [node name="Sad man65" parent="SadPeople" instance=ExtResource("7_or3d6")]
 position = Vector2(627, 3738)
@@ -678,19 +684,19 @@ scale = Vector2(0.25, 0.25)
 [node name="Drzewa" type="Node2D" parent="."]
 
 [node name="Drzewo" parent="Drzewa" instance=ExtResource("29_ou8qf")]
-position = Vector2(5649, 2754)
+position = Vector2(5301, 2809)
 scale = Vector2(0.25, 0.25)
 
 [node name="Drzewo21" parent="Drzewa" instance=ExtResource("29_ou8qf")]
-position = Vector2(489, 4866)
+position = Vector2(938, 4507)
 scale = Vector2(0.25, 0.25)
 
 [node name="Drzewo2" parent="Drzewa" instance=ExtResource("30_evsiw")]
-position = Vector2(6226, 2072)
+position = Vector2(5567, 2343)
 scale = Vector2(0.3, 0.3)
 
 [node name="Drzewo22" parent="Drzewa" instance=ExtResource("30_evsiw")]
-position = Vector2(-278, 4816)
+position = Vector2(254, 4267)
 scale = Vector2(0.3, 0.3)
 
 [node name="Drzewo8" parent="Drzewa" instance=ExtResource("30_evsiw")]
@@ -721,16 +727,16 @@ rotation = -0.113446
 scale = Vector2(0.25, 0.25)
 
 [node name="Drzewo12" parent="Drzewa" instance=ExtResource("31_dpvcf")]
-position = Vector2(4633, 442)
+position = Vector2(4273, 406)
 scale = Vector2(0.2, 0.2)
 
 [node name="Drzewo13" parent="Drzewa" instance=ExtResource("31_dpvcf")]
-position = Vector2(5341, 624)
+position = Vector2(4945, 552)
 scale = Vector2(0.3, 0.3)
 skew = 0.174533
 
 [node name="Drzewo14" parent="Drzewa" instance=ExtResource("29_ou8qf")]
-position = Vector2(6060, 3920)
+position = Vector2(4558, 4278)
 scale = Vector2(0.25, 0.25)
 
 [node name="Drzewo19" parent="Drzewa" instance=ExtResource("29_ou8qf")]
@@ -738,11 +744,11 @@ position = Vector2(2773, 4582)
 scale = Vector2(0.25, 0.25)
 
 [node name="Drzewo20" parent="Drzewa" instance=ExtResource("29_ou8qf")]
-position = Vector2(-443, 4070)
+position = Vector2(-367, 3683)
 scale = Vector2(0.25, 0.25)
 
 [node name="Drzewo15" parent="Drzewa" instance=ExtResource("30_evsiw")]
-position = Vector2(4326, 799)
+position = Vector2(4608, 805)
 scale = Vector2(0.3, 0.3)
 
 [node name="Drzewo16" parent="Drzewa" instance=ExtResource("30_evsiw")]
@@ -755,7 +761,7 @@ position = Vector2(4140, 3450)
 scale = Vector2(0.2, 0.2)
 
 [node name="Drzewo18" parent="Drzewa" instance=ExtResource("31_dpvcf")]
-position = Vector2(4440, 2613)
+position = Vector2(4772, 2645)
 scale = Vector2(0.3, 0.3)
 skew = 0.174533
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cg0ad0p2mjrkd"]
+[gd_scene load_steps=10 format=3 uid="uid://cbgw8hvxcwppe"]
 
 [ext_resource type="PackedScene" uid="uid://cc4o75emmeaay" path="res://scenes/budynki/bruk.tscn" id="2_klmb1"]
 [ext_resource type="PackedScene" uid="uid://bbrcme6303jvk" path="res://scenes/budynki/lewy_róg.tscn" id="6_nkrty"]
@@ -17,12 +17,12 @@ collision_layer = 3
 collision_mask = 3
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array(-173, 426, 1865, -1081, 7649, -758, 10619, -326, 17449, -1675, 29127, 47, 29558, 8550, 30849, 9573, 29854, 19625, 18491, 21303, 894, 21590, -3133, 16316, -1315, 13050, -1171, 8884, -1746, 4573, -740, 1412, -403, -164, -2460, -634, -5951, 28781, 36227, 29958, 35141, -5160, -674, -1017, -230, -156)
+polygon = PackedVector2Array(-173, 426, 1865, -1081, 7649, -758, 10619, -326, 17440, -241, 22312, 922, 24278, 7737, 24844, 12622, 23458, 17540, 21051, 17947, 17494, 19753, 9903, 19736, 3663, 18840, -401, 15640, -860, 12905, -404, 9061, -1746, 4573, -740, 1412, -403, -164, -2460, -634, -5951, 28781, 36227, 29958, 35141, -5160, -674, -1017, -230, -156)
 
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="Trawa-04" type="Sprite2D" parent="Node2D"]
-position = Vector2(17013, 3644)
+position = Vector2(16186, 5355)
 scale = Vector2(11.1941, 14.0588)
 texture = ExtResource("12_rh4d6")
 
@@ -32,7 +32,7 @@ scale = Vector2(9.0241, 12.0987)
 texture = ExtResource("12_rh4d6")
 
 [node name="Trawa-06" type="Sprite2D" parent="Node2D"]
-position = Vector2(8819, 12949)
+position = Vector2(10067, 12373)
 scale = Vector2(17.0241, 14.1197)
 texture = ExtResource("12_rh4d6")
 
@@ -40,12 +40,12 @@ texture = ExtResource("12_rh4d6")
 position = Vector2(20386, -519)
 
 [node name="Trawa-05" type="Sprite2D" parent="Node2D2"]
-position = Vector2(4437, 4379)
+position = Vector2(-1915, 6651)
 scale = Vector2(9.0241, 12.0987)
 texture = ExtResource("12_rh4d6")
 
 [node name="Trawa-06" type="Sprite2D" parent="Node2D2"]
-position = Vector2(790, 13697)
+position = Vector2(-6521, 13411)
 scale = Vector2(17.0241, 14.1197)
 texture = ExtResource("12_rh4d6")
 
@@ -53,17 +53,17 @@ texture = ExtResource("12_rh4d6")
 position = Vector2(484, 18465)
 
 [node name="Trawa-04" type="Sprite2D" parent="Node2D3"]
-position = Vector2(16797, -4043)
+position = Vector2(13041, -4076)
 scale = Vector2(11.1941, 14.0588)
 texture = ExtResource("12_rh4d6")
 
 [node name="Trawa-05" type="Sprite2D" parent="Node2D3"]
-position = Vector2(5371, -1224)
+position = Vector2(6239, -4086)
 scale = Vector2(9.0241, 12.0987)
 texture = ExtResource("12_rh4d6")
 
 [node name="Trawa-06" type="Sprite2D" parent="Node2D3"]
-position = Vector2(7382, -1997)
+position = Vector2(10418, -5555)
 scale = Vector2(17.0241, 14.1197)
 texture = ExtResource("12_rh4d6")
 
@@ -71,12 +71,12 @@ texture = ExtResource("12_rh4d6")
 position = Vector2(20870, 17946)
 
 [node name="Trawa-04" type="Sprite2D" parent="Node2D4"]
-position = Vector2(2198, -2442)
+position = Vector2(-5799, -5217)
 scale = Vector2(11.1941, 14.0588)
 texture = ExtResource("12_rh4d6")
 
 [node name="Trawa-06" type="Sprite2D" parent="Node2D4"]
-position = Vector2(-13293, -12529)
+position = Vector2(-11463, -12421)
 scale = Vector2(17.0241, 14.1197)
 texture = ExtResource("12_rh4d6")
 
@@ -258,7 +258,7 @@ scale = Vector2(3.04631, 3.15714)
 texture = ExtResource("12_4f8op")
 
 [node name="Trawa-05" type="Sprite2D" parent="."]
-position = Vector2(21864, 3542)
+position = Vector2(20237, 3779)
 scale = Vector2(1.92435, 2.80199)
 texture = ExtResource("13_k4au4")
 
@@ -273,6 +273,6 @@ scale = Vector2(1.68297, 2.13472)
 texture = ExtResource("13_k4au4")
 
 [node name="Trawa-08" type="Sprite2D" parent="."]
-position = Vector2(24245, 11652)
+position = Vector2(22900, 11975)
 scale = Vector2(1.76601, 2.78571)
 texture = ExtResource("13_k4au4")

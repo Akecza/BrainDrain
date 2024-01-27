@@ -35,10 +35,10 @@ func countGlobalHappiness():
 	if GlobalHappinessLevel>20:
 		trackFart.volume_db=0
 		skillsAvailable+=1
-	if GlobalHappinessLevel>50:
+	if GlobalHappinessLevel>30:
 		track3.volume_db=0
 		skillsAvailable+=1
-	if GlobalHappinessLevel>80:
+	if GlobalHappinessLevel>70:
 		skillsAvailable+=1
 	$Player.skillsAvailable=skillsAvailable
 		
