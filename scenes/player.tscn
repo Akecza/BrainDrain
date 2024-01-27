@@ -1,22 +1,35 @@
-[gd_scene load_steps=23 format=3 uid="uid://b3l8edt0bi7np"]
+[gd_scene load_steps=36 format=3 uid="uid://b3l8edt0bi7np"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_bpioq"]
 [ext_resource type="PackedScene" uid="uid://nbhh5gxf8d8r" path="res://scenes/cake.tscn" id="2_10fye"]
 [ext_resource type="PackedScene" uid="uid://biwhd6ooi88yn" path="res://scenes/whoopie.tscn" id="2_h6r6q"]
 [ext_resource type="PackedScene" uid="uid://cnwlcdqhf7rvq" path="res://scenes/inflatable.tscn" id="2_ug073"]
-[ext_resource type="Texture2D" uid="uid://c8bsq5v8na34q" path="res://art/CharacterAnimation/Jajcarz/Jajcarz_00000.png" id="5_1uyty"]
-[ext_resource type="Texture2D" uid="uid://by2y32kkrydh6" path="res://art/CharacterAnimation/Jajcarz/Jajcarz_00001.png" id="6_1f44k"]
-[ext_resource type="Texture2D" uid="uid://726w5d1ere68" path="res://art/CharacterAnimation/Jajcarz/Jajcarz_00002.png" id="7_rnnhr"]
-[ext_resource type="Texture2D" uid="uid://bvvl33j0ha0x7" path="res://art/CharacterAnimation/Jajcarz/Jajcarz_00003.png" id="8_kgkpm"]
-[ext_resource type="Texture2D" uid="uid://ejh0olt330tp" path="res://art/CharacterAnimation/Jajcarz/Jajcarz_00004.png" id="9_8ahdw"]
-[ext_resource type="Texture2D" uid="uid://dt0labtmgm0n5" path="res://art/CharacterAnimation/Jajcarz/Jajcarz_00005.png" id="10_j4f86"]
-[ext_resource type="Texture2D" uid="uid://buwnfriu012ar" path="res://art/CharacterAnimation/Jajcarz/Jajcarz_00006.png" id="11_1rv1w"]
-[ext_resource type="Texture2D" uid="uid://biitbmh4w310g" path="res://art/CharacterAnimation/Jajcarz/Jajcarz_00007.png" id="12_m45vq"]
-[ext_resource type="Texture2D" uid="uid://cnjqdkcl8dfpc" path="res://art/CharacterAnimation/Jajcarz/Jajcarz_00008.png" id="13_78smh"]
-[ext_resource type="Texture2D" uid="uid://dui78ob524naq" path="res://art/CharacterAnimation/Jajcarz/Jajcarz_00009.png" id="14_7eubi"]
-[ext_resource type="Texture2D" uid="uid://chvkecl0dtrv1" path="res://art/CharacterAnimation/Jajcarz/Jajcarz_00010.png" id="15_7d1ui"]
-[ext_resource type="Texture2D" uid="uid://b6jm5w7p5j3wl" path="res://art/CharacterAnimation/Jajcarz/Jajcarz_00011.png" id="16_4vxfl"]
-[ext_resource type="AudioStream" uid="uid://c0pintx3myjxd" path="res://audio/Objects/Joke/A_Joke_BaDum_02.wav" id="17_4bsdt"]
+[ext_resource type="Texture2D" uid="uid://dj8v5u48ma13i" path="res://art/CharacterAnimation/Jajcarz/Jajcarz_00000.png" id="5_1uyty"]
+[ext_resource type="Texture2D" uid="uid://bapipwx1v3rbn" path="res://art/CharacterParts/Arm-throw-L.png" id="5_ofjq8"]
+[ext_resource type="Texture2D" uid="uid://d0mv8dvvcl6qi" path="res://art/CharacterParts/Glove-throw-L.png" id="6_m2u5l"]
+[ext_resource type="Texture2D" uid="uid://bjcvy08py5q6q" path="res://art/CharacterParts/ciasto.png" id="7_0qkqp"]
+[ext_resource type="Texture2D" uid="uid://b4aifpgensnxj" path="res://art/CharacterAnimation/JajcarzNoHand/Jajcarz_nohand_00001.png" id="9_fx33r"]
+[ext_resource type="Texture2D" uid="uid://cb3so5jgql0wy" path="res://art/CharacterAnimation/JajcarzNoHand/Jajcarz_nohand_00002.png" id="10_hip7h"]
+[ext_resource type="Texture2D" uid="uid://bqwcw7ie3kv35" path="res://art/CharacterAnimation/JajcarzNoHand/Jajcarz_nohand_00003.png" id="11_yjj5v"]
+[ext_resource type="Texture2D" uid="uid://cf4ag2bh0n2sm" path="res://art/CharacterAnimation/JajcarzNoHand/Jajcarz_nohand_00004.png" id="12_im6n8"]
+[ext_resource type="Texture2D" uid="uid://b0ix4caqhwyf8" path="res://art/CharacterAnimation/JajcarzNoHand/Jajcarz_nohand_00005.png" id="13_sv311"]
+[ext_resource type="Texture2D" uid="uid://cbt6pkl75aja4" path="res://art/CharacterAnimation/JajcarzNoHand/Jajcarz_nohand_00006.png" id="14_mf4rn"]
+[ext_resource type="Texture2D" uid="uid://ck6qqb7ggg27o" path="res://art/CharacterAnimation/JajcarzNoHand/Jajcarz_nohand_00007.png" id="15_lbfm0"]
+[ext_resource type="Texture2D" uid="uid://oljamrt8350m" path="res://art/CharacterAnimation/JajcarzNoHand/Jajcarz_nohand_00008.png" id="16_g7l4x"]
+[ext_resource type="AudioStream" uid="uid://cft7yt0wninq4" path="res://audio/Objects/Joke/A_Joke_BaDum_02.wav" id="17_4bsdt"]
+[ext_resource type="Texture2D" uid="uid://xjrca8sfyviv" path="res://art/CharacterAnimation/JajcarzNoHand/Jajcarz_nohand_00009.png" id="17_16p4c"]
+[ext_resource type="Texture2D" uid="uid://djrtcq2fwk2op" path="res://art/CharacterAnimation/JajcarzNoHand/Jajcarz_nohand_00010.png" id="18_ax0tf"]
+[ext_resource type="Texture2D" uid="uid://b4lan50jwg86x" path="res://art/CharacterAnimation/JajcarzNoHand/Jajcarz_nohand_00011.png" id="19_sscxf"]
+[ext_resource type="Texture2D" uid="uid://q5wm4o1nyi6w" path="res://art/CharacterAnimation/JajcarzNoHand/Jajcarz_nohand_00012.png" id="20_0ewqg"]
+[ext_resource type="Texture2D" uid="uid://cias7d0xx0w17" path="res://art/CharacterAnimation/JajcarzNoHand/Jajcarz_nohand_00013.png" id="21_rfhli"]
+[ext_resource type="Texture2D" uid="uid://bclekyoyq6e7v" path="res://art/CharacterAnimation/JajcarzNoHand/Jajcarz_nohand_00014.png" id="22_3vopi"]
+[ext_resource type="Texture2D" uid="uid://cqpgtmoamhmmp" path="res://art/CharacterAnimation/JajcarzNoHand/Jajcarz_nohand_00015.png" id="23_grart"]
+[ext_resource type="Texture2D" uid="uid://dvaq2jtmexiaq" path="res://art/CharacterAnimation/JajcarzNoHand/Jajcarz_nohand_00016.png" id="24_8o0ig"]
+[ext_resource type="Texture2D" uid="uid://s7o5xwetabgs" path="res://art/CharacterAnimation/JajcarzNoHand/Jajcarz_nohand_00017.png" id="25_bfmxk"]
+[ext_resource type="Texture2D" uid="uid://pwqipmisls60" path="res://art/CharacterAnimation/JajcarzNoHand/Jajcarz_nohand_00018.png" id="26_cefuq"]
+[ext_resource type="Texture2D" uid="uid://bomyw84scapmn" path="res://art/CharacterAnimation/JajcarzNoHand/Jajcarz_nohand_00019.png" id="27_3jfnx"]
+[ext_resource type="Texture2D" uid="uid://dc7n875kje213" path="res://art/CharacterAnimation/JajcarzNoHand/Jajcarz_nohand_00020.png" id="28_315ph"]
+[ext_resource type="Texture2D" uid="uid://q5nyufwr1sy0" path="res://art/CharacterAnimation/JajcarzNoHand/Jajcarz_nohand_00022.png" id="29_avyam"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_byd17"]
 animations = [{
@@ -30,44 +43,71 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_1uyty")
+"texture": ExtResource("9_fx33r")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_1f44k")
+"texture": ExtResource("10_hip7h")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_rnnhr")
+"texture": ExtResource("11_yjj5v")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_kgkpm")
+"texture": ExtResource("12_im6n8")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_8ahdw")
+"texture": ExtResource("13_sv311")
 }, {
 "duration": 1.0,
-"texture": ExtResource("10_j4f86")
+"texture": ExtResource("14_mf4rn")
 }, {
 "duration": 1.0,
-"texture": ExtResource("11_1rv1w")
+"texture": ExtResource("15_lbfm0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("12_m45vq")
+"texture": ExtResource("16_g7l4x")
 }, {
 "duration": 1.0,
-"texture": ExtResource("13_78smh")
+"texture": ExtResource("17_16p4c")
 }, {
 "duration": 1.0,
-"texture": ExtResource("14_7eubi")
+"texture": ExtResource("18_ax0tf")
 }, {
 "duration": 1.0,
-"texture": ExtResource("15_7d1ui")
+"texture": ExtResource("19_sscxf")
 }, {
 "duration": 1.0,
-"texture": ExtResource("16_4vxfl")
+"texture": ExtResource("20_0ewqg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_rfhli")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_3vopi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_grart")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_8o0ig")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_bfmxk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_cefuq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_3jfnx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_315ph")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_avyam")
 }],
 "loop": true,
 "name": &"walk",
-"speed": 24.0
+"speed": 12.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qphrt"]
@@ -94,14 +134,37 @@ whoopie = ExtResource("2_h6r6q")
 cake = ExtResource("2_10fye")
 metadata/_edit_group_ = true
 
+[node name="Hand" type="Node2D" parent="."]
+
+[node name="Nuzzle" type="Marker2D" parent="Hand"]
+position = Vector2(49, -1)
+
+[node name="Center" type="Marker2D" parent="Hand"]
+
+[node name="HandSprite" type="Sprite2D" parent="Hand"]
+position = Vector2(28, 10)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("5_ofjq8")
+
+[node name="Glove" type="Sprite2D" parent="Hand/HandSprite"]
+position = Vector2(175, -50)
+rotation = 0.459572
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("6_m2u5l")
+flip_h = true
+
+[node name="Cake" type="Sprite2D" parent="Hand/HandSprite/Glove"]
+position = Vector2(0.569603, -139.753)
+texture = ExtResource("7_0qkqp")
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 light_mask = 2
 visibility_layer = 3
-scale = Vector2(0.04, 0.04)
+scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_byd17")
 animation = &"walk"
-frame = 8
-frame_progress = 0.614454
+frame = 9
+frame_progress = 0.320126
 
 [node name="PlayerCollision" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_qphrt")
@@ -154,13 +217,6 @@ one_shot = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(1.5, 1.5)
-
-[node name="Hand" type="Node2D" parent="."]
-
-[node name="Nuzzle" type="Marker2D" parent="Hand"]
-position = Vector2(20, 0)
-
-[node name="Center" type="Marker2D" parent="Hand"]
 
 [node name="JokePlayer" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("17_4bsdt")

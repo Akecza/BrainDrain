@@ -17,7 +17,8 @@ extends RigidBody2D
 
 var screen_size # Size of the game window.
 var honk_on_cooldown = false
-
+var skillsAvailable = 2
+var activeSkill = 1
 
 
 func _ready():

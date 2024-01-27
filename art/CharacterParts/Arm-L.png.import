@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://covl4wnhiw7vt"
-path="res://.godot/imported/Jajcarz_nohand_00000.png-532b3e0f91a6ce17cbdb1ec5efc58d7d.ctex"
+uid="uid://clk3lf4mx6t"
+path="res://.godot/imported/Arm-L.png-17f31de1ec9d49311d1c6e7a4e5563a1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/CharacterAnimation/JajcarzNoHand/Jajcarz_nohand_00000.png"
-dest_files=["res://.godot/imported/Jajcarz_nohand_00000.png-532b3e0f91a6ce17cbdb1ec5efc58d7d.ctex"]
+source_file="res://art/CharacterParts/Arm-L.png"
+dest_files=["res://.godot/imported/Arm-L.png-17f31de1ec9d49311d1c6e7a4e5563a1.ctex"]
 
 [params]
 
