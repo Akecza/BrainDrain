@@ -38,7 +38,7 @@ func _process(delta):
 	if Input.is_action_pressed("skill1"):
 		skill_honk()
 	if Input.is_action_pressed("shoot"):
-		shoot()
+		useActiveSkill
 
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
@@ -50,7 +50,8 @@ func _process(delta):
 	if $Hand.rotation>180:
 		transform.inverse()
 	
-	
+func useActiveSkill():
+	shoot()
 	
 func skill_honk():
 	if(not honk_on_cooldown):

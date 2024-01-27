@@ -239,9 +239,9 @@ texture = ExtResource("6_51djo")
 flip_h = true
 
 [node name="HeldObject" type="Sprite2D" parent="Hand/HandSprite/Hand"]
-position = Vector2(30.6682, -178.257)
-rotation = 0.253381
-scale = Vector2(0.8, 0.8)
+position = Vector2(63.4988, -212.085)
+rotation = 0.529729
+scale = Vector2(1.22741, 1)
 texture = ExtResource("7_d2tew")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
