@@ -13,8 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://dowrjcdnnxods" path="res://scenes/sad_man.tscn" id="7_or3d6"]
 [ext_resource type="Texture2D" uid="uid://bwu3lq2c0v524" path="res://art/baloon.png" id="9_higc0"]
 [ext_resource type="PackedScene" uid="uid://biwhd6ooi88yn" path="res://scenes/whoopie.tscn" id="11_0vyw4"]
-[ext_resource type="Texture2D" uid="uid://5mvw15dojlum" path="res://art/UI/panel_brown.png" id="12_vlhmp"]
-[ext_resource type="Texture2D" uid="uid://c3v0di7dtkgva" path="res://art/UI/yellowBar.png" id="13_2etor"]
+[ext_resource type="Texture2D" uid="uid://dbpxvi1lkb5as" path="res://art/UI/panel_brown.png" id="12_vlhmp"]
+[ext_resource type="Texture2D" uid="uid://3128u8et1qoq" path="res://art/UI/yellowBar.png" id="13_2etor"]
 [ext_resource type="AudioStream" uid="uid://bgy2su6e4hleh" path="res://sounds/A_Clown_Honker_02.wav" id="13_t681a"]
 
 [sub_resource type="GDScript" id="GDScript_j45pr"]
@@ -174,3 +174,4 @@ volume_db = 24.0
 [connection signal="pressed" from="CanvasLayer/PanelContainer/HBoxContainer/CAKE" to="Player" method="shoot"]
 [connection signal="pressed" from="CanvasLayer/PanelContainer/HBoxContainer/WHOOPIE" to="Player" method="skill_whoopie"]
 [connection signal="pressed" from="CanvasLayer/PanelContainer/HBoxContainer/JOKE" to="Player" method="skill_joke"]
+[connection signal="pressed" from="CanvasLayer/PanelContainer/HBoxContainer/INFLATABLE" to="Player" method="skill_inflatable"]

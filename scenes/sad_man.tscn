@@ -100,6 +100,9 @@ shape = SubResource("CapsuleShape2D_q607b")
 wait_time = 8.0
 one_shot = true
 
+[node name="GotCakedTimer" type="Timer" parent="."]
+one_shot = true
+
 [connection signal="timeout" from="StateMachine/Idle/IdleTimer" to="StateMachine/Idle" method="_on_idle_timer_timeout"]
 [connection signal="area_entered" from="HitboxArea" to="." method="_on_hitbox_area_area_entered"]
 [connection signal="area_exited" from="HitboxArea" to="." method="_on_hitbox_area_area_exited"]

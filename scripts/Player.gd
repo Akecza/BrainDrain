@@ -1,5 +1,6 @@
 extends RigidBody2D
 
+@export var inflatable: PackedScene
 @export var whoopie: PackedScene
 @export var cake: PackedScene
 @export var speed = 400 # How fast the player will move (pixels/sec).
@@ -10,6 +11,7 @@ extends RigidBody2D
 @onready var joke_cooldown_timer = $JokeCooldown
 @onready var joke_finish_duration_timer = $JokeFinishDuration
 @onready var whoopie_cooldown_timer = $WhoopieCooldownTimer
+@onready var inflatable_cooldown_timer = $InflatableCooldownTimer
 
 @onready var joke_player : AudioStreamPlayer2D = $JokePlayer
 
@@ -82,6 +84,13 @@ func skill_whoopie():
 	if(whoopie_cooldown_timer.time_left == 0):
 		whoopie_cooldown_timer.start()
 		var instance=whoopie.instantiate()
+		owner.add_child(instance)
+		instance.position=position
+		
+func skill_inflatable():
+	if(inflatable_cooldown_timer.time_left == 0):
+		inflatable_cooldown_timer.start()
+		var instance=inflatable.instantiate()
 		owner.add_child(instance)
 		instance.position=position
 

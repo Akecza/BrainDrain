@@ -1,21 +1,22 @@
-[gd_scene load_steps=22 format=3 uid="uid://b3l8edt0bi7np"]
+[gd_scene load_steps=23 format=3 uid="uid://b3l8edt0bi7np"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_bpioq"]
 [ext_resource type="PackedScene" uid="uid://nbhh5gxf8d8r" path="res://scenes/cake.tscn" id="2_10fye"]
 [ext_resource type="PackedScene" uid="uid://biwhd6ooi88yn" path="res://scenes/whoopie.tscn" id="2_h6r6q"]
-[ext_resource type="Texture2D" uid="uid://dj8v5u48ma13i" path="res://art/CharacterAnimation/Jajcarz/Jajcarz_00000.png" id="5_1uyty"]
-[ext_resource type="Texture2D" uid="uid://b0ulf5e2jgfbm" path="res://art/CharacterAnimation/Jajcarz/Jajcarz_00001.png" id="6_1f44k"]
+[ext_resource type="PackedScene" uid="uid://cnwlcdqhf7rvq" path="res://scenes/inflatable.tscn" id="2_ug073"]
+[ext_resource type="Texture2D" uid="uid://c8bsq5v8na34q" path="res://art/CharacterAnimation/Jajcarz/Jajcarz_00000.png" id="5_1uyty"]
+[ext_resource type="Texture2D" uid="uid://by2y32kkrydh6" path="res://art/CharacterAnimation/Jajcarz/Jajcarz_00001.png" id="6_1f44k"]
 [ext_resource type="AudioStream" uid="uid://ctwge7rxc2m4y" path="res://sounds/fart.wav" id="7_776qy"]
-[ext_resource type="Texture2D" uid="uid://dwd2akvjmrh88" path="res://art/CharacterAnimation/Jajcarz/Jajcarz_00002.png" id="7_rnnhr"]
-[ext_resource type="Texture2D" uid="uid://c81e162pt4n62" path="res://art/CharacterAnimation/Jajcarz/Jajcarz_00003.png" id="8_kgkpm"]
-[ext_resource type="Texture2D" uid="uid://1m4sug00yeg7" path="res://art/CharacterAnimation/Jajcarz/Jajcarz_00004.png" id="9_8ahdw"]
-[ext_resource type="Texture2D" uid="uid://b1gqxqiqw2squ" path="res://art/CharacterAnimation/Jajcarz/Jajcarz_00005.png" id="10_j4f86"]
-[ext_resource type="Texture2D" uid="uid://ctl0w7pdfohiv" path="res://art/CharacterAnimation/Jajcarz/Jajcarz_00006.png" id="11_1rv1w"]
-[ext_resource type="Texture2D" uid="uid://coxle3rpg1qwc" path="res://art/CharacterAnimation/Jajcarz/Jajcarz_00007.png" id="12_m45vq"]
-[ext_resource type="Texture2D" uid="uid://yyr5plrsj15h" path="res://art/CharacterAnimation/Jajcarz/Jajcarz_00008.png" id="13_78smh"]
-[ext_resource type="Texture2D" uid="uid://cov107ao1s6a" path="res://art/CharacterAnimation/Jajcarz/Jajcarz_00009.png" id="14_7eubi"]
-[ext_resource type="Texture2D" uid="uid://dd0o08w3xtfnr" path="res://art/CharacterAnimation/Jajcarz/Jajcarz_00010.png" id="15_7d1ui"]
-[ext_resource type="Texture2D" uid="uid://difqt7l2utyvv" path="res://art/CharacterAnimation/Jajcarz/Jajcarz_00011.png" id="16_4vxfl"]
+[ext_resource type="Texture2D" uid="uid://726w5d1ere68" path="res://art/CharacterAnimation/Jajcarz/Jajcarz_00002.png" id="7_rnnhr"]
+[ext_resource type="Texture2D" uid="uid://bvvl33j0ha0x7" path="res://art/CharacterAnimation/Jajcarz/Jajcarz_00003.png" id="8_kgkpm"]
+[ext_resource type="Texture2D" uid="uid://ejh0olt330tp" path="res://art/CharacterAnimation/Jajcarz/Jajcarz_00004.png" id="9_8ahdw"]
+[ext_resource type="Texture2D" uid="uid://dt0labtmgm0n5" path="res://art/CharacterAnimation/Jajcarz/Jajcarz_00005.png" id="10_j4f86"]
+[ext_resource type="Texture2D" uid="uid://buwnfriu012ar" path="res://art/CharacterAnimation/Jajcarz/Jajcarz_00006.png" id="11_1rv1w"]
+[ext_resource type="Texture2D" uid="uid://biitbmh4w310g" path="res://art/CharacterAnimation/Jajcarz/Jajcarz_00007.png" id="12_m45vq"]
+[ext_resource type="Texture2D" uid="uid://cnjqdkcl8dfpc" path="res://art/CharacterAnimation/Jajcarz/Jajcarz_00008.png" id="13_78smh"]
+[ext_resource type="Texture2D" uid="uid://dui78ob524naq" path="res://art/CharacterAnimation/Jajcarz/Jajcarz_00009.png" id="14_7eubi"]
+[ext_resource type="Texture2D" uid="uid://chvkecl0dtrv1" path="res://art/CharacterAnimation/Jajcarz/Jajcarz_00010.png" id="15_7d1ui"]
+[ext_resource type="Texture2D" uid="uid://b6jm5w7p5j3wl" path="res://art/CharacterAnimation/Jajcarz/Jajcarz_00011.png" id="16_4vxfl"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_byd17"]
 animations = [{
@@ -88,6 +89,7 @@ collision_mask = 7
 gravity_scale = 0.0
 lock_rotation = true
 script = ExtResource("1_bpioq")
+inflatable = ExtResource("2_ug073")
 whoopie = ExtResource("2_h6r6q")
 cake = ExtResource("2_10fye")
 metadata/_edit_group_ = true
@@ -144,6 +146,10 @@ one_shot = true
 
 [node name="WhoopieCooldownTimer" type="Timer" parent="."]
 wait_time = 10.0
+one_shot = true
+
+[node name="InflatableCooldownTimer" type="Timer" parent="."]
+wait_time = 20.0
 one_shot = true
 
 [node name="Camera2D" type="Camera2D" parent="."]

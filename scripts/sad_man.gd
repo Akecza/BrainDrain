@@ -2,6 +2,7 @@ extends CharacterBody2D
 class_name SadMan
 signal happinessChanged
 
+@onready var got_caked_timer = $GotCakedTimer
 @onready var animations = $AnimatedSprite2D
 @onready var state_machine = $StateMachine
 @onready var timer : Timer = $Timer
@@ -51,12 +52,14 @@ func _on_hitbox_area_area_entered(area : Area2D):
 		make_happy(-50)
 	if (area.name == "WhoopieSound"):
 		make_happy(30)
-	if (area.name == "CakeHappy"):
+	if (area.name == "CakeHappy" && got_caked_timer.time_left == 0):
 		make_happy(50)
 	if (area.name == "Joke"):
 		state_machine.change_state($StateMachine/Following, area.get_parent())
 	if (area.name == "JokeFinish"):
 		make_happy(100)
+	if (area.name == "InflatableSound"):
+		state_machine.change_state($StateMachine/Following, area.get_parent())
 
 func _on_hitbox_area_area_exited(area):
 	if (area.name == "Joke"):
