@@ -26,9 +26,7 @@ func _on_body_entered(body):
 	$CakeSprite.visible=false
 	$CakeFloorMush.visible=true
 	$CakeFloorMush.rotation=$CakeSprite.rotation
-		#var smush=$CakeFloorMush.instantiate()
-		#body.add_child(smush)
-		#$CakeFloorMush.transform.look_at(body)
+	$CakeFloorMush.rotation+=20
 	$HappyTimer.start()
 	rotateSpeed=0
 	speed=0

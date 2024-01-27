@@ -1,5 +1,6 @@
 extends CharacterBody2D
 class_name SadMan
+signal happinessChanged
 
 @onready var animations = $AnimatedSprite2D
 @onready var state_machine = $StateMachine
@@ -17,7 +18,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 func _ready():
 	HappyDepleteAmount=BaseHappyDepleteSpeed
 	state_machine.init(self)
-
+	owner.SadManList.push_back(self)
 #func new_random_direction():
 	#direction = Vector2(randf_range(-1, 1), randf_range(-1, 1))
 	#direction = direction.normalized()

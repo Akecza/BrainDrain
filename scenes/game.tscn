@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cafnh4rpv7oee"]
+[gd_scene load_steps=18 format=3 uid="uid://cafnh4rpv7oee"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_3qlki"]
 [ext_resource type="PackedScene" uid="uid://b3l8edt0bi7np" path="res://scenes/player.tscn" id="1_dofbq"]
@@ -10,10 +10,29 @@
 [ext_resource type="Texture2D" uid="uid://c6ep6l1a1bqjt" path="res://art/whoopie.png" id="6_324vo"]
 [ext_resource type="Texture2D" uid="uid://dunkl37kuc773" path="res://art/inflatable.png" id="6_w2n4u"]
 [ext_resource type="Texture2D" uid="uid://cps8i6qug7k0t" path="res://art/joke.png" id="7_o1ny2"]
-[ext_resource type="PackedScene" uid="uid://rq4ussnki31b" path="res://scenes/sad_man.tscn" id="7_or3d6"]
+[ext_resource type="PackedScene" uid="uid://dowrjcdnnxods" path="res://scenes/sad_man.tscn" id="7_or3d6"]
 [ext_resource type="Texture2D" uid="uid://bwu3lq2c0v524" path="res://art/baloon.png" id="9_higc0"]
 [ext_resource type="PackedScene" uid="uid://biwhd6ooi88yn" path="res://scenes/whoopie.tscn" id="11_0vyw4"]
+[ext_resource type="Texture2D" uid="uid://5mvw15dojlum" path="res://art/UI/panel_brown.png" id="12_vlhmp"]
+[ext_resource type="Texture2D" uid="uid://c3v0di7dtkgva" path="res://art/UI/yellowBar.png" id="13_2etor"]
 [ext_resource type="AudioStream" uid="uid://bgy2su6e4hleh" path="res://sounds/A_Clown_Honker_02.wav" id="13_t681a"]
+
+[sub_resource type="GDScript" id="GDScript_j45pr"]
+script/source = "extends TextureProgressBar
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	value=0
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+
+func changeProgressValue(amount):
+	pass
+"
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_3qlki")
@@ -34,10 +53,10 @@ position = Vector2(859, 979)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="PanelContainer" type="PanelContainer" parent="CanvasLayer"]
-offset_left = 64.0
-offset_top = 551.0
-offset_right = 1088.0
-offset_bottom = 637.0
+offset_left = 42.0
+offset_top = 759.0
+offset_right = 1066.0
+offset_bottom = 867.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/PanelContainer"]
 layout_mode = 2
@@ -90,6 +109,21 @@ icon_alignment = 1
 script = ExtResource("5_42r6h")
 input = "6"
 
+[node name="GlobalHappinessBar" type="TextureProgressBar" parent="CanvasLayer"]
+offset_left = 997.0
+offset_top = 49.0
+offset_right = 1626.0
+offset_bottom = 117.0
+value = 50.0
+nine_patch_stretch = true
+stretch_margin_left = 7
+stretch_margin_top = 1
+stretch_margin_right = 6
+stretch_margin_bottom = 1
+texture_under = ExtResource("12_vlhmp")
+texture_progress = ExtResource("13_2etor")
+script = SubResource("GDScript_j45pr")
+
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
@@ -136,16 +170,7 @@ position = Vector2(878, 1142)
 stream = ExtResource("13_t681a")
 volume_db = 24.0
 
-[node name="HONK" type="Button" parent="."]
-size_flags_horizontal = 3
-icon = ExtResource("4_71f3e")
-icon_alignment = 1
-script = ExtResource("5_42r6h")
-input = "1"
-
 [connection signal="pressed" from="CanvasLayer/PanelContainer/HBoxContainer/HONK" to="Player" method="skill_honk"]
 [connection signal="pressed" from="CanvasLayer/PanelContainer/HBoxContainer/CAKE" to="Player" method="shoot"]
 [connection signal="pressed" from="CanvasLayer/PanelContainer/HBoxContainer/WHOOPIE" to="Player" method="skill_whoopie"]
 [connection signal="pressed" from="CanvasLayer/PanelContainer/HBoxContainer/JOKE" to="Player" method="skill_joke"]
-[connection signal="pressed" from="HONK" to="." method="_on_honk_pressed"]
-[connection signal="pressed" from="HONK" to="Player" method="skill_honk"]
