@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://yv8iuhtcensv"]
+
+[ext_resource type="Texture2D" uid="uid://d1w2qvbai018q" path="res://art/Drzewa/drzewo.png" id="1_xiywt"]
+
+[node name="Drzewo" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-371, -110, -205, 15, 482, -34, 549, -191, 226, -645, -192, -627)
+
+[node name="Drzewo" type="Sprite2D" parent="."]
+position = Vector2(51, -1067)
+texture = ExtResource("1_xiywt")

@@ -140,7 +140,7 @@ stream_2/weight = 1.0
 
 [node name="Player" type="RigidBody2D"]
 collision_layer = 2
-collision_mask = 7
+collision_mask = 6
 gravity_scale = 0.0
 lock_rotation = true
 script = ExtResource("1_bpioq")

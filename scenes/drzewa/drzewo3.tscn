@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://bbm0jsitf31h0"]
+
+[ext_resource type="Texture2D" uid="uid://d1w2qvbai018q" path="res://art/Drzewa/drzewo.png" id="1_negyj"]
+[ext_resource type="Texture2D" uid="uid://bw7hlwgmqi3dl" path="res://art/Drzewa/drzewo-galaz-02.png" id="2_oov3v"]
+[ext_resource type="Texture2D" uid="uid://bqfikducsog7o" path="res://art/Drzewa/drzewo-galaz-01.png" id="3_n3l43"]
+
+[node name="Drzewo" type="StaticBody2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-371, -110, -205, 15, 482, -34, 549, -191, 226, -645, -192, -627)
+
+[node name="Drzewo" type="Sprite2D" parent="."]
+position = Vector2(-9, -1100)
+texture = ExtResource("1_negyj")
+flip_h = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(282, -948)
+scale = Vector2(1.36364, 1.38987)
+texture = ExtResource("2_oov3v")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(-358.599, -282.041)
+scale = Vector2(1.36364, 1.38987)
+texture = ExtResource("2_oov3v")
+flip_h = true
+
+[node name="Drzewo-galaz-01" type="Sprite2D" parent="."]
+position = Vector2(-332, -878)
+texture = ExtResource("3_n3l43")

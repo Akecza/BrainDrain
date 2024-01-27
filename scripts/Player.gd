@@ -27,7 +27,7 @@ signal skill_changed
 
 var screen_size # Size of the game window.
 var honk_on_cooldown = false
-var skillsAvailable = 2
+var skillsAvailable = 1
 var activeSkill = 1
 var skillNames = ["Honk","Cake","Fart","Joke","Wobbly Man", "The Ultimate Joke"]
 

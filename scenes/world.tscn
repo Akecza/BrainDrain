@@ -12,6 +12,13 @@
 
 [node name="World" type="Node2D"]
 
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-173, 426, 1865, -1081, 7649, -758, 10619, -326, 17449, -1675, 29127, 47, 29558, 8550, 30849, 9573, 29854, 19625, 18491, 21303, 894, 21590, -3133, 16316, -1315, 13050, -1171, 8884, -1746, 4573, -740, 1412, -403, -164, -2460, -634, -5951, 28781, 36227, 29958, 35141, -5160, -674, -1017, -230, -156)
+
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="Trawa-04" type="Sprite2D" parent="Node2D"]
@@ -20,22 +27,17 @@ scale = Vector2(11.1941, 14.0588)
 texture = ExtResource("12_rh4d6")
 
 [node name="Trawa-05" type="Sprite2D" parent="Node2D"]
-position = Vector2(4437, 4379)
+position = Vector2(4719, 3573)
 scale = Vector2(9.0241, 12.0987)
 texture = ExtResource("12_rh4d6")
 
 [node name="Trawa-06" type="Sprite2D" parent="Node2D"]
-position = Vector2(10444, 13355)
+position = Vector2(8819, 12949)
 scale = Vector2(17.0241, 14.1197)
 texture = ExtResource("12_rh4d6")
 
 [node name="Node2D2" type="Node2D" parent="."]
 position = Vector2(20386, -519)
-
-[node name="Trawa-04" type="Sprite2D" parent="Node2D2"]
-position = Vector2(17013, 3644)
-scale = Vector2(11.1941, 14.0588)
-texture = ExtResource("12_rh4d6")
 
 [node name="Trawa-05" type="Sprite2D" parent="Node2D2"]
 position = Vector2(4437, 4379)
@@ -43,7 +45,7 @@ scale = Vector2(9.0241, 12.0987)
 texture = ExtResource("12_rh4d6")
 
 [node name="Trawa-06" type="Sprite2D" parent="Node2D2"]
-position = Vector2(10444, 13355)
+position = Vector2(790, 13697)
 scale = Vector2(17.0241, 14.1197)
 texture = ExtResource("12_rh4d6")
 
@@ -51,17 +53,17 @@ texture = ExtResource("12_rh4d6")
 position = Vector2(484, 18465)
 
 [node name="Trawa-04" type="Sprite2D" parent="Node2D3"]
-position = Vector2(17013, 3644)
+position = Vector2(16797, -4043)
 scale = Vector2(11.1941, 14.0588)
 texture = ExtResource("12_rh4d6")
 
 [node name="Trawa-05" type="Sprite2D" parent="Node2D3"]
-position = Vector2(4437, 4379)
+position = Vector2(5371, -1224)
 scale = Vector2(9.0241, 12.0987)
 texture = ExtResource("12_rh4d6")
 
 [node name="Trawa-06" type="Sprite2D" parent="Node2D3"]
-position = Vector2(10444, 13355)
+position = Vector2(7382, -1997)
 scale = Vector2(17.0241, 14.1197)
 texture = ExtResource("12_rh4d6")
 
@@ -69,17 +71,12 @@ texture = ExtResource("12_rh4d6")
 position = Vector2(20870, 17946)
 
 [node name="Trawa-04" type="Sprite2D" parent="Node2D4"]
-position = Vector2(17013, 3644)
+position = Vector2(2198, -2442)
 scale = Vector2(11.1941, 14.0588)
 texture = ExtResource("12_rh4d6")
 
-[node name="Trawa-05" type="Sprite2D" parent="Node2D4"]
-position = Vector2(4437, 4379)
-scale = Vector2(9.0241, 12.0987)
-texture = ExtResource("12_rh4d6")
-
 [node name="Trawa-06" type="Sprite2D" parent="Node2D4"]
-position = Vector2(10444, 13355)
+position = Vector2(-13421, -12337)
 scale = Vector2(17.0241, 14.1197)
 texture = ExtResource("12_rh4d6")
 
@@ -92,8 +89,50 @@ texture = ExtResource("12_rh4d6")
 [node name="Bruk" parent="." instance=ExtResource("2_klmb1")]
 position = Vector2(6274, 1868)
 
+[node name="KawalBruku5" type="Node2D" parent="."]
+position = Vector2(-3764, 6101)
+
+[node name="Bruk2" parent="KawalBruku5" instance=ExtResource("2_klmb1")]
+position = Vector2(6335, 7991)
+
+[node name="Bruk3" parent="KawalBruku5" instance=ExtResource("2_klmb1")]
+position = Vector2(6331, 6289)
+
+[node name="Bruk4" parent="KawalBruku5" instance=ExtResource("2_klmb1")]
+position = Vector2(6302, 5552)
+
+[node name="KawalBruku6" type="Node2D" parent="."]
+position = Vector2(-4768, 3147)
+
+[node name="Bruk2" parent="KawalBruku6" instance=ExtResource("2_klmb1")]
+position = Vector2(6335, 7991)
+
+[node name="Bruk3" parent="KawalBruku6" instance=ExtResource("2_klmb1")]
+position = Vector2(6331, 6289)
+
+[node name="Bruk4" parent="KawalBruku6" instance=ExtResource("2_klmb1")]
+position = Vector2(6302, 5552)
+
+[node name="KawalBruku7" type="Node2D" parent="."]
+position = Vector2(-4748, 2)
+
+[node name="Bruk2" parent="KawalBruku7" instance=ExtResource("2_klmb1")]
+position = Vector2(6335, 7991)
+
+[node name="Bruk3" parent="KawalBruku7" instance=ExtResource("2_klmb1")]
+position = Vector2(6331, 6289)
+
+[node name="Bruk4" parent="KawalBruku7" instance=ExtResource("2_klmb1")]
+position = Vector2(6302, 5552)
+
 [node name="Bruk5" parent="." instance=ExtResource("2_klmb1")]
 position = Vector2(6405, 14101)
+
+[node name="Bruk8" parent="." instance=ExtResource("2_klmb1")]
+position = Vector2(6149, 15810)
+
+[node name="Bruk9" parent="." instance=ExtResource("2_klmb1")]
+position = Vector2(7858, 15767)
 
 [node name="Bruk6" parent="." instance=ExtResource("2_klmb1")]
 position = Vector2(6401, 12399)
@@ -167,7 +206,7 @@ position = Vector2(11100, 9742)
 position = Vector2(9521, 9749)
 
 [node name="KawalBruku3" type="Node2D" parent="."]
-position = Vector2(2849, -4108)
+position = Vector2(2609, -4060)
 
 [node name="Bruk2" parent="KawalBruku3" instance=ExtResource("2_klmb1")]
 position = Vector2(6335, 7991)
@@ -199,6 +238,18 @@ position = Vector2(6335, 7991)
 position = Vector2(6331, 6289)
 
 [node name="Bruk4" parent="KawalBruku" instance=ExtResource("2_klmb1")]
+position = Vector2(6302, 5552)
+
+[node name="KawalBruku4" type="Node2D" parent="."]
+position = Vector2(3866, 6101)
+
+[node name="Bruk2" parent="KawalBruku4" instance=ExtResource("2_klmb1")]
+position = Vector2(6335, 7991)
+
+[node name="Bruk3" parent="KawalBruku4" instance=ExtResource("2_klmb1")]
+position = Vector2(6331, 6289)
+
+[node name="Bruk4" parent="KawalBruku4" instance=ExtResource("2_klmb1")]
 position = Vector2(6302, 5552)
 
 [node name="Trawa-04" type="Sprite2D" parent="."]

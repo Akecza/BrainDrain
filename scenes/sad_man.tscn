@@ -353,7 +353,6 @@ offset_right = 27.0
 offset_bottom = -36.0
 theme_override_styles/background = SubResource("StyleBoxFlat_niccl")
 theme_override_styles/fill = SubResource("StyleBoxFlat_rtoln")
-value = 60.0
 show_percentage = false
 
 [node name="HitboxArea" type="Area2D" parent="."]
