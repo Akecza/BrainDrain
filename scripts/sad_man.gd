@@ -33,7 +33,7 @@ func _physics_process(delta):
 	state_machine.process_physics(delta)
 	check_happiness_state()
 	if (InInflatableRange):
-		make_happy(55*delta)
+		make_happy(15*delta)
 	if velocity.x>0:
 		$AnimatedSprite2D.flip_h=true
 	else:
@@ -60,7 +60,7 @@ func _on_hitbox_area_area_entered(area : Area2D):
 	if (area.name == "Whoopie"):
 		make_happy(-50)
 	if (area.name == "WhoopieSound"):
-		make_happy(30)
+		make_happy(60)
 	if (area.name == "CakeHappy" && got_caked_timer.time_left == 0):
 		make_happy(50)
 	if (area.name == "Joke"):

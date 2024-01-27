@@ -2,7 +2,7 @@ extends Node2D
 
 var SadManList = []
 var GlobalHappinessLevel=0
-@onready var honk = $HonkPlayer2D
+@onready var honk = $HonkPlayer
 @onready var track1 : AudioStreamPlayer = $Music/TrackLevel1
 @onready var track2 : AudioStreamPlayer = $Music/TrackLevel2
 @onready var track3 : AudioStreamPlayer = $Music/TrackLevel3

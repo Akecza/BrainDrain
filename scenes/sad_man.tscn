@@ -1,4 +1,4 @@
-[gd_scene load_steps=83 format=3 uid="uid://dowrjcdnnxods"]
+[gd_scene load_steps=81 format=3 uid="uid://dowrjcdnnxods"]
 
 [ext_resource type="Script" path="res://scripts/sad_man.gd" id="1_wtxo7"]
 [ext_resource type="Script" path="res://scripts/state_machine/Idle.gd" id="3_kjit3"]
@@ -15,12 +15,10 @@
 [ext_resource type="AudioStream" uid="uid://cgnjpbcbc5w6u" path="res://audio/Objects/Laugh/A_Crowd_Laugh_01.wav" id="8_m2jpo"]
 [ext_resource type="Texture2D" uid="uid://quwekyglr070" path="res://art/CharacterAnimation/SadCoffee/Kawiarz_walk_frame_00006.png" id="9_rwnak"]
 [ext_resource type="AudioStream" uid="uid://5gey3evtlaq" path="res://audio/Objects/Laugh/A_Crowd_Laugh_02.wav" id="9_v0tvv"]
-[ext_resource type="AudioStream" uid="uid://ddsddbkvwe617" path="res://audio/Objects/Laugh/A_Crowd_Laugh_03.wav" id="10_5olv7"]
 [ext_resource type="Texture2D" uid="uid://ddqw7s5p4h0i7" path="res://art/CharacterAnimation/SadCoffee/Kawiarz_walk_frame_00007.png" id="10_w3roh"]
 [ext_resource type="AudioStream" uid="uid://cxpsjw2myupk4" path="res://audio/Objects/Laugh/A_Crowd_Laugh_04.wav" id="11_q5hps"]
 [ext_resource type="Texture2D" uid="uid://bomnyo72r4l05" path="res://art/CharacterAnimation/SadCoffee/Kawiarz_walk_frame_00008.png" id="11_w1tps"]
 [ext_resource type="Texture2D" uid="uid://b5snlyictrx7c" path="res://art/CharacterAnimation/SadCoffee/Kawiarz_walk_frame_00009.png" id="12_7tdjg"]
-[ext_resource type="AudioStream" uid="uid://mgimv6hk3riw" path="res://audio/Objects/Laugh/A_Crowd_Laugh_05.wav" id="12_ne6cm"]
 [ext_resource type="Texture2D" uid="uid://gsbatqx5ye16" path="res://art/CharacterAnimation/SadCoffee/Kawiarz_walk_frame_00010.png" id="13_6tbhb"]
 [ext_resource type="Texture2D" uid="uid://vx47y2t0670o" path="res://art/CharacterAnimation/SadCoffee/Kawiarz_walk_frame_00011.png" id="14_8ixtp"]
 [ext_resource type="Texture2D" uid="uid://bbt677pxovjhp" path="res://art/CharacterAnimation/SadCoffee/Kawiarz_walk_frame_00012.png" id="15_phm2i"]
@@ -306,17 +304,13 @@ bg_color = Color(0.341176, 0.341176, 0.341176, 1)
 bg_color = Color(1, 1, 0, 1)
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_4pejl"]
-streams_count = 5
+streams_count = 3
 stream_0/stream = ExtResource("8_m2jpo")
 stream_0/weight = 1.0
 stream_1/stream = ExtResource("9_v0tvv")
 stream_1/weight = 1.0
-stream_2/stream = ExtResource("10_5olv7")
+stream_2/stream = ExtResource("11_q5hps")
 stream_2/weight = 1.0
-stream_3/stream = ExtResource("11_q5hps")
-stream_3/weight = 1.0
-stream_4/stream = ExtResource("12_ne6cm")
-stream_4/weight = 1.0
 
 [node name="Sad man" type="CharacterBody2D" groups=["Cakeables", "Sadman"]]
 script = ExtResource("1_wtxo7")

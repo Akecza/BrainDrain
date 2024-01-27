@@ -14,7 +14,7 @@ extends RigidBody2D
 @onready var inflatable_cooldown_timer = $InflatableCooldownTimer
 
 @onready var joke_player : AudioStreamPlayer2D = $JokePlayer
-@export var honk_player: AudioStreamPlayer2D
+@export var honk_player: AudioStreamPlayer
 
 @export var honk_button : Button
 @export var cake_button : Button

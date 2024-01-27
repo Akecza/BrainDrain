@@ -59,7 +59,7 @@ scale = Vector2(0.25, 0.25)
 
 [node name="Player" parent="." node_paths=PackedStringArray("honk_player", "honk_button", "cake_button", "whoopie_button", "joke_button", "inflattable_button", "baloon_button") instance=ExtResource("1_dofbq")]
 position = Vector2(571, 1229)
-honk_player = NodePath("../HonkPlayer2D")
+honk_player = NodePath("../HonkPlayer")
 honk_button = NodePath("../CanvasLayer/PanelContainer/HBoxContainer/HONK")
 cake_button = NodePath("../CanvasLayer/PanelContainer/HBoxContainer/CAKE")
 whoopie_button = NodePath("../CanvasLayer/PanelContainer/HBoxContainer/WHOOPIE")
@@ -235,13 +235,13 @@ position = Vector2(861, 1375)
 [node name="Sad man5" parent="." instance=ExtResource("7_or3d6")]
 position = Vector2(666, 1426)
 
-[node name="HonkPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="HonkPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("13_t681a")
-volume_db = 24.0
+volume_db = 4.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("17_oilmp")
-volume_db = -14.509
+volume_db = -13.597
 autoplay = true
 
 [node name="Music" type="Node" parent="."]
