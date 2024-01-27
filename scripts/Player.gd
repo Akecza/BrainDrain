@@ -5,9 +5,13 @@ extends RigidBody2D
 @export var speed = 400 # How fast the player will move (pixels/sec).
 @onready var honk = $Honk/HonkCollision
 @onready var joke = $Joke/JokeCollision
+@onready var joke_finished = $JokeFinish/JokeFinishCollision
 @onready var joke_duration_timer = $JokeDuration
 @onready var joke_cooldown_timer = $JokeCooldown
+@onready var joke_finish_duration_timer = $JokeFinishDuration
 @onready var whoopie_cooldown_timer = $WhoopieCooldownTimer
+
+@onready var joke_player : AudioStreamPlayer2D = $JokePlayer
 
 var screen_size # Size of the game window.
 var honk_on_cooldown = false
@@ -61,9 +65,14 @@ func shoot():
 		
 func skill_joke():
 	if(joke_cooldown_timer.time_left == 0):
+		joke_player.play()
 		joke_cooldown_timer.start()
 		joke.disabled=false
 		joke_duration_timer.start()
+		
+func skill_joke_finished():
+	joke_finished.disabled=false
+	joke_finish_duration_timer.start()
 
 func skill_whoopie():
 	if(whoopie_cooldown_timer.time_left == 0):

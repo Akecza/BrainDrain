@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b3l8edt0bi7np"]
+[gd_scene load_steps=13 format=3 uid="uid://b3l8edt0bi7np"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_bpioq"]
 [ext_resource type="PackedScene" uid="uid://d2trrbx3ixdgy" path="res://scenes/cake.tscn" id="2_10fye"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://biwhd6ooi88yn" path="res://scenes/whoopie.tscn" id="2_h6r6q"]
 [ext_resource type="Texture2D" uid="uid://dgok2lgd86qi7" path="res://Placeholder/bunny1_walk1.png" id="3_yorwq"]
 [ext_resource type="Texture2D" uid="uid://cuftb2iyu3028" path="res://Placeholder/bunny1_walk2.png" id="4_7mb2m"]
+[ext_resource type="AudioStream" uid="uid://ctwge7rxc2m4y" path="res://sounds/fart.wav" id="7_776qy"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_byd17"]
 animations = [{
@@ -38,6 +39,9 @@ radius = 85.5862
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vvg36"]
 radius = 178.908
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i2o6m"]
+radius = 178.0
 
 [node name="Player" type="RigidBody2D"]
 collision_layer = 2
@@ -72,6 +76,12 @@ disabled = true
 shape = SubResource("CircleShape2D_vvg36")
 disabled = true
 
+[node name="JokeFinish" type="Area2D" parent="."]
+
+[node name="JokeFinishCollision" type="CollisionShape2D" parent="JokeFinish"]
+shape = SubResource("CircleShape2D_i2o6m")
+disabled = true
+
 [node name="HonkDuration" type="Timer" parent="."]
 wait_time = 0.1
 one_shot = true
@@ -87,6 +97,8 @@ one_shot = true
 [node name="JokeCooldown" type="Timer" parent="."]
 wait_time = 10.0
 one_shot = true
+
+[node name="JokeFinishDuration" type="Timer" parent="."]
 
 [node name="ShootCooldown" type="Timer" parent="."]
 wait_time = 0.2
@@ -106,6 +118,10 @@ position = Vector2(20, 0)
 
 [node name="Center" type="Marker2D" parent="Hand"]
 
+[node name="JokePlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_776qy")
+
 [connection signal="timeout" from="HonkDuration" to="." method="_on_skill_duration_timeout"]
 [connection signal="timeout" from="HonkCooldown" to="." method="_on_skill_cooldown_timeout"]
 [connection signal="timeout" from="JokeDuration" to="." method="_on_joke_duration_timeout"]
+[connection signal="finished" from="JokePlayer" to="." method="skill_joke_finished"]

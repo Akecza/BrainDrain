@@ -52,6 +52,8 @@ func _on_hitbox_area_area_entered(area : Area2D):
 		make_happy(50)
 	if (area.name == "Joke"):
 		state_machine.change_state($StateMachine/Following, area.get_parent())
+	if (area.name == "JokeFinish"):
+		make_happy(100)
 
 func _on_hitbox_area_area_exited(area):
 	if (area.name == "Joke"):
