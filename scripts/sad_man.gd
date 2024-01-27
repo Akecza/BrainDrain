@@ -28,6 +28,10 @@ func _physics_process(delta):
 	state_machine.process_physics(delta)
 	check_happiness_state()
 	
+	
+func getHappinessValue():
+	return $HappinessBar.value
+	
 #func _on_timer_timeout():
 	#new_random_direction()
 	#timer.wait_time = randf_range(1,3)

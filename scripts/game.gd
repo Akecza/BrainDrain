@@ -9,7 +9,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	countGlobalHappiness()
 	
 
 func _on_honk_pressed():
@@ -18,5 +18,7 @@ func _on_honk_pressed():
 func countGlobalHappiness():
 	var HappinessTotal=0
 	for i in SadManList:
-		#HappinessTotal += i.$HappinessBar.value
-	pass
+		HappinessTotal += i.getHappinessValue()
+	HappinessTotal=HappinessTotal/SadManList.size()
+	$CanvasLayer/GlobalHappinessBar.value=HappinessTotal
+
