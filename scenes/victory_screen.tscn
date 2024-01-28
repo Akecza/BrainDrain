@@ -68,11 +68,12 @@ offset_top = -498.0
 offset_right = -1574.0
 offset_bottom = -471.0
 
-[node name="QuitButton" type="Button" parent="CanvasLayer"]
+[node name="QuitButton" type="Button" parent="CanvasLayer/Node2D"]
 self_modulate = Color(1, 1, 1, 0)
-offset_left = 657.0
-offset_top = 666.0
-offset_right = 960.0
-offset_bottom = 793.0
+offset_left = -238.0
+offset_top = 616.0
+offset_right = 190.0
+offset_bottom = 764.0
 
-[connection signal="pressed" from="CanvasLayer/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="button_down" from="CanvasLayer/Node2D/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Node2D/QuitButton" to="." method="_on_quit_button_pressed"]

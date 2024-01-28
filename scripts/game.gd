@@ -8,9 +8,12 @@ var GlobalHappinessLevel=0
 @onready var track3 : AudioStreamPlayer = $Music/TrackLevel3
 @onready var trackFart : AudioStreamPlayer = $Music/TrackFart
 
+#@export var victory_screen : Node2D
+var victory_screen = load("res://scenes/victory_screen.tscn")
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	pass
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -40,7 +43,7 @@ func countGlobalHappiness():
 		skillsAvailable+=1
 	if GlobalHappinessLevel>70:
 		skillsAvailable+=1
-	if GlobalHappinessLevel>98:
+	if GlobalHappinessLevel>2:
 		showVictoryScreen()
 	$Player.skillsAvailable=skillsAvailable
 		
@@ -59,6 +62,8 @@ func _on_player_skill_changed():
 
 func win():
 	ultimateJoke()
-	
+
+
 func showVictoryScreen():
-	pass
+	var instance = victory_screen.instantiate()
+	get_tree().root.add_child(instance)
