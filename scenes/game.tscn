@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://cafnh4rpv7oee"]
+[gd_scene load_steps=38 format=3 uid="uid://cafnh4rpv7oee"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_3qlki"]
 [ext_resource type="PackedScene" uid="uid://b3l8edt0bi7np" path="res://scenes/player.tscn" id="1_dofbq"]
@@ -14,8 +14,10 @@
 [ext_resource type="Texture2D" uid="uid://2c3s08aegmb1" path="res://art/CharacterParts/Arm-Joke.png" id="12_2ynn6"]
 [ext_resource type="Texture2D" uid="uid://dbpxvi1lkb5as" path="res://art/UI/panel_brown.png" id="12_vlhmp"]
 [ext_resource type="Texture2D" uid="uid://3128u8et1qoq" path="res://art/UI/yellowBar.png" id="13_2etor"]
+[ext_resource type="Texture2D" uid="uid://y0h0y277wwpi" path="res://art/UI/white.png" id="13_5ui2y"]
 [ext_resource type="AudioStream" uid="uid://bgy2su6e4hleh" path="res://sounds/A_Clown_Honker_02.wav" id="13_t681a"]
 [ext_resource type="Texture2D" uid="uid://b664mtq5hexct" path="res://art/CharacterParts/balon-zoltko.png" id="14_22ane"]
+[ext_resource type="Script" path="res://scripts/Cooldown.gd" id="14_he424"]
 [ext_resource type="Texture2D" uid="uid://bx1vaoyby07pv" path="res://art/CharacterParts/wiggleman.png" id="14_o7bdr"]
 [ext_resource type="AudioStream" uid="uid://cvnn1n6xqetgc" path="res://audio/Ambience/A_Park_Ambience_Loop.wav" id="17_oilmp"]
 [ext_resource type="AudioStream" uid="uid://npe2edwn8kcx" path="res://audio/Music/A_Music_Layer_Basic.wav" id="18_fq0xi"]
@@ -147,13 +149,13 @@ stretch_mode = 3
 layout_mode = 2
 texture = ExtResource("8_tjqbk")
 
-[node name="Fart" type="TextureRect" parent="CanvasLayer/HappinessContainer/VBoxContainer/HBoxContainer/VBoxContainer4/Circle"]
+[node name="Joke" type="TextureRect" parent="CanvasLayer/HappinessContainer/VBoxContainer/HBoxContainer/VBoxContainer4/Circle"]
 layout_mode = 2
 offset_left = 42.0
 offset_top = 33.0
-offset_right = 169.0
-offset_bottom = 178.0
-texture = ExtResource("11_5snge")
+offset_right = 182.0
+offset_bottom = 168.0
+texture = ExtResource("12_2ynn6")
 expand_mode = 1
 
 [node name="VBoxContainer3" type="VBoxContainer" parent="CanvasLayer/HappinessContainer/VBoxContainer/HBoxContainer"]
@@ -170,13 +172,13 @@ stretch_mode = 3
 layout_mode = 2
 texture = ExtResource("8_tjqbk")
 
-[node name="Fart" type="TextureRect" parent="CanvasLayer/HappinessContainer/VBoxContainer/HBoxContainer/VBoxContainer3/Circle"]
+[node name="Inflatable" type="TextureRect" parent="CanvasLayer/HappinessContainer/VBoxContainer/HBoxContainer/VBoxContainer3/Circle"]
 layout_mode = 2
 offset_left = 42.0
 offset_top = 33.0
 offset_right = 169.0
 offset_bottom = 178.0
-texture = ExtResource("11_5snge")
+texture = ExtResource("14_o7bdr")
 expand_mode = 1
 
 [node name="PanelContainer2" type="PanelContainer" parent="CanvasLayer/HappinessContainer/VBoxContainer/HBoxContainer"]
@@ -199,13 +201,13 @@ stretch_mode = 3
 layout_mode = 2
 texture = ExtResource("8_tjqbk")
 
-[node name="Fart" type="TextureRect" parent="CanvasLayer/HappinessContainer/VBoxContainer/HBoxContainer/VBoxContainer5/Circle"]
+[node name="Baloons" type="TextureRect" parent="CanvasLayer/HappinessContainer/VBoxContainer/HBoxContainer/VBoxContainer5/Circle"]
 layout_mode = 2
 offset_left = 42.0
 offset_top = 33.0
 offset_right = 169.0
 offset_bottom = 178.0
-texture = ExtResource("11_5snge")
+texture = ExtResource("14_22ane")
 expand_mode = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/HappinessContainer"]
@@ -256,6 +258,20 @@ offset_bottom = 139.0
 texture = ExtResource("9_6rsn5")
 expand_mode = 1
 
+[node name="ProgressBar" type="TextureProgressBar" parent="CanvasLayer/PanelContainer/HBoxContainer/HONK" node_paths=PackedStringArray("player")]
+modulate = Color(0.219608, 0.219608, 0.219608, 0.792157)
+layout_mode = 2
+offset_right = 176.0
+offset_bottom = 166.0
+size_flags_stretch_ratio = 3.71
+value = 90.0
+fill_mode = 5
+nine_patch_stretch = true
+texture_progress = ExtResource("13_5ui2y")
+script = ExtResource("14_he424")
+player = NodePath("../../../../../Player")
+timerName = "HonkCooldown"
+
 [node name="CAKE" type="Button" parent="CanvasLayer/PanelContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -271,6 +287,19 @@ offset_right = 153.0
 offset_bottom = 141.0
 texture = ExtResource("7_vevqi")
 expand_mode = 1
+
+[node name="Cooldown" type="TextureProgressBar" parent="CanvasLayer/PanelContainer/HBoxContainer/CAKE" node_paths=PackedStringArray("player")]
+modulate = Color(0.219608, 0.219608, 0.219608, 0.792157)
+layout_mode = 0
+offset_right = 175.0
+offset_bottom = 166.0
+value = 10.0
+fill_mode = 5
+nine_patch_stretch = true
+texture_progress = ExtResource("13_5ui2y")
+script = ExtResource("14_he424")
+player = NodePath("../../../../../Player")
+timerName = "ShootCooldown"
 
 [node name="WHOOPIE" type="Button" parent="CanvasLayer/PanelContainer/HBoxContainer"]
 layout_mode = 2
@@ -289,6 +318,19 @@ offset_bottom = 149.0
 texture = ExtResource("11_5snge")
 expand_mode = 1
 
+[node name="Cooldown" type="TextureProgressBar" parent="CanvasLayer/PanelContainer/HBoxContainer/WHOOPIE" node_paths=PackedStringArray("player")]
+modulate = Color(0.219608, 0.219608, 0.219608, 0.792157)
+layout_mode = 0
+offset_right = 175.0
+offset_bottom = 166.0
+value = 10.0
+fill_mode = 5
+nine_patch_stretch = true
+texture_progress = ExtResource("13_5ui2y")
+script = ExtResource("14_he424")
+player = NodePath("../../../../../Player")
+timerName = "WhoopieCooldownTimer"
+
 [node name="JOKE" type="Button" parent="CanvasLayer/PanelContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -306,6 +348,19 @@ offset_bottom = 149.0
 texture = ExtResource("12_2ynn6")
 expand_mode = 1
 
+[node name="Cooldown" type="TextureProgressBar" parent="CanvasLayer/PanelContainer/HBoxContainer/JOKE" node_paths=PackedStringArray("player")]
+modulate = Color(0.219608, 0.219608, 0.219608, 0.792157)
+layout_mode = 0
+offset_right = 175.0
+offset_bottom = 166.0
+value = 10.0
+fill_mode = 5
+nine_patch_stretch = true
+texture_progress = ExtResource("13_5ui2y")
+script = ExtResource("14_he424")
+player = NodePath("../../../../../Player")
+timerName = "JokeCooldown"
+
 [node name="INFLATABLE" type="Button" parent="CanvasLayer/PanelContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -322,6 +377,19 @@ offset_right = 149.0
 offset_bottom = 149.0
 texture = ExtResource("14_o7bdr")
 expand_mode = 1
+
+[node name="Cooldown" type="TextureProgressBar" parent="CanvasLayer/PanelContainer/HBoxContainer/INFLATABLE" node_paths=PackedStringArray("player")]
+modulate = Color(0.219608, 0.219608, 0.219608, 0.792157)
+layout_mode = 0
+offset_right = 175.0
+offset_bottom = 166.0
+value = 10.0
+fill_mode = 5
+nine_patch_stretch = true
+texture_progress = ExtResource("13_5ui2y")
+script = ExtResource("14_he424")
+player = NodePath("../../../../../Player")
+timerName = "InflatableCooldownTimer"
 
 [node name="BALOON" type="Button" parent="CanvasLayer/PanelContainer/HBoxContainer"]
 layout_mode = 2

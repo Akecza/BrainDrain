@@ -124,10 +124,10 @@ height = 138.0
 radius = 159.013
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vvg36"]
-radius = 366.197
+radius = 503.254
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_i2o6m"]
-radius = 366.442
+radius = 457.027
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_28ger"]
 streams_count = 3
