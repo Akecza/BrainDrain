@@ -62,7 +62,7 @@ func _on_hitbox_area_area_entered(area : Area2D):
 	if (area.name == "WhoopieSound"):
 		make_happy(60)
 	if (area.name == "CakeHappy" && got_caked_timer.time_left == 0):
-		make_happy(50)
+		make_happy(60)
 	if (area.name == "Joke"):
 		state_machine.change_state($StateMachine/Following, area.get_parent())
 	if (area.name == "JokeFinish"):

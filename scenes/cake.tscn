@@ -11,7 +11,7 @@ radius = 21.0
 height = 56.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_a7btd"]
-radius = 311.026
+radius = 423.17
 
 [node name="Cake" type="Area2D"]
 collision_layer = 4
@@ -36,7 +36,6 @@ shape = SubResource("CapsuleShape2D_md1jc")
 [node name="CakeHappy" type="Area2D" parent="."]
 
 [node name="CakeHappyCollision" type="CollisionShape2D" parent="CakeHappy"]
-visible = false
 shape = SubResource("CircleShape2D_a7btd")
 
 [node name="HappyTimer" type="Timer" parent="."]
