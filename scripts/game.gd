@@ -26,7 +26,7 @@ func countGlobalHappiness():
 	for i in SadManList:
 		HappinessTotal += i.getHappinessValue()
 	HappinessTotal=HappinessTotal/SadManList.size()
-	$CanvasLayer/HappinessContainer/GlobalHappinessBar.value=HappinessTotal
+	$CanvasLayer/HappinessContainer/VBoxContainer/GlobalHappinessBar.value=HappinessTotal
 	GlobalHappinessLevel=HappinessTotal
 	var skillsAvailable=2
 	if GlobalHappinessLevel>10:

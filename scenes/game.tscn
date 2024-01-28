@@ -6,34 +6,34 @@
 [ext_resource type="Script" path="res://scripts/button.gd" id="5_42r6h"]
 [ext_resource type="PackedScene" uid="uid://dsn3hhui0gbhr" path="res://scenes/indicator.tscn" id="7_6c4p2"]
 [ext_resource type="Theme" uid="uid://b0svc8rhmt1x" path="res://buttontheme.tres" id="7_8sk05"]
-[ext_resource type="Texture2D" uid="uid://dxqb2dxqkxwbk" path="res://art/UI/arrowBeige_right.png" id="7_brmyy"]
+[ext_resource type="Texture2D" uid="uid://osc7ghwu84r6" path="res://art/UI/arrowBeige_right.png" id="7_brmyy"]
 [ext_resource type="PackedScene" uid="uid://dowrjcdnnxods" path="res://scenes/sad_man.tscn" id="7_or3d6"]
 [ext_resource type="Texture2D" uid="uid://bjcvy08py5q6q" path="res://art/CharacterParts/ciasto.png" id="7_vevqi"]
 [ext_resource type="Texture2D" uid="uid://ckwkxus81hfnu" path="res://art/CharacterParts/honk.png" id="9_6rsn5"]
 [ext_resource type="Texture2D" uid="uid://dp43v5vo461t5" path="res://art/CharacterParts/fart.png" id="11_5snge"]
 [ext_resource type="Texture2D" uid="uid://2c3s08aegmb1" path="res://art/CharacterParts/Arm-Joke.png" id="12_2ynn6"]
-[ext_resource type="Texture2D" uid="uid://5mvw15dojlum" path="res://art/UI/panel_brown.png" id="12_vlhmp"]
-[ext_resource type="Texture2D" uid="uid://c3v0di7dtkgva" path="res://art/UI/yellowBar.png" id="13_2etor"]
+[ext_resource type="Texture2D" uid="uid://dbpxvi1lkb5as" path="res://art/UI/panel_brown.png" id="12_vlhmp"]
+[ext_resource type="Texture2D" uid="uid://3128u8et1qoq" path="res://art/UI/yellowBar.png" id="13_2etor"]
 [ext_resource type="AudioStream" uid="uid://bgy2su6e4hleh" path="res://sounds/A_Clown_Honker_02.wav" id="13_t681a"]
 [ext_resource type="Texture2D" uid="uid://b664mtq5hexct" path="res://art/CharacterParts/balon-zoltko.png" id="14_22ane"]
 [ext_resource type="Texture2D" uid="uid://bx1vaoyby07pv" path="res://art/CharacterParts/wiggleman.png" id="14_o7bdr"]
-[ext_resource type="AudioStream" uid="uid://c6vlevppvli77" path="res://audio/Ambience/A_Park_Ambience_Loop.wav" id="17_oilmp"]
-[ext_resource type="AudioStream" uid="uid://btvox6oaimgoj" path="res://audio/Music/A_Music_Layer_Basic.wav" id="18_fq0xi"]
-[ext_resource type="AudioStream" uid="uid://bjdsuyxlnk3hq" path="res://audio/Music/A_Music_Layer_BasicHappy.wav" id="18_kkle2"]
-[ext_resource type="AudioStream" uid="uid://drjx60xlafitj" path="res://audio/Music/A_Music_Layer_BasicPlus.wav" id="19_so2l7"]
-[ext_resource type="AudioStream" uid="uid://cbh1ksrlccdwe" path="res://audio/Music/A_Music_Layer_Fart.wav" id="21_hmvje"]
+[ext_resource type="AudioStream" uid="uid://cvnn1n6xqetgc" path="res://audio/Ambience/A_Park_Ambience_Loop.wav" id="17_oilmp"]
+[ext_resource type="AudioStream" uid="uid://npe2edwn8kcx" path="res://audio/Music/A_Music_Layer_Basic.wav" id="18_fq0xi"]
+[ext_resource type="AudioStream" uid="uid://1key58iu5lec" path="res://audio/Music/A_Music_Layer_BasicHappy.wav" id="18_kkle2"]
+[ext_resource type="AudioStream" uid="uid://c74i65ivcuv5u" path="res://audio/Music/A_Music_Layer_BasicPlus.wav" id="19_so2l7"]
+[ext_resource type="AudioStream" uid="uid://b1erj13n14ne1" path="res://audio/Music/A_Music_Layer_Fart.wav" id="21_hmvje"]
 [ext_resource type="PackedScene" uid="uid://cj2k68g58rsu6" path="res://scenes/budynki/wiezowiec.tscn" id="25_8fpw8"]
-[ext_resource type="PackedScene" uid="uid://cg0ad0p2mjrkd" path="res://scenes/world.tscn" id="25_jtldu"]
+[ext_resource type="PackedScene" uid="uid://cbgw8hvxcwppe" path="res://scenes/world.tscn" id="25_jtldu"]
 [ext_resource type="PackedScene" uid="uid://cdb4dovef24af" path="res://scenes/budynki/biurowiec.tscn" id="26_gb857"]
 [ext_resource type="PackedScene" uid="uid://bs4d2gfiogkav" path="res://scenes/budynki/wiezowiec_2.tscn" id="27_rwnbm"]
 [ext_resource type="PackedScene" uid="uid://iitbdf6snpgv" path="res://scenes/budynki/wiezowiec_3.tscn" id="28_6wr15"]
-[ext_resource type="PackedScene" path="res://scenes/budynki/kamienica3.tscn" id="29_0o51i"]
+[ext_resource type="PackedScene" uid="uid://diycyfouraes3" path="res://scenes/budynki/kamienica3.tscn" id="29_0o51i"]
 [ext_resource type="PackedScene" uid="uid://cr0t6c44qy4er" path="res://scenes/drzewa/drzewo2.tscn" id="29_ou8qf"]
 [ext_resource type="PackedScene" uid="uid://bbm0jsitf31h0" path="res://scenes/drzewa/drzewo3.tscn" id="30_evsiw"]
-[ext_resource type="PackedScene" path="res://scenes/budynki/kamienica2.tscn" id="30_hbg7v"]
+[ext_resource type="PackedScene" uid="uid://cw45db8jb3vse" path="res://scenes/budynki/kamienica2.tscn" id="30_hbg7v"]
 [ext_resource type="PackedScene" uid="uid://yv8iuhtcensv" path="res://scenes/drzewa/drzewo.tscn" id="31_dpvcf"]
-[ext_resource type="PackedScene" path="res://scenes/budynki/kamienica.tscn" id="31_vq0jr"]
-[ext_resource type="PackedScene" path="res://scenes/baloons.tscn" id="33_hhsqp"]
+[ext_resource type="PackedScene" uid="uid://diq7uclkf3cag" path="res://scenes/budynki/kamienica.tscn" id="31_vq0jr"]
+[ext_resource type="PackedScene" uid="uid://5yjqunl8docr" path="res://scenes/baloons.tscn" id="33_hhsqp"]
 
 [sub_resource type="GDScript" id="GDScript_j45pr"]
 script/source = "extends TextureProgressBar
@@ -78,11 +78,16 @@ baloon_button = NodePath("../CanvasLayer/PanelContainer/HBoxContainer/BALOON")
 [node name="HappinessContainer" type="PanelContainer" parent="CanvasLayer"]
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 72.0
+offset_right = 2.0
+offset_bottom = 124.0
 grow_horizontal = 2
 
-[node name="GlobalHappinessBar" type="TextureProgressBar" parent="CanvasLayer/HappinessContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/HappinessContainer"]
 layout_mode = 2
+
+[node name="GlobalHappinessBar" type="TextureProgressBar" parent="CanvasLayer/HappinessContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
 value = 70.0
 nine_patch_stretch = true
 stretch_margin_left = 7
@@ -93,66 +98,91 @@ texture_under = ExtResource("12_vlhmp")
 texture_progress = ExtResource("13_2etor")
 script = SubResource("GDScript_j45pr")
 
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/HappinessContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/HappinessContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Arrow" type="TextureRect" parent="CanvasLayer/HappinessContainer/VBoxContainer/HBoxContainer/PanelContainer"]
+layout_mode = 2
+texture = ExtResource("7_brmyy")
+
+[node name="Circle" type="TextureRect" parent="CanvasLayer/HappinessContainer/VBoxContainer/HBoxContainer/PanelContainer"]
+layout_mode = 2
+texture = ExtResource("7_brmyy")
+
+[node name="PanelContainer2" type="PanelContainer" parent="CanvasLayer/HappinessContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Arrow" type="TextureRect" parent="CanvasLayer/HappinessContainer/VBoxContainer/HBoxContainer/PanelContainer2"]
+layout_mode = 2
+texture = ExtResource("7_brmyy")
+
+[node name="Circle" type="TextureRect" parent="CanvasLayer/HappinessContainer/VBoxContainer/HBoxContainer/PanelContainer2"]
+layout_mode = 2
+texture = ExtResource("7_brmyy")
+
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/HappinessContainer"]
 layout_mode = 2
 theme_override_font_sizes/normal_font_size = 50
 text = "GLOBAL HAPPINESS"
 
-[node name="10" parent="CanvasLayer" instance=ExtResource("7_6c4p2")]
+[node name="10" parent="CanvasLayer/HappinessContainer" instance=ExtResource("7_6c4p2")]
 position = Vector2(165, 148)
 
-[node name="Icon" type="Sprite2D" parent="CanvasLayer/10"]
+[node name="Icon" type="Sprite2D" parent="CanvasLayer/HappinessContainer/10"]
 position = Vector2(-2.90871e-05, 6.66669)
 rotation = 1.46687
 scale = Vector2(0.45, 0.45)
 texture = ExtResource("11_5snge")
 
-[node name="Arrow" type="Sprite2D" parent="CanvasLayer/10"]
+[node name="Arrow" type="Sprite2D" parent="CanvasLayer/HappinessContainer/10"]
 self_modulate = Color(1, 0.701961, 0.701961, 1)
 position = Vector2(122.261, 0.000366211)
 scale = Vector2(2.52892, 2.89682)
 texture = ExtResource("7_brmyy")
 
-[node name="20" parent="CanvasLayer" instance=ExtResource("7_6c4p2")]
+[node name="20" parent="CanvasLayer/HappinessContainer" instance=ExtResource("7_6c4p2")]
 position = Vector2(329, 148)
 
-[node name="Icon" type="Sprite2D" parent="CanvasLayer/20"]
+[node name="Icon" type="Sprite2D" parent="CanvasLayer/HappinessContainer/20"]
 position = Vector2(-6.66676, 24.9999)
 rotation = 0.938841
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("12_2ynn6")
 
-[node name="Arrow" type="Sprite2D" parent="CanvasLayer/20"]
+[node name="Arrow" type="Sprite2D" parent="CanvasLayer/HappinessContainer/20"]
 self_modulate = Color(1, 0.701961, 0.701961, 1)
 position = Vector2(122.261, 0.000366211)
 scale = Vector2(2.52892, 2.89682)
 texture = ExtResource("7_brmyy")
 
-[node name="30" parent="CanvasLayer" instance=ExtResource("7_6c4p2")]
+[node name="30" parent="CanvasLayer/HappinessContainer" instance=ExtResource("7_6c4p2")]
 position = Vector2(493, 148)
 
-[node name="Arrow" type="Sprite2D" parent="CanvasLayer/30"]
+[node name="Arrow" type="Sprite2D" parent="CanvasLayer/HappinessContainer/30"]
 self_modulate = Color(1, 0.701961, 0.701961, 1)
 position = Vector2(122.261, 0.000427246)
 scale = Vector2(2.52892, 2.89682)
 texture = ExtResource("7_brmyy")
 
-[node name="Icon" type="Sprite2D" parent="CanvasLayer/30"]
+[node name="Icon" type="Sprite2D" parent="CanvasLayer/HappinessContainer/30"]
 position = Vector2(4.91738e-05, -15)
 rotation = 1.01349
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("14_o7bdr")
 
-[node name="70" parent="CanvasLayer" instance=ExtResource("7_6c4p2")]
+[node name="70" parent="CanvasLayer/HappinessContainer" instance=ExtResource("7_6c4p2")]
 position = Vector2(1151, 148)
 
-[node name="Arrow" type="Sprite2D" parent="CanvasLayer/70"]
+[node name="Arrow" type="Sprite2D" parent="CanvasLayer/HappinessContainer/70"]
 self_modulate = Color(1, 0.701961, 0.701961, 1)
 position = Vector2(122.261, 0.000366211)
 scale = Vector2(2.52892, 2.89682)
 texture = ExtResource("7_brmyy")
 
-[node name="Icon" type="Sprite2D" parent="CanvasLayer/70"]
+[node name="Icon" type="Sprite2D" parent="CanvasLayer/HappinessContainer/70"]
 position = Vector2(-11.6667, -5.00002)
 rotation = 2.23517
 scale = Vector2(0.4, 0.4)
