@@ -24,6 +24,7 @@ extends RigidBody2D
 @export var baloon_button : Button
 
 signal skill_changed
+signal ultimate_joke
 
 var screen_size # Size of the game window.
 var honk_on_cooldown = false
@@ -79,7 +80,7 @@ func useActiveSkill():
 	if activeSkill==5:
 		skill_inflatable()
 	if activeSkill==6:
-		pass
+		ultimate_joke.emit()
 	
 func skill_honk():
 	if(not honk_on_cooldown):

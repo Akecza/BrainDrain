@@ -15,6 +15,7 @@ const JUMP_VELOCITY = -400.0
 var BaseHappyDepleteSpeed = 1
 var HappyDepleteAmount
 var InInflatableRange
+var HappyBaloonBonus=0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -29,7 +30,7 @@ func _ready():
 	#direction = direction.normalized()
 
 func _physics_process(delta):
-	happiness_bar.value = happiness_bar.value - HappyDepleteAmount*delta
+	happiness_bar.value = happiness_bar.value - HappyDepleteAmount*delta +HappyBaloonBonus*delta
 	state_machine.process_physics(delta)
 	check_happiness_state()
 	if (InInflatableRange):

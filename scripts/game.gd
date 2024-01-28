@@ -29,23 +29,27 @@ func countGlobalHappiness():
 	$CanvasLayer/HappinessContainer/GlobalHappinessBar.value=HappinessTotal
 	GlobalHappinessLevel=HappinessTotal
 	var skillsAvailable=2
-	if GlobalHappinessLevel>1:
+	if GlobalHappinessLevel>10:
 		track2.volume_db=0
 		skillsAvailable+=1
-	if GlobalHappinessLevel>2:
+	if GlobalHappinessLevel>20:
 		trackFart.volume_db=0
 		skillsAvailable+=1
-	if GlobalHappinessLevel>5:
+	if GlobalHappinessLevel>30:
 		track3.volume_db=0
 		skillsAvailable+=1
-	if GlobalHappinessLevel>8:
+	if GlobalHappinessLevel>70:
 		skillsAvailable+=1
+	if GlobalHappinessLevel>98:
+		showVictoryScreen()
 	$Player.skillsAvailable=skillsAvailable
 		
 		
 func ultimateJoke():
-	pass
-
+	for i in SadManList:
+		i.HappyBaloonBonus=20
+		$Baloons.visible=true
+		$Baloons.go_balooons_go()
 
 
 func _on_player_skill_changed():
@@ -54,5 +58,7 @@ func _on_player_skill_changed():
 
 
 func win():
-	$Baloons.visible=true
-	$Baloons.go_balooons_go()
+	ultimateJoke()
+	
+func showVictoryScreen():
+	pass
