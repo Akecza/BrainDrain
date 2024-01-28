@@ -242,12 +242,13 @@ size_flags_vertical = 4
 layout_mode = 2
 theme = ExtResource("7_8sk05")
 
-[node name="HONK" type="Button" parent="CanvasLayer/PanelContainer/HBoxContainer"]
+[node name="HONK" type="Button" parent="CanvasLayer/PanelContainer/HBoxContainer" node_paths=PackedStringArray("player")]
 layout_mode = 2
 size_flags_horizontal = 3
 icon_alignment = 1
 script = ExtResource("5_42r6h")
 input = "1"
+player = NodePath("../../../../Player")
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/PanelContainer/HBoxContainer/HONK"]
 layout_mode = 0
@@ -272,12 +273,13 @@ script = ExtResource("14_he424")
 player = NodePath("../../../../../Player")
 timerName = "HonkCooldown"
 
-[node name="CAKE" type="Button" parent="CanvasLayer/PanelContainer/HBoxContainer"]
+[node name="CAKE" type="Button" parent="CanvasLayer/PanelContainer/HBoxContainer" node_paths=PackedStringArray("player")]
 layout_mode = 2
 size_flags_horizontal = 3
 icon_alignment = 1
 script = ExtResource("5_42r6h")
 input = "2"
+player = NodePath("../../../../Player")
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/PanelContainer/HBoxContainer/CAKE"]
 layout_mode = 0
@@ -301,12 +303,13 @@ script = ExtResource("14_he424")
 player = NodePath("../../../../../Player")
 timerName = "ShootCooldown"
 
-[node name="WHOOPIE" type="Button" parent="CanvasLayer/PanelContainer/HBoxContainer"]
+[node name="WHOOPIE" type="Button" parent="CanvasLayer/PanelContainer/HBoxContainer" node_paths=PackedStringArray("player")]
 layout_mode = 2
 size_flags_horizontal = 3
 icon_alignment = 1
 script = ExtResource("5_42r6h")
 input = "3"
+player = NodePath("../../../../Player")
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/PanelContainer/HBoxContainer/WHOOPIE"]
 layout_mode = 1
@@ -331,12 +334,13 @@ script = ExtResource("14_he424")
 player = NodePath("../../../../../Player")
 timerName = "WhoopieCooldownTimer"
 
-[node name="JOKE" type="Button" parent="CanvasLayer/PanelContainer/HBoxContainer"]
+[node name="JOKE" type="Button" parent="CanvasLayer/PanelContainer/HBoxContainer" node_paths=PackedStringArray("player")]
 layout_mode = 2
 size_flags_horizontal = 3
 icon_alignment = 1
 script = ExtResource("5_42r6h")
 input = "4"
+player = NodePath("../../../../Player")
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/PanelContainer/HBoxContainer/JOKE"]
 layout_mode = 1
@@ -361,12 +365,13 @@ script = ExtResource("14_he424")
 player = NodePath("../../../../../Player")
 timerName = "JokeCooldown"
 
-[node name="INFLATABLE" type="Button" parent="CanvasLayer/PanelContainer/HBoxContainer"]
+[node name="INFLATABLE" type="Button" parent="CanvasLayer/PanelContainer/HBoxContainer" node_paths=PackedStringArray("player")]
 layout_mode = 2
 size_flags_horizontal = 3
 icon_alignment = 1
 script = ExtResource("5_42r6h")
 input = "5"
+player = NodePath("../../../../Player")
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/PanelContainer/HBoxContainer/INFLATABLE"]
 layout_mode = 1
@@ -391,12 +396,13 @@ script = ExtResource("14_he424")
 player = NodePath("../../../../../Player")
 timerName = "InflatableCooldownTimer"
 
-[node name="BALOON" type="Button" parent="CanvasLayer/PanelContainer/HBoxContainer"]
+[node name="BALOON" type="Button" parent="CanvasLayer/PanelContainer/HBoxContainer" node_paths=PackedStringArray("player")]
 layout_mode = 2
 size_flags_horizontal = 3
 icon_alignment = 1
 script = ExtResource("5_42r6h")
 input = "6"
+player = NodePath("../../../../Player")
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/PanelContainer/HBoxContainer/BALOON"]
 layout_mode = 1
@@ -942,15 +948,20 @@ scale = Vector2(0.25, 0.25)
 
 [connection signal="skill_changed" from="Player" to="." method="_on_player_skill_changed"]
 [connection signal="ultimate_joke" from="Player" to="." method="ultimateJoke"]
+[connection signal="button_down" from="CanvasLayer/PanelContainer/HBoxContainer/HONK" to="CanvasLayer/PanelContainer/HBoxContainer/HONK" method="change_skill"]
 [connection signal="pressed" from="CanvasLayer/PanelContainer/HBoxContainer/HONK" to="." method="_on_honk_pressed"]
 [connection signal="pressed" from="CanvasLayer/PanelContainer/HBoxContainer/HONK" to="Player" method="skill_honk"]
 [connection signal="button_down" from="CanvasLayer/PanelContainer/HBoxContainer/CAKE" to="Player" method="shoot"]
+[connection signal="button_down" from="CanvasLayer/PanelContainer/HBoxContainer/CAKE" to="CanvasLayer/PanelContainer/HBoxContainer/CAKE" method="change_skill"]
 [connection signal="pressed" from="CanvasLayer/PanelContainer/HBoxContainer/CAKE" to="Player" method="shoot"]
 [connection signal="button_down" from="CanvasLayer/PanelContainer/HBoxContainer/WHOOPIE" to="Player" method="skill_whoopie"]
+[connection signal="button_down" from="CanvasLayer/PanelContainer/HBoxContainer/WHOOPIE" to="CanvasLayer/PanelContainer/HBoxContainer/WHOOPIE" method="change_skill"]
 [connection signal="pressed" from="CanvasLayer/PanelContainer/HBoxContainer/WHOOPIE" to="Player" method="skill_whoopie"]
 [connection signal="button_down" from="CanvasLayer/PanelContainer/HBoxContainer/JOKE" to="Player" method="skill_joke"]
+[connection signal="button_down" from="CanvasLayer/PanelContainer/HBoxContainer/JOKE" to="CanvasLayer/PanelContainer/HBoxContainer/JOKE" method="change_skill"]
 [connection signal="pressed" from="CanvasLayer/PanelContainer/HBoxContainer/JOKE" to="Player" method="skill_joke"]
 [connection signal="button_down" from="CanvasLayer/PanelContainer/HBoxContainer/INFLATABLE" to="Player" method="skill_inflatable"]
+[connection signal="button_down" from="CanvasLayer/PanelContainer/HBoxContainer/INFLATABLE" to="CanvasLayer/PanelContainer/HBoxContainer/INFLATABLE" method="change_skill"]
 [connection signal="pressed" from="CanvasLayer/PanelContainer/HBoxContainer/INFLATABLE" to="Player" method="skill_inflatable"]
 [connection signal="button_down" from="CanvasLayer/PanelContainer/HBoxContainer/BALOON" to="." method="win"]
 [connection signal="pressed" from="CanvasLayer/PanelContainer/HBoxContainer/BALOON" to="." method="win"]
