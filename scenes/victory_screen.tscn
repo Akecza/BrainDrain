@@ -1,0 +1,58 @@
+[gd_scene load_steps=5 format=3 uid="uid://bsrim7sklm4bp"]
+
+[ext_resource type="Texture2D" uid="uid://ckwkxus81hfnu" path="res://art/CharacterParts/honk.png" id="1_taun6"]
+[ext_resource type="Script" path="res://scripts/victory_screen.gd" id="1_wwob6"]
+[ext_resource type="Texture2D" uid="uid://fuqh8ds7i57a" path="res://art/UI/menu_przycisk.png" id="2_gyvrw"]
+[ext_resource type="Texture2D" uid="uid://ciuvcwqugpyf4" path="res://art/UI/quit.png" id="3_8dfsh"]
+
+[node name="VictoryScreen" type="Node2D"]
+script = ExtResource("1_wwob6")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Node2D" type="Node2D" parent="CanvasLayer"]
+position = Vector2(822, 238)
+scale = Vector2(0.7, 0.7)
+
+[node name="Honk3" type="Sprite2D" parent="CanvasLayer/Node2D"]
+position = Vector2(583, 169)
+rotation = 0.64737
+scale = Vector2(0.750386, 0.750386)
+texture = ExtResource("1_taun6")
+
+[node name="Honk" type="Sprite2D" parent="CanvasLayer/Node2D/Honk3"]
+position = Vector2(-103.86, -115.273)
+rotation = -0.64737
+scale = Vector2(1.33265, 1.33265)
+texture = ExtResource("1_taun6")
+
+[node name="Honk4" type="Sprite2D" parent="CanvasLayer/Node2D"]
+position = Vector2(-583, 169)
+rotation = 2.49422
+scale = Vector2(0.750386, -0.750386)
+texture = ExtResource("1_taun6")
+
+[node name="Honk" type="Sprite2D" parent="CanvasLayer/Node2D/Honk4"]
+position = Vector2(-103.86, -115.273)
+rotation = -0.64737
+scale = Vector2(1.33265, 1.33265)
+texture = ExtResource("1_taun6")
+
+[node name="MenuPrzycisk" type="Sprite2D" parent="CanvasLayer/Node2D"]
+position = Vector2(-508.571, 434.286)
+scale = Vector2(0.705761, 0.705761)
+texture = ExtResource("2_gyvrw")
+
+[node name="Quit" type="Sprite2D" parent="CanvasLayer/Node2D/MenuPrzycisk"]
+position = Vector2(679, 364)
+scale = Vector2(2.04505, 1.41736)
+texture = ExtResource("3_8dfsh")
+
+[node name="QuitButton" type="Button" parent="CanvasLayer"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 657.0
+offset_top = 666.0
+offset_right = 960.0
+offset_bottom = 793.0
+
+[connection signal="pressed" from="CanvasLayer/QuitButton" to="." method="_on_quit_button_pressed"]
