@@ -43,10 +43,11 @@ func _physics_process(delta):
 func getHappinessValue():
 	return $HappinessBar.value
 	
-#func _on_timer_timeout():
-	#new_random_direction()
-	#timer.wait_time = randf_range(1,3)
-	#timer.start()
+
+func getCakedIdiot():
+	$GotCakedTimer.start()
+	make_happy(-100)
+	$getCakedIdiotSprite.visible=true
 	
 func make_happy(amount):
 	happiness_bar.value = happiness_bar.value + amount
@@ -84,3 +85,7 @@ func check_happiness_state():
 	if (happiness_bar.value == 100):
 		state_machine.change_state($StateMachine/Laughing, null)
 
+
+
+func _on_got_caked_timer_timeout():
+	$getCakedIdiotSprite.visible=false
