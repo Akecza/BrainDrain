@@ -5,7 +5,7 @@ signal happinessChanged
 @onready var got_caked_timer = $GotCakedTimer
 @onready var animations = $AnimatedSprite2D
 @onready var state_machine = $StateMachine
-@onready var timer : Timer = $Timer
+#@onready var timer : Timer = $Timer
 @onready var happiness_bar : ProgressBar = $HappinessBar 
 
 @onready var laughing_player : AudioStreamPlayer2D = $LaughingPlayer

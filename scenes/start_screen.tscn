@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cs2vplbx5y43g"]
+[gd_scene load_steps=20 format=3 uid="uid://deb5u1te3xvnc"]
 
 [ext_resource type="Texture2D" uid="uid://bwfwl8igo03rj" path="res://art/Terrain/asfalt.png" id="1_o32mo"]
 [ext_resource type="Texture2D" uid="uid://n7dq2b3s2bmk" path="res://art/Terrain/budynek-01.png" id="2_v2ct1"]
@@ -11,12 +11,13 @@
 [ext_resource type="Texture2D" uid="uid://dobiitb2g74vc" path="res://art/CharacterAnimation/SadCoffee/Kawiarz_walk_frame_00000.png" id="7_p1ksc"]
 [ext_resource type="Texture2D" uid="uid://ckwkxus81hfnu" path="res://art/CharacterParts/honk.png" id="8_wbvq6"]
 [ext_resource type="Texture2D" uid="uid://ubdiu45dvxrl" path="res://art/CharacterParts/Glove-R-honk.png" id="9_pfblx"]
-[ext_resource type="Texture2D" uid="uid://b4aifpgensnxj" path="res://art/CharacterAnimation/JajcarzNoHand/Jajcarz_nohand_00001.png" id="10_cm8eo"]
+[ext_resource type="Texture2D" uid="uid://35ucrd4f4k46" path="res://art/CharacterAnimation/JajcarzNoHand/Jajcarz_nohand_00001.png" id="10_cm8eo"]
 [ext_resource type="Texture2D" uid="uid://gm47lu1i8q57" path="res://art/CharacterParts/menu_napis.png" id="12_20q5e"]
 [ext_resource type="Texture2D" uid="uid://sfpwyuyo4785" path="res://art/CharacterParts/cien.png" id="12_sfycc"]
 [ext_resource type="Texture2D" uid="uid://fuqh8ds7i57a" path="res://art/UI/menu_przycisk.png" id="13_uba4j"]
 [ext_resource type="Texture2D" uid="uid://d161xtnygl0ew" path="res://art/UI/stat.png" id="16_a17s1"]
 [ext_resource type="Texture2D" uid="uid://ciuvcwqugpyf4" path="res://art/UI/quit.png" id="17_efcn1"]
+[ext_resource type="Script" path="res://scenes/PlayButton.gd" id="18_x4h3n"]
 
 [sub_resource type="Theme" id="Theme_iaf0c"]
 
@@ -150,6 +151,7 @@ offset_bottom = 969.0
 theme = SubResource("Theme_iaf0c")
 theme_override_colors/icon_normal_color = Color(0, 0, 0, 0)
 theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0)
+script = ExtResource("18_x4h3n")
 
 [node name="QuitButton" type="Button" parent="CanvasLayer"]
 self_modulate = Color(1, 1, 1, 0)
@@ -157,3 +159,7 @@ offset_left = 1774.0
 offset_top = 1075.0
 offset_right = 2352.0
 offset_bottom = 1316.0
+script = ExtResource("18_x4h3n")
+
+[connection signal="button_down" from="CanvasLayer/PlayButton" to="CanvasLayer/PlayButton" method="start_game"]
+[connection signal="button_down" from="CanvasLayer/QuitButton" to="CanvasLayer/PlayButton" method="exit_game"]
