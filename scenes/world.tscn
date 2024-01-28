@@ -1,14 +1,34 @@
-[gd_scene load_steps=10 format=3 uid="uid://cbgw8hvxcwppe"]
+[gd_scene load_steps=30 format=3 uid="uid://cbgw8hvxcwppe"]
 
 [ext_resource type="PackedScene" uid="uid://cc4o75emmeaay" path="res://scenes/budynki/bruk.tscn" id="2_klmb1"]
 [ext_resource type="PackedScene" uid="uid://bbrcme6303jvk" path="res://scenes/budynki/lewy_róg.tscn" id="6_nkrty"]
 [ext_resource type="PackedScene" uid="uid://b3a5mwiqvlxb" path="res://scenes/budynki/prawy_róg.tscn" id="7_eml4v"]
 [ext_resource type="PackedScene" uid="uid://dhfv05m8tul0s" path="res://scenes/budynki/skrzyżowanie.tscn" id="8_xdg67"]
 [ext_resource type="PackedScene" uid="uid://c3gksvotehbio" path="res://scenes/budynki/pionowa_ulica.tscn" id="9_oeqk6"]
+[ext_resource type="Texture2D" uid="uid://c50n5kdegn8e5" path="res://scenes/chodnik-01.png" id="10_05i80"]
 [ext_resource type="PackedScene" uid="uid://b1rw41fkubyrg" path="res://scenes/budynki/pozioma_ulica.tscn" id="10_pmvnd"]
+[ext_resource type="Texture2D" uid="uid://ctwscambo3gwt" path="res://scenes/chodnik-04.png" id="11_lycou"]
 [ext_resource type="Texture2D" uid="uid://dnckm3py6rgcy" path="res://art/Terrain/trawa-04.png" id="12_4f8op"]
+[ext_resource type="Texture2D" uid="uid://lsq2kjl41n13" path="res://scenes/chodnik-05.png" id="12_5id31"]
 [ext_resource type="Texture2D" uid="uid://c7i28p1erondq" path="res://art/Terrain/trawa-03.png" id="12_rh4d6"]
 [ext_resource type="Texture2D" uid="uid://cunmh8ba4c6dk" path="res://art/Terrain/trawa-05.png" id="13_k4au4"]
+[ext_resource type="Texture2D" uid="uid://cbvkpwdjdi2t7" path="res://scenes/chodnik-06.png" id="13_oxxvi"]
+[ext_resource type="Texture2D" uid="uid://c4qr4m7xvcls8" path="res://scenes/chodnik-03.png" id="14_u73ag"]
+[ext_resource type="Texture2D" uid="uid://c02s14gysg5p7" path="res://scenes/chodnik-02.png" id="15_o1el3"]
+[ext_resource type="Texture2D" uid="uid://cqtxqofdrw08c" path="res://art/Terrain/chodnik-pion.png" id="16_e6v1r"]
+[ext_resource type="Texture2D" uid="uid://cwpvhoqv6nog6" path="res://art/Terrain/trawa-08.png" id="17_736av"]
+[ext_resource type="Texture2D" uid="uid://gqb2x7ms14ul" path="res://art/Terrain/chodnik-pion02.png" id="18_ylqk4"]
+[ext_resource type="Texture2D" uid="uid://cbtqymbiru4rl" path="res://art/Terrain/trawa-02.png" id="19_3bqvv"]
+[ext_resource type="Texture2D" uid="uid://co77wwgjulfiv" path="res://art/Terrain/trawa-01.png" id="20_xuetv"]
+[ext_resource type="Texture2D" uid="uid://eh0t5hgxijq7" path="res://art/Terrain/kraweznik-rog02.png" id="21_4lgk1"]
+[ext_resource type="Texture2D" uid="uid://bto08d5iufbf4" path="res://art/Terrain/kraweznik-poziom-01.png" id="22_ncfsm"]
+[ext_resource type="Texture2D" uid="uid://b6pwcetslqcse" path="res://art/Terrain/trawa-06.png" id="23_08l8c"]
+[ext_resource type="Texture2D" uid="uid://4vbxaleq4mol" path="res://art/Terrain/trawa-07.png" id="24_21422"]
+[ext_resource type="Texture2D" uid="uid://cm7bryy7tbwlr" path="res://scenes/hydrant.png" id="25_e2ku3"]
+[ext_resource type="Texture2D" uid="uid://cbue66baw1pg6" path="res://scenes/kwiat.png" id="26_twnsl"]
+[ext_resource type="Texture2D" uid="uid://dkn3at1o352nw" path="res://art/Terrain/budynek-baza.png" id="26_xajh7"]
+[ext_resource type="Texture2D" uid="uid://dwm6u5dg2h23e" path="res://art/Terrain/trawa-09.png" id="28_i2neq"]
+[ext_resource type="Texture2D" uid="uid://13gonbpeywb0" path="res://art/Terrain/posag.png" id="29_4glg8"]
 
 [node name="World" type="Node2D"]
 
@@ -276,3 +296,879 @@ texture = ExtResource("13_k4au4")
 position = Vector2(22900, 11975)
 scale = Vector2(1.76601, 2.78571)
 texture = ExtResource("13_k4au4")
+
+[node name="Chodnik-01" type="Sprite2D" parent="."]
+position = Vector2(2847, 3453)
+texture = ExtResource("10_05i80")
+
+[node name="Chodnik-04" type="Sprite2D" parent="."]
+position = Vector2(2535, 3917)
+texture = ExtResource("11_lycou")
+
+[node name="Chodnik-05" type="Sprite2D" parent="."]
+position = Vector2(2529, 3687)
+texture = ExtResource("12_5id31")
+
+[node name="Chodnik-06" type="Sprite2D" parent="."]
+position = Vector2(2375, 3531)
+texture = ExtResource("13_oxxvi")
+
+[node name="Trawa-09" type="Sprite2D" parent="."]
+position = Vector2(2383, 4140)
+scale = Vector2(0.594476, 0.501357)
+texture = ExtResource("13_k4au4")
+
+[node name="Chodnik-03" type="Sprite2D" parent="."]
+position = Vector2(2545, 4862)
+
+[node name="Chodnik-07" type="Sprite2D" parent="."]
+position = Vector2(2709, 4879)
+rotation = -1.55683
+texture = ExtResource("14_u73ag")
+
+[node name="Chodnik-08" type="Sprite2D" parent="."]
+position = Vector2(2793, 4519)
+rotation = 1.55509
+scale = Vector2(1.09919, 0.961841)
+texture = ExtResource("13_oxxvi")
+
+[node name="Chodnik-02" type="Sprite2D" parent="."]
+position = Vector2(2392, 5414)
+texture = ExtResource("10_05i80")
+
+[node name="Chodnik-09" type="Sprite2D" parent="."]
+position = Vector2(1445, 5570)
+texture = ExtResource("11_lycou")
+
+[node name="Chodnik-10" type="Sprite2D" parent="."]
+position = Vector2(1815, 5260)
+texture = ExtResource("15_o1el3")
+
+[node name="Chodnik-pion" type="Sprite2D" parent="."]
+position = Vector2(1612, 6528)
+texture = ExtResource("16_e6v1r")
+
+[node name="Chodnik-11" type="Sprite2D" parent="."]
+position = Vector2(1315, 5879)
+rotation = 1.5708
+texture = ExtResource("14_u73ag")
+
+[node name="Trawa-10" type="Sprite2D" parent="."]
+position = Vector2(2815, 5555)
+texture = ExtResource("17_736av")
+
+[node name="Trawa-11" type="Sprite2D" parent="."]
+position = Vector2(1159, 6161)
+scale = Vector2(0.663265, 0.68264)
+texture = ExtResource("13_k4au4")
+
+[node name="Chodnik-pion02" type="Sprite2D" parent="."]
+position = Vector2(1310, 7144)
+texture = ExtResource("18_ylqk4")
+
+[node name="Chodnik-12" type="Sprite2D" parent="."]
+position = Vector2(1451, 7936)
+rotation = 1.5708
+texture = ExtResource("14_u73ag")
+
+[node name="Chodnik-13" type="Sprite2D" parent="."]
+position = Vector2(1198, 8180)
+texture = ExtResource("11_lycou")
+
+[node name="Trawa-12" type="Sprite2D" parent="."]
+position = Vector2(1561, 8485)
+scale = Vector2(1, 0.847619)
+texture = ExtResource("12_4f8op")
+
+[node name="Trawa-13" type="Sprite2D" parent="."]
+position = Vector2(3422, 9975)
+texture = ExtResource("17_736av")
+
+[node name="Chodnik-pion03" type="Sprite2D" parent="."]
+position = Vector2(1446, 9450)
+texture = ExtResource("18_ylqk4")
+
+[node name="Chodnik-pion04" type="Sprite2D" parent="."]
+position = Vector2(1277, 10321)
+rotation = 3.14159
+texture = ExtResource("18_ylqk4")
+
+[node name="Trawa-14" type="Sprite2D" parent="."]
+position = Vector2(1460, 10795)
+texture = ExtResource("13_k4au4")
+
+[node name="Trawa-15" type="Sprite2D" parent="."]
+position = Vector2(799, 10880)
+scale = Vector2(1.36964, 1.25714)
+texture = ExtResource("12_4f8op")
+
+[node name="Chodnik-pion05" type="Sprite2D" parent="."]
+position = Vector2(1426, 11939)
+texture = ExtResource("18_ylqk4")
+
+[node name="Chodnik-14" type="Sprite2D" parent="."]
+position = Vector2(1194, 12502)
+texture = ExtResource("14_u73ag")
+
+[node name="Chodnik-15" type="Sprite2D" parent="."]
+position = Vector2(1501, 13051)
+texture = ExtResource("15_o1el3")
+
+[node name="Chodnik-16" type="Sprite2D" parent="."]
+position = Vector2(997, 12914)
+scale = Vector2(0.90568, 0.897436)
+texture = ExtResource("11_lycou")
+
+[node name="Trawa-16" type="Sprite2D" parent="."]
+position = Vector2(983, 13255)
+scale = Vector2(0.752639, 0.679024)
+texture = ExtResource("13_k4au4")
+
+[node name="Chodnik-pion06" type="Sprite2D" parent="."]
+position = Vector2(2455, 13487)
+texture = ExtResource("18_ylqk4")
+
+[node name="Chodnik-pion07" type="Sprite2D" parent="."]
+position = Vector2(2292, 14362)
+rotation = 3.14159
+texture = ExtResource("18_ylqk4")
+
+[node name="Chodnik-17" type="Sprite2D" parent="."]
+position = Vector2(1991, 13663)
+rotation = 1.5708
+texture = ExtResource("15_o1el3")
+
+[node name="Chodnik-18" type="Sprite2D" parent="."]
+position = Vector2(1837, 13204)
+rotation = 3.14159
+scale = Vector2(0.951264, 0.914432)
+texture = ExtResource("11_lycou")
+
+[node name="Chodnik-pion08" type="Sprite2D" parent="."]
+position = Vector2(3923, 3038)
+texture = ExtResource("18_ylqk4")
+
+[node name="Chodnik-19" type="Sprite2D" parent="."]
+position = Vector2(3199, 3234)
+texture = ExtResource("12_5id31")
+
+[node name="Chodnik-20" type="Sprite2D" parent="."]
+position = Vector2(3535, 3453)
+texture = ExtResource("14_u73ag")
+
+[node name="Chodnik-21" type="Sprite2D" parent="."]
+position = Vector2(3761, 2229)
+rotation = 1.5708
+texture = ExtResource("11_lycou")
+
+[node name="Trawa-02" type="Sprite2D" parent="."]
+position = Vector2(5188, 1372)
+texture = ExtResource("19_3bqvv")
+
+[node name="Chodnik-22" type="Sprite2D" parent="."]
+position = Vector2(4283, 1304)
+texture = ExtResource("12_5id31")
+
+[node name="Chodnik-23" type="Sprite2D" parent="."]
+position = Vector2(3983, 1861)
+rotation = 1.5708
+texture = ExtResource("13_oxxvi")
+
+[node name="Chodnik-24" type="Sprite2D" parent="."]
+position = Vector2(6313, 1387)
+rotation = 1.5708
+texture = ExtResource("14_u73ag")
+
+[node name="Trawa-01" type="Sprite2D" parent="."]
+position = Vector2(3395, 2472)
+scale = Vector2(0.713456, 0.749433)
+texture = ExtResource("20_xuetv")
+
+[node name="Trawa-17" type="Sprite2D" parent="."]
+position = Vector2(2687, 15880)
+texture = ExtResource("19_3bqvv")
+
+[node name="Chodnik-25" type="Sprite2D" parent="."]
+position = Vector2(1988, 15181)
+rotation = 1.5708
+texture = ExtResource("11_lycou")
+
+[node name="Chodnik-26" type="Sprite2D" parent="."]
+position = Vector2(2383, 15002)
+texture = ExtResource("12_5id31")
+
+[node name="Chodnik-27" type="Sprite2D" parent="."]
+position = Vector2(4150, 16010)
+texture = ExtResource("10_05i80")
+
+[node name="Chodnik-28" type="Sprite2D" parent="."]
+position = Vector2(4730, 16013)
+texture = ExtResource("11_lycou")
+
+[node name="Trawa-18" type="Sprite2D" parent="."]
+position = Vector2(5625, 15940)
+scale = Vector2(0.8737, 0.885488)
+texture = ExtResource("20_xuetv")
+
+[node name="Chodnik-29" type="Sprite2D" parent="."]
+position = Vector2(5010, 16298)
+texture = ExtResource("14_u73ag")
+
+[node name="Chodnik-30" type="Sprite2D" parent="."]
+position = Vector2(5328, 16378)
+scale = Vector2(0.982143, 0.892405)
+texture = ExtResource("12_5id31")
+
+[node name="Trawa-19" type="Sprite2D" parent="."]
+position = Vector2(4342, 16352)
+texture = ExtResource("12_4f8op")
+
+[node name="Chodnik-31" type="Sprite2D" parent="."]
+position = Vector2(6016, 16586)
+rotation = 1.5708
+texture = ExtResource("10_05i80")
+
+[node name="Chodnik-32" type="Sprite2D" parent="."]
+position = Vector2(5908, 17280)
+texture = ExtResource("11_lycou")
+
+[node name="Chodnik-33" type="Sprite2D" parent="."]
+position = Vector2(5588, 17360)
+texture = ExtResource("12_5id31")
+
+[node name="Chodnik-34" type="Sprite2D" parent="."]
+position = Vector2(6042, 17658)
+texture = ExtResource("13_oxxvi")
+
+[node name="Chodnik-35" type="Sprite2D" parent="."]
+position = Vector2(6633, 17726)
+texture = ExtResource("10_05i80")
+
+[node name="Trawa-20" type="Sprite2D" parent="."]
+position = Vector2(7695, 17581)
+scale = Vector2(0.953823, 0.914966)
+texture = ExtResource("20_xuetv")
+
+[node name="Chodnik-36" type="Sprite2D" parent="."]
+position = Vector2(7229, 18028)
+texture = ExtResource("11_lycou")
+
+[node name="Chodnik-37" type="Sprite2D" parent="."]
+position = Vector2(6757, 18025)
+texture = ExtResource("14_u73ag")
+
+[node name="Chodnik-38" type="Sprite2D" parent="."]
+position = Vector2(6964, 18328)
+texture = ExtResource("11_lycou")
+
+[node name="Chodnik-39" type="Sprite2D" parent="."]
+position = Vector2(8640, 17683)
+texture = ExtResource("14_u73ag")
+
+[node name="Chodnik-40" type="Sprite2D" parent="."]
+position = Vector2(8136, 17980)
+texture = ExtResource("10_05i80")
+
+[node name="Trawa-21" type="Sprite2D" parent="."]
+position = Vector2(9346, 17824)
+scale = Vector2(0.691468, 0.629214)
+texture = ExtResource("19_3bqvv")
+
+[node name="Chodnik-41" type="Sprite2D" parent="."]
+position = Vector2(8857, 17971)
+texture = ExtResource("14_u73ag")
+
+[node name="Chodnik-42" type="Sprite2D" parent="."]
+position = Vector2(9111, 17682)
+texture = ExtResource("11_lycou")
+
+[node name="Chodnik-pion09" type="Sprite2D" parent="."]
+position = Vector2(9928, 17676)
+rotation = -1.5708
+texture = ExtResource("18_ylqk4")
+
+[node name="Chodnik-43" type="Sprite2D" parent="."]
+position = Vector2(8438, 18271)
+texture = ExtResource("10_05i80")
+
+[node name="Chodnik-44" type="Sprite2D" parent="."]
+position = Vector2(9032, 18203)
+texture = ExtResource("12_5id31")
+
+[node name="Chodnik-45" type="Sprite2D" parent="."]
+position = Vector2(9954, 17982)
+texture = ExtResource("14_u73ag")
+
+[node name="Kraweznik-rog02" type="Sprite2D" parent="."]
+position = Vector2(11521, 17382)
+texture = ExtResource("21_4lgk1")
+
+[node name="Kraweznik-poziom-01" type="Sprite2D" parent="."]
+position = Vector2(10989, 17580)
+texture = ExtResource("22_ncfsm")
+
+[node name="Trawa-22" type="Sprite2D" parent="."]
+position = Vector2(11995, 17664)
+scale = Vector2(0.958834, 0.860317)
+texture = ExtResource("12_4f8op")
+
+[node name="Trawa-23" type="Sprite2D" parent="."]
+position = Vector2(10480, 17662)
+texture = ExtResource("23_08l8c")
+
+[node name="Chodnik-pion10" type="Sprite2D" parent="."]
+position = Vector2(11850, 16677)
+texture = ExtResource("18_ylqk4")
+
+[node name="Chodnik-46" type="Sprite2D" parent="."]
+position = Vector2(11923, 16001)
+texture = ExtResource("11_lycou")
+
+[node name="Chodnik-47" type="Sprite2D" parent="."]
+position = Vector2(12339, 16298)
+texture = ExtResource("10_05i80")
+
+[node name="Trawa-24" type="Sprite2D" parent="Chodnik-47"]
+position = Vector2(928, -87)
+texture = ExtResource("12_rh4d6")
+
+[node name="Chodnik-48" type="Sprite2D" parent="."]
+position = Vector2(12073, 16530)
+texture = ExtResource("12_5id31")
+
+[node name="Chodnik-49" type="Sprite2D" parent="."]
+position = Vector2(12681, 15998)
+texture = ExtResource("15_o1el3")
+
+[node name="Chodnik-50" type="Sprite2D" parent="."]
+position = Vector2(12775, 16598)
+texture = ExtResource("11_lycou")
+
+[node name="Chodnik-51" type="Sprite2D" parent="."]
+position = Vector2(13125, 16086)
+texture = ExtResource("12_5id31")
+
+[node name="Trawa-24" type="Sprite2D" parent="."]
+position = Vector2(13400, 15741)
+texture = ExtResource("17_736av")
+
+[node name="Chodnik-pion11" type="Sprite2D" parent="."]
+position = Vector2(14186, 15993)
+texture = ExtResource("18_ylqk4")
+
+[node name="Chodnik-52" type="Sprite2D" parent="."]
+position = Vector2(14669, 14754)
+rotation = 1.5708
+texture = ExtResource("14_u73ag")
+
+[node name="Chodnik-53" type="Sprite2D" parent="."]
+position = Vector2(14379, 14965)
+texture = ExtResource("10_05i80")
+
+[node name="Chodnik-54" type="Sprite2D" parent="."]
+position = Vector2(14391, 15265)
+texture = ExtResource("14_u73ag")
+
+[node name="Chodnik-55" type="Sprite2D" parent="."]
+position = Vector2(14548, 15496)
+texture = ExtResource("12_5id31")
+
+[node name="Trawa-25" type="Sprite2D" parent="."]
+position = Vector2(14769, 14935)
+texture = ExtResource("24_21422")
+
+[node name="Chodnik-pion12" type="Sprite2D" parent="."]
+position = Vector2(14182, 14240)
+texture = ExtResource("18_ylqk4")
+
+[node name="Trawa-26" type="Sprite2D" parent="."]
+position = Vector2(15248, 13782)
+texture = ExtResource("19_3bqvv")
+
+[node name="Chodnik-56" type="Sprite2D" parent="."]
+position = Vector2(14737, 14371)
+texture = ExtResource("14_u73ag")
+
+[node name="Chodnik-57" type="Sprite2D" parent="."]
+position = Vector2(14404, 14051)
+texture = ExtResource("12_5id31")
+
+[node name="Chodnik-58" type="Sprite2D" parent="."]
+position = Vector2(14159, 13292)
+rotation = 1.5708
+texture = ExtResource("11_lycou")
+
+[node name="Chodnik-pion13" type="Sprite2D" parent="."]
+position = Vector2(14163, 12722)
+texture = ExtResource("18_ylqk4")
+
+[node name="Chodnik-59" type="Sprite2D" parent="."]
+position = Vector2(14215, 11804)
+texture = ExtResource("14_u73ag")
+
+[node name="Chodnik-60" type="Sprite2D" parent="."]
+position = Vector2(14724, 11961)
+texture = ExtResource("15_o1el3")
+
+[node name="Chodnik-61" type="Sprite2D" parent="."]
+position = Vector2(14548, 12263)
+texture = ExtResource("11_lycou")
+
+[node name="Trawa-27" type="Sprite2D" parent="."]
+position = Vector2(15347, 12453)
+scale = Vector2(0.756944, 0.88015)
+texture = ExtResource("19_3bqvv")
+
+[node name="Chodnik-pion14" type="Sprite2D" parent="."]
+position = Vector2(15645, 11828)
+rotation = 1.5708
+texture = ExtResource("18_ylqk4")
+
+[node name="Chodnik-62" type="Sprite2D" parent="."]
+position = Vector2(15851, 12111)
+texture = ExtResource("14_u73ag")
+
+[node name="Chodnik-63" type="Sprite2D" parent="."]
+position = Vector2(16705, 11804)
+texture = ExtResource("10_05i80")
+
+[node name="Chodnik-64" type="Sprite2D" parent="."]
+position = Vector2(17561, 11802)
+texture = ExtResource("11_lycou")
+
+[node name="Chodnik-pion15" type="Sprite2D" parent="."]
+position = Vector2(17435, 12100)
+rotation = -1.5708
+texture = ExtResource("18_ylqk4")
+
+[node name="Trawa-28" type="Sprite2D" parent="."]
+position = Vector2(17200, 12365)
+scale = Vector2(1, 0.754973)
+texture = ExtResource("13_k4au4")
+
+[node name="Chodnik-pion16" type="Sprite2D" parent="."]
+position = Vector2(18738, 11795)
+rotation = -1.5708
+texture = ExtResource("18_ylqk4")
+
+[node name="Chodnik-65" type="Sprite2D" parent="."]
+position = Vector2(18299, 12254)
+texture = ExtResource("14_u73ag")
+
+[node name="Chodnik-66" type="Sprite2D" parent="."]
+position = Vector2(18432, 12033)
+texture = ExtResource("12_5id31")
+
+[node name="Trawa-29" type="Sprite2D" parent="."]
+position = Vector2(19788, 11959)
+texture = ExtResource("12_rh4d6")
+
+[node name="Trawa-30" type="Sprite2D" parent="."]
+position = Vector2(19821, 11593)
+texture = ExtResource("12_4f8op")
+
+[node name="Trawa-31" type="Sprite2D" parent="."]
+position = Vector2(19055, 11300)
+texture = ExtResource("17_736av")
+
+[node name="Chodnik-pion17" type="Sprite2D" parent="."]
+position = Vector2(20092, 10862)
+texture = ExtResource("18_ylqk4")
+
+[node name="Chodnik-67" type="Sprite2D" parent="."]
+position = Vector2(20100, 9854)
+rotation = 1.5708
+texture = ExtResource("14_u73ag")
+
+[node name="Chodnik-68" type="Sprite2D" parent="."]
+position = Vector2(19695, 9573)
+texture = ExtResource("11_lycou")
+
+[node name="Chodnik-69" type="Sprite2D" parent="."]
+position = Vector2(20006, 9338)
+texture = ExtResource("12_5id31")
+
+[node name="Trawa-32" type="Sprite2D" parent="."]
+position = Vector2(20431, 10112)
+scale = Vector2(0.728988, 0.430158)
+texture = ExtResource("12_4f8op")
+
+[node name="Trawa-33" type="Sprite2D" parent="."]
+position = Vector2(18472, 10037)
+texture = ExtResource("24_21422")
+
+[node name="Trawa-34" type="Sprite2D" parent="."]
+position = Vector2(17932, 10087)
+texture = ExtResource("23_08l8c")
+
+[node name="Chodnik-pion18" type="Sprite2D" parent="."]
+position = Vector2(17559, 9571)
+rotation = 1.5708
+texture = ExtResource("18_ylqk4")
+
+[node name="Chodnik-70" type="Sprite2D" parent="."]
+position = Vector2(17483, 9250)
+texture = ExtResource("14_u73ag")
+
+[node name="Chodnik-71" type="Sprite2D" parent="."]
+position = Vector2(16439, 9561)
+texture = ExtResource("11_lycou")
+
+[node name="Chodnik-72" type="Sprite2D" parent="."]
+position = Vector2(16296, 9252)
+texture = ExtResource("14_u73ag")
+
+[node name="Chodnik-pion19" type="Sprite2D" parent="."]
+position = Vector2(15440, 9574)
+rotation = 1.5708
+texture = ExtResource("18_ylqk4")
+
+[node name="Trawa-35" type="Sprite2D" parent="."]
+position = Vector2(15400, 9268)
+scale = Vector2(0.674603, 0.790262)
+texture = ExtResource("19_3bqvv")
+
+[node name="Chodnik-73" type="Sprite2D" parent="."]
+position = Vector2(14334, 9568)
+texture = ExtResource("14_u73ag")
+
+[node name="Chodnik-pion20" type="Sprite2D" parent="."]
+position = Vector2(13956, 9150)
+texture = ExtResource("18_ylqk4")
+
+[node name="Chodnik-74" type="Sprite2D" parent="."]
+position = Vector2(14341, 9274)
+texture = ExtResource("11_lycou")
+
+[node name="Chodnik-75" type="Sprite2D" parent="."]
+position = Vector2(14800, 9488)
+texture = ExtResource("12_5id31")
+
+[node name="Chodnik-pion21" type="Sprite2D" parent="."]
+position = Vector2(14244, 8346)
+rotation = 3.14159
+texture = ExtResource("18_ylqk4")
+
+[node name="Chodnik-76" type="Sprite2D" parent="."]
+position = Vector2(13965, 8056)
+rotation = 1.5708
+texture = ExtResource("14_u73ag")
+
+[node name="Chodnik-77" type="Sprite2D" parent="."]
+position = Vector2(13960, 7528)
+rotation = 1.5708
+texture = ExtResource("11_lycou")
+
+[node name="Chodnik-pion22" type="Sprite2D" parent="."]
+position = Vector2(14110, 6838)
+texture = ExtResource("18_ylqk4")
+
+[node name="Trawa-36" type="Sprite2D" parent="."]
+position = Vector2(14883, 9077)
+rotation = 4.78744
+scale = Vector2(0.375315, 1.44369)
+texture = ExtResource("19_3bqvv")
+
+[node name="Trawa-37" type="Sprite2D" parent="."]
+position = Vector2(15128, 8920)
+scale = Vector2(1, 0.953176)
+texture = ExtResource("12_4f8op")
+
+[node name="Chodnik-78" type="Sprite2D" parent="."]
+position = Vector2(14413, 6993)
+rotation = 1.5708
+texture = ExtResource("14_u73ag")
+
+[node name="Chodnik-79" type="Sprite2D" parent="."]
+position = Vector2(14641, 7245)
+rotation = 1.5708
+texture = ExtResource("13_oxxvi")
+
+[node name="Chodnik-80" type="Sprite2D" parent="."]
+position = Vector2(13923, 5893)
+rotation = 1.5708
+texture = ExtResource("14_u73ag")
+
+[node name="Chodnik-81" type="Sprite2D" parent="."]
+position = Vector2(13701, 5425)
+texture = ExtResource("11_lycou")
+
+[node name="Chodnik-82" type="Sprite2D" parent="."]
+position = Vector2(14067, 5500)
+texture = ExtResource("13_oxxvi")
+
+[node name="Chodnik-83" type="Sprite2D" parent="."]
+position = Vector2(14278, 5196)
+texture = ExtResource("12_5id31")
+
+[node name="Chodnik-pion23" type="Sprite2D" parent="."]
+position = Vector2(12940, 4998)
+texture = ExtResource("18_ylqk4")
+
+[node name="Chodnik-84" type="Sprite2D" parent="."]
+position = Vector2(13239, 4967)
+rotation = 4.71239
+texture = ExtResource("11_lycou")
+
+[node name="Chodnik-85" type="Sprite2D" parent="."]
+position = Vector2(13239, 4329)
+rotation = 1.5708
+texture = ExtResource("14_u73ag")
+
+[node name="Chodnik-86" type="Sprite2D" parent="."]
+position = Vector2(13105, 3949)
+texture = ExtResource("11_lycou")
+
+[node name="Chodnik-pion24" type="Sprite2D" parent="."]
+position = Vector2(12956, 3113)
+rotation = 3.14159
+texture = ExtResource("18_ylqk4")
+
+[node name="Trawa-38" type="Sprite2D" parent="."]
+position = Vector2(13674, 3956)
+scale = Vector2(0.805317, 0.679365)
+texture = ExtResource("12_4f8op")
+
+[node name="Chodnik-87" type="Sprite2D" parent="."]
+position = Vector2(13090, 3744)
+scale = Vector2(1, 0.821429)
+texture = ExtResource("13_oxxvi")
+
+[node name="Chodnik-88" type="Sprite2D" parent="."]
+position = Vector2(13282, 3611)
+scale = Vector2(0.833333, 0.810127)
+texture = ExtResource("12_5id31")
+
+[node name="Chodnik-89" type="Sprite2D" parent="."]
+position = Vector2(12812, 1764)
+texture = ExtResource("14_u73ag")
+
+[node name="Chodnik-90" type="Sprite2D" parent="."]
+position = Vector2(13034, 2220)
+texture = ExtResource("11_lycou")
+
+[node name="Chodnik-91" type="Sprite2D" parent="."]
+position = Vector2(12981, 1996)
+texture = ExtResource("13_oxxvi")
+
+[node name="Chodnik-92" type="Sprite2D" parent="."]
+position = Vector2(13117, 1535)
+texture = ExtResource("12_5id31")
+
+[node name="Chodnik-pion25" type="Sprite2D" parent="."]
+position = Vector2(12011, 1776)
+rotation = 1.5708
+texture = ExtResource("18_ylqk4")
+
+[node name="Chodnik-93" type="Sprite2D" parent="."]
+position = Vector2(10163, 1774)
+texture = ExtResource("14_u73ag")
+
+[node name="Chodnik-94" type="Sprite2D" parent="."]
+position = Vector2(10529, 1624)
+texture = ExtResource("11_lycou")
+
+[node name="Chodnik-95" type="Sprite2D" parent="."]
+position = Vector2(11044, 1771)
+texture = ExtResource("15_o1el3")
+
+[node name="Chodnik-96" type="Sprite2D" parent="."]
+position = Vector2(11119, 1539)
+texture = ExtResource("12_5id31")
+
+[node name="Chodnik-97" type="Sprite2D" parent="."]
+position = Vector2(9690, 1845)
+texture = ExtResource("13_oxxvi")
+
+[node name="Chodnik-pion26" type="Sprite2D" parent="."]
+position = Vector2(7360, 1720)
+rotation = 4.71239
+texture = ExtResource("18_ylqk4")
+
+[node name="Chodnik-98" type="Sprite2D" parent="."]
+position = Vector2(7056, 1416)
+texture = ExtResource("14_u73ag")
+
+[node name="Chodnik-99" type="Sprite2D" parent="."]
+position = Vector2(8527, 1718)
+texture = ExtResource("10_05i80")
+
+[node name="Chodnik-100" type="Sprite2D" parent="."]
+position = Vector2(8940, 1440)
+texture = ExtResource("11_lycou")
+
+[node name="Trawa-39" type="Sprite2D" parent="."]
+position = Vector2(9231, 1597)
+scale = Vector2(0.714637, 0.729656)
+texture = ExtResource("13_k4au4")
+
+[node name="Chodnik-101" type="Sprite2D" parent="."]
+position = Vector2(9261, 1846)
+texture = ExtResource("13_oxxvi")
+
+[node name="Hydrant" type="Sprite2D" parent="."]
+position = Vector2(6227, 3576)
+scale = Vector2(0.512678, 0.492731)
+texture = ExtResource("25_e2ku3")
+
+[node name="Hydrant2" type="Sprite2D" parent="."]
+position = Vector2(9283, 9651)
+scale = Vector2(0.593502, 0.600727)
+texture = ExtResource("25_e2ku3")
+
+[node name="Hydrant3" type="Sprite2D" parent="."]
+position = Vector2(4067, 11344)
+scale = Vector2(0.509509, 0.530114)
+texture = ExtResource("25_e2ku3")
+
+[node name="Hydrant4" type="Sprite2D" parent="."]
+position = Vector2(13201, 11331)
+scale = Vector2(0.596672, 0.625649)
+texture = ExtResource("25_e2ku3")
+
+[node name="Budynek-baza" type="Sprite2D" parent="."]
+position = Vector2(11079, 4296)
+scale = Vector2(0.558032, 1.56777)
+texture = ExtResource("26_xajh7")
+
+[node name="Budynek-baza2" type="Sprite2D" parent="."]
+position = Vector2(11104, 4592)
+scale = Vector2(0.87817, 1.84432)
+texture = ExtResource("26_xajh7")
+
+[node name="Kwiat" type="Sprite2D" parent="."]
+position = Vector2(12317, 5234)
+scale = Vector2(0.630074, 0.945273)
+texture = ExtResource("26_twnsl")
+
+[node name="Kwiat" type="Sprite2D" parent="Kwiat"]
+position = Vector2(12308, 5291)
+scale = Vector2(0.682657, 0.919507)
+texture = ExtResource("26_twnsl")
+
+[node name="Kwiat2" type="Sprite2D" parent="."]
+position = Vector2(11075, 5609)
+scale = Vector2(0.706643, 0.999149)
+texture = ExtResource("26_twnsl")
+
+[node name="Kwiat3" type="Sprite2D" parent="."]
+position = Vector2(9691, 5119)
+scale = Vector2(0.668819, 0.999148)
+texture = ExtResource("26_twnsl")
+
+[node name="Kwiat4" type="Sprite2D" parent="."]
+position = Vector2(9741, 3677)
+scale = Vector2(0.651291, 0.936116)
+texture = ExtResource("26_twnsl")
+
+[node name="Kwiat5" type="Sprite2D" parent="."]
+position = Vector2(11009, 3361)
+scale = Vector2(0.627306, 0.789182)
+texture = ExtResource("26_twnsl")
+
+[node name="Kwiat6" type="Sprite2D" parent="."]
+position = Vector2(12287, 3708)
+scale = Vector2(0.591328, 0.801959)
+texture = ExtResource("26_twnsl")
+
+[node name="Trawa-40" type="Sprite2D" parent="."]
+position = Vector2(11501, 4809)
+texture = ExtResource("17_736av")
+
+[node name="Trawa-41" type="Sprite2D" parent="."]
+position = Vector2(10576, 4821)
+texture = ExtResource("23_08l8c")
+
+[node name="Kwiat7" type="Sprite2D" parent="."]
+position = Vector2(3894, 14816)
+scale = Vector2(0.583026, 0.798127)
+texture = ExtResource("26_twnsl")
+
+[node name="Kwiat8" type="Sprite2D" parent="."]
+position = Vector2(6719, 14809)
+scale = Vector2(0.597786, 0.777681)
+texture = ExtResource("26_twnsl")
+
+[node name="Trawa-42" type="Sprite2D" parent="."]
+position = Vector2(7582, 11282)
+scale = Vector2(1.82743, 1.97407)
+texture = ExtResource("17_736av")
+
+[node name="Trawa-43" type="Sprite2D" parent="."]
+position = Vector2(12036, 11262)
+scale = Vector2(2.95699, 1.87097)
+texture = ExtResource("28_i2neq")
+
+[node name="Posag" type="Sprite2D" parent="."]
+position = Vector2(11287, 3282)
+texture = ExtResource("29_4glg8")
+
+[node name="Kwiat9" type="Sprite2D" parent="."]
+position = Vector2(12774, 4430)
+scale = Vector2(0.630996, 0.786201)
+texture = ExtResource("26_twnsl")
+
+[node name="Trawa-44" type="Sprite2D" parent="."]
+position = Vector2(14633, 6582)
+scale = Vector2(0.75729, 0.749206)
+texture = ExtResource("12_4f8op")
+
+[node name="Trawa-45" type="Sprite2D" parent="."]
+position = Vector2(18435, 7821)
+texture = ExtResource("13_k4au4")
+
+[node name="Trawa-46" type="Sprite2D" parent="."]
+position = Vector2(16608, 5235)
+texture = ExtResource("13_k4au4")
+
+[node name="Trawa-47" type="Sprite2D" parent="."]
+position = Vector2(15103, 6633)
+texture = ExtResource("24_21422")
+
+[node name="Trawa-48" type="Sprite2D" parent="."]
+position = Vector2(17795, 7843)
+texture = ExtResource("17_736av")
+
+[node name="Trawa-49" type="Sprite2D" parent="."]
+position = Vector2(16132, 7351)
+texture = ExtResource("23_08l8c")
+
+[node name="Trawa-50" type="Sprite2D" parent="."]
+position = Vector2(16602, 9659)
+texture = ExtResource("24_21422")
+
+[node name="Trawa-51" type="Sprite2D" parent="."]
+position = Vector2(19821, 9535)
+texture = ExtResource("23_08l8c")
+
+[node name="Trawa-52" type="Sprite2D" parent="."]
+position = Vector2(13864, 9541)
+texture = ExtResource("24_21422")
+
+[node name="Trawa-53" type="Sprite2D" parent="."]
+position = Vector2(20041, 10926)
+texture = ExtResource("23_08l8c")
+
+[node name="Trawa-54" type="Sprite2D" parent="."]
+position = Vector2(11019, 5869)
+texture = ExtResource("17_736av")
+
+[node name="Trawa-55" type="Sprite2D" parent="."]
+position = Vector2(9723, 5405)
+texture = ExtResource("24_21422")
+
+[node name="Trawa-56" type="Sprite2D" parent="."]
+position = Vector2(12359, 5502)
+texture = ExtResource("23_08l8c")
+
+[node name="Trawa-57" type="Sprite2D" parent="."]
+position = Vector2(8117, 5219)
+texture = ExtResource("17_736av")
+
+[node name="Trawa-58" type="Sprite2D" parent="."]
+position = Vector2(9661, 3901)
+texture = ExtResource("23_08l8c")
+
+[node name="Trawa-59" type="Sprite2D" parent="."]
+position = Vector2(6434, 3769)
+texture = ExtResource("17_736av")
