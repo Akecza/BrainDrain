@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://cafnh4rpv7oee"]
+[gd_scene load_steps=40 format=3 uid="uid://cafnh4rpv7oee"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_3qlki"]
 [ext_resource type="PackedScene" uid="uid://b3l8edt0bi7np" path="res://scenes/player.tscn" id="1_dofbq"]
@@ -36,6 +36,7 @@
 [ext_resource type="PackedScene" uid="uid://yv8iuhtcensv" path="res://scenes/drzewa/drzewo.tscn" id="31_dpvcf"]
 [ext_resource type="PackedScene" path="res://scenes/budynki/kamienica.tscn" id="31_vq0jr"]
 [ext_resource type="PackedScene" path="res://scenes/baloons.tscn" id="33_hhsqp"]
+[ext_resource type="PackedScene" uid="uid://cbjh58s2pv131" path="res://scenes/static_body_2d.tscn" id="37_xp43b"]
 
 [sub_resource type="GDScript" id="GDScript_j45pr"]
 script/source = "extends TextureProgressBar
@@ -54,7 +55,12 @@ func changeProgressValue(amount):
 	pass
 "
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fjuxi"]
+radius = 45.0
+height = 248.0
+
 [node name="Game" type="Node2D"]
+position = Vector2(179, 255)
 script = ExtResource("1_3qlki")
 
 [node name="Background2" type="Sprite2D" parent="."]
@@ -63,6 +69,72 @@ texture = ExtResource("3_0jlkx")
 
 [node name="World" parent="." instance=ExtResource("25_jtldu")]
 position = Vector2(-427, -119)
+scale = Vector2(0.25, 0.25)
+
+[node name="Budynki" type="Node2D" parent="."]
+
+[node name="Wiezowiec7" parent="Budynki" instance=ExtResource("25_8fpw8")]
+position = Vector2(418.5, 742.25)
+scale = Vector2(0.25, 0.25)
+
+[node name="Biurowiec3" parent="Budynki" instance=ExtResource("26_gb857")]
+position = Vector2(1767.25, 781.25)
+scale = Vector2(0.25, 0.25)
+
+[node name="Wiezowiec8" parent="Budynki" instance=ExtResource("27_rwnbm")]
+position = Vector2(1335.5, 715.25)
+scale = Vector2(0.25, 0.25)
+
+[node name="Wiezowiec9" parent="Budynki" instance=ExtResource("28_6wr15")]
+position = Vector2(1541, 1741.5)
+scale = Vector2(0.25, 0.25)
+
+[node name="Kamienica6" parent="Budynki" instance=ExtResource("29_0o51i")]
+position = Vector2(876.25, 3033.5)
+scale = Vector2(0.25, 0.25)
+
+[node name="Kamienica7" parent="Budynki" instance=ExtResource("30_hbg7v")]
+position = Vector2(1437, 2921)
+scale = Vector2(0.25, 0.25)
+
+[node name="Kamienica8" parent="Budynki" instance=ExtResource("29_0o51i")]
+position = Vector2(1942.75, 3581.5)
+scale = Vector2(0.25, 0.25)
+
+[node name="Kamienica9" parent="Budynki" instance=ExtResource("31_vq0jr")]
+position = Vector2(1925.25, 2928)
+scale = Vector2(0.25, 0.25)
+
+[node name="Kamienica11" parent="Budynki" instance=ExtResource("31_vq0jr")]
+position = Vector2(2589, 1833)
+scale = Vector2(0.25, 0.25)
+
+[node name="Kamienica10" parent="Budynki" instance=ExtResource("30_hbg7v")]
+position = Vector2(2402.25, 2927.25)
+scale = Vector2(0.25, 0.25)
+
+[node name="Wiezowiec10" parent="Budynki" instance=ExtResource("25_8fpw8")]
+position = Vector2(1272, 1755.5)
+scale = Vector2(0.25, 0.25)
+
+[node name="Wiezowiec11" parent="Budynki" instance=ExtResource("27_rwnbm")]
+position = Vector2(2167.75, 2286.5)
+scale = Vector2(0.25, 0.25)
+
+[node name="Wiezowiec12" parent="Budynki" instance=ExtResource("25_8fpw8")]
+position = Vector2(411.75, 1764)
+scale = Vector2(0.25, 0.25)
+
+[node name="Biurowiec4" parent="Budynki" instance=ExtResource("26_gb857")]
+position = Vector2(1312, 2305)
+scale = Vector2(0.25, 0.25)
+
+[node name="Biurowiec5" parent="Budynki" instance=ExtResource("26_gb857")]
+position = Vector2(-117, 2608)
+scale = Vector2(0.25, 0.25)
+
+[node name="Wiezowiec13" parent="Budynki" instance=ExtResource("27_rwnbm")]
+position = Vector2(283, 2130)
 scale = Vector2(0.25, 0.25)
 
 [node name="Player" parent="." node_paths=PackedStringArray("honk_player", "honk_button", "cake_button", "whoopie_button", "joke_button", "inflattable_button", "baloon_button") instance=ExtResource("1_dofbq")]
@@ -779,72 +851,6 @@ position = Vector2(564, 4093)
 [node name="Sad man67" parent="SadPeople" instance=ExtResource("7_or3d6")]
 position = Vector2(1418, 3805)
 
-[node name="Budynki" type="Node2D" parent="."]
-
-[node name="Wiezowiec7" parent="Budynki" instance=ExtResource("25_8fpw8")]
-position = Vector2(418.5, 742.25)
-scale = Vector2(0.25, 0.25)
-
-[node name="Biurowiec3" parent="Budynki" instance=ExtResource("26_gb857")]
-position = Vector2(1767.25, 781.25)
-scale = Vector2(0.25, 0.25)
-
-[node name="Wiezowiec8" parent="Budynki" instance=ExtResource("27_rwnbm")]
-position = Vector2(1335.5, 715.25)
-scale = Vector2(0.25, 0.25)
-
-[node name="Wiezowiec9" parent="Budynki" instance=ExtResource("28_6wr15")]
-position = Vector2(1541, 1741.5)
-scale = Vector2(0.25, 0.25)
-
-[node name="Kamienica6" parent="Budynki" instance=ExtResource("29_0o51i")]
-position = Vector2(876.25, 3033.5)
-scale = Vector2(0.25, 0.25)
-
-[node name="Kamienica7" parent="Budynki" instance=ExtResource("30_hbg7v")]
-position = Vector2(1437, 2921)
-scale = Vector2(0.25, 0.25)
-
-[node name="Kamienica8" parent="Budynki" instance=ExtResource("29_0o51i")]
-position = Vector2(1942.75, 3581.5)
-scale = Vector2(0.25, 0.25)
-
-[node name="Kamienica9" parent="Budynki" instance=ExtResource("31_vq0jr")]
-position = Vector2(1925.25, 2928)
-scale = Vector2(0.25, 0.25)
-
-[node name="Kamienica11" parent="Budynki" instance=ExtResource("31_vq0jr")]
-position = Vector2(2589, 1833)
-scale = Vector2(0.25, 0.25)
-
-[node name="Kamienica10" parent="Budynki" instance=ExtResource("30_hbg7v")]
-position = Vector2(2402.25, 2927.25)
-scale = Vector2(0.25, 0.25)
-
-[node name="Wiezowiec10" parent="Budynki" instance=ExtResource("25_8fpw8")]
-position = Vector2(1272, 1755.5)
-scale = Vector2(0.25, 0.25)
-
-[node name="Wiezowiec11" parent="Budynki" instance=ExtResource("27_rwnbm")]
-position = Vector2(2167.75, 2286.5)
-scale = Vector2(0.25, 0.25)
-
-[node name="Wiezowiec12" parent="Budynki" instance=ExtResource("25_8fpw8")]
-position = Vector2(411.75, 1764)
-scale = Vector2(0.25, 0.25)
-
-[node name="Biurowiec4" parent="Budynki" instance=ExtResource("26_gb857")]
-position = Vector2(1312, 2305)
-scale = Vector2(0.25, 0.25)
-
-[node name="Biurowiec5" parent="Budynki" instance=ExtResource("26_gb857")]
-position = Vector2(-117, 2608)
-scale = Vector2(0.25, 0.25)
-
-[node name="Wiezowiec13" parent="Budynki" instance=ExtResource("27_rwnbm")]
-position = Vector2(283, 2130)
-scale = Vector2(0.25, 0.25)
-
 [node name="Drzewa" type="Node2D" parent="."]
 
 [node name="Drzewo" parent="Drzewa" instance=ExtResource("29_ou8qf")]
@@ -945,6 +951,245 @@ scale = Vector2(0.2, 0.2)
 visible = false
 position = Vector2(-1295, 5466)
 scale = Vector2(0.25, 0.25)
+
+[node name="Kolizje" type="Node2D" parent="."]
+
+[node name="StaticBody2D" parent="Kolizje" instance=ExtResource("37_xp43b")]
+position = Vector2(-417, 438)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D2" type="CollisionPolygon2D" parent="Kolizje/StaticBody2D"]
+position = Vector2(2752.5, 419)
+polygon = PackedVector2Array(-73.5, -231, -26.5, -213, 13.5, -214, 49.5, -150, 55.5, -107, 79.5, -74, 85.5, -54, 61.5, -39, 69.5, 18, 206.5, 66, 99.5, 71, 104.5, 97, 124.5, 129, 139.5, 168, 134.5, 231, -127.5, 231, -134.5, 165, -108.5, 145, -83.5, 132, -82.5, 68, -36.5, 14, -35.5, -57, -49.5, -130, -73.5, -171)
+
+[node name="StaticBody2D2" parent="Kolizje" instance=ExtResource("37_xp43b")]
+position = Vector2(3294, 450)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Kolizje/StaticBody2D2"]
+position = Vector2(0, -19)
+shape = SubResource("CapsuleShape2D_fjuxi")
+
+[node name="StaticBody2D3" parent="Kolizje" instance=ExtResource("37_xp43b")]
+position = Vector2(4618, 727)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Kolizje/StaticBody2D3"]
+position = Vector2(0, -19)
+shape = SubResource("CapsuleShape2D_fjuxi")
+
+[node name="StaticBody2D4" parent="Kolizje" instance=ExtResource("37_xp43b")]
+position = Vector2(4988, 480)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Kolizje/StaticBody2D4"]
+position = Vector2(0, -19)
+shape = SubResource("CapsuleShape2D_fjuxi")
+
+[node name="StaticBody2D5" parent="Kolizje" instance=ExtResource("37_xp43b")]
+position = Vector2(4290, 357)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Kolizje/StaticBody2D5"]
+position = Vector2(0, -19)
+shape = SubResource("CapsuleShape2D_fjuxi")
+
+[node name="StaticBody2D6" parent="Kolizje" instance=ExtResource("37_xp43b")]
+position = Vector2(3838, 1665)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Kolizje/StaticBody2D6"]
+position = Vector2(0, -19)
+shape = SubResource("CapsuleShape2D_fjuxi")
+
+[node name="StaticBody2D7" parent="Kolizje" instance=ExtResource("37_xp43b")]
+position = Vector2(4608, 1641)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Kolizje/StaticBody2D7"]
+position = Vector2(0, -19)
+shape = SubResource("CapsuleShape2D_fjuxi")
+
+[node name="StaticBody2D8" parent="Kolizje" instance=ExtResource("37_xp43b")]
+position = Vector2(5459, 1483)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Kolizje/StaticBody2D8"]
+position = Vector2(0, -19)
+shape = SubResource("CapsuleShape2D_fjuxi")
+
+[node name="StaticBody2D9" parent="Kolizje" instance=ExtResource("37_xp43b")]
+position = Vector2(6683, 767)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Kolizje/StaticBody2D9"]
+position = Vector2(0, -19)
+shape = SubResource("CapsuleShape2D_fjuxi")
+
+[node name="StaticBody2D10" parent="Kolizje" instance=ExtResource("37_xp43b")]
+position = Vector2(5580, 2268)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Kolizje/StaticBody2D10"]
+position = Vector2(0, -19)
+shape = SubResource("CapsuleShape2D_fjuxi")
+
+[node name="StaticBody2D11" parent="Kolizje" instance=ExtResource("37_xp43b")]
+position = Vector2(5042, 2083)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Kolizje/StaticBody2D11"]
+position = Vector2(0, -19)
+shape = SubResource("CapsuleShape2D_fjuxi")
+
+[node name="StaticBody2D12" parent="Kolizje" instance=ExtResource("37_xp43b")]
+position = Vector2(4807, 2577)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Kolizje/StaticBody2D12"]
+position = Vector2(0, -19)
+shape = SubResource("CapsuleShape2D_fjuxi")
+
+[node name="StaticBody2D13" parent="Kolizje" instance=ExtResource("37_xp43b")]
+position = Vector2(5301, 2735)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Kolizje/StaticBody2D13"]
+position = Vector2(0, -19)
+shape = SubResource("CapsuleShape2D_fjuxi")
+
+[node name="StaticBody2D14" parent="Kolizje" instance=ExtResource("37_xp43b")]
+position = Vector2(5804, 3547)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Kolizje/StaticBody2D14"]
+position = Vector2(0, -19)
+shape = SubResource("CapsuleShape2D_fjuxi")
+
+[node name="StaticBody2D15" parent="Kolizje" instance=ExtResource("37_xp43b")]
+position = Vector2(5156, 3635)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Kolizje/StaticBody2D15"]
+position = Vector2(0, -19)
+shape = SubResource("CapsuleShape2D_fjuxi")
+
+[node name="StaticBody2D16" parent="Kolizje" instance=ExtResource("37_xp43b")]
+position = Vector2(4149, 3400)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Kolizje/StaticBody2D16"]
+position = Vector2(0, -19)
+shape = SubResource("CapsuleShape2D_fjuxi")
+
+[node name="StaticBody2D17" parent="Kolizje" instance=ExtResource("37_xp43b")]
+position = Vector2(4563, 4217)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Kolizje/StaticBody2D17"]
+position = Vector2(0, -19)
+shape = SubResource("CapsuleShape2D_fjuxi")
+
+[node name="StaticBody2D18" parent="Kolizje" instance=ExtResource("37_xp43b")]
+position = Vector2(2778, 4522)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Kolizje/StaticBody2D18"]
+position = Vector2(0, -19)
+shape = SubResource("CapsuleShape2D_fjuxi")
+
+[node name="StaticBody2D19" parent="Kolizje" instance=ExtResource("37_xp43b")]
+position = Vector2(943, 4439)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Kolizje/StaticBody2D19"]
+position = Vector2(0, -19)
+shape = SubResource("CapsuleShape2D_fjuxi")
+
+[node name="StaticBody2D20" parent="Kolizje" instance=ExtResource("37_xp43b")]
+position = Vector2(245, 4204)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Kolizje/StaticBody2D20"]
+position = Vector2(0, -19)
+shape = SubResource("CapsuleShape2D_fjuxi")
+
+[node name="StaticBody2D21" parent="Kolizje" instance=ExtResource("37_xp43b")]
+position = Vector2(-371, 3639)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Kolizje/StaticBody2D21"]
+position = Vector2(0, -19)
+shape = SubResource("CapsuleShape2D_fjuxi")
+
+[node name="StaticBody2D22" parent="Kolizje" instance=ExtResource("37_xp43b")]
+position = Vector2(-149, 3118)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Kolizje/StaticBody2D22"]
+position = Vector2(0, -19)
+shape = SubResource("CapsuleShape2D_fjuxi")
+
+[node name="StaticBody2D23" parent="Kolizje" instance=ExtResource("37_xp43b")]
+position = Vector2(-347, 1636)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Kolizje/StaticBody2D23"]
+position = Vector2(0, -19)
+shape = SubResource("CapsuleShape2D_fjuxi")
+
+[node name="StaticBody2D24" parent="Kolizje" instance=ExtResource("37_xp43b")]
+position = Vector2(592, 2709)
+scale = Vector2(0.5, 0.5)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Kolizje/StaticBody2D24"]
+position = Vector2(-2, 26)
+shape = SubResource("CapsuleShape2D_fjuxi")
+
+[node name="StaticBody2D25" parent="Kolizje" instance=ExtResource("37_xp43b")]
+position = Vector2(1899, 2282)
+scale = Vector2(0.5, 0.5)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Kolizje/StaticBody2D25"]
+position = Vector2(-2, 26)
+shape = SubResource("CapsuleShape2D_fjuxi")
+
+[node name="StaticBody2D26" parent="Kolizje" instance=ExtResource("37_xp43b")]
+position = Vector2(2879, 2706)
+scale = Vector2(0.5, 0.5)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Kolizje/StaticBody2D26"]
+position = Vector2(-2, 26)
+shape = SubResource("CapsuleShape2D_fjuxi")
 
 [connection signal="skill_changed" from="Player" to="." method="_on_player_skill_changed"]
 [connection signal="ultimate_joke" from="Player" to="." method="ultimateJoke"]

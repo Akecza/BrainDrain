@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cbjh58s2pv131"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b5wwo"]
+radius = 59.0
+height = 178.0
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_b5wwo")
