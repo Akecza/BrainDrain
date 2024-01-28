@@ -1,18 +1,27 @@
-[gd_scene load_steps=5 format=3 uid="uid://bsrim7sklm4bp"]
+[gd_scene load_steps=6 format=3 uid="uid://bsrim7sklm4bp"]
 
 [ext_resource type="Texture2D" uid="uid://ckwkxus81hfnu" path="res://art/CharacterParts/honk.png" id="1_taun6"]
 [ext_resource type="Script" path="res://scripts/victory_screen.gd" id="1_wwob6"]
 [ext_resource type="Texture2D" uid="uid://fuqh8ds7i57a" path="res://art/UI/menu_przycisk.png" id="2_gyvrw"]
 [ext_resource type="Texture2D" uid="uid://ciuvcwqugpyf4" path="res://art/UI/quit.png" id="3_8dfsh"]
+[ext_resource type="Texture2D" uid="uid://0s3w8mb7py0q" path="res://art/UI/victory_napis.png" id="5_o47lq"]
 
 [node name="VictoryScreen" type="Node2D"]
 script = ExtResource("1_wwob6")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+self_modulate = Color(1, 1, 1, 0.203922)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
 [node name="Node2D" type="Node2D" parent="CanvasLayer"]
-position = Vector2(822, 238)
-scale = Vector2(0.7, 0.7)
+position = Vector2(1578, 498)
 
 [node name="Honk3" type="Sprite2D" parent="CanvasLayer/Node2D"]
 position = Vector2(583, 169)
@@ -47,6 +56,17 @@ texture = ExtResource("2_gyvrw")
 position = Vector2(679, 364)
 scale = Vector2(2.04505, 1.41736)
 texture = ExtResource("3_8dfsh")
+
+[node name="VictoryNapis" type="Sprite2D" parent="CanvasLayer/Node2D"]
+position = Vector2(-6.00002, 287)
+scale = Vector2(1.91007, 1.91007)
+texture = ExtResource("5_o47lq")
+
+[node name="ProgressBar" type="TextureProgressBar" parent="CanvasLayer/Node2D"]
+offset_left = -1578.0
+offset_top = -498.0
+offset_right = -1574.0
+offset_bottom = -471.0
 
 [node name="QuitButton" type="Button" parent="CanvasLayer"]
 self_modulate = Color(1, 1, 1, 0)
