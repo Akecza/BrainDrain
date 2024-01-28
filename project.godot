@@ -13,7 +13,7 @@ config_version=5
 config/name="SunnySideUp"
 run/main_scene="res://scenes/game.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
-config/icon="res://icon.svg"
+config/icon="res://art/CharacterParts/honk.png"
 
 [display]
 

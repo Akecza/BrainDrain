@@ -301,6 +301,9 @@ skew = -0.23911
 texture = ExtResource("77_hlu7g")
 flip_v = true
 
+[node name="LaughPosition" type="Marker2D" parent="."]
+position = Vector2(0, -82)
+
 [connection signal="timeout" from="StateMachine/Idle/IdleTimer" to="StateMachine/Idle" method="_on_idle_timer_timeout"]
 [connection signal="area_entered" from="HitboxArea" to="." method="_on_hitbox_area_area_entered"]
 [connection signal="area_exited" from="HitboxArea" to="." method="_on_hitbox_area_area_exited"]
