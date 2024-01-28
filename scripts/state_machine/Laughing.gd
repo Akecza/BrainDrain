@@ -6,6 +6,7 @@ class_name Laughing
 func enter(player_ref):
 	super(player_ref)
 	parent.laughing_player.play()
+	parent.spawnLaugh()
 	
 func exit():
 	pass

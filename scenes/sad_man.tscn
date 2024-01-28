@@ -1,7 +1,8 @@
-[gd_scene load_steps=62 format=3 uid="uid://dowrjcdnnxods"]
+[gd_scene load_steps=63 format=3 uid="uid://dowrjcdnnxods"]
 
 [ext_resource type="Script" path="res://scripts/sad_man.gd" id="1_wtxo7"]
 [ext_resource type="Texture2D" uid="uid://bphhi462bgb11" path="res://art/CharacterAnimation/Kawiak_sad/Kawiak_walk_00000.png" id="2_hjqxg"]
+[ext_resource type="PackedScene" uid="uid://by7dqeumveyok" path="res://scenes/napis.tscn" id="2_rfpem"]
 [ext_resource type="Script" path="res://scripts/state_machine/Idle.gd" id="3_kjit3"]
 [ext_resource type="Script" path="res://scripts/state_machine/StateMachine.gd" id="3_q2x24"]
 [ext_resource type="Texture2D" uid="uid://f6vqob7aigej" path="res://art/CharacterAnimation/Kawiak_sad/Kawiak_walk_00002.png" id="4_jwqtv"]
@@ -227,6 +228,7 @@ stream_4/weight = 1.0
 
 [node name="Sad man" type="CharacterBody2D" groups=["Cakeables", "Sadman"]]
 script = ExtResource("1_wtxo7")
+laughAnim = ExtResource("2_rfpem")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 y_sort_enabled = true
@@ -302,7 +304,7 @@ texture = ExtResource("77_hlu7g")
 flip_v = true
 
 [node name="LaughPosition" type="Marker2D" parent="."]
-position = Vector2(0, -82)
+position = Vector2(0, -152)
 
 [connection signal="timeout" from="StateMachine/Idle/IdleTimer" to="StateMachine/Idle" method="_on_idle_timer_timeout"]
 [connection signal="area_entered" from="HitboxArea" to="." method="_on_hitbox_area_area_entered"]

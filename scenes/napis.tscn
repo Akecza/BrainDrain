@@ -20,7 +20,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("3_im0l2")
 }],
-"loop": true,
+"loop": false,
 "name": &"default",
 "speed": 2.0
 }]
@@ -28,10 +28,10 @@ animations = [{
 [node name="Napis" type="Node2D"]
 script = ExtResource("1_mw4pl")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="Animation" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.15, 0.15)
 sprite_frames = SubResource("SpriteFrames_51iv1")
-frame = 2
-frame_progress = 0.474427
+frame_progress = 0.18176
 
 [node name="Duration" type="Timer" parent="."]
 wait_time = 2.0

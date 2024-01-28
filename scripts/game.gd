@@ -43,7 +43,7 @@ func countGlobalHappiness():
 		skillsAvailable+=1
 	if GlobalHappinessLevel>70:
 		skillsAvailable+=1
-	if GlobalHappinessLevel>98:
+	if GlobalHappinessLevel>97:
 		showVictoryScreen()
 	$Player.skillsAvailable=skillsAvailable
 		

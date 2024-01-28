@@ -64,9 +64,9 @@ func _process(delta):
 		
 func _input(event):
 	if event.is_action_pressed("skill_up"):
-		changeSkill(activeSkill+1)
-	if event.is_action_pressed("skill_down"):
 		changeSkill(activeSkill-1)
+	if event.is_action_pressed("skill_down"):
+		changeSkill(activeSkill+1)
 
 func useActiveSkill():
 	if activeSkill==1:

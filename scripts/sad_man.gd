@@ -9,7 +9,7 @@ signal happinessChanged
 @onready var happiness_bar : ProgressBar = $HappinessBar 
 
 @onready var laughing_player : AudioStreamPlayer2D = $LaughingPlayer
-
+@export var laughAnim: PackedScene
 const SPEED = 50.0
 const JUMP_VELOCITY = -400.0
 var BaseHappyDepleteSpeed = 1
@@ -86,6 +86,12 @@ func check_happiness_state():
 		state_machine.change_state($StateMachine/Laughing, null)
 
 
+func spawnLaugh():
+	var b=laughAnim.instantiate()
+	owner.add_child(b)
+	var rng = RandomNumberGenerator.new()
+	b.position=$LaughPosition.global_position + Vector2(rng.randf_range(-10.0, 10.0),rng.randf_range(-10.0, 10.0))
+	b.rotation=b.rotation+rng.randf_range(-0.1, 0.1)*2*PI
 
 func _on_got_caked_timer_timeout():
 	$getCakedIdiotSprite.visible=false
