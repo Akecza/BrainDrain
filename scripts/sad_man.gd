@@ -54,7 +54,6 @@ func make_happy(amount):
 		HappyDepleteAmount=0
 
 func _on_hitbox_area_area_entered(area : Area2D):
-	print(area.name)
 	if (area.name == "Honk"):
 		make_happy(13)
 	if (area.name == "Whoopie"):

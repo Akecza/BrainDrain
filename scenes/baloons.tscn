@@ -1,0 +1,1031 @@
+[gd_scene load_steps=3 format=3 uid="uid://5yjqunl8docr"]
+
+[ext_resource type="Texture2D" uid="uid://cy0u0xwvre5yb" path="res://art/CharacterParts/balon.png" id="1_423ak"]
+[ext_resource type="Script" path="res://scripts/baloons.gd" id="1_os0l6"]
+
+[node name="Baloons" type="Node2D"]
+script = ExtResource("1_os0l6")
+
+[node name="Balon" type="Sprite2D" parent="."]
+position = Vector2(479, 151)
+texture = ExtResource("1_423ak")
+
+[node name="Balon2" type="Sprite2D" parent="."]
+position = Vector2(1346, -71)
+texture = ExtResource("1_423ak")
+
+[node name="Balon3" type="Sprite2D" parent="."]
+position = Vector2(2292.5, 710.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon4" type="Sprite2D" parent="."]
+position = Vector2(2871, -54)
+texture = ExtResource("1_423ak")
+
+[node name="Balon5" type="Sprite2D" parent="."]
+position = Vector2(1903, -1833)
+texture = ExtResource("1_423ak")
+
+[node name="Balon6" type="Sprite2D" parent="."]
+position = Vector2(2736.5, -2444.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon7" type="Sprite2D" parent="."]
+position = Vector2(3819, -968)
+texture = ExtResource("1_423ak")
+
+[node name="Balon8" type="Sprite2D" parent="."]
+position = Vector2(4550, -1885)
+texture = ExtResource("1_423ak")
+
+[node name="Balon9" type="Sprite2D" parent="."]
+position = Vector2(4246.5, 904)
+texture = ExtResource("1_423ak")
+
+[node name="Balon10" type="Sprite2D" parent="."]
+position = Vector2(5113.5, 682)
+texture = ExtResource("1_423ak")
+
+[node name="Balon11" type="Sprite2D" parent="."]
+position = Vector2(6060, 1463.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon12" type="Sprite2D" parent="."]
+position = Vector2(6638.5, 699)
+texture = ExtResource("1_423ak")
+
+[node name="Balon13" type="Sprite2D" parent="."]
+position = Vector2(5670.5, -1080)
+texture = ExtResource("1_423ak")
+
+[node name="Balon14" type="Sprite2D" parent="."]
+position = Vector2(6504, -1691.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon15" type="Sprite2D" parent="."]
+position = Vector2(7586.5, -215)
+texture = ExtResource("1_423ak")
+
+[node name="Balon16" type="Sprite2D" parent="."]
+position = Vector2(8317.5, -1132)
+texture = ExtResource("1_423ak")
+
+[node name="Balon17" type="Sprite2D" parent="."]
+position = Vector2(8067.5, -3078)
+texture = ExtResource("1_423ak")
+
+[node name="Balon18" type="Sprite2D" parent="."]
+position = Vector2(8934.5, -3300)
+texture = ExtResource("1_423ak")
+
+[node name="Balon19" type="Sprite2D" parent="."]
+position = Vector2(9881, -2518.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon20" type="Sprite2D" parent="."]
+position = Vector2(10459.5, -3283)
+texture = ExtResource("1_423ak")
+
+[node name="Balon21" type="Sprite2D" parent="."]
+position = Vector2(9491.5, -5062)
+texture = ExtResource("1_423ak")
+
+[node name="Balon22" type="Sprite2D" parent="."]
+position = Vector2(10325, -5673.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon23" type="Sprite2D" parent="."]
+position = Vector2(11407.5, -4197)
+texture = ExtResource("1_423ak")
+
+[node name="Balon24" type="Sprite2D" parent="."]
+position = Vector2(12138.5, -5114)
+texture = ExtResource("1_423ak")
+
+[node name="Balon25" type="Sprite2D" parent="."]
+position = Vector2(11835, -2325)
+texture = ExtResource("1_423ak")
+
+[node name="Balon26" type="Sprite2D" parent="."]
+position = Vector2(12702, -2547)
+texture = ExtResource("1_423ak")
+
+[node name="Balon27" type="Sprite2D" parent="."]
+position = Vector2(13648.5, -1765.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon28" type="Sprite2D" parent="."]
+position = Vector2(14227, -2530)
+texture = ExtResource("1_423ak")
+
+[node name="Balon29" type="Sprite2D" parent="."]
+position = Vector2(13259, -4309)
+texture = ExtResource("1_423ak")
+
+[node name="Balon30" type="Sprite2D" parent="."]
+position = Vector2(14092.5, -4920.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon31" type="Sprite2D" parent="."]
+position = Vector2(15175, -3444)
+texture = ExtResource("1_423ak")
+
+[node name="Balon32" type="Sprite2D" parent="."]
+position = Vector2(15906, -4361)
+texture = ExtResource("1_423ak")
+
+[node name="Balon33" type="Sprite2D" parent="."]
+position = Vector2(317.5, -5392)
+texture = ExtResource("1_423ak")
+
+[node name="Balon34" type="Sprite2D" parent="."]
+position = Vector2(1184.5, -5614)
+texture = ExtResource("1_423ak")
+
+[node name="Balon35" type="Sprite2D" parent="."]
+position = Vector2(2131, -4832.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon36" type="Sprite2D" parent="."]
+position = Vector2(2709.5, -5597)
+texture = ExtResource("1_423ak")
+
+[node name="Balon37" type="Sprite2D" parent="."]
+position = Vector2(1741.5, -7376)
+texture = ExtResource("1_423ak")
+
+[node name="Balon38" type="Sprite2D" parent="."]
+position = Vector2(2575, -7987.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon39" type="Sprite2D" parent="."]
+position = Vector2(3657.5, -6511)
+texture = ExtResource("1_423ak")
+
+[node name="Balon40" type="Sprite2D" parent="."]
+position = Vector2(4388.5, -7428)
+texture = ExtResource("1_423ak")
+
+[node name="Balon41" type="Sprite2D" parent="."]
+position = Vector2(4085, -4639)
+texture = ExtResource("1_423ak")
+
+[node name="Balon42" type="Sprite2D" parent="."]
+position = Vector2(4952, -4861)
+texture = ExtResource("1_423ak")
+
+[node name="Balon43" type="Sprite2D" parent="."]
+position = Vector2(5898.5, -4079.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon44" type="Sprite2D" parent="."]
+position = Vector2(6477, -4844)
+texture = ExtResource("1_423ak")
+
+[node name="Balon45" type="Sprite2D" parent="."]
+position = Vector2(5509, -6623)
+texture = ExtResource("1_423ak")
+
+[node name="Balon46" type="Sprite2D" parent="."]
+position = Vector2(6342.5, -7234.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon47" type="Sprite2D" parent="."]
+position = Vector2(7425, -5758)
+texture = ExtResource("1_423ak")
+
+[node name="Balon48" type="Sprite2D" parent="."]
+position = Vector2(8156, -6675)
+texture = ExtResource("1_423ak")
+
+[node name="Balon49" type="Sprite2D" parent="."]
+position = Vector2(7906, -8621)
+texture = ExtResource("1_423ak")
+
+[node name="Balon50" type="Sprite2D" parent="."]
+position = Vector2(8773, -8843)
+texture = ExtResource("1_423ak")
+
+[node name="Balon51" type="Sprite2D" parent="."]
+position = Vector2(9719.5, -8061.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon52" type="Sprite2D" parent="."]
+position = Vector2(10298, -8826)
+texture = ExtResource("1_423ak")
+
+[node name="Balon53" type="Sprite2D" parent="."]
+position = Vector2(9330, -10605)
+texture = ExtResource("1_423ak")
+
+[node name="Balon54" type="Sprite2D" parent="."]
+position = Vector2(10163.5, -11216.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon55" type="Sprite2D" parent="."]
+position = Vector2(11246, -9740)
+texture = ExtResource("1_423ak")
+
+[node name="Balon56" type="Sprite2D" parent="."]
+position = Vector2(11977, -10657)
+texture = ExtResource("1_423ak")
+
+[node name="Balon57" type="Sprite2D" parent="."]
+position = Vector2(11673.5, -7868)
+texture = ExtResource("1_423ak")
+
+[node name="Balon58" type="Sprite2D" parent="."]
+position = Vector2(12540.5, -8090)
+texture = ExtResource("1_423ak")
+
+[node name="Balon59" type="Sprite2D" parent="."]
+position = Vector2(13487, -7308.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon60" type="Sprite2D" parent="."]
+position = Vector2(14065.5, -8073)
+texture = ExtResource("1_423ak")
+
+[node name="Balon61" type="Sprite2D" parent="."]
+position = Vector2(13097.5, -9852)
+texture = ExtResource("1_423ak")
+
+[node name="Balon62" type="Sprite2D" parent="."]
+position = Vector2(13931, -10463.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon63" type="Sprite2D" parent="."]
+position = Vector2(15013.5, -8987)
+texture = ExtResource("1_423ak")
+
+[node name="Balon64" type="Sprite2D" parent="."]
+position = Vector2(15744.5, -9904)
+texture = ExtResource("1_423ak")
+
+[node name="Balon65" type="Sprite2D" parent="."]
+position = Vector2(15199, -1257)
+texture = ExtResource("1_423ak")
+
+[node name="Balon66" type="Sprite2D" parent="."]
+position = Vector2(16066, -1479)
+texture = ExtResource("1_423ak")
+
+[node name="Balon67" type="Sprite2D" parent="."]
+position = Vector2(17012.5, -697.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon68" type="Sprite2D" parent="."]
+position = Vector2(17591, -1462)
+texture = ExtResource("1_423ak")
+
+[node name="Balon69" type="Sprite2D" parent="."]
+position = Vector2(16623, -3241)
+texture = ExtResource("1_423ak")
+
+[node name="Balon70" type="Sprite2D" parent="."]
+position = Vector2(17456.5, -3852.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon71" type="Sprite2D" parent="."]
+position = Vector2(18539, -2376)
+texture = ExtResource("1_423ak")
+
+[node name="Balon72" type="Sprite2D" parent="."]
+position = Vector2(19270, -3293)
+texture = ExtResource("1_423ak")
+
+[node name="Balon73" type="Sprite2D" parent="."]
+position = Vector2(18966.5, -504)
+texture = ExtResource("1_423ak")
+
+[node name="Balon74" type="Sprite2D" parent="."]
+position = Vector2(19833.5, -726)
+texture = ExtResource("1_423ak")
+
+[node name="Balon75" type="Sprite2D" parent="."]
+position = Vector2(20780, 55.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon76" type="Sprite2D" parent="."]
+position = Vector2(21358.5, -709)
+texture = ExtResource("1_423ak")
+
+[node name="Balon77" type="Sprite2D" parent="."]
+position = Vector2(20390.5, -2488)
+texture = ExtResource("1_423ak")
+
+[node name="Balon78" type="Sprite2D" parent="."]
+position = Vector2(21224, -3099.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon79" type="Sprite2D" parent="."]
+position = Vector2(22306.5, -1623)
+texture = ExtResource("1_423ak")
+
+[node name="Balon80" type="Sprite2D" parent="."]
+position = Vector2(23037.5, -2540)
+texture = ExtResource("1_423ak")
+
+[node name="Balon81" type="Sprite2D" parent="."]
+position = Vector2(22787.5, -4486)
+texture = ExtResource("1_423ak")
+
+[node name="Balon82" type="Sprite2D" parent="."]
+position = Vector2(23654.5, -4708)
+texture = ExtResource("1_423ak")
+
+[node name="Balon83" type="Sprite2D" parent="."]
+position = Vector2(24601, -3926.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon84" type="Sprite2D" parent="."]
+position = Vector2(25179.5, -4691)
+texture = ExtResource("1_423ak")
+
+[node name="Balon85" type="Sprite2D" parent="."]
+position = Vector2(24211.5, -6470)
+texture = ExtResource("1_423ak")
+
+[node name="Balon86" type="Sprite2D" parent="."]
+position = Vector2(25045, -7081.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon87" type="Sprite2D" parent="."]
+position = Vector2(26127.5, -5605)
+texture = ExtResource("1_423ak")
+
+[node name="Balon88" type="Sprite2D" parent="."]
+position = Vector2(26858.5, -6522)
+texture = ExtResource("1_423ak")
+
+[node name="Balon89" type="Sprite2D" parent="."]
+position = Vector2(26555, -3733)
+texture = ExtResource("1_423ak")
+
+[node name="Balon90" type="Sprite2D" parent="."]
+position = Vector2(27422, -3955)
+texture = ExtResource("1_423ak")
+
+[node name="Balon91" type="Sprite2D" parent="."]
+position = Vector2(28368.5, -3173.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon92" type="Sprite2D" parent="."]
+position = Vector2(28947, -3938)
+texture = ExtResource("1_423ak")
+
+[node name="Balon93" type="Sprite2D" parent="."]
+position = Vector2(27979, -5717)
+texture = ExtResource("1_423ak")
+
+[node name="Balon94" type="Sprite2D" parent="."]
+position = Vector2(28812.5, -6328.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon95" type="Sprite2D" parent="."]
+position = Vector2(29895, -4852)
+texture = ExtResource("1_423ak")
+
+[node name="Balon96" type="Sprite2D" parent="."]
+position = Vector2(30626, -5769)
+texture = ExtResource("1_423ak")
+
+[node name="Balon97" type="Sprite2D" parent="."]
+position = Vector2(15037.5, -6800)
+texture = ExtResource("1_423ak")
+
+[node name="Balon98" type="Sprite2D" parent="."]
+position = Vector2(15904.5, -7022)
+texture = ExtResource("1_423ak")
+
+[node name="Balon99" type="Sprite2D" parent="."]
+position = Vector2(16851, -6240.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon100" type="Sprite2D" parent="."]
+position = Vector2(17429.5, -7005)
+texture = ExtResource("1_423ak")
+
+[node name="Balon101" type="Sprite2D" parent="."]
+position = Vector2(16461.5, -8784)
+texture = ExtResource("1_423ak")
+
+[node name="Balon102" type="Sprite2D" parent="."]
+position = Vector2(17295, -9395.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon103" type="Sprite2D" parent="."]
+position = Vector2(18377.5, -7919)
+texture = ExtResource("1_423ak")
+
+[node name="Balon104" type="Sprite2D" parent="."]
+position = Vector2(19108.5, -8836)
+texture = ExtResource("1_423ak")
+
+[node name="Balon105" type="Sprite2D" parent="."]
+position = Vector2(18805, -6047)
+texture = ExtResource("1_423ak")
+
+[node name="Balon106" type="Sprite2D" parent="."]
+position = Vector2(19672, -6269)
+texture = ExtResource("1_423ak")
+
+[node name="Balon107" type="Sprite2D" parent="."]
+position = Vector2(20618.5, -5487.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon108" type="Sprite2D" parent="."]
+position = Vector2(21197, -6252)
+texture = ExtResource("1_423ak")
+
+[node name="Balon109" type="Sprite2D" parent="."]
+position = Vector2(20229, -8031)
+texture = ExtResource("1_423ak")
+
+[node name="Balon110" type="Sprite2D" parent="."]
+position = Vector2(21062.5, -8642.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon111" type="Sprite2D" parent="."]
+position = Vector2(22145, -7166)
+texture = ExtResource("1_423ak")
+
+[node name="Balon112" type="Sprite2D" parent="."]
+position = Vector2(22876, -8083)
+texture = ExtResource("1_423ak")
+
+[node name="Balon113" type="Sprite2D" parent="."]
+position = Vector2(22626, -10029)
+texture = ExtResource("1_423ak")
+
+[node name="Balon114" type="Sprite2D" parent="."]
+position = Vector2(23493, -10251)
+texture = ExtResource("1_423ak")
+
+[node name="Balon115" type="Sprite2D" parent="."]
+position = Vector2(24439.5, -9469.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon116" type="Sprite2D" parent="."]
+position = Vector2(25018, -10234)
+texture = ExtResource("1_423ak")
+
+[node name="Balon117" type="Sprite2D" parent="."]
+position = Vector2(24050, -12013)
+texture = ExtResource("1_423ak")
+
+[node name="Balon118" type="Sprite2D" parent="."]
+position = Vector2(24883.5, -12624.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon119" type="Sprite2D" parent="."]
+position = Vector2(25966, -11148)
+texture = ExtResource("1_423ak")
+
+[node name="Balon120" type="Sprite2D" parent="."]
+position = Vector2(26697, -12065)
+texture = ExtResource("1_423ak")
+
+[node name="Balon121" type="Sprite2D" parent="."]
+position = Vector2(26393.5, -9276)
+texture = ExtResource("1_423ak")
+
+[node name="Balon122" type="Sprite2D" parent="."]
+position = Vector2(27260.5, -9498)
+texture = ExtResource("1_423ak")
+
+[node name="Balon123" type="Sprite2D" parent="."]
+position = Vector2(28207, -8716.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon124" type="Sprite2D" parent="."]
+position = Vector2(28785.5, -9481)
+texture = ExtResource("1_423ak")
+
+[node name="Balon125" type="Sprite2D" parent="."]
+position = Vector2(27817.5, -11260)
+texture = ExtResource("1_423ak")
+
+[node name="Balon126" type="Sprite2D" parent="."]
+position = Vector2(28651, -11871.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon127" type="Sprite2D" parent="."]
+position = Vector2(29733.5, -10395)
+texture = ExtResource("1_423ak")
+
+[node name="Balon128" type="Sprite2D" parent="."]
+position = Vector2(30464.5, -11312)
+texture = ExtResource("1_423ak")
+
+[node name="Balon129" type="Sprite2D" parent="."]
+position = Vector2(351, -10409)
+texture = ExtResource("1_423ak")
+
+[node name="Balon130" type="Sprite2D" parent="."]
+position = Vector2(1218, -10631)
+texture = ExtResource("1_423ak")
+
+[node name="Balon131" type="Sprite2D" parent="."]
+position = Vector2(2164.5, -9849.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon132" type="Sprite2D" parent="."]
+position = Vector2(2743, -10614)
+texture = ExtResource("1_423ak")
+
+[node name="Balon133" type="Sprite2D" parent="."]
+position = Vector2(1775, -12393)
+texture = ExtResource("1_423ak")
+
+[node name="Balon134" type="Sprite2D" parent="."]
+position = Vector2(2608.5, -13004.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon135" type="Sprite2D" parent="."]
+position = Vector2(3691, -11528)
+texture = ExtResource("1_423ak")
+
+[node name="Balon136" type="Sprite2D" parent="."]
+position = Vector2(4422, -12445)
+texture = ExtResource("1_423ak")
+
+[node name="Balon137" type="Sprite2D" parent="."]
+position = Vector2(4118.5, -9656)
+texture = ExtResource("1_423ak")
+
+[node name="Balon138" type="Sprite2D" parent="."]
+position = Vector2(4985.5, -9878)
+texture = ExtResource("1_423ak")
+
+[node name="Balon139" type="Sprite2D" parent="."]
+position = Vector2(5932, -9096.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon140" type="Sprite2D" parent="."]
+position = Vector2(6510.5, -9861)
+texture = ExtResource("1_423ak")
+
+[node name="Balon141" type="Sprite2D" parent="."]
+position = Vector2(5542.5, -11640)
+texture = ExtResource("1_423ak")
+
+[node name="Balon142" type="Sprite2D" parent="."]
+position = Vector2(6376, -12251.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon143" type="Sprite2D" parent="."]
+position = Vector2(7458.5, -10775)
+texture = ExtResource("1_423ak")
+
+[node name="Balon144" type="Sprite2D" parent="."]
+position = Vector2(8189.5, -11692)
+texture = ExtResource("1_423ak")
+
+[node name="Balon145" type="Sprite2D" parent="."]
+position = Vector2(7939.5, -13638)
+texture = ExtResource("1_423ak")
+
+[node name="Balon146" type="Sprite2D" parent="."]
+position = Vector2(8806.5, -13860)
+texture = ExtResource("1_423ak")
+
+[node name="Balon147" type="Sprite2D" parent="."]
+position = Vector2(9753, -13078.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon148" type="Sprite2D" parent="."]
+position = Vector2(10331.5, -13843)
+texture = ExtResource("1_423ak")
+
+[node name="Balon149" type="Sprite2D" parent="."]
+position = Vector2(9363.5, -15622)
+texture = ExtResource("1_423ak")
+
+[node name="Balon150" type="Sprite2D" parent="."]
+position = Vector2(10197, -16233.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon151" type="Sprite2D" parent="."]
+position = Vector2(11279.5, -14757)
+texture = ExtResource("1_423ak")
+
+[node name="Balon152" type="Sprite2D" parent="."]
+position = Vector2(12010.5, -15674)
+texture = ExtResource("1_423ak")
+
+[node name="Balon153" type="Sprite2D" parent="."]
+position = Vector2(11707, -12885)
+texture = ExtResource("1_423ak")
+
+[node name="Balon154" type="Sprite2D" parent="."]
+position = Vector2(12574, -13107)
+texture = ExtResource("1_423ak")
+
+[node name="Balon155" type="Sprite2D" parent="."]
+position = Vector2(13520.5, -12325.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon156" type="Sprite2D" parent="."]
+position = Vector2(14099, -13090)
+texture = ExtResource("1_423ak")
+
+[node name="Balon157" type="Sprite2D" parent="."]
+position = Vector2(13131, -14869)
+texture = ExtResource("1_423ak")
+
+[node name="Balon158" type="Sprite2D" parent="."]
+position = Vector2(13964.5, -15480.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon159" type="Sprite2D" parent="."]
+position = Vector2(15047, -14004)
+texture = ExtResource("1_423ak")
+
+[node name="Balon160" type="Sprite2D" parent="."]
+position = Vector2(15778, -14921)
+texture = ExtResource("1_423ak")
+
+[node name="Balon161" type="Sprite2D" parent="."]
+position = Vector2(189.5, -15952)
+texture = ExtResource("1_423ak")
+
+[node name="Balon162" type="Sprite2D" parent="."]
+position = Vector2(1056.5, -16174)
+texture = ExtResource("1_423ak")
+
+[node name="Balon163" type="Sprite2D" parent="."]
+position = Vector2(2003, -15392.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon164" type="Sprite2D" parent="."]
+position = Vector2(2581.5, -16157)
+texture = ExtResource("1_423ak")
+
+[node name="Balon165" type="Sprite2D" parent="."]
+position = Vector2(1613.5, -17936)
+texture = ExtResource("1_423ak")
+
+[node name="Balon166" type="Sprite2D" parent="."]
+position = Vector2(2447, -18547.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon167" type="Sprite2D" parent="."]
+position = Vector2(3529.5, -17071)
+texture = ExtResource("1_423ak")
+
+[node name="Balon168" type="Sprite2D" parent="."]
+position = Vector2(4260.5, -17988)
+texture = ExtResource("1_423ak")
+
+[node name="Balon169" type="Sprite2D" parent="."]
+position = Vector2(3957, -15199)
+texture = ExtResource("1_423ak")
+
+[node name="Balon170" type="Sprite2D" parent="."]
+position = Vector2(4824, -15421)
+texture = ExtResource("1_423ak")
+
+[node name="Balon171" type="Sprite2D" parent="."]
+position = Vector2(5770.5, -14639.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon172" type="Sprite2D" parent="."]
+position = Vector2(6349, -15404)
+texture = ExtResource("1_423ak")
+
+[node name="Balon173" type="Sprite2D" parent="."]
+position = Vector2(5381, -17183)
+texture = ExtResource("1_423ak")
+
+[node name="Balon174" type="Sprite2D" parent="."]
+position = Vector2(6214.5, -17794.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon175" type="Sprite2D" parent="."]
+position = Vector2(7297, -16318)
+texture = ExtResource("1_423ak")
+
+[node name="Balon176" type="Sprite2D" parent="."]
+position = Vector2(8028, -17235)
+texture = ExtResource("1_423ak")
+
+[node name="Balon177" type="Sprite2D" parent="."]
+position = Vector2(7778, -19181)
+texture = ExtResource("1_423ak")
+
+[node name="Balon178" type="Sprite2D" parent="."]
+position = Vector2(8645, -19403)
+texture = ExtResource("1_423ak")
+
+[node name="Balon179" type="Sprite2D" parent="."]
+position = Vector2(9591.5, -18621.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon180" type="Sprite2D" parent="."]
+position = Vector2(10170, -19386)
+texture = ExtResource("1_423ak")
+
+[node name="Balon181" type="Sprite2D" parent="."]
+position = Vector2(9202, -21165)
+texture = ExtResource("1_423ak")
+
+[node name="Balon182" type="Sprite2D" parent="."]
+position = Vector2(10035.5, -21776.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon183" type="Sprite2D" parent="."]
+position = Vector2(11118, -20300)
+texture = ExtResource("1_423ak")
+
+[node name="Balon184" type="Sprite2D" parent="."]
+position = Vector2(11849, -21217)
+texture = ExtResource("1_423ak")
+
+[node name="Balon185" type="Sprite2D" parent="."]
+position = Vector2(11545.5, -18428)
+texture = ExtResource("1_423ak")
+
+[node name="Balon186" type="Sprite2D" parent="."]
+position = Vector2(12412.5, -18650)
+texture = ExtResource("1_423ak")
+
+[node name="Balon187" type="Sprite2D" parent="."]
+position = Vector2(13359, -17868.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon188" type="Sprite2D" parent="."]
+position = Vector2(13937.5, -18633)
+texture = ExtResource("1_423ak")
+
+[node name="Balon189" type="Sprite2D" parent="."]
+position = Vector2(12969.5, -20412)
+texture = ExtResource("1_423ak")
+
+[node name="Balon190" type="Sprite2D" parent="."]
+position = Vector2(13803, -21023.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon191" type="Sprite2D" parent="."]
+position = Vector2(14885.5, -19547)
+texture = ExtResource("1_423ak")
+
+[node name="Balon192" type="Sprite2D" parent="."]
+position = Vector2(15616.5, -20464)
+texture = ExtResource("1_423ak")
+
+[node name="Balon193" type="Sprite2D" parent="."]
+position = Vector2(15071, -11817)
+texture = ExtResource("1_423ak")
+
+[node name="Balon194" type="Sprite2D" parent="."]
+position = Vector2(15938, -12039)
+texture = ExtResource("1_423ak")
+
+[node name="Balon195" type="Sprite2D" parent="."]
+position = Vector2(16884.5, -11257.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon196" type="Sprite2D" parent="."]
+position = Vector2(17463, -12022)
+texture = ExtResource("1_423ak")
+
+[node name="Balon197" type="Sprite2D" parent="."]
+position = Vector2(16495, -13801)
+texture = ExtResource("1_423ak")
+
+[node name="Balon198" type="Sprite2D" parent="."]
+position = Vector2(17328.5, -14412.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon199" type="Sprite2D" parent="."]
+position = Vector2(18411, -12936)
+texture = ExtResource("1_423ak")
+
+[node name="Balon200" type="Sprite2D" parent="."]
+position = Vector2(19142, -13853)
+texture = ExtResource("1_423ak")
+
+[node name="Balon201" type="Sprite2D" parent="."]
+position = Vector2(18838.5, -11064)
+texture = ExtResource("1_423ak")
+
+[node name="Balon202" type="Sprite2D" parent="."]
+position = Vector2(19705.5, -11286)
+texture = ExtResource("1_423ak")
+
+[node name="Balon203" type="Sprite2D" parent="."]
+position = Vector2(20652, -10504.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon204" type="Sprite2D" parent="."]
+position = Vector2(21230.5, -11269)
+texture = ExtResource("1_423ak")
+
+[node name="Balon205" type="Sprite2D" parent="."]
+position = Vector2(20262.5, -13048)
+texture = ExtResource("1_423ak")
+
+[node name="Balon206" type="Sprite2D" parent="."]
+position = Vector2(21096, -13659.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon207" type="Sprite2D" parent="."]
+position = Vector2(22178.5, -12183)
+texture = ExtResource("1_423ak")
+
+[node name="Balon208" type="Sprite2D" parent="."]
+position = Vector2(22909.5, -13100)
+texture = ExtResource("1_423ak")
+
+[node name="Balon209" type="Sprite2D" parent="."]
+position = Vector2(22659.5, -15046)
+texture = ExtResource("1_423ak")
+
+[node name="Balon210" type="Sprite2D" parent="."]
+position = Vector2(23526.5, -15268)
+texture = ExtResource("1_423ak")
+
+[node name="Balon211" type="Sprite2D" parent="."]
+position = Vector2(24473, -14486.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon212" type="Sprite2D" parent="."]
+position = Vector2(25051.5, -15251)
+texture = ExtResource("1_423ak")
+
+[node name="Balon213" type="Sprite2D" parent="."]
+position = Vector2(24083.5, -17030)
+texture = ExtResource("1_423ak")
+
+[node name="Balon214" type="Sprite2D" parent="."]
+position = Vector2(24917, -17641.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon215" type="Sprite2D" parent="."]
+position = Vector2(25999.5, -16165)
+texture = ExtResource("1_423ak")
+
+[node name="Balon216" type="Sprite2D" parent="."]
+position = Vector2(26730.5, -17082)
+texture = ExtResource("1_423ak")
+
+[node name="Balon217" type="Sprite2D" parent="."]
+position = Vector2(26427, -14293)
+texture = ExtResource("1_423ak")
+
+[node name="Balon218" type="Sprite2D" parent="."]
+position = Vector2(27294, -14515)
+texture = ExtResource("1_423ak")
+
+[node name="Balon219" type="Sprite2D" parent="."]
+position = Vector2(28240.5, -13733.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon220" type="Sprite2D" parent="."]
+position = Vector2(28819, -14498)
+texture = ExtResource("1_423ak")
+
+[node name="Balon221" type="Sprite2D" parent="."]
+position = Vector2(27851, -16277)
+texture = ExtResource("1_423ak")
+
+[node name="Balon222" type="Sprite2D" parent="."]
+position = Vector2(28684.5, -16888.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon223" type="Sprite2D" parent="."]
+position = Vector2(29767, -15412)
+texture = ExtResource("1_423ak")
+
+[node name="Balon224" type="Sprite2D" parent="."]
+position = Vector2(30498, -16329)
+texture = ExtResource("1_423ak")
+
+[node name="Balon225" type="Sprite2D" parent="."]
+position = Vector2(14909.5, -17360)
+texture = ExtResource("1_423ak")
+
+[node name="Balon226" type="Sprite2D" parent="."]
+position = Vector2(15776.5, -17582)
+texture = ExtResource("1_423ak")
+
+[node name="Balon227" type="Sprite2D" parent="."]
+position = Vector2(16723, -16800.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon228" type="Sprite2D" parent="."]
+position = Vector2(17301.5, -17565)
+texture = ExtResource("1_423ak")
+
+[node name="Balon229" type="Sprite2D" parent="."]
+position = Vector2(16333.5, -19344)
+texture = ExtResource("1_423ak")
+
+[node name="Balon230" type="Sprite2D" parent="."]
+position = Vector2(17167, -19955.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon231" type="Sprite2D" parent="."]
+position = Vector2(18249.5, -18479)
+texture = ExtResource("1_423ak")
+
+[node name="Balon232" type="Sprite2D" parent="."]
+position = Vector2(18980.5, -19396)
+texture = ExtResource("1_423ak")
+
+[node name="Balon233" type="Sprite2D" parent="."]
+position = Vector2(18677, -16607)
+texture = ExtResource("1_423ak")
+
+[node name="Balon234" type="Sprite2D" parent="."]
+position = Vector2(19544, -16829)
+texture = ExtResource("1_423ak")
+
+[node name="Balon235" type="Sprite2D" parent="."]
+position = Vector2(20490.5, -16047.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon236" type="Sprite2D" parent="."]
+position = Vector2(21069, -16812)
+texture = ExtResource("1_423ak")
+
+[node name="Balon237" type="Sprite2D" parent="."]
+position = Vector2(20101, -18591)
+texture = ExtResource("1_423ak")
+
+[node name="Balon238" type="Sprite2D" parent="."]
+position = Vector2(20934.5, -19202.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon239" type="Sprite2D" parent="."]
+position = Vector2(22017, -17726)
+texture = ExtResource("1_423ak")
+
+[node name="Balon240" type="Sprite2D" parent="."]
+position = Vector2(22748, -18643)
+texture = ExtResource("1_423ak")
+
+[node name="Balon241" type="Sprite2D" parent="."]
+position = Vector2(22498, -20589)
+texture = ExtResource("1_423ak")
+
+[node name="Balon242" type="Sprite2D" parent="."]
+position = Vector2(23365, -20811)
+texture = ExtResource("1_423ak")
+
+[node name="Balon243" type="Sprite2D" parent="."]
+position = Vector2(24311.5, -20029.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon244" type="Sprite2D" parent="."]
+position = Vector2(24890, -20794)
+texture = ExtResource("1_423ak")
+
+[node name="Balon245" type="Sprite2D" parent="."]
+position = Vector2(23922, -22573)
+texture = ExtResource("1_423ak")
+
+[node name="Balon246" type="Sprite2D" parent="."]
+position = Vector2(24755.5, -23184.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon247" type="Sprite2D" parent="."]
+position = Vector2(25838, -21708)
+texture = ExtResource("1_423ak")
+
+[node name="Balon248" type="Sprite2D" parent="."]
+position = Vector2(26569, -22625)
+texture = ExtResource("1_423ak")
+
+[node name="Balon249" type="Sprite2D" parent="."]
+position = Vector2(26265.5, -19836)
+texture = ExtResource("1_423ak")
+
+[node name="Balon250" type="Sprite2D" parent="."]
+position = Vector2(27132.5, -20058)
+texture = ExtResource("1_423ak")
+
+[node name="Balon251" type="Sprite2D" parent="."]
+position = Vector2(28079, -19276.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon252" type="Sprite2D" parent="."]
+position = Vector2(28657.5, -20041)
+texture = ExtResource("1_423ak")
+
+[node name="Balon253" type="Sprite2D" parent="."]
+position = Vector2(27689.5, -21820)
+texture = ExtResource("1_423ak")
+
+[node name="Balon254" type="Sprite2D" parent="."]
+position = Vector2(28523, -22431.5)
+texture = ExtResource("1_423ak")
+
+[node name="Balon255" type="Sprite2D" parent="."]
+position = Vector2(29605.5, -20955)
+texture = ExtResource("1_423ak")
+
+[node name="Balon256" type="Sprite2D" parent="."]
+position = Vector2(30336.5, -21872)
+texture = ExtResource("1_423ak")
