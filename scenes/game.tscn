@@ -4,11 +4,11 @@
 [ext_resource type="PackedScene" uid="uid://b3l8edt0bi7np" path="res://scenes/player.tscn" id="1_dofbq"]
 [ext_resource type="Texture2D" uid="uid://ce8aomk05iuvx" path="res://art/background.png" id="3_0jlkx"]
 [ext_resource type="Script" path="res://scripts/button.gd" id="5_42r6h"]
-[ext_resource type="PackedScene" uid="uid://dsn3hhui0gbhr" path="res://scenes/indicator.tscn" id="7_6c4p2"]
+[ext_resource type="Texture2D" uid="uid://sgs0byuwi1us" path="res://art/UI/arrowBeige_up.png" id="7_5pa55"]
 [ext_resource type="Theme" uid="uid://b0svc8rhmt1x" path="res://buttontheme.tres" id="7_8sk05"]
-[ext_resource type="Texture2D" uid="uid://osc7ghwu84r6" path="res://art/UI/arrowBeige_right.png" id="7_brmyy"]
 [ext_resource type="PackedScene" uid="uid://dowrjcdnnxods" path="res://scenes/sad_man.tscn" id="7_or3d6"]
 [ext_resource type="Texture2D" uid="uid://bjcvy08py5q6q" path="res://art/CharacterParts/ciasto.png" id="7_vevqi"]
+[ext_resource type="Texture2D" uid="uid://cyethh07dwi2d" path="res://art/UI/button_round/transparent_cropped/button_rnd_grayscale.png" id="8_tjqbk"]
 [ext_resource type="Texture2D" uid="uid://ckwkxus81hfnu" path="res://art/CharacterParts/honk.png" id="9_6rsn5"]
 [ext_resource type="Texture2D" uid="uid://dp43v5vo461t5" path="res://art/CharacterParts/fart.png" id="11_5snge"]
 [ext_resource type="Texture2D" uid="uid://2c3s08aegmb1" path="res://art/CharacterParts/Arm-Joke.png" id="12_2ynn6"]
@@ -76,10 +76,11 @@ baloon_button = NodePath("../CanvasLayer/PanelContainer/HBoxContainer/BALOON")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="HappinessContainer" type="PanelContainer" parent="CanvasLayer"]
+self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 10
 anchor_right = 1.0
-offset_right = 2.0
-offset_bottom = 124.0
+offset_right = 48.0
+offset_bottom = 325.0
 grow_horizontal = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/HappinessContainer"]
@@ -88,7 +89,7 @@ layout_mode = 2
 [node name="GlobalHappinessBar" type="TextureProgressBar" parent="CanvasLayer/HappinessContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-value = 70.0
+value = 30.0
 nine_patch_stretch = true
 stretch_margin_left = 7
 stretch_margin_top = 1
@@ -99,94 +100,118 @@ texture_progress = ExtResource("13_2etor")
 script = SubResource("GDScript_j45pr")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/HappinessContainer/VBoxContainer"]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 
 [node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/HappinessContainer/VBoxContainer/HBoxContainer"]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 5.0
 
-[node name="Arrow" type="TextureRect" parent="CanvasLayer/HappinessContainer/VBoxContainer/HBoxContainer/PanelContainer"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="CanvasLayer/HappinessContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("7_brmyy")
+size_flags_horizontal = 6
+size_flags_stretch_ratio = 10.0
 
-[node name="Circle" type="TextureRect" parent="CanvasLayer/HappinessContainer/VBoxContainer/HBoxContainer/PanelContainer"]
+[node name="Arrow" type="TextureRect" parent="CanvasLayer/HappinessContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
-texture = ExtResource("7_brmyy")
+texture = ExtResource("7_5pa55")
+stretch_mode = 3
+
+[node name="Circle" type="TextureRect" parent="CanvasLayer/HappinessContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("8_tjqbk")
+stretch_mode = 4
+
+[node name="Fart" type="TextureRect" parent="CanvasLayer/HappinessContainer/VBoxContainer/HBoxContainer/VBoxContainer2/Circle"]
+layout_mode = 2
+offset_left = 42.0
+offset_top = 33.0
+offset_right = 169.0
+offset_bottom = 178.0
+texture = ExtResource("11_5snge")
+expand_mode = 1
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="CanvasLayer/HappinessContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_stretch_ratio = 10.0
+
+[node name="Arrow" type="TextureRect" parent="CanvasLayer/HappinessContainer/VBoxContainer/HBoxContainer/VBoxContainer4"]
+layout_mode = 2
+texture = ExtResource("7_5pa55")
+stretch_mode = 3
+
+[node name="Circle" type="TextureRect" parent="CanvasLayer/HappinessContainer/VBoxContainer/HBoxContainer/VBoxContainer4"]
+layout_mode = 2
+texture = ExtResource("8_tjqbk")
+
+[node name="Fart" type="TextureRect" parent="CanvasLayer/HappinessContainer/VBoxContainer/HBoxContainer/VBoxContainer4/Circle"]
+layout_mode = 2
+offset_left = 42.0
+offset_top = 33.0
+offset_right = 169.0
+offset_bottom = 178.0
+texture = ExtResource("11_5snge")
+expand_mode = 1
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="CanvasLayer/HappinessContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_stretch_ratio = 10.0
+
+[node name="Arrow" type="TextureRect" parent="CanvasLayer/HappinessContainer/VBoxContainer/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+texture = ExtResource("7_5pa55")
+stretch_mode = 3
+
+[node name="Circle" type="TextureRect" parent="CanvasLayer/HappinessContainer/VBoxContainer/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+texture = ExtResource("8_tjqbk")
+
+[node name="Fart" type="TextureRect" parent="CanvasLayer/HappinessContainer/VBoxContainer/HBoxContainer/VBoxContainer3/Circle"]
+layout_mode = 2
+offset_left = 42.0
+offset_top = 33.0
+offset_right = 169.0
+offset_bottom = 178.0
+texture = ExtResource("11_5snge")
+expand_mode = 1
 
 [node name="PanelContainer2" type="PanelContainer" parent="CanvasLayer/HappinessContainer/VBoxContainer/HBoxContainer"]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 5.0
 
-[node name="Arrow" type="TextureRect" parent="CanvasLayer/HappinessContainer/VBoxContainer/HBoxContainer/PanelContainer2"]
+[node name="VBoxContainer5" type="VBoxContainer" parent="CanvasLayer/HappinessContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("7_brmyy")
+size_flags_horizontal = 6
+size_flags_stretch_ratio = 60.0
 
-[node name="Circle" type="TextureRect" parent="CanvasLayer/HappinessContainer/VBoxContainer/HBoxContainer/PanelContainer2"]
+[node name="Arrow" type="TextureRect" parent="CanvasLayer/HappinessContainer/VBoxContainer/HBoxContainer/VBoxContainer5"]
 layout_mode = 2
-texture = ExtResource("7_brmyy")
+texture = ExtResource("7_5pa55")
+stretch_mode = 3
+
+[node name="Circle" type="TextureRect" parent="CanvasLayer/HappinessContainer/VBoxContainer/HBoxContainer/VBoxContainer5"]
+layout_mode = 2
+texture = ExtResource("8_tjqbk")
+
+[node name="Fart" type="TextureRect" parent="CanvasLayer/HappinessContainer/VBoxContainer/HBoxContainer/VBoxContainer5/Circle"]
+layout_mode = 2
+offset_left = 42.0
+offset_top = 33.0
+offset_right = 169.0
+offset_bottom = 178.0
+texture = ExtResource("11_5snge")
+expand_mode = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/HappinessContainer"]
 layout_mode = 2
 theme_override_font_sizes/normal_font_size = 50
 text = "GLOBAL HAPPINESS"
-
-[node name="10" parent="CanvasLayer/HappinessContainer" instance=ExtResource("7_6c4p2")]
-position = Vector2(165, 148)
-
-[node name="Icon" type="Sprite2D" parent="CanvasLayer/HappinessContainer/10"]
-position = Vector2(-2.90871e-05, 6.66669)
-rotation = 1.46687
-scale = Vector2(0.45, 0.45)
-texture = ExtResource("11_5snge")
-
-[node name="Arrow" type="Sprite2D" parent="CanvasLayer/HappinessContainer/10"]
-self_modulate = Color(1, 0.701961, 0.701961, 1)
-position = Vector2(122.261, 0.000366211)
-scale = Vector2(2.52892, 2.89682)
-texture = ExtResource("7_brmyy")
-
-[node name="20" parent="CanvasLayer/HappinessContainer" instance=ExtResource("7_6c4p2")]
-position = Vector2(329, 148)
-
-[node name="Icon" type="Sprite2D" parent="CanvasLayer/HappinessContainer/20"]
-position = Vector2(-6.66676, 24.9999)
-rotation = 0.938841
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("12_2ynn6")
-
-[node name="Arrow" type="Sprite2D" parent="CanvasLayer/HappinessContainer/20"]
-self_modulate = Color(1, 0.701961, 0.701961, 1)
-position = Vector2(122.261, 0.000366211)
-scale = Vector2(2.52892, 2.89682)
-texture = ExtResource("7_brmyy")
-
-[node name="30" parent="CanvasLayer/HappinessContainer" instance=ExtResource("7_6c4p2")]
-position = Vector2(493, 148)
-
-[node name="Arrow" type="Sprite2D" parent="CanvasLayer/HappinessContainer/30"]
-self_modulate = Color(1, 0.701961, 0.701961, 1)
-position = Vector2(122.261, 0.000427246)
-scale = Vector2(2.52892, 2.89682)
-texture = ExtResource("7_brmyy")
-
-[node name="Icon" type="Sprite2D" parent="CanvasLayer/HappinessContainer/30"]
-position = Vector2(4.91738e-05, -15)
-rotation = 1.01349
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("14_o7bdr")
-
-[node name="70" parent="CanvasLayer/HappinessContainer" instance=ExtResource("7_6c4p2")]
-position = Vector2(1151, 148)
-
-[node name="Arrow" type="Sprite2D" parent="CanvasLayer/HappinessContainer/70"]
-self_modulate = Color(1, 0.701961, 0.701961, 1)
-position = Vector2(122.261, 0.000366211)
-scale = Vector2(2.52892, 2.89682)
-texture = ExtResource("7_brmyy")
-
-[node name="Icon" type="Sprite2D" parent="CanvasLayer/HappinessContainer/70"]
-position = Vector2(-11.6667, -5.00002)
-rotation = 2.23517
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("14_22ane")
 
 [node name="SkillText" type="TextEdit" parent="CanvasLayer"]
 visible = false

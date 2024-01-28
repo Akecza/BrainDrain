@@ -1,22 +1,21 @@
 [gd_scene load_steps=6 format=3 uid="uid://biwhd6ooi88yn"]
 
 [ext_resource type="Script" path="res://scripts/whoopie.gd" id="1_mpyoc"]
-[ext_resource type="Texture2D" uid="uid://dp43v5vo461t5" path="res://art/CharacterParts/fart.png" id="2_eshf1"]
+[ext_resource type="Texture2D" uid="uid://dp43v5vo461t5" path="res://art/CharacterParts/fart.png" id="2_m64ja"]
 [ext_resource type="AudioStream" uid="uid://ctwge7rxc2m4y" path="res://sounds/fart.wav" id="3_42fey"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_oawvf"]
-radius = 25.02
+radius = 43.1856
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8rglb"]
-radius = 279.002
+radius = 541.267
 
 [node name="Whoopie" type="Node2D"]
 script = ExtResource("1_mpyoc")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-4, -11)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("2_eshf1")
+scale = Vector2(0.239246, 0.239246)
+texture = ExtResource("2_m64ja")
 
 [node name="Whoopie" type="Area2D" parent="."]
 
@@ -30,7 +29,7 @@ shape = SubResource("CircleShape2D_8rglb")
 disabled = true
 
 [node name="DeathTimer" type="Timer" parent="."]
-wait_time = 10.0
+wait_time = 90.0
 one_shot = true
 autostart = true
 

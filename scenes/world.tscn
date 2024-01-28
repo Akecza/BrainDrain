@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://cg0ad0p2mjrkd"]
+[gd_scene load_steps=30 format=3 uid="uid://cbgw8hvxcwppe"]
 
 [ext_resource type="PackedScene" uid="uid://cc4o75emmeaay" path="res://scenes/budynki/bruk.tscn" id="2_klmb1"]
 [ext_resource type="PackedScene" uid="uid://bbrcme6303jvk" path="res://scenes/budynki/lewy_róg.tscn" id="6_nkrty"]
